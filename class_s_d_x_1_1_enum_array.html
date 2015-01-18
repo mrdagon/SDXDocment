@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>SDXFrameWork: SDX::EnumArray&lt; TData, TType &gt; Class Template Reference</title>
+<title>SDXFrameWork: SDX::EnumArray&lt; TType, TEnum &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_s_d_x_1_1_enum_array-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SDX::EnumArray&lt; TData, TType &gt; Class Template Reference</div>  </div>
+<div class="title">SDX::EnumArray&lt; TType, TEnum &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -101,38 +101,223 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abd078354f59ca2af4bfe41bcd42f5fcf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd078354f59ca2af4bfe41bcd42f5fcf"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const </td></tr>
-<tr class="separator:abd078354f59ca2af4bfe41bcd42f5fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7e0d1ae0d5bf0c25e9432d0230d010d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7e0d1ae0d5bf0c25e9432d0230d010d"></a>
-TData &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const TType index)</td></tr>
-<tr class="separator:af7e0d1ae0d5bf0c25e9432d0230d010d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba0640170af2ab37563ca6c375f8ab7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba0640170af2ab37563ca6c375f8ab7d"></a>
-const TData &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (const TType index) const </td></tr>
-<tr class="separator:aba0640170af2ab37563ca6c375f8ab7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47b27973f232830ca4e744676f67ed16"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47b27973f232830ca4e744676f67ed16"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () -&gt; decltype(Array.begin())</td></tr>
-<tr class="separator:a47b27973f232830ca4e744676f67ed16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ce6a0c2a4bf001bb2064e3ef48f4f40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ce6a0c2a4bf001bb2064e3ef48f4f40"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () -&gt; decltype(Array.end())</td></tr>
-<tr class="separator:a3ce6a0c2a4bf001bb2064e3ef48f4f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1950c1e312587d17bd20f2319517854f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1950c1e312587d17bd20f2319517854f"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const -&gt; decltype(Array.begin())</td></tr>
-<tr class="separator:a1950c1e312587d17bd20f2319517854f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafd6a803f0e8063b2f6a8f147a66656e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafd6a803f0e8063b2f6a8f147a66656e"></a>
-auto&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const -&gt; decltype(Array.end())</td></tr>
-<tr class="separator:aafd6a803f0e8063b2f6a8f147a66656e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30f578f33327d1a598969221de105f91"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#a30f578f33327d1a598969221de105f91">size</a> () const </td></tr>
+<tr class="memdesc:a30f578f33327d1a598969221de105f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を取得.  <a href="#a30f578f33327d1a598969221de105f91">More...</a><br /></td></tr>
+<tr class="separator:a30f578f33327d1a598969221de105f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8522875b1d51107086134f0f6b58e315"><td class="memItemLeft" align="right" valign="top">TType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#a8522875b1d51107086134f0f6b58e315">operator[]</a> (const TEnum index)</td></tr>
+<tr class="memdesc:a8522875b1d51107086134f0f6b58e315"><td class="mdescLeft">&#160;</td><td class="mdescRight">[]のオペレータ.  <a href="#a8522875b1d51107086134f0f6b58e315">More...</a><br /></td></tr>
+<tr class="separator:a8522875b1d51107086134f0f6b58e315"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75b8c18d5205ad2a8b5de99097cb4d0"><td class="memItemLeft" align="right" valign="top">const TType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#af75b8c18d5205ad2a8b5de99097cb4d0">operator[]</a> (const TEnum index) const </td></tr>
+<tr class="memdesc:af75b8c18d5205ad2a8b5de99097cb4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">[]のオペレータ.  <a href="#af75b8c18d5205ad2a8b5de99097cb4d0">More...</a><br /></td></tr>
+<tr class="separator:af75b8c18d5205ad2a8b5de99097cb4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0ec813fd1bcd88536dc09a30a7b6b8"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#adb0ec813fd1bcd88536dc09a30a7b6b8">begin</a> () -&gt; decltype(Array.begin())</td></tr>
+<tr class="memdesc:adb0ec813fd1bcd88536dc09a30a7b6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲for用.  <a href="#adb0ec813fd1bcd88536dc09a30a7b6b8">More...</a><br /></td></tr>
+<tr class="separator:adb0ec813fd1bcd88536dc09a30a7b6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae38c47940416c20986cad7ba9cef04b5"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#ae38c47940416c20986cad7ba9cef04b5">end</a> () -&gt; decltype(Array.end())</td></tr>
+<tr class="memdesc:ae38c47940416c20986cad7ba9cef04b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲for用.  <a href="#ae38c47940416c20986cad7ba9cef04b5">More...</a><br /></td></tr>
+<tr class="separator:ae38c47940416c20986cad7ba9cef04b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb3ca31235a2870c2c7bf73acfc81f9"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#abcb3ca31235a2870c2c7bf73acfc81f9">begin</a> () const -&gt; decltype(Array.begin())</td></tr>
+<tr class="memdesc:abcb3ca31235a2870c2c7bf73acfc81f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲for用.  <a href="#abcb3ca31235a2870c2c7bf73acfc81f9">More...</a><br /></td></tr>
+<tr class="separator:abcb3ca31235a2870c2c7bf73acfc81f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a308faf25a824ad872d5f274e5354e1ef"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_enum_array.html#a308faf25a824ad872d5f274e5354e1ef">end</a> () const -&gt; decltype(Array.end())</td></tr>
+<tr class="memdesc:a308faf25a824ad872d5f274e5354e1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">範囲for用.  <a href="#a308faf25a824ad872d5f274e5354e1ef">More...</a><br /></td></tr>
+<tr class="separator:a308faf25a824ad872d5f274e5354e1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;class TData, class TType&gt;<br />
-class SDX::EnumArray&lt; TData, TType &gt;</h3>
+<div class="textblock"><h3>template&lt;class TType, class TEnum&gt;<br />
+class SDX::EnumArray&lt; TType, TEnum &gt;</h3>
 
 <p>列挙型を直接添字に使える配列. </p>
-<p>エラー処理など未実装 </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//EnumArrayの使用例</span></div>
+<div class="line"><span class="keywordtype">bool</span> SampleEnumArray()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ウィンドウタイトルを指定して、初期化する</span></div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">enum class</span> ANIMAL</div>
+<div class="line">    {</div>
+<div class="line">        ねずみ,</div>
+<div class="line">        ひよこ,</div>
+<div class="line">        くま,</div>
+<div class="line">        にわとり,</div>
+<div class="line">        COUNT,</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_enum_array.html">EnumArray&lt;Image, ANIMAL&gt;</a> 画像;</div>
+<div class="line"></div>
+<div class="line">    画像[ANIMAL::ねずみ].Load(<span class="stringliteral">&quot;data/pipo-enemy034.png&quot;</span>);</div>
+<div class="line">    画像[ANIMAL::ひよこ].Load(<span class="stringliteral">&quot;data/pipo-enemy035.png&quot;</span>);</div>
+<div class="line">    画像[ANIMAL::にわとり].Load(<span class="stringliteral">&quot;data/pipo-enemy036.png&quot;</span>);</div>
+<div class="line">    画像[ANIMAL::くま].Load(<span class="stringliteral">&quot;data/pipo-enemy037.png&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    ANIMAL type = ANIMAL::ねずみ;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())<span class="comment">//ウィンドウの更新や、入力の更新等を行う</span></div>
+<div class="line">    {</div>
+<div class="line">        画像[type].Draw({ 300, 200 });</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._1.on) type = ANIMAL::ねずみ;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._2.on) type = ANIMAL::ひよこ;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._3.on) type = ANIMAL::にわとり;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._4.on) type = ANIMAL::くま;</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理を行う</span></div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000019">Todo:</a></b></dt><dd>エラー処理など未実装 </dd></dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a30f578f33327d1a598969221de105f91"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>要素数を取得. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8522875b1d51107086134f0f6b58e315"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">TType&amp; <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const TEnum&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[]のオペレータ. </p>
+
+</div>
+</div>
+<a class="anchor" id="af75b8c18d5205ad2a8b5de99097cb4d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">const TType&amp; <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">const TEnum&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[]のオペレータ. </p>
+
+</div>
+</div>
+<a class="anchor" id="adb0ec813fd1bcd88536dc09a30a7b6b8"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; decltype(Array.begin())
+		</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>範囲for用. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae38c47940416c20986cad7ba9cef04b5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> -&gt; decltype(Array.end())
+		</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>範囲for用. </p>
+
+</div>
+</div>
+<a class="anchor" id="abcb3ca31235a2870c2c7bf73acfc81f9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; decltype(Array.begin())
+		</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>範囲for用. </p>
+
+</div>
+</div>
+<a class="anchor" id="a308faf25a824ad872d5f274e5354e1ef"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TType, class TEnum&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">auto <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a>&lt; TType, TEnum &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const -&gt; decltype(Array.end())
+		</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>範囲for用. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

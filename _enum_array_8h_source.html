@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,59 +83,68 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">EnumArray.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TData, <span class="keyword">class</span> TType&gt;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_enum_array.html">EnumArray</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        std::array&lt;TData, (int)TType::COUNT&gt; Array;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">size_t</span> size()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">return</span> Array.size();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        TData&amp; operator[](<span class="keyword">const</span> TType index)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> Array[(int)index];</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">class</span> TType, <span class="keyword">class</span> TEnum&gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_enum_array.html">EnumArray</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        std::array&lt;TType, (int)TEnum::COUNT&gt; Array;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#a30f578f33327d1a598969221de105f91">   19</a></span>&#160;        <span class="keywordtype">size_t</span> <a class="code" href="class_s_d_x_1_1_enum_array.html#a30f578f33327d1a598969221de105f91">size</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> Array.size();</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">const</span> TData&amp; operator[](<span class="keyword">const</span> TType index)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span> Array[(int)index];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">auto</span> begin() -&gt;decltype(Array.begin())</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">return</span> Array.begin();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">auto</span> end() -&gt;decltype(Array.end())</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">return</span> Array.end();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">auto</span> begin() <span class="keyword">const</span> -&gt;decltype(Array.begin())</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span> Array.begin();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">auto</span> end() <span class="keyword">const</span> -&gt;decltype(Array.end())</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> Array.end();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    };</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_enum_array_html"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a></div><div class="ttdoc">列挙型を直接添字に使える配列. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:9</div></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#a8522875b1d51107086134f0f6b58e315">   25</a></span>&#160;        TType&amp; <a class="code" href="class_s_d_x_1_1_enum_array.html#a8522875b1d51107086134f0f6b58e315">operator[]</a>(<span class="keyword">const</span> TEnum index)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">return</span> Array[(int)index];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#af75b8c18d5205ad2a8b5de99097cb4d0">   31</a></span>&#160;        <span class="keyword">const</span> TType&amp; <a class="code" href="class_s_d_x_1_1_enum_array.html#af75b8c18d5205ad2a8b5de99097cb4d0">operator[]</a>(<span class="keyword">const</span> TEnum index)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">return</span> Array[(int)index];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#adb0ec813fd1bcd88536dc09a30a7b6b8">   37</a></span>&#160;        <span class="keyword">auto</span> <a class="code" href="class_s_d_x_1_1_enum_array.html#adb0ec813fd1bcd88536dc09a30a7b6b8">begin</a>() -&gt;decltype(Array.begin())</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">return</span> Array.begin();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#ae38c47940416c20986cad7ba9cef04b5">   43</a></span>&#160;        <span class="keyword">auto</span> <a class="code" href="class_s_d_x_1_1_enum_array.html#ae38c47940416c20986cad7ba9cef04b5">end</a>() -&gt;decltype(Array.end())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">return</span> Array.end();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#abcb3ca31235a2870c2c7bf73acfc81f9">   49</a></span>&#160;        <span class="keyword">auto</span> <a class="code" href="class_s_d_x_1_1_enum_array.html#abcb3ca31235a2870c2c7bf73acfc81f9">begin</a>() const -&gt;decltype(Array.<a class="code" href="class_s_d_x_1_1_enum_array.html#adb0ec813fd1bcd88536dc09a30a7b6b8">begin</a>())</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordflow">return</span> Array.begin();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_enum_array.html#a308faf25a824ad872d5f274e5354e1ef">   55</a></span>&#160;        <span class="keyword">auto</span> <a class="code" href="class_s_d_x_1_1_enum_array.html#a308faf25a824ad872d5f274e5354e1ef">end</a>() const -&gt;decltype(Array.<a class="code" href="class_s_d_x_1_1_enum_array.html#ae38c47940416c20986cad7ba9cef04b5">end</a>())</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> Array.end();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_a308faf25a824ad872d5f274e5354e1ef"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#a308faf25a824ad872d5f274e5354e1ef">SDX::EnumArray::end</a></div><div class="ttdeci">auto end() const -&gt; decltype(Array.end())</div><div class="ttdoc">範囲for用. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:55</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_a8522875b1d51107086134f0f6b58e315"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#a8522875b1d51107086134f0f6b58e315">SDX::EnumArray::operator[]</a></div><div class="ttdeci">TType &amp; operator[](const TEnum index)</div><div class="ttdoc">[]のオペレータ. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:25</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_abcb3ca31235a2870c2c7bf73acfc81f9"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#abcb3ca31235a2870c2c7bf73acfc81f9">SDX::EnumArray::begin</a></div><div class="ttdeci">auto begin() const -&gt; decltype(Array.begin())</div><div class="ttdoc">範囲for用. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:49</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_af75b8c18d5205ad2a8b5de99097cb4d0"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#af75b8c18d5205ad2a8b5de99097cb4d0">SDX::EnumArray::operator[]</a></div><div class="ttdeci">const TType &amp; operator[](const TEnum index) const </div><div class="ttdoc">[]のオペレータ. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:31</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray</a></div><div class="ttdoc">列挙型を直接添字に使える配列. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:13</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_ae38c47940416c20986cad7ba9cef04b5"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#ae38c47940416c20986cad7ba9cef04b5">SDX::EnumArray::end</a></div><div class="ttdeci">auto end() -&gt; decltype(Array.end())</div><div class="ttdoc">範囲for用. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:43</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_a30f578f33327d1a598969221de105f91"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#a30f578f33327d1a598969221de105f91">SDX::EnumArray::size</a></div><div class="ttdeci">size_t size() const </div><div class="ttdoc">要素数を取得. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:19</div></div>
+<div class="ttc" id="class_s_d_x_1_1_enum_array_html_adb0ec813fd1bcd88536dc09a30a7b6b8"><div class="ttname"><a href="class_s_d_x_1_1_enum_array.html#adb0ec813fd1bcd88536dc09a30a7b6b8">SDX::EnumArray::begin</a></div><div class="ttdeci">auto begin() -&gt; decltype(Array.begin())</div><div class="ttdoc">範囲for用. </div><div class="ttdef"><b>Definition:</b> EnumArray.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

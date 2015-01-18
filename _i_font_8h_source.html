@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,33 +83,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IFont.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//☀SDL</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Color.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Utility/VariadicStream.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_font.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_i_font.html">IFont</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#a469998eaf4c3958996253d5b8da9560b">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標 ,  <a class="code" href="class_s_d_x_1_1_color.html">Color</a> 色 , <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列 ) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#a3294c5199bc3140f3d54353a99b23fbf">DrawRotate</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> 拡大率, <span class="keywordtype">double</span> 角度 , <a class="code" href="class_s_d_x_1_1_color.html">Color</a> 描画色 , <span class="keywordtype">bool</span> 反転フラグ, <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#ace0958cd56a54d9883915127707d9a85">DrawExtend</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> X軸拡大率, <span class="keywordtype">double</span> Y軸拡大率, <a class="code" href="class_s_d_x_1_1_color.html">Color</a> 色, <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_i_font_html"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html">SDX::IFont</a></div><div class="ttdoc">Font,BmpFont等のインターフェース. </div><div class="ttdef"><b>Definition:</b> IFont.h:9</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_font_html_ace0958cd56a54d9883915127707d9a85"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#ace0958cd56a54d9883915127707d9a85">SDX::IFont::DrawExtend</a></div><div class="ttdeci">virtual bool DrawExtend(const Point &amp;座標, double X軸拡大率, double Y軸拡大率, Color 色, VariadicStream 描画する文字列) const =0</div><div class="ttdoc">拡大率を指定して文字を描画. </div></div>
-<div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Shape.h:129</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_font_html_a469998eaf4c3958996253d5b8da9560b"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#a469998eaf4c3958996253d5b8da9560b">SDX::IFont::Draw</a></div><div class="ttdeci">virtual bool Draw(const Point &amp;座標, Color 色, VariadicStream 描画する文字列) const =0</div><div class="ttdoc">文字を描画. </div></div>
-<div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:7</div></div>
-<div class="ttc" id="class_s_d_x_1_1_variadic_stream_html"><div class="ttname"><a href="class_s_d_x_1_1_variadic_stream.html">SDX::VariadicStream</a></div><div class="ttdoc">可変数引数な文字列を処理するクラス. </div><div class="ttdef"><b>Definition:</b> VariadicStream.h:8</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_font_html_a3294c5199bc3140f3d54353a99b23fbf"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#a3294c5199bc3140f3d54353a99b23fbf">SDX::IFont::DrawRotate</a></div><div class="ttdeci">virtual bool DrawRotate(const Point &amp;座標, double 拡大率, double 角度, Color 描画色, bool 反転フラグ, VariadicStream 描画する文字列) const =0</div><div class="ttdoc">文字を回転して描画. </div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Color.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Utility/VariadicStream.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_font.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_i_font.html">IFont</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_s_d_x_1_1_i_font.html">IFont</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列 , <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">DrawRotate</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> 拡大率, <span class="keywordtype">double</span> 角度, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">DrawExtend</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> X軸拡大率, <span class="keywordtype">double</span> Y軸拡大率, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列 , <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_i_font_html"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html">SDX::IFont</a></div><div class="ttdoc">Fontのインターフェース. </div><div class="ttdef"><b>Definition:</b> IFont.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_font_html_ad76df196db6490bbfbb1fe205f30d30f"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">SDX::IFont::Draw</a></div><div class="ttdeci">virtual bool Draw(const Point &amp;座標, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const =0</div><div class="ttdoc">文字を描画. </div></div>
+<div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_font_html_af92e08f09b52d8792009903c03ee8542"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">SDX::IFont::DrawExtend</a></div><div class="ttdeci">virtual bool DrawExtend(const Point &amp;座標, double X軸拡大率, double Y軸拡大率, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const =0</div><div class="ttdoc">拡大率を指定して文字を描画. </div></div>
+<div class="ttc" id="class_s_d_x_1_1_variadic_stream_html"><div class="ttname"><a href="class_s_d_x_1_1_variadic_stream.html">SDX::VariadicStream</a></div><div class="ttdoc">可変数引数な文字列を処理するクラス. </div><div class="ttdef"><b>Definition:</b> VariadicStream.h:25</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_font_html_a0cb58da36015d571717a351c58314510"><div class="ttname"><a href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">SDX::IFont::DrawRotate</a></div><div class="ttdeci">virtual bool DrawRotate(const Point &amp;座標, double 拡大率, double 角度, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const =0</div><div class="ttdoc">文字を回転して描画. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

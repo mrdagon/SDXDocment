@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -104,29 +104,125 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abe06cb1aea5b34acc5db1ecaf0b54fdd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#abe06cb1aea5b34acc5db1ecaf0b54fdd">Run</a> ()</td></tr>
 <tr class="memdesc:abe06cb1aea5b34acc5db1ecaf0b54fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行開始.  <a href="#abe06cb1aea5b34acc5db1ecaf0b54fdd">More...</a><br /></td></tr>
 <tr class="separator:abe06cb1aea5b34acc5db1ecaf0b54fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d878937ff26e770498a7e561852c650"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#a7d878937ff26e770498a7e561852c650">Remove</a> ()</td></tr>
-<tr class="memdesc:a7d878937ff26e770498a7e561852c650"><td class="mdescLeft">&#160;</td><td class="mdescRight">消滅したSceneを片付ける.  <a href="#a7d878937ff26e770498a7e561852c650">More...</a><br /></td></tr>
-<tr class="separator:a7d878937ff26e770498a7e561852c650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af74222a1300146c6718097636bf25f42"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#af74222a1300146c6718097636bf25f42">AddScene</a> (<a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> *追加するシーン)</td></tr>
-<tr class="memdesc:af74222a1300146c6718097636bf25f42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sceneを追加する.  <a href="#af74222a1300146c6718097636bf25f42">More...</a><br /></td></tr>
-<tr class="separator:af74222a1300146c6718097636bf25f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a626c6b595c86ea433cd8b7072f743b45"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#a626c6b595c86ea433cd8b7072f743b45">GetScene</a> (int インデックス)</td></tr>
-<tr class="memdesc:a626c6b595c86ea433cd8b7072f743b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">上からインデックス番目のシーンを取得.  <a href="#a626c6b595c86ea433cd8b7072f743b45">More...</a><br /></td></tr>
-<tr class="separator:a626c6b595c86ea433cd8b7072f743b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c759ba981f64f88335a09671acf1b7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#a06c759ba981f64f88335a09671acf1b7">AddScene</a> (std::shared_ptr&lt; <a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> &gt; 追加するシーン)</td></tr>
+<tr class="memdesc:a06c759ba981f64f88335a09671acf1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sceneを追加しスタックに積む.  <a href="#a06c759ba981f64f88335a09671acf1b7">More...</a><br /></td></tr>
+<tr class="separator:a06c759ba981f64f88335a09671acf1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1d2d8d52f0fb72d4aee0bbaf0d9912"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; <a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">GetScene</a> (int インデックス)</td></tr>
+<tr class="memdesc:a3a1d2d8d52f0fb72d4aee0bbaf0d9912"><td class="mdescLeft">&#160;</td><td class="mdescRight">上からインデックス番目のシーンを取得.  <a href="#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">More...</a><br /></td></tr>
+<tr class="separator:a3a1d2d8d52f0fb72d4aee0bbaf0d9912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ecb4607774c7fe94a36f3413802505"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#af5ecb4607774c7fe94a36f3413802505">ActiveScene</a> (int インデックス)</td></tr>
+<tr class="memdesc:af5ecb4607774c7fe94a36f3413802505"><td class="mdescLeft">&#160;</td><td class="mdescRight">上からインデックス番目のシーンをアクティブにする.  <a href="#af5ecb4607774c7fe94a36f3413802505">More...</a><br /></td></tr>
+<tr class="separator:af5ecb4607774c7fe94a36f3413802505"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77933f7444745f5834740ed8db982cb1"><td class="memItemLeft" align="right" valign="top">static bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_director.html#a77933f7444745f5834740ed8db982cb1">IsDraw</a> ()</td></tr>
+<tr class="memdesc:a77933f7444745f5834740ed8db982cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画更新フラグを設定.  <a href="#a77933f7444745f5834740ed8db982cb1">More...</a><br /></td></tr>
+<tr class="separator:a77933f7444745f5834740ed8db982cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>シーンを管理するクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣[サンプルコード作成中]</span></div>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//[サンプルコード作成中]</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleDirector()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    <span class="keyword">class </span>SceneA : <span class="keyword">public</span> IScene</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span>(Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了</span></div>
-<div class="line">    }</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line"></div>
+<div class="line">        Image back;</div>
+<div class="line"></div>
+<div class="line">        SceneA()</div>
+<div class="line">        {</div>
+<div class="line">            back.Make(640, 480);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        ~SceneA()</div>
+<div class="line">        {</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">void</span> Update()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.A.on)</div>
+<div class="line">            {</div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#af5ecb4607774c7fe94a36f3413802505">Director::ActiveScene</a>(1);</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on)</div>
+<div class="line">            {</div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">Director::GetScene</a>(0)-&gt;isEnd = <span class="keyword">true</span>;</div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">Director::GetScene</a>(1)-&gt;isEnd = <span class="keyword">true</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">void</span> Draw()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line"></div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>(&amp;back);</div>
+<div class="line">            <span class="keywordtype">double</span> x = <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(640.0);</div>
+<div class="line">            <span class="keywordtype">double</span> y = <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(480.0);</div>
+<div class="line">            Color color = { <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255) };</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ x, y, 30 }, color);</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>();</div>
+<div class="line"></div>
+<div class="line">            back.Draw({0,0});</div>
+<div class="line"></div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;現在のSceneはA\nAキーでScene切り替え、Returnで終了&quot;</span>);</div>
+<div class="line">        }</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">class </span>SceneB : <span class="keyword">public</span> IScene</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keyword">public</span>:</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">int</span> time = 0;</div>
+<div class="line"></div>
+<div class="line">        SceneB()</div>
+<div class="line">        {</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        ~SceneB()</div>
+<div class="line">        {</div>
+<div class="line"></div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordtype">void</span> Update()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line">            ++time;</div>
+<div class="line">            <span class="keywordflow">if</span> (time &gt; 640){ time = 0; }</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.A.on)</div>
+<div class="line">            {</div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#af5ecb4607774c7fe94a36f3413802505">Director::ActiveScene</a>(1);</div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on)</div>
+<div class="line">            { </div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">Director::GetScene</a>(0)-&gt;isEnd = <span class="keyword">true</span>;</div>
+<div class="line">                <a class="code" href="class_s_d_x_1_1_director.html#a3a1d2d8d52f0fb72d4aee0bbaf0d9912">Director::GetScene</a>(1)-&gt;isEnd = <span class="keyword">true</span>;</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordtype">void</span> Draw()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">        </span>{</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;現在のSceneはB\nAキーでScene切り替え、Returnで終了&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ 0, 100, time, 280 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>);</div>
+<div class="line">        }</div>
+<div class="line">    };</div>
+<div class="line"></div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//shared_ptrの関係でAとBでデストラクタを呼ばれるタイミングが変わる</span></div>
+<div class="line">    std::shared_ptr&lt;SceneA&gt; sceneA = std::make_shared&lt;SceneA&gt;();</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_director.html#a06c759ba981f64f88335a09671acf1b7">Director::AddScene</a>(sceneA);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_director.html#a06c759ba981f64f88335a09671acf1b7">Director::AddScene</a>(std::make_shared&lt;SceneB&gt;());</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_director.html#abe06cb1aea5b34acc5db1ecaf0b54fdd">Director::Run</a>();</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -157,32 +253,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7d878937ff26e770498a7e561852c650"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void SDX::Director::Remove </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>消滅したSceneを片付ける. </p>
-
-</div>
-</div>
-<a class="anchor" id="af74222a1300146c6718097636bf25f42"></a>
+<a class="anchor" id="a06c759ba981f64f88335a09671acf1b7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -192,7 +263,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void SDX::Director::AddScene </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> *&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a> &gt;&#160;</td>
           <td class="paramname"><em>追加するシーン</em></td><td>)</td>
           <td></td>
         </tr>
@@ -204,13 +275,13 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sceneを追加する. </p>
+<p>Sceneを追加しスタックに積む. </p>
 <p>追加したシーンがアクティブになる<br />
-既に追加されているシーンの場合アクティブ化する </p>
+ 既に追加されているシーンの場合アクティブにするだけ </p>
 
 </div>
 </div>
-<a class="anchor" id="a626c6b595c86ea433cd8b7072f743b45"></a>
+<a class="anchor" id="a3a1d2d8d52f0fb72d4aee0bbaf0d9912"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -218,7 +289,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a>* SDX::Director::GetScene </td>
+          <td class="memname">static std::shared_ptr&lt;<a class="el" href="class_s_d_x_1_1_i_scene.html">IScene</a>&gt; SDX::Director::GetScene </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>インデックス</em></td><td>)</td>
@@ -233,14 +304,66 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>上からインデックス番目のシーンを取得. </p>
+<p>0で現在アクティブなシーン、1で一つ前 </p>
+
+</div>
+</div>
+<a class="anchor" id="af5ecb4607774c7fe94a36f3413802505"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool SDX::Director::ActiveScene </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>インデックス</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>上からインデックス番目のシーンをアクティブにする. </p>
 <p>0で現在アクティブなシーン </p>
+
+</div>
+</div>
+<a class="anchor" id="a77933f7444745f5834740ed8db982cb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool&amp; SDX::Director::IsDraw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画更新フラグを設定. </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

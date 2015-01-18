@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -102,23 +102,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99d01f01530e889c9e39744b054c5982"><td class="memTemplParams" colspan="2"><a class="anchor" id="a99d01f01530e889c9e39744b054c5982"></a>
-template&lt;typename... TStream&gt; </td></tr>
-<tr class="memitem:a99d01f01530e889c9e39744b054c5982"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><b>VariadicStream</b> (TStream...文字列ストリーム)</td></tr>
+<tr class="memitem:a99d01f01530e889c9e39744b054c5982"><td class="memTemplParams" colspan="2">template&lt;typename... TStream&gt; </td></tr>
+<tr class="memitem:a99d01f01530e889c9e39744b054c5982"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_variadic_stream.html#a99d01f01530e889c9e39744b054c5982">VariadicStream</a> (TStream...文字列ストリーム)</td></tr>
+<tr class="memdesc:a99d01f01530e889c9e39744b054c5982"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="#a99d01f01530e889c9e39744b054c5982">More...</a><br /></td></tr>
 <tr class="separator:a99d01f01530e889c9e39744b054c5982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a86f6c2aeab1e88bfcd11312313aa6349"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a86f6c2aeab1e88bfcd11312313aa6349"></a>
-std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>StringS</b></td></tr>
+<tr class="memitem:a86f6c2aeab1e88bfcd11312313aa6349"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_variadic_stream.html#a86f6c2aeab1e88bfcd11312313aa6349">StringS</a></td></tr>
+<tr class="memdesc:a86f6c2aeab1e88bfcd11312313aa6349"><td class="mdescLeft">&#160;</td><td class="mdescRight">一行ずつの文字列.  <a href="#a86f6c2aeab1e88bfcd11312313aa6349">More...</a><br /></td></tr>
 <tr class="separator:a86f6c2aeab1e88bfcd11312313aa6349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>可変数引数な文字列を処理するクラス. </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//フォントを作成して文字列を描画する</span></div>
+<div class="line"><span class="keywordtype">bool</span> SampleFont()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//フォントの初期化</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line"></div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">Screen::SetBackColor</a>(<a class="code" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Color::Silver</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    {</div>
+<div class="line">        angle += 0.02;</div>
+<div class="line"></div>
+<div class="line">        fontA.Draw({ 10 , 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line">        fontB.Draw({ 10 , 200 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        fontA.DrawRotate({ 300, 100 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a99d01f01530e889c9e39744b054c5982"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename... TStream&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">SDX::VariadicStream::VariadicStream </td>
+          <td>(</td>
+          <td class="paramtype">TStream...&#160;</td>
+          <td class="paramname"><em>文字列ストリーム</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ. </p>
+<p>書式指定にはiomanipを使う </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a86f6c2aeab1e88bfcd11312313aa6349"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; SDX::VariadicStream::StringS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>一行ずつの文字列. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

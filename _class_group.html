@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -88,35 +88,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_system.html" title="ライブラリの初期化やシステム的な処理を行う関数群. ">SDX::System</a> </td><td>ライブラリの初期化やシステム的な処理を行う関数群 </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_window.html" title="ウィンドウを表すクラス. ">SDX::Window</a> </td><td>ウィンドウを表すクラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_window.html" title="アクティブなSubWindowを操作するクラス. ">SDX::Window</a> </td><td>アクティブウィンドウを扱うクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_wait.html" title="一時停止処理する関数群. ">SDX::Wait</a> </td><td>一時停止処理する関数群 </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_sub_window.html" title="ウィンドウを表すクラス. ">SDX::SubWindow</a> </td><td>ウィンドウの生成と管理クラス </td></tr>
+<tr>
+<td><a class="el" href="class_s_d_x_1_1_screen.html" title="アクティブなRendererを操作するクラス. ">SDX::Screen</a> </td><td>アクティブな描画先を扱うクラス </td></tr>
+<tr>
+<td><a class="el" href="class_s_d_x_1_1_renderer.html" title="描画先を表すクラス. ">SDX::Renderer</a> </td><td>描画領域の管理クラス </td></tr>
 <tr style="background:#ccccff">
 <td>描画 </td><td></td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_drawing.html" title="リソースを読み込まずに描画を行う関数群. ">SDX::Drawing</a> </td><td>リソースを読み込まずに描画を行う関数群 </td></tr>
 <tr>
+<td><a class="el" href="class_s_d_x_1_1_i_drawable.html" title="描画可能なクラスのインターフェース. ">SDX::IDrawable</a> </td><td>描画可能なクラスのインターフェース </td></tr>
+<tr>
 <td><a class="el" href="class_s_d_x_1_1_image.html" title="画像データを表すクラス. ">SDX::Image</a> </td><td>画像データを表すクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_i_font.html" title="Font,BmpFont等のインターフェース. ">SDX::IFont</a> </td><td>Font,BmpFont等のインターフェース </td></tr>
-<tr>
-<td><a class="el" href="class_s_d_x_1_1_font.html" title="フォントデータを表すクラス. ">SDX::Font</a> </td><td>フォントデータを表すクラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_font.html" title="TrueTypeFontとBMPFontをまとめて扱うクラス. ">SDX::Font</a> </td><td>フォントデータを表すクラス </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_color.html" title="色を表すクラス. ">SDX::Color</a> </td><td>色を表すクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_screen.html" title="描画先を表すクラス. ">SDX::Screen</a> </td><td>描画先を表すクラス </td></tr>
-<tr>
-<td><a class="el" href="class_s_d_x_1_1_thread_load.html" title="リソースの非同期読み込み設定関数群[非実装]. ">SDX::ThreadLoad</a> </td><td>リソースの非同期読み込み設定関数群[未実装] </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_loading.html" title="リソースの非同期読み込み支援関数. ">SDX::Loading</a> </td><td>リソースの非同期読み込み設定関数群 </td></tr>
 <tr style="background:#ccccff">
 <td>画像処理[未実装]</td><td></td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_blend.html" title="Image同士の合成処理を行う関数群[未実装]. ">SDX::Blend</a> </td><td>Image同士の合成処理を行う関数群[未実装] </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_blend_blt.html" title="イメージを合成して合成[未実装]. ">SDX::BlendBlt</a> </td><td>イメージを合成して作成[未実装] </td></tr>
-<tr>
 <td><a class="el" href="class_s_d_x_1_1_filter.html" title="Imageにフィルター処理を行う関数群[未実装]. ">SDX::Filter</a> </td><td>Imageにフィルター処理を行う関数群[未実装] </td></tr>
-<tr>
-<td><a class="el" href="class_s_d_x_1_1_filter_blt.html" title="フィルター処理したイメージを生成. ">SDX::FilterBlt</a> </td><td>フィルター処理したイメージを生成[未実装] </td></tr>
 <tr style="background:#ccccff">
 <td>音声、動画</td><td></td></tr>
 <tr>
@@ -125,8 +123,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td><a class="el" href="class_s_d_x_1_1_sound.html" title="効果音用音声を表すクラス. ">SDX::Sound</a> </td><td>効果音用音声を表すクラス </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_movie.html" title="動画を表すクラス[未実装]. ">SDX::Movie</a> </td><td>動画を表すクラス[未実装] </td></tr>
-<tr>
-<td><a class="el" href="class_s_d_x_1_1_movie_image.html" title="Imageクラスの動画版[未実装]. ">SDX::MovieImage</a> </td><td>Imageクラスの動画版[未実装] </td></tr>
 <tr style="background:#ccccff">
 <td>入力</td><td></td></tr>
 <tr>
@@ -140,7 +136,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_mouse.html" title="マウスの状態を表すクラス. ">SDX::Mouse</a> </td><td>マウスの状態を表すクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_touch.html">SDX::Touch</a> </td><td>マウスの状態を表すクラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_touch.html" title="タッチ操作. ">SDX::Touch</a> </td><td>タッチ操作の状態を表すクラス </td></tr>
+<tr>
+<td><a class="el" href="class_s_d_x_1_1_gesture.html" title="タッチ操作の各種ジェスチャー. ">SDX::Gesture</a> </td><td>タッチ操作の各種ジェスチャー </td></tr>
 <tr style="background:#8888ff">
 <th>フレームワーク </th><th>マルチメディアクラスを間接利用するクラス等 </th></tr>
 <tr style="background:#ccccff">
@@ -148,9 +146,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_image_pack.html" title="複数のImageをまとめるクラス. ">SDX::ImagePack</a> </td><td>複数のImageをまとめるクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_anime.html" title="Imageをまとめてコマ送りアニメとして表すクラス. ">SDX::Anime</a> </td><td>Imageをまとめてコマ送りアニメとして表すクラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_film.html" title="ImagePackにコマ毎の再生時間を追加したクラス. ">SDX::Film</a> </td><td>Imageをまとめてコマ送りアニメとして表すクラス </td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_bmp_font.html" title="ビットマップフォントを表すクラス. ">SDX::BmpFont</a> </td><td>ビットマップフォントを表すクラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_anime.html" title="Filmに再生状態を付与したクラス. ">SDX::Anime</a> </td><td>Imageをまとめてコマ送りアニメとして表すクラス </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_i_frame.html" title="描画用枠のインターフェース. ">SDX::IFrame</a> </td><td>描画用枠のインターフェース </td></tr>
 <tr>
@@ -160,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr style="background:#ccccff">
 <td>図形と当たり判定</td><td></td></tr>
 <tr>
-<td><a class="el" href="class_s_d_x_1_1_i_shape.html" title="位置情報を持つ図形の抽象クラス. ">SDX::IShape</a> </td><td>位置情報を持つ図形の抽象クラス </td></tr>
+<td><a class="el" href="class_s_d_x_1_1_i_shape.html" title="衝突判定可能な図形の抽象クラス. ">SDX::IShape</a> </td><td>位置情報を持つ図形の抽象クラス </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_complex.html" title="複合図形を表すクラス. ">SDX::Complex</a> </td><td>複合図形を表すクラス </td></tr>
 <tr>
@@ -185,6 +183,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <td><a class="el" href="class_s_d_x_1_1_sp_frame.html" title="IFrameスプライト. ">SDX::SpFrame</a> </td><td>IFrameのスプライト </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_sp_map.html" title="マップチップスプライト. ">SDX::SpMap</a> </td><td>マップチップのスプライト </td></tr>
+<tr>
+<td><a class="el" href="class_s_d_x_1_1_sp_null.html" title="描画しないNullスプライト. ">SDX::SpNull</a> </td><td>何も描画しないスプライト </td></tr>
 <tr style="background:#ccccff">
 <td>2Dモデル</td><td></td></tr>
 <tr>
@@ -204,16 +204,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_time.html" title="時間と日付を取得する関数群. ">SDX::Time</a> </td><td>時間と日付を取得する関数群 </td></tr>
 <tr>
-<td><a class="el" href="namespace_s_d_x_1_1_s_p_e_e_d.html" title="速度変化のポリシー. ">SDX::SPEED</a> </td><td>速度変化のポリシー </td></tr>
-<tr>
-<td><a class="el" href="namespace_s_d_x_1_1_m_o_t_i_o_n.html" title="Modelの移動パターンのポリシー. ">SDX::MOTION</a> </td><td>移動方法のポリシー </td></tr>
+<td><a class="el" href="namespace_s_d_x_1_1_m_o_t_i_o_n.html" title="移動パターンのポリシー. ">SDX::MOTION</a> </td><td>移動方法のポリシー郡 </td></tr>
 <tr>
 <td><a class="el" href="class_s_d_x_1_1_enum_array.html" title="列挙型を直接添字に使える配列. ">SDX::EnumArray</a> </td><td>列挙型用固定配列 </td></tr>
+<tr>
+<td><a class="el" href="namespace_s_d_x_1_1_s_p_e_e_d.html" title="変化する数値のポリシー. ">SDX::SPEED</a> </td><td>速度変化のポリシー郡 </td></tr>
 </table>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -102,59 +102,74 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d84ee57be80dde6e03adeb6e2775274"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_d_x_1_1_font.html">Font</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a3d84ee57be80dde6e03adeb6e2775274">GetFont</a> ()</td></tr>
-<tr class="memdesc:a3d84ee57be80dde6e03adeb6e2775274"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのフォントを取得する[SDL].  <a href="#a3d84ee57be80dde6e03adeb6e2775274">More...</a><br /></td></tr>
+<tr class="memdesc:a3d84ee57be80dde6e03adeb6e2775274"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのフォントを取得する.  <a href="#a3d84ee57be80dde6e03adeb6e2775274">More...</a><br /></td></tr>
 <tr class="separator:a3d84ee57be80dde6e03adeb6e2775274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af040c52d07aea90a2c46b8ff5612ac66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#af040c52d07aea90a2c46b8ff5612ac66">SetDefaultFont</a> (const char *フォント名, int 大きさ)</td></tr>
-<tr class="memdesc:af040c52d07aea90a2c46b8ff5612ac66"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのフォントを設定する.  <a href="#af040c52d07aea90a2c46b8ff5612ac66">More...</a><br /></td></tr>
-<tr class="separator:af040c52d07aea90a2c46b8ff5612ac66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e603f57975a94ec39421bb831973ed5"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a0e603f57975a94ec39421bb831973ed5">Line</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;始点, const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;終点, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, int 太さ)</td></tr>
-<tr class="memdesc:a0e603f57975a94ec39421bb831973ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">始点と終点を結ぶ直線を描画.  <a href="#a0e603f57975a94ec39421bb831973ed5">More...</a><br /></td></tr>
-<tr class="separator:a0e603f57975a94ec39421bb831973ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187d8e2094ac03a175f55d2ad60a1512"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a187d8e2094ac03a175f55d2ad60a1512">Rect</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, bool 塗りつぶしフラグ)</td></tr>
-<tr class="memdesc:a187d8e2094ac03a175f55d2ad60a1512"><td class="mdescLeft">&#160;</td><td class="mdescRight">左上の座標と大きさを指定して矩形を描画.  <a href="#a187d8e2094ac03a175f55d2ad60a1512">More...</a><br /></td></tr>
-<tr class="separator:a187d8e2094ac03a175f55d2ad60a1512"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b31893f59219c5152cadb08b99f7949"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a4b31893f59219c5152cadb08b99f7949">Circle</a> (const <a class="el" href="class_s_d_x_1_1_circle.html">Circle</a> &amp;円形, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, bool 塗りつぶしフラグ)</td></tr>
-<tr class="memdesc:a4b31893f59219c5152cadb08b99f7949"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心と半径を指定して円を描画.  <a href="#a4b31893f59219c5152cadb08b99f7949">More...</a><br /></td></tr>
-<tr class="separator:a4b31893f59219c5152cadb08b99f7949"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4832534368856cac2176877710a6387"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#ad4832534368856cac2176877710a6387">Oval</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;中心, int 幅, int 高さ, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, bool 塗りつぶしフラグ)</td></tr>
-<tr class="memdesc:ad4832534368856cac2176877710a6387"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心と外接する四角形の大きさを指定して楕円を描画.  <a href="#ad4832534368856cac2176877710a6387">More...</a><br /></td></tr>
-<tr class="separator:ad4832534368856cac2176877710a6387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ac53e6557adc20f611eeb638aa5040"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a21ac53e6557adc20f611eeb638aa5040">Triangle</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;頂点A, const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;頂点B, const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;頂点C, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, bool 塗りつぶしフラグ)</td></tr>
-<tr class="memdesc:a21ac53e6557adc20f611eeb638aa5040"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点を３つ指定して三角形を描画.  <a href="#a21ac53e6557adc20f611eeb638aa5040">More...</a><br /></td></tr>
-<tr class="separator:a21ac53e6557adc20f611eeb638aa5040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3618650c27fbaa32eddfdfb52fde9aa9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a3618650c27fbaa32eddfdfb52fde9aa9">Pixel</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色)</td></tr>
-<tr class="memdesc:a3618650c27fbaa32eddfdfb52fde9aa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定座標に点を描画.  <a href="#a3618650c27fbaa32eddfdfb52fde9aa9">More...</a><br /></td></tr>
-<tr class="separator:a3618650c27fbaa32eddfdfb52fde9aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba046f26ed5c5282abd446281debdd4d"><td class="memItemLeft" align="right" valign="top">static ColorData&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#aba046f26ed5c5282abd446281debdd4d">GetPixel</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標)</td></tr>
-<tr class="memdesc:aba046f26ed5c5282abd446281debdd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定座標の色を取得[未実装].  <a href="#aba046f26ed5c5282abd446281debdd4d">More...</a><br /></td></tr>
-<tr class="separator:aba046f26ed5c5282abd446281debdd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e690805234ee19bf6f3abe0e4b99b3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a93e690805234ee19bf6f3abe0e4b99b3">SetDefaultFont</a> (const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリング=true)</td></tr>
+<tr class="memdesc:a93e690805234ee19bf6f3abe0e4b99b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトのフォントを設定する.  <a href="#a93e690805234ee19bf6f3abe0e4b99b3">More...</a><br /></td></tr>
+<tr class="separator:a93e690805234ee19bf6f3abe0e4b99b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0697ad811535c732a5edf5806ee8e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a6c0697ad811535c732a5edf5806ee8e0">Line</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;始点, const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;終点, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, int 太さ=1)</td></tr>
+<tr class="memdesc:a6c0697ad811535c732a5edf5806ee8e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">始点と終点を結ぶ直線を描画.  <a href="#a6c0697ad811535c732a5edf5806ee8e0">More...</a><br /></td></tr>
+<tr class="separator:a6c0697ad811535c732a5edf5806ee8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53026c27c78acf010b31f7e91117a76e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Rect</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, bool 塗りつぶしフラグ=true)</td></tr>
+<tr class="memdesc:a53026c27c78acf010b31f7e91117a76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">左上の座標と大きさを指定して矩形を描画.  <a href="#a53026c27c78acf010b31f7e91117a76e">More...</a><br /></td></tr>
+<tr class="separator:a53026c27c78acf010b31f7e91117a76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28151c6f54694fb3d92a8ca8b809140a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Circle</a> (const <a class="el" href="class_s_d_x_1_1_circle.html">Circle</a> &amp;円形, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, int 太さ=0)</td></tr>
+<tr class="memdesc:a28151c6f54694fb3d92a8ca8b809140a"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心と半径を指定して円を描画.  <a href="#a28151c6f54694fb3d92a8ca8b809140a">More...</a><br /></td></tr>
+<tr class="separator:a28151c6f54694fb3d92a8ca8b809140a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf95683d1bf262a11e4ffa9189a49b2e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#adf95683d1bf262a11e4ffa9189a49b2e">Oval</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;中心, int 幅, int 高さ, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, int 太さ=0)</td></tr>
+<tr class="memdesc:adf95683d1bf262a11e4ffa9189a49b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">中心と外接する四角形の大きさを指定して楕円を描画.  <a href="#adf95683d1bf262a11e4ffa9189a49b2e">More...</a><br /></td></tr>
+<tr class="separator:adf95683d1bf262a11e4ffa9189a49b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a24b321e71b0300985064b20a1a6bd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#ae3a24b321e71b0300985064b20a1a6bd">Polygon</a> (std::vector&lt; <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &gt; 頂点, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, int 太さ=1)</td></tr>
+<tr class="memdesc:ae3a24b321e71b0300985064b20a1a6bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点を指定して多角形を描画.  <a href="#ae3a24b321e71b0300985064b20a1a6bd">More...</a><br /></td></tr>
+<tr class="separator:ae3a24b321e71b0300985064b20a1a6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e6357070500b8313f44988a329924ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a8e6357070500b8313f44988a329924ef">Triangle</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;中心座標, int 辺の長さ, double 角度, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, int 太さ=0)</td></tr>
+<tr class="memdesc:a8e6357070500b8313f44988a329924ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">正三角形を描画.  <a href="#a8e6357070500b8313f44988a329924ef">More...</a><br /></td></tr>
+<tr class="separator:a8e6357070500b8313f44988a329924ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092e46646cd28498fa0dae4682ef551d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a092e46646cd28498fa0dae4682ef551d">Pixel</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色)</td></tr>
+<tr class="memdesc:a092e46646cd28498fa0dae4682ef551d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定座標に点を描画.  <a href="#a092e46646cd28498fa0dae4682ef551d">More...</a><br /></td></tr>
+<tr class="separator:a092e46646cd28498fa0dae4682ef551d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3370b6d6bc54274a45df2fee4d9ed29c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a3370b6d6bc54274a45df2fee4d9ed29c">ImageFile</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, const char *ファイル名, bool 透過フラグ=true)</td></tr>
 <tr class="memdesc:a3370b6d6bc54274a45df2fee4d9ed29c"><td class="mdescLeft">&#160;</td><td class="mdescRight">画像を一時的にメモリに読み込んで描画.  <a href="#a3370b6d6bc54274a45df2fee4d9ed29c">More...</a><br /></td></tr>
 <tr class="separator:a3370b6d6bc54274a45df2fee4d9ed29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d6185e4363cdf47bb7faee48087cc8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a91d6185e4363cdf47bb7faee48087cc8">String</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列)</td></tr>
-<tr class="memdesc:a91d6185e4363cdf47bb7faee48087cc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#a91d6185e4363cdf47bb7faee48087cc8">More...</a><br /></td></tr>
-<tr class="separator:a91d6185e4363cdf47bb7faee48087cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a75bae9e9dbdb6f26abff04fe646dd7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">String</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列)</td></tr>
+<tr class="memdesc:a0a75bae9e9dbdb6f26abff04fe646dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#a0a75bae9e9dbdb6f26abff04fe646dd7">More...</a><br /></td></tr>
+<tr class="separator:a0a75bae9e9dbdb6f26abff04fe646dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>リソースを読み込まずに描画を行う関数群. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣色々描画してみる</span></div>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//色々描画してみる</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleDrawing()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a91d6185e4363cdf47bb7faee48087cc8">Drawing::String</a>({ 10, 10 }, Color::White, <span class="stringliteral">&quot;こんにちは&quot;</span>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;こんにちは&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0e603f57975a94ec39421bb831973ed5">Drawing::Line</a>({10, 100}, {100, 150}, Color::Blue, 3);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a6c0697ad811535c732a5edf5806ee8e0">Drawing::Line</a>({ 10, 100 }, { 100, 150 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, 3);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a6c0697ad811535c732a5edf5806ee8e0">Drawing::Line</a>({ 210, 100 }, { 100, 150 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>);</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a187d8e2094ac03a175f55d2ad60a1512">Drawing::Rect</a>({60, 200, 100, 250}, Color::Red, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ 50, 200, 50, 50 }, <a class="code" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Color::Green</a>,<span class="keyword">false</span>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ 75, 225, 50, 50 }, <a class="code" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Color::Green</a>, <span class="keyword">true</span>);</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a4b31893f59219c5152cadb08b99f7949">Drawing::Circle</a>({ 300, 200, 50 }, Color::Red, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>({ 255, 255, 255, 128 } , <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598">BlendMode::Alpha</a>);</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span>(Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了    </span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ 150, 200, 50 }, <a class="code" href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">Color::Red</a> );</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ 100, 200, 50 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, 5);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a8e6357070500b8313f44988a329924ef">Drawing::Triangle</a>({ 200, 200 }, 50, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a8e6357070500b8313f44988a329924ef">Drawing::Triangle</a>({ 150, 200 }, 100, angle, <a class="code" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Color::Green</a>, 5);</div>
+<div class="line">        </div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>();</div>
+<div class="line"></div>
+<div class="line">        angle += 0.1;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
@@ -182,11 +197,11 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>デフォルトのフォントを取得する[SDL]. </p>
+<p>デフォルトのフォントを取得する. </p>
 
 </div>
 </div>
-<a class="anchor" id="af040c52d07aea90a2c46b8ff5612ac66"></a>
+<a class="anchor" id="a93e690805234ee19bf6f3abe0e4b99b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -203,7 +218,19 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>大きさ</em>&#160;</td>
+          <td class="paramname"><em>大きさ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>行間</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>高品質レンダリング</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -222,7 +249,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0e603f57975a94ec39421bb831973ed5"></a>
+<a class="anchor" id="a6c0697ad811535c732a5edf5806ee8e0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -230,7 +257,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SDX::Drawing::Line </td>
+          <td class="memname">static void SDX::Drawing::Line </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
           <td class="paramname"><em>始点</em>, </td>
@@ -244,14 +271,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>太さ</em>&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -267,11 +294,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>始点と終点を結ぶ直線を描画. </p>
-<p>SDLは太さ指定不可 </p>
 
 </div>
 </div>
-<a class="anchor" id="a187d8e2094ac03a175f55d2ad60a1512"></a>
+<a class="anchor" id="a53026c27c78acf010b31f7e91117a76e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -279,7 +305,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SDX::Drawing::Rect </td>
+          <td class="memname">static void SDX::Drawing::Rect </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
           <td class="paramname"><em>領域</em>, </td>
@@ -287,14 +313,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>塗りつぶしフラグ</em>&#160;</td>
+          <td class="paramname"><em>塗りつぶしフラグ</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -313,7 +339,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4b31893f59219c5152cadb08b99f7949"></a>
+<a class="anchor" id="a28151c6f54694fb3d92a8ca8b809140a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -329,14 +355,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>塗りつぶしフラグ</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -352,11 +378,11 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>中心と半径を指定して円を描画. </p>
-<p>SDLは仮実装 </p>
+<p>太さに0を指定した場合塗りつぶし. 太さが1以上の場合処理が重い </p>
 
 </div>
 </div>
-<a class="anchor" id="ad4832534368856cac2176877710a6387"></a>
+<a class="anchor" id="adf95683d1bf262a11e4ffa9189a49b2e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -384,14 +410,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>塗りつぶしフラグ</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -407,11 +433,11 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>中心と外接する四角形の大きさを指定して楕円を描画. </p>
-<p>SDLは仮実装 </p>
+<p>太さに0を指定した場合塗りつぶし. 太さが1以上の場合処理が重い </p>
 
 </div>
 </div>
-<a class="anchor" id="a21ac53e6557adc20f611eeb638aa5040"></a>
+<a class="anchor" id="ae3a24b321e71b0300985064b20a1a6bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -419,34 +445,22 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void SDX::Drawing::Triangle </td>
+          <td class="memname">static void SDX::Drawing::Polygon </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
-          <td class="paramname"><em>頂点A</em>, </td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &gt;&#160;</td>
+          <td class="paramname"><em>頂点</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
-          <td class="paramname"><em>頂点B</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
-          <td class="paramname"><em>頂点C</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>塗りつぶしフラグ</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -461,12 +475,66 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>頂点を３つ指定して三角形を描画. </p>
-<p>SDLは塗りつぶし不可 </p>
+<p>頂点を指定して多角形を描画. </p>
 
 </div>
 </div>
-<a class="anchor" id="a3618650c27fbaa32eddfdfb52fde9aa9"></a>
+<a class="anchor" id="a8e6357070500b8313f44988a329924ef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SDX::Drawing::Triangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>中心座標</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>辺の長さ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>角度</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画色</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>正三角形を描画. </p>
+<p>太さに0を指定した場合塗りつぶし. 太さが1以上の場合処理が重い </p>
+
+</div>
+</div>
+<a class="anchor" id="a092e46646cd28498fa0dae4682ef551d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -482,7 +550,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>&#160;</td>
         </tr>
         <tr>
@@ -499,32 +567,6 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>指定座標に点を描画. </p>
-
-</div>
-</div>
-<a class="anchor" id="aba046f26ed5c5282abd446281debdd4d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static ColorData SDX::Drawing::GetPixel </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
-          <td class="paramname"><em>座標</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>指定座標の色を取得[未実装]. </p>
 
 </div>
 </div>
@@ -571,7 +613,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a91d6185e4363cdf47bb7faee48087cc8"></a>
+<a class="anchor" id="a0a75bae9e9dbdb6f26abff04fe646dd7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -587,13 +629,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
           <td class="paramname"><em>描画する文字列</em>&#160;</td>
         </tr>
         <tr>
@@ -617,7 +659,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

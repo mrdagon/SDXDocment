@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="class_s_d_x_1_1_joypad-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SDX::Joypad Class Reference</div>  </div>
@@ -103,8 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a875779b77a3c6fc9ede8af90e3fec97d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a875779b77a3c6fc9ede8af90e3fec97d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> ()</td></tr>
+<tr class="memitem:a875779b77a3c6fc9ede8af90e3fec97d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a875779b77a3c6fc9ede8af90e3fec97d">Open</a> ()</td></tr>
+<tr class="memdesc:a875779b77a3c6fc9ede8af90e3fec97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイパッドを起動.  <a href="#a875779b77a3c6fc9ede8af90e3fec97d">More...</a><br /></td></tr>
 <tr class="separator:a875779b77a3c6fc9ede8af90e3fec97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48a8e156fd21720b2eab8a1771787c81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a48a8e156fd21720b2eab8a1771787c81">Make</a> (<a class="el" href="namespace_s_d_x.html#a262353ebabeeb70d530796862077a5fe">PadType</a> パッドタイプ)</td></tr>
 <tr class="memdesc:a48a8e156fd21720b2eab8a1771787c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">パッドの作成.  <a href="#a48a8e156fd21720b2eab8a1771787c81">More...</a><br /></td></tr>
@@ -121,12 +122,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> ()</td></tr>
 <tr class="memitem:ad06b0bb7589c87f165c477123d395574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#ad06b0bb7589c87f165c477123d395574">SetInputType</a> (<a class="el" href="namespace_s_d_x.html#a262353ebabeeb70d530796862077a5fe">PadType</a> 入力タイプ)</td></tr>
 <tr class="memdesc:ad06b0bb7589c87f165c477123d395574"><td class="mdescLeft">&#160;</td><td class="mdescRight">パッドタイプの設定.  <a href="#ad06b0bb7589c87f165c477123d395574">More...</a><br /></td></tr>
 <tr class="separator:ad06b0bb7589c87f165c477123d395574"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a79991bc2123c23e6b19824b593906"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a02a79991bc2123c23e6b19824b593906">StartVibration</a> (double 強さ, int 振動ミリ秒)</td></tr>
-<tr class="memdesc:a02a79991bc2123c23e6b19824b593906"><td class="mdescLeft">&#160;</td><td class="mdescRight">パッドを振動させる[未実装].  <a href="#a02a79991bc2123c23e6b19824b593906">More...</a><br /></td></tr>
-<tr class="separator:a02a79991bc2123c23e6b19824b593906"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7840202931edf69f55f721a6f951a8eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a7840202931edf69f55f721a6f951a8eb">StopVibration</a> ()</td></tr>
-<tr class="memdesc:a7840202931edf69f55f721a6f951a8eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">パッドの振動を停止する[未実装].  <a href="#a7840202931edf69f55f721a6f951a8eb">More...</a><br /></td></tr>
-<tr class="separator:a7840202931edf69f55f721a6f951a8eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9bda8e314454791e781f49da918e58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_key.html">Key</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a1e9bda8e314454791e781f49da918e58">operator[]</a> (<a class="el" href="namespace_s_d_x.html#a3f6daed44c2ccf4dda2689130ab10b04">PadCode</a> index)</td></tr>
+<tr class="memdesc:a1e9bda8e314454791e781f49da918e58"><td class="mdescLeft">&#160;</td><td class="mdescRight">PadCodeでアクセス.  <a href="#a1e9bda8e314454791e781f49da918e58">More...</a><br /></td></tr>
+<tr class="separator:a1e9bda8e314454791e781f49da918e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -137,140 +135,198 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a31fac3e6a4b24a4f7c1d7c03ef94f1ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31fac3e6a4b24a4f7c1d7c03ef94f1ac"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>StickX</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a31fac3e6a4b24a4f7c1d7c03ef94f1ac">StickX</a> = 0</td></tr>
+<tr class="memdesc:a31fac3e6a4b24a4f7c1d7c03ef94f1ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイスティックの横方向入力 <br /></td></tr>
 <tr class="separator:a31fac3e6a4b24a4f7c1d7c03ef94f1ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0a54c7059614122d33c10f57d08053"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add0a54c7059614122d33c10f57d08053"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>StickY</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#add0a54c7059614122d33c10f57d08053">StickY</a> = 0</td></tr>
+<tr class="memdesc:add0a54c7059614122d33c10f57d08053"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジョイスティックの縦方向入力 <br /></td></tr>
 <tr class="separator:add0a54c7059614122d33c10f57d08053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af088311815220ca3cdcd861538b7935d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af088311815220ca3cdcd861538b7935d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>press</b> [32]</td></tr>
-<tr class="separator:af088311815220ca3cdcd861538b7935d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61cd2e325af720d6b7b4739d6a4ddb23"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61cd2e325af720d6b7b4739d6a4ddb23"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Down</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a61cd2e325af720d6b7b4739d6a4ddb23">Down</a></td></tr>
+<tr class="memdesc:a61cd2e325af720d6b7b4739d6a4ddb23"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a61cd2e325af720d6b7b4739d6a4ddb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62f572578b913496a10cdba1347167e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62f572578b913496a10cdba1347167e3"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Left</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a62f572578b913496a10cdba1347167e3">Left</a></td></tr>
+<tr class="memdesc:a62f572578b913496a10cdba1347167e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a62f572578b913496a10cdba1347167e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7767ab35e15e600b16ef43a47149817e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7767ab35e15e600b16ef43a47149817e"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Right</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a7767ab35e15e600b16ef43a47149817e">Right</a></td></tr>
+<tr class="memdesc:a7767ab35e15e600b16ef43a47149817e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a7767ab35e15e600b16ef43a47149817e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb5676adaed17fc56265a095201f93a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb5676adaed17fc56265a095201f93a4"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Up</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#abb5676adaed17fc56265a095201f93a4">Up</a></td></tr>
+<tr class="memdesc:abb5676adaed17fc56265a095201f93a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:abb5676adaed17fc56265a095201f93a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bb4aee9590b7387ac7c8c1105606334"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb4aee9590b7387ac7c8c1105606334"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button1</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a9bb4aee9590b7387ac7c8c1105606334">Button1</a></td></tr>
+<tr class="memdesc:a9bb4aee9590b7387ac7c8c1105606334"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a9bb4aee9590b7387ac7c8c1105606334"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c52a1ecc21b3d0b04a90f49a9d14471"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3c52a1ecc21b3d0b04a90f49a9d14471"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button2</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a3c52a1ecc21b3d0b04a90f49a9d14471">Button2</a></td></tr>
+<tr class="memdesc:a3c52a1ecc21b3d0b04a90f49a9d14471"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a3c52a1ecc21b3d0b04a90f49a9d14471"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a111b0b6600f9d51a03d855709bea2b9d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a111b0b6600f9d51a03d855709bea2b9d"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button3</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a111b0b6600f9d51a03d855709bea2b9d">Button3</a></td></tr>
+<tr class="memdesc:a111b0b6600f9d51a03d855709bea2b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a111b0b6600f9d51a03d855709bea2b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fce6103a0c6e66a19e3bf6d546958d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fce6103a0c6e66a19e3bf6d546958d2"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button4</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a2fce6103a0c6e66a19e3bf6d546958d2">Button4</a></td></tr>
+<tr class="memdesc:a2fce6103a0c6e66a19e3bf6d546958d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a2fce6103a0c6e66a19e3bf6d546958d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba93825da290de89e27138a8d0c3e362"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba93825da290de89e27138a8d0c3e362"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button5</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#aba93825da290de89e27138a8d0c3e362">Button5</a></td></tr>
+<tr class="memdesc:aba93825da290de89e27138a8d0c3e362"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:aba93825da290de89e27138a8d0c3e362"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eafd6794d8f65b53b19bf9b79548ac5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6eafd6794d8f65b53b19bf9b79548ac5"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button6</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a6eafd6794d8f65b53b19bf9b79548ac5">Button6</a></td></tr>
+<tr class="memdesc:a6eafd6794d8f65b53b19bf9b79548ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a6eafd6794d8f65b53b19bf9b79548ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26889703a1d7adccb4f7fbecf6b2c0da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26889703a1d7adccb4f7fbecf6b2c0da"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button7</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a26889703a1d7adccb4f7fbecf6b2c0da">Button7</a></td></tr>
+<tr class="memdesc:a26889703a1d7adccb4f7fbecf6b2c0da"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a26889703a1d7adccb4f7fbecf6b2c0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af814b626cf5664a0712ddfdaeb98e622"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af814b626cf5664a0712ddfdaeb98e622"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button8</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#af814b626cf5664a0712ddfdaeb98e622">Button8</a></td></tr>
+<tr class="memdesc:af814b626cf5664a0712ddfdaeb98e622"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:af814b626cf5664a0712ddfdaeb98e622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a795871d31e99190b3961b2cdee1d47d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a795871d31e99190b3961b2cdee1d47d9"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button9</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a795871d31e99190b3961b2cdee1d47d9">Button9</a></td></tr>
+<tr class="memdesc:a795871d31e99190b3961b2cdee1d47d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a795871d31e99190b3961b2cdee1d47d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0629562e78ef4a12f1a02c812244189a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0629562e78ef4a12f1a02c812244189a"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button10</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a0629562e78ef4a12f1a02c812244189a">Button10</a></td></tr>
+<tr class="memdesc:a0629562e78ef4a12f1a02c812244189a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a0629562e78ef4a12f1a02c812244189a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe621a8bb8e69b2f122b1b3157f134f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe621a8bb8e69b2f122b1b3157f134f4"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button11</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#abe621a8bb8e69b2f122b1b3157f134f4">Button11</a></td></tr>
+<tr class="memdesc:abe621a8bb8e69b2f122b1b3157f134f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:abe621a8bb8e69b2f122b1b3157f134f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a468677570bce806a1711c09e316b5aea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a468677570bce806a1711c09e316b5aea"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button12</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a468677570bce806a1711c09e316b5aea">Button12</a></td></tr>
+<tr class="memdesc:a468677570bce806a1711c09e316b5aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a468677570bce806a1711c09e316b5aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb03aaf4e77c202054cca4ead1df86fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb03aaf4e77c202054cca4ead1df86fc"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button13</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#adb03aaf4e77c202054cca4ead1df86fc">Button13</a></td></tr>
+<tr class="memdesc:adb03aaf4e77c202054cca4ead1df86fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:adb03aaf4e77c202054cca4ead1df86fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a783e8a0229f55141f9f8e0e19bc3b71e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a783e8a0229f55141f9f8e0e19bc3b71e"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button14</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a783e8a0229f55141f9f8e0e19bc3b71e">Button14</a></td></tr>
+<tr class="memdesc:a783e8a0229f55141f9f8e0e19bc3b71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a783e8a0229f55141f9f8e0e19bc3b71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebe0ef9f87bbc9d0e8292e281c3afd20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebe0ef9f87bbc9d0e8292e281c3afd20"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button15</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#aebe0ef9f87bbc9d0e8292e281c3afd20">Button15</a></td></tr>
+<tr class="memdesc:aebe0ef9f87bbc9d0e8292e281c3afd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:aebe0ef9f87bbc9d0e8292e281c3afd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a343514dc06e35eda829dda87841201c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a343514dc06e35eda829dda87841201c9"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button16</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a343514dc06e35eda829dda87841201c9">Button16</a></td></tr>
+<tr class="memdesc:a343514dc06e35eda829dda87841201c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a343514dc06e35eda829dda87841201c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4083b7c3e1fe95ab90a7bbb2eba7accc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4083b7c3e1fe95ab90a7bbb2eba7accc"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button17</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a4083b7c3e1fe95ab90a7bbb2eba7accc">Button17</a></td></tr>
+<tr class="memdesc:a4083b7c3e1fe95ab90a7bbb2eba7accc"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a4083b7c3e1fe95ab90a7bbb2eba7accc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57959b2199a665a60a4f87c4ac524c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae57959b2199a665a60a4f87c4ac524c9"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button18</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#ae57959b2199a665a60a4f87c4ac524c9">Button18</a></td></tr>
+<tr class="memdesc:ae57959b2199a665a60a4f87c4ac524c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:ae57959b2199a665a60a4f87c4ac524c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60833a1d95e19b09708cff67f5dca981"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60833a1d95e19b09708cff67f5dca981"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button19</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a60833a1d95e19b09708cff67f5dca981">Button19</a></td></tr>
+<tr class="memdesc:a60833a1d95e19b09708cff67f5dca981"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a60833a1d95e19b09708cff67f5dca981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc70a2eff978f8093e4633d5905f34ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc70a2eff978f8093e4633d5905f34ca"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button20</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#adc70a2eff978f8093e4633d5905f34ca">Button20</a></td></tr>
+<tr class="memdesc:adc70a2eff978f8093e4633d5905f34ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:adc70a2eff978f8093e4633d5905f34ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac547bd7fbde37a129eacf1fbe0d18ec0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac547bd7fbde37a129eacf1fbe0d18ec0"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button21</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#ac547bd7fbde37a129eacf1fbe0d18ec0">Button21</a></td></tr>
+<tr class="memdesc:ac547bd7fbde37a129eacf1fbe0d18ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:ac547bd7fbde37a129eacf1fbe0d18ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f17185d4df390bb299bbd9808b4aee0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f17185d4df390bb299bbd9808b4aee0"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button22</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a1f17185d4df390bb299bbd9808b4aee0">Button22</a></td></tr>
+<tr class="memdesc:a1f17185d4df390bb299bbd9808b4aee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a1f17185d4df390bb299bbd9808b4aee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f52b9bf475e8aac930f35a54b804b5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f52b9bf475e8aac930f35a54b804b5a"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button23</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a0f52b9bf475e8aac930f35a54b804b5a">Button23</a></td></tr>
+<tr class="memdesc:a0f52b9bf475e8aac930f35a54b804b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a0f52b9bf475e8aac930f35a54b804b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7861c9c16edf4661e0d2601567ef3d77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7861c9c16edf4661e0d2601567ef3d77"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button24</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a7861c9c16edf4661e0d2601567ef3d77">Button24</a></td></tr>
+<tr class="memdesc:a7861c9c16edf4661e0d2601567ef3d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a7861c9c16edf4661e0d2601567ef3d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf5d9a3a48f282415f5c4eccef47d33b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf5d9a3a48f282415f5c4eccef47d33b"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button25</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#abf5d9a3a48f282415f5c4eccef47d33b">Button25</a></td></tr>
+<tr class="memdesc:abf5d9a3a48f282415f5c4eccef47d33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:abf5d9a3a48f282415f5c4eccef47d33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac51e9f01261cd814a2c5de710e5ac2e5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac51e9f01261cd814a2c5de710e5ac2e5"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button26</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#ac51e9f01261cd814a2c5de710e5ac2e5">Button26</a></td></tr>
+<tr class="memdesc:ac51e9f01261cd814a2c5de710e5ac2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:ac51e9f01261cd814a2c5de710e5ac2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3c736fa17827755aa768322f82983e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3c736fa17827755aa768322f82983e2"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button27</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#ac3c736fa17827755aa768322f82983e2">Button27</a></td></tr>
+<tr class="memdesc:ac3c736fa17827755aa768322f82983e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:ac3c736fa17827755aa768322f82983e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6391c9d945b600de0f4e3aebb9f76072"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6391c9d945b600de0f4e3aebb9f76072"></a>
-<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Button28</b></td></tr>
+<a class="el" href="class_s_d_x_1_1_key.html">Key</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_joypad.html#a6391c9d945b600de0f4e3aebb9f76072">Button28</a></td></tr>
+<tr class="memdesc:a6391c9d945b600de0f4e3aebb9f76072"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー <br /></td></tr>
 <tr class="separator:a6391c9d945b600de0f4e3aebb9f76072"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a9732a2f3b51c8d069f54b1a13fb64c68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9732a2f3b51c8d069f54b1a13fb64c68"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Input</b></td></tr>
+<tr class="separator:a9732a2f3b51c8d069f54b1a13fb64c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ジョイパッドの状態を表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣入力を取得する</span></div>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000012">Todo:</a></b></dt><dd>2つ目以降のjoypad対応未実装 </dd></dl>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//入力を取得する</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleInput()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
-<div class="line">    std::string message = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">    std::string message = <span class="stringliteral">&quot;クリックするかZキーを押して&quot;</span>;</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::mouse.Left.on)  message = <span class="stringliteral">&quot;クリックした&quot;</span>;</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::mouse.Left.off) message = <span class="stringliteral">&quot;離した&quot;</span>;</div>
-<div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Z.hold           ) message = <span class="stringliteral">&quot;Zを押している&quot;</span>;</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Z.holdCount &gt; 60 ) message = <span class="stringliteral">&quot;Zを長押し&quot;</span>;</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_joypad.html#a62f572578b913496a10cdba1347167e3">Left</a>.<a class="code" href="class_s_d_x_1_1_key.html#a26d46608256468553f3f6c6d8a213d22">on</a>){ message = <span class="stringliteral">&quot;クリックした&quot;</span>; }</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_joypad.html#a62f572578b913496a10cdba1347167e3">Left</a>.<a class="code" href="class_s_d_x_1_1_key.html#a08317b59f9fe80584199fb23bfd1afef">off</a>){ message = <span class="stringliteral">&quot;離した&quot;</span>; }</div>
+<div class="line">    </div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>[KeyCode::Z].hold){ message = <span class="stringliteral">&quot;Zを押している&quot;</span>; }<span class="comment">//列挙子でのキー指定も可能</span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Z.holdCount &gt; 60){ message = <span class="stringliteral">&quot;Zを長押し&quot;</span>; }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//マウスの位置に文字を描画</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a91d6185e4363cdf47bb7faee48087cc8">Drawing::String</a>({ Input::mouse.x, Input::mouse.y }, Color::White, message.c_str());</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#ab4282deb9545d77b69649fa71773fddb">x</a>, <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#a9cc8482282bfae916976c02466bdc116">y</a> }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, message.c_str());</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了    </span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a875779b77a3c6fc9ede8af90e3fec97d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::Joypad::Open </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ジョイパッドを起動. </p>
+
+</div>
+</div>
 <a class="anchor" id="a48a8e156fd21720b2eab8a1771787c81"></a>
 <div class="memitem">
 <div class="memproto">
@@ -358,53 +414,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>press</b> [32]</td></
 
 </div>
 </div>
-<a class="anchor" id="a02a79991bc2123c23e6b19824b593906"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SDX::Joypad::StartVibration </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>強さ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>振動ミリ秒</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>パッドを振動させる[未実装]. </p>
-<p>指定した強さ(0.0～1.0)で指定ミリ秒パッドを振動させる<br />
-時間が-1の場合、StopVibration関数を呼ぶまで振動させる </p>
-
-</div>
-</div>
-<a class="anchor" id="a7840202931edf69f55f721a6f951a8eb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SDX::Joypad::StopVibration </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>パッドの振動を停止する[未実装]. </p>
-
-</div>
-</div>
 <a class="anchor" id="a2fda9c2d1eb95b768dd08942189f9ea7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -430,10 +439,29 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>press</b> [32]</td></
 
 </div>
 </div>
+<a class="anchor" id="a1e9bda8e314454791e781f49da918e58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_d_x_1_1_key.html">Key</a>&amp; SDX::Joypad::operator[] </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_s_d_x.html#a3f6daed44c2ccf4dda2689130ab10b04">PadCode</a>&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PadCodeでアクセス. </p>
+<p>PadCode::COUNTや範囲外の場合Button1を返す </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

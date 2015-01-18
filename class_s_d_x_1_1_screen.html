@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -88,108 +88,115 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_s_d_x_1_1_screen-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SDX::Screen Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>描画先を表すクラス.  
+<p>アクティブなRendererを操作するクラス.  
  <a href="class_s_d_x_1_1_screen.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_screen_8h_source.html">Screen.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ac8b735b095085cfdeb1c92a081c5deec"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_d_x_1_1_screen.html">Screen</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a> ()</td></tr>
-<tr class="memdesc:ac8b735b095085cfdeb1c92a081c5deec"><td class="mdescLeft">&#160;</td><td class="mdescRight">シングルトンなインスタンスを取得.  <a href="#ac8b735b095085cfdeb1c92a081c5deec">More...</a><br /></td></tr>
-<tr class="separator:ac8b735b095085cfdeb1c92a081c5deec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbcf348129e66aa3166f50c2536e5bf5"><td class="memItemLeft" align="right" valign="top">static RendererHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">GetHandle</a> ()</td></tr>
-<tr class="memdesc:adbcf348129e66aa3166f50c2536e5bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクリーンハンドルを取得.  <a href="#adbcf348129e66aa3166f50c2536e5bf5">More...</a><br /></td></tr>
-<tr class="separator:adbcf348129e66aa3166f50c2536e5bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bc3da393677827956230bae1bd695a4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a4bc3da393677827956230bae1bd695a4">SetRenderer</a> (<a class="el" href="class_s_d_x_1_1_renderer.html">Renderer</a> &amp;描画先Renderer)</td></tr>
-<tr class="memdesc:a4bc3da393677827956230bae1bd695a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクリーンハンドルを設定.  <a href="#a4bc3da393677827956230bae1bd695a4">More...</a><br /></td></tr>
-<tr class="separator:a4bc3da393677827956230bae1bd695a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71d42b23c4af04d12ccac11801f801e8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a71d42b23c4af04d12ccac11801f801e8">SetArea</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;描画領域)</td></tr>
-<tr class="memdesc:a71d42b23c4af04d12ccac11801f801e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画範囲を設定する、設定範囲外には描画されない[未実装].  <a href="#a71d42b23c4af04d12ccac11801f801e8">More...</a><br /></td></tr>
-<tr class="separator:a71d42b23c4af04d12ccac11801f801e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673f3b078efb780eb64df95d2ed72941"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a673f3b078efb780eb64df95d2ed72941">SetBackColor</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 背景色)</td></tr>
-<tr class="memdesc:a673f3b078efb780eb64df95d2ed72941"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen::Clear後の色を設定.  <a href="#a673f3b078efb780eb64df95d2ed72941">More...</a><br /></td></tr>
-<tr class="separator:a673f3b078efb780eb64df95d2ed72941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a464df43da2fb85be486d7337309b194c"><td class="memItemLeft" align="right" valign="top">static SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">GetHandle</a> ()</td></tr>
+<tr class="memdesc:a464df43da2fb85be486d7337309b194c"><td class="mdescLeft">&#160;</td><td class="mdescRight">スクリーンハンドルを取得.  <a href="#a464df43da2fb85be486d7337309b194c">More...</a><br /></td></tr>
+<tr class="separator:a464df43da2fb85be486d7337309b194c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a18d8aa6c37b391052eb3ff4a2003b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_d_x_1_1_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">GetRenderer</a> ()</td></tr>
+<tr class="memdesc:a7a18d8aa6c37b391052eb3ff4a2003b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなRendererを取得.  <a href="#a7a18d8aa6c37b391052eb3ff4a2003b5">More...</a><br /></td></tr>
+<tr class="separator:a7a18d8aa6c37b391052eb3ff4a2003b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12eda6cb5489822af0df7640a75b7196"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">SetRenderer</a> (<a class="el" href="class_s_d_x_1_1_renderer.html">Renderer</a> &amp;描画先Renderer=<a class="el" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a>)</td></tr>
+<tr class="memdesc:a12eda6cb5489822af0df7640a75b7196"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブなRendererを設定.  <a href="#a12eda6cb5489822af0df7640a75b7196">More...</a><br /></td></tr>
+<tr class="separator:a12eda6cb5489822af0df7640a75b7196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2660c5800b998f53a7bb4387d07a3cfe"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">SetTarget</a> (<a class="el" href="class_s_d_x_1_1_image.html">Image</a> *描画対象=nullptr)</td></tr>
+<tr class="memdesc:a2660c5800b998f53a7bb4387d07a3cfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画先を変更.  <a href="#a2660c5800b998f53a7bb4387d07a3cfe">More...</a><br /></td></tr>
+<tr class="separator:a2660c5800b998f53a7bb4387d07a3cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7cd559674dfc6d5dd5d7bb974c08e5a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#af7cd559674dfc6d5dd5d7bb974c08e5a">GetTarget</a> ()</td></tr>
+<tr class="memdesc:af7cd559674dfc6d5dd5d7bb974c08e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画先Imageを取得.  <a href="#af7cd559674dfc6d5dd5d7bb974c08e5a">More...</a><br /></td></tr>
+<tr class="separator:af7cd559674dfc6d5dd5d7bb974c08e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abda2a2a9a53995c607a50140adcf9d13"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">Flip</a> ()</td></tr>
 <tr class="memdesc:abda2a2a9a53995c607a50140adcf9d13"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画内容を反映.  <a href="#abda2a2a9a53995c607a50140adcf9d13">More...</a><br /></td></tr>
 <tr class="separator:abda2a2a9a53995c607a50140adcf9d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf49a63164918a98c99bf04e1d70550e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#adf49a63164918a98c99bf04e1d70550e">Copy</a> ()</td></tr>
-<tr class="memdesc:adf49a63164918a98c99bf04e1d70550e"><td class="mdescLeft">&#160;</td><td class="mdescRight">裏画面の内容を、表画面にコピー.  <a href="#adf49a63164918a98c99bf04e1d70550e">More...</a><br /></td></tr>
-<tr class="separator:adf49a63164918a98c99bf04e1d70550e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99fbf08357a846871cd71453da4bf11"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">Clear</a> ()</td></tr>
 <tr class="memdesc:aa99fbf08357a846871cd71453da4bf11"><td class="mdescLeft">&#160;</td><td class="mdescRight">画面を消去する.  <a href="#aa99fbf08357a846871cd71453da4bf11">More...</a><br /></td></tr>
 <tr class="separator:aa99fbf08357a846871cd71453da4bf11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf7a7a256567c36051d92ae7ab891fe4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">SetBlendMode</a> (<a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード, int 設定値)</td></tr>
-<tr class="memdesc:abf7a7a256567c36051d92ae7ab891fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレンド描画のモードを設定.  <a href="#abf7a7a256567c36051d92ae7ab891fe4">More...</a><br /></td></tr>
-<tr class="separator:abf7a7a256567c36051d92ae7ab891fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c0b1cc915c890e81c7037c115577e70"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a0c0b1cc915c890e81c7037c115577e70">SaveBmp</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域, const char *ファイル名)</td></tr>
-<tr class="memdesc:a0c0b1cc915c890e81c7037c115577e70"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画対象になっている画面の一部をBMP形式で保存[未実装].  <a href="#a0c0b1cc915c890e81c7037c115577e70">More...</a><br /></td></tr>
-<tr class="separator:a0c0b1cc915c890e81c7037c115577e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f79bc00321c96d055a761cb026940a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">SetBright</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 輝度)</td></tr>
-<tr class="memdesc:a99f79bc00321c96d055a761cb026940a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画輝度を設定.  <a href="#a99f79bc00321c96d055a761cb026940a">More...</a><br /></td></tr>
-<tr class="separator:a99f79bc00321c96d055a761cb026940a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21420de6ed982068e83bb5034e68303d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a21420de6ed982068e83bb5034e68303d">SetTransColor</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 輝度)</td></tr>
-<tr class="memdesc:a21420de6ed982068e83bb5034e68303d"><td class="mdescLeft">&#160;</td><td class="mdescRight">透過色を設定[未実装].  <a href="#a21420de6ed982068e83bb5034e68303d">More...</a><br /></td></tr>
-<tr class="separator:a21420de6ed982068e83bb5034e68303d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a2c80df8242a14e80fe31d3551a943838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c80df8242a14e80fe31d3551a943838"></a>
-<a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>nowBlendMode</b> = BlendMode::NoBlend</td></tr>
-<tr class="separator:a2c80df8242a14e80fe31d3551a943838"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af70d36474c7ad2fc0bc1c5c427a080ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af70d36474c7ad2fc0bc1c5c427a080ad"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td></tr>
-<tr class="separator:af70d36474c7ad2fc0bc1c5c427a080ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0af3943974898f41a534e899d101f7e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0af3943974898f41a534e899d101f7e1"></a>
-<a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>clearColor</b> = <a class="el" href="class_s_d_x_1_1_color.html">Color</a>(0, 0, 0)</td></tr>
-<tr class="separator:a0af3943974898f41a534e899d101f7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9c4eaa1924f3401ce0edbd71ea1ac0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9c4eaa1924f3401ce0edbd71ea1ac0d"></a>
-<a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>rgba</b> = <a class="el" href="class_s_d_x_1_1_color.html">Color</a>(255, 255, 255, 0)</td></tr>
-<tr class="separator:ad9c4eaa1924f3401ce0edbd71ea1ac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7172e71f864db4fdd9344b28aae9aa52"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">SetClip</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;非描画領域={0, 0, 0, 0})</td></tr>
+<tr class="memdesc:a7172e71f864db4fdd9344b28aae9aa52"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画領域を設定する、設定範囲外には描画されない.  <a href="#a7172e71f864db4fdd9344b28aae9aa52">More...</a><br /></td></tr>
+<tr class="separator:a7172e71f864db4fdd9344b28aae9aa52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a2c286c76b740ac4b44dd968fc9e5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">SetBackColor</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;背景色)</td></tr>
+<tr class="memdesc:ab5a2c286c76b740ac4b44dd968fc9e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen::Clear後の色を設定.  <a href="#ab5a2c286c76b740ac4b44dd968fc9e5c">More...</a><br /></td></tr>
+<tr class="separator:ab5a2c286c76b740ac4b44dd968fc9e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf836ca1608ed4ca1161a856a22b4676"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">SetBright</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;輝度=<a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>)</td></tr>
+<tr class="memdesc:acf836ca1608ed4ca1161a856a22b4676"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画輝度を設定.  <a href="#acf836ca1608ed4ca1161a856a22b4676">More...</a><br /></td></tr>
+<tr class="separator:acf836ca1608ed4ca1161a856a22b4676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99498ee22abe812e8ea7d152ddf50916"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a99498ee22abe812e8ea7d152ddf50916">SetBlendMode</a> (<a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード=<a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba97d7b134c46d41b1f15de713f0fd7d05">BlendMode::NoBlend</a>, int 設定値=255)</td></tr>
+<tr class="memdesc:a99498ee22abe812e8ea7d152ddf50916"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレンド描画のモードを設定.  <a href="#a99498ee22abe812e8ea7d152ddf50916">More...</a><br /></td></tr>
+<tr class="separator:a99498ee22abe812e8ea7d152ddf50916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26da77095152626487bf45ad44fad309"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26da77095152626487bf45ad44fad309"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">SetDrawMode</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;輝度＋α値=<a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード=<a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598">BlendMode::Alpha</a>)</td></tr>
+<tr class="memdesc:a26da77095152626487bf45ad44fad309"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画輝度と描画モードをまとめて設定 <br /></td></tr>
+<tr class="separator:a26da77095152626487bf45ad44fad309"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>描画先を表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣初期化を行い何かキーを押すと終了する</span></div>
+<div class="textblock"><p>アクティブなRendererを操作するクラス. </p>
+<p>ScreenにあってRendereに無い関数は[Screen専用]と表記. </p><div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//初期化を行い何かキーを押すと終了する</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"></div>
 <div class="line"><span class="keywordtype">bool</span> SampleScreen()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_image.html">Image</a> image(<span class="stringliteral">&quot;image.bmp&quot;</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image.html">Image</a> image(<span class="stringliteral">&quot;data/pipo-enemy035.png&quot;</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image.html">Image</a> back;</div>
+<div class="line">    back.<a class="code" href="class_s_d_x_1_1_image.html#a543231a2f06838779ba90b97e28312a1">Make</a>(640, 480);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
+<div class="line">        <span class="comment">//背景描画</span></div>
+<div class="line">        back.Draw({ 0, 0 });</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//輝度を変更して描画</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">Screen::SetBright</a>(Color::Red);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">Screen::SetBright</a>(<a class="code" href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">Color::Red</a>);</div>
 <div class="line">        image.Draw({ 0, 0 });</div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">Screen::SetBright</a>(Color::Green);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">Screen::SetBright</a>(<a class="code" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Color::Green</a>);</div>
+<div class="line">        image.Draw({ 100, 0 });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">Screen::SetBright</a>(<a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>);</div>
 <div class="line">        image.Draw({ 200, 0 });</div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">Screen::SetBright</a>(Color::Blue);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">//描画モード変更</span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>({ 255, 255, 255, 128 }, <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598">BlendMode::Alpha</a>);</div>
+<div class="line">        image.Draw({ 300, 0 });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>({ 255, 255, 255, 128 }, <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3baec211f7c20af43e742bf2570c3cb84f9">BlendMode::Add</a>);</div>
 <div class="line">        image.Draw({ 400, 0 });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>({ 255, 255, 255, 128 }, <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba601752081a111703ab466b2e6302c24e">BlendMode::Mula</a>);</div>
+<div class="line">        image.Draw({ 500, 0 });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">Screen::SetDrawMode</a>();<span class="comment">//引数無しで解除</span></div>
 <div class="line"></div>
-<div class="line">        <span class="comment">//半透明描画</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">Screen::SetBright</a>(Color::White);</div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">Screen::SetBlendMode</a>(BlendMode::Alpha, 128);</div>
-<div class="line">        image.Draw({ 0, 200 });</div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">Screen::SetBlendMode</a>(BlendMode::NoBlend, 0);</div>
+<div class="line">        <span class="comment">//描画範囲制御</span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">Screen::SetClip</a>({ 0, 100 , 60, 120 });</div>
+<div class="line">        image.Draw({ 0, 100 });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">Screen::SetClip</a>();<span class="comment">//引数無しで解除</span></div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了</span></div>
+<div class="line">        <span class="comment">//描画先変更</span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>(&amp;back);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(590), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(430), 50, 50 },<a class="code" href="class_s_d_x_1_1_color.html#aba7a2b19c2154dcc42b65663aaa12b2e">Color::Gray</a>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>();</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ac8b735b095085cfdeb1c92a081c5deec"></a>
+<a class="anchor" id="a464df43da2fb85be486d7337309b194c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -197,32 +204,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_s_d_x_1_1_screen.html">Screen</a>&amp; SDX::Screen::Single </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>シングルトンなインスタンスを取得. </p>
-
-</div>
-</div>
-<a class="anchor" id="adbcf348129e66aa3166f50c2536e5bf5"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static RendererHandle SDX::Screen::GetHandle </td>
+          <td class="memname">static SDL_Renderer* SDX::Screen::GetHandle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -236,10 +218,37 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 </div><div class="memdoc">
 
 <p>スクリーンハンドルを取得. </p>
+<p>[Screen専用] </p>
 
 </div>
 </div>
-<a class="anchor" id="a4bc3da393677827956230bae1bd695a4"></a>
+<a class="anchor" id="a7a18d8aa6c37b391052eb3ff4a2003b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_s_d_x_1_1_renderer.html">Renderer</a>* SDX::Screen::GetRenderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>アクティブなRendererを取得. </p>
+<p>[Screen専用] </p>
+
+</div>
+</div>
+<a class="anchor" id="a12eda6cb5489822af0df7640a75b7196"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -250,7 +259,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
           <td class="memname">static void SDX::Screen::SetRenderer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_s_d_x_1_1_renderer.html">Renderer</a> &amp;&#160;</td>
-          <td class="paramname"><em>描画先Renderer</em></td><td>)</td>
+          <td class="paramname"><em>描画先Renderer</em> = <code><a class="el" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a></code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -261,11 +270,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 </table>
 </div><div class="memdoc">
 
-<p>スクリーンハンドルを設定. </p>
+<p>アクティブなRendererを設定. </p>
+<p>[Screen専用] </p>
 
 </div>
 </div>
-<a class="anchor" id="a71d42b23c4af04d12ccac11801f801e8"></a>
+<a class="anchor" id="a2660c5800b998f53a7bb4387d07a3cfe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -273,10 +283,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SDX::Screen::SetArea </td>
+          <td class="memname">static bool SDX::Screen::SetTarget </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
-          <td class="paramname"><em>描画領域</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>描画対象</em> = <code>nullptr</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -287,11 +297,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 </table>
 </div><div class="memdoc">
 
-<p>描画範囲を設定する、設定範囲外には描画されない[未実装]. </p>
+<p>描画先を変更. </p>
+<p>引数がnullptrの場合、デフォルトに戻す Image::Makeで作成したTextureのみ有効. </p>
 
 </div>
 </div>
-<a class="anchor" id="a673f3b078efb780eb64df95d2ed72941"></a>
+<a class="anchor" id="af7cd559674dfc6d5dd5d7bb974c08e5a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -299,10 +310,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SDX::Screen::SetBackColor </td>
+          <td class="memname">static <a class="el" href="class_s_d_x_1_1_image.html">Image</a>* SDX::Screen::GetTarget </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>背景色</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -313,7 +323,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 </table>
 </div><div class="memdoc">
 
-<p>Screen::Clear後の色を設定. </p>
+<p>描画先Imageを取得. </p>
+<p>返り値がnullptrの場合、デフォルトの描画先 </p>
 
 </div>
 </div>
@@ -339,31 +350,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 </div><div class="memdoc">
 
 <p>描画内容を反映. </p>
-
-</div>
-</div>
-<a class="anchor" id="adf49a63164918a98c99bf04e1d70550e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool SDX::Screen::Copy </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>裏画面の内容を、表画面にコピー. </p>
+<p>[Screen専用] </p>
 
 </div>
 </div>
@@ -392,7 +379,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 
 </div>
 </div>
-<a class="anchor" id="abf7a7a256567c36051d92ae7ab891fe4"></a>
+<a class="anchor" id="a7172e71f864db4fdd9344b28aae9aa52"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -400,16 +387,95 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static bool SDX::Screen::SetBlendMode </td>
+          <td class="memname">static bool SDX::Screen::SetClip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>非描画領域</em> = <code>{0,0,0,0}</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画領域を設定する、設定範囲外には描画されない. </p>
+<p>Rectの幅を0にするとクリップ領域が解除される. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab5a2c286c76b740ac4b44dd968fc9e5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SDX::Screen::SetBackColor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>背景色</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Screen::Clear後の色を設定. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf836ca1608ed4ca1161a856a22b4676"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SDX::Screen::SetBright </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>輝度</em> = <code><a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画輝度を設定. </p>
+
+</div>
+</div>
+<a class="anchor" id="a99498ee22abe812e8ea7d152ddf50916"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SDX::Screen::SetBlendMode </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a>&#160;</td>
-          <td class="paramname"><em>ブレンドモード</em>, </td>
+          <td class="paramname"><em>ブレンドモード</em> = <code><a class="el" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba97d7b134c46d41b1f15de713f0fd7d05">BlendMode::NoBlend</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>設定値</em>&#160;</td>
+          <td class="paramname"><em>設定値</em> = <code>255</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -428,98 +494,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>blendParam</b> = 0</td
 
 </div>
 </div>
-<a class="anchor" id="a0c0b1cc915c890e81c7037c115577e70"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool SDX::Screen::SaveBmp </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
-          <td class="paramname"><em>領域</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ファイル名</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>描画対象になっている画面の一部をBMP形式で保存[未実装]. </p>
-
-</div>
-</div>
-<a class="anchor" id="a99f79bc00321c96d055a761cb026940a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool SDX::Screen::SetBright </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>輝度</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>描画輝度を設定. </p>
-
-</div>
-</div>
-<a class="anchor" id="a21420de6ed982068e83bb5034e68303d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static bool SDX::Screen::SetTransColor </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>輝度</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>透過色を設定[未実装]. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

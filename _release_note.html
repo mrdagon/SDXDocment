@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -80,10 +80,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>各バージョンの主な更新履歴です <br />
-詳細はGithubのコミットコメントを確認して下さい<br />
-今後の変更予定はSorceForgeの <br />
+今後の変更予定はSorceForgeのチケットを参照して下さい<br />
+<br />
 </p><hr/>
-<p> <b>ver 0.09</b><br />
+<p> <b>ver 0.10</b><br />
+[大きめの破壊的変更]<br />
+BmpFontをFontに統合して廃止<br />
+Cameraクラスを再設計<br />
+AnimeクラスをFilmクラスに名称変更、Anime::PlayerをAnimeに名称変更し設計見直し<br />
+引数が座標X、座標Yとかになっている物をconst Point&amp;に変更<br />
+引数が座標X、座標Y、幅、高さとかになっている物をconst Rect&amp;に変更<br />
+DrawExtendの引数をPoint2つからRectに変更<br />
+Directorクラスのバグを修正<b>IFontクラスの反転フラグの引数の位置を変更</b> <br />
+[細かい破壊的変更]<br />
+DXLib版と分離したので～Handleのusing宣言を削除<br />
+NULL_HANDLEマクロを削除<br />
+Font初期化時の引数を変更<br />
+Waitクラスを削除してSystemに統合<br />
+Window::SetFullScreenをWindow::SetFullscreenに変更<br />
+SoundとMusicのPlayTypeを削除、及び引数をPlayTypeからboolに変更<br />
+必ずtrueを返す関数の戻り値をboolからvoidに変更<br />
+Load済みのImageやSound等に対してLoadした場合失敗するように統一<br />
+Shape::Draw関数の引数を削減<br />
+MOTIONの仕様を変更<br />
+<br />
+[新機能追加]<br />
+Fontクラスを改善、機能強化<br />
+Screenクラスの機能をRendererクラスに分割して再設計＆機能強化<br />
+Windowクラスの機能をSubWindowクラスに分割して再設計＆機能強化<br />
+Mouse::SetVisibleを実装<br />
+Soundクラスにエフェクト系関数追加<br />
+ThreadLoadクラスをLoadingクラスに名称変更して実装完了<br />
+Mouse,Joypad,Keyboardで列挙子からキーの状態を取る機能を追加<br />
+Drawingの円描画と正三角形描画を実装<br />
+<br />
+[その他の変更]<br />
+一部Get関数のconst漏れを修正<br />
+ヘッダーファイルの分割粒度やファイル名を変更<br />
+Sampleコードの分割粒度やファイル名を変更<br />
+非実装のJoypadの振動関数を削除<br />
+非実装のScreen::Copyを削除<br />
+Soundクラスの非実装関数を一部削除<br />
+ImageからisScreen,isAlpha,isTransフラグ関係を削除<br />
+BlendBltとFilterBltをそれぞれBlend,Filterに統合(ただし未実装)<br />
+Copyコンストラクタを色々禁止<br />
+<br />
+<b>ver 0.09</b><br />
 ライセンスをAGPL Ver3に変更<br />
 DXLIB版を開発終了、以降はSDL2.0版の開発に注力して行きます。<br />
 DXLIB版とSDL2.0版の互換性の維持を終了<br />
@@ -142,7 +184,7 @@ Drawing::Rect<br />
 Screen::SaveBmp<br />
 Screen::SetArea<br />
 の3つを座標指定から大きさを指定するように変更 <br />
-AsyncroLoad を ThreadLoad に 改名<br />
+AsyncroLoad を Loading に 改名<br />
 <br />
 線分と円の当たり判定のバグを修正<br />
 <br />
@@ -157,7 +199,7 @@ UpDateとなっていた関数をUpdateに変更<br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

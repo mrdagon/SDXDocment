@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,175 +83,131 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Screen.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//☀SDL</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;Multimedia/SDX.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Color.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Framework/Shape.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">   10</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Multimedia/SDX.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Color.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Renderer.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;Framework/Shape.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>SDX</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    NoBlend = SDL_BLENDMODE_NONE,</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    Alpha = SDL_BLENDMODE_BLEND,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="namespace_s_d_x.html#a54657119f8a69a9885e2a13ea4ffc315aec211f7c20af43e742bf2570c3cb84f9">Add</a> = SDL_BLENDMODE_ADD,</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    Mula = SDL_BLENDMODE_MOD</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>Image;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_renderer.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    RendererHandle handle = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/*描画ハンドルを取得*/</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    RendererHandle GetHandle()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> handle;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a>()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Destroy();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">/*Rendererを生成*/</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> Create(WindowHandle 元Window)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        handle = SDL_CreateRenderer(元Window, -1, SDL_RENDERER_PRESENTVSYNC);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">class </span>Image;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_screen.html">Screen</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        MONO_STATE(<a class="code" href="class_s_d_x_1_1_screen.html">Screen</a>)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a> *activeRenderer;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">   26</a></span>&#160;        <span class="keyword">static</span> SDL_Renderer* <a class="code" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">GetHandle</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">return</span> activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#ae8cee3d93f5150e4773a346f4311f485">GetHandle</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">   33</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a>* <a class="code" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">GetRenderer</a>()</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">return</span> activeRenderer;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">   40</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">SetRenderer</a>(<a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a> &amp;描画先Renderer = <a class="code" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            activeRenderer = &amp;描画先Renderer;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">/*Rendererを削除*/</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> Destroy()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (handle == 0) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        SDL_DestroyRenderer(handle);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_screen.html">Screen</a></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_s_d_x_1_1_screen.html">Screen</a>(){};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    ~<a class="code" href="class_s_d_x_1_1_screen.html">Screen</a>(){};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    RendererHandle handle = 0;<span class="comment">//現在の描画先</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> nowBlendMode = BlendMode::NoBlend;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> blendParam = 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="class_s_d_x_1_1_color.html">Color</a> clearColor = <a class="code" href="class_s_d_x_1_1_color.html">Color</a>(0, 0, 0);<span class="comment">//消去時の色</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_s_d_x_1_1_color.html">Color</a> rgba = <a class="code" href="class_s_d_x_1_1_color.html">Color</a>(255, 255, 255, 0);<span class="comment">//描画輝度と透明度</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">   70</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_screen.html">Screen</a>&amp; <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_screen.html">Screen</a> single;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">return</span> single;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">   77</a></span>&#160;    <span class="keyword">static</span> RendererHandle <a class="code" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">GetHandle</a>()</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().handle;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a4bc3da393677827956230bae1bd695a4">   83</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#a4bc3da393677827956230bae1bd695a4">SetRenderer</a>(<a class="code" href="class_s_d_x_1_1_renderer.html">Renderer</a> &amp;描画先Renderer)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().handle = 描画先Renderer.GetHandle();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a71d42b23c4af04d12ccac11801f801e8">   89</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a71d42b23c4af04d12ccac11801f801e8">SetArea</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;描画領域)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a673f3b078efb780eb64df95d2ed72941">   95</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a673f3b078efb780eb64df95d2ed72941">SetBackColor</a>( <a class="code" href="class_s_d_x_1_1_color.html">Color</a> 背景色 )</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().clearColor.SetColor(背景色.<a class="code" href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">GetRed</a>(), 背景色.<a class="code" href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">GetGreen</a>(), 背景色.<a class="code" href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">GetBlue</a>());</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">   48</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">SetTarget</a>(<a class="code" href="class_s_d_x_1_1_image.html">Image</a> *描画対象 = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {       </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">SetTarget</a>(描画対象);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#af7cd559674dfc6d5dd5d7bb974c08e5a">   55</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_image.html">Image</a>* <a class="code" href="class_s_d_x_1_1_screen.html#af7cd559674dfc6d5dd5d7bb974c08e5a">GetTarget</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">return</span> activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a2203a7edc75460644b2c78b820dfb333">GetTarget</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">   62</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">Flip</a>()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            SDL_RenderPresent(<a class="code" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">GetHandle</a>());</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">   69</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">Clear</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">return</span> activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a6d8311a47016f34061fc89c261ac5879">Clear</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">   76</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">SetClip</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;非描画領域 = {0,0,0,0})</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span> activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a87165402223e8b423d5246260ea7cb68">SetClip</a>(非描画領域);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">   82</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">SetBackColor</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;背景色)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#aed3510975f202ec30523ce0e8ffe9eac">SetBackColor</a>(背景色);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">   88</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">SetBright</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;輝度 = <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a3f2a5c839dbf75a0c1d7d2e410600329">SetBright</a>(輝度);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a99498ee22abe812e8ea7d152ddf50916">   94</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#a99498ee22abe812e8ea7d152ddf50916">SetBlendMode</a>(<a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード = <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba97d7b134c46d41b1f15de713f0fd7d05">BlendMode::NoBlend</a>, <span class="keywordtype">int</span> 設定値 = 255)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a3a97c4e8d75490ef54ecaa94767fc7f7">SetBlendMode</a>(ブレンドモード,設定値);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">  103</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">Flip</a>()</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        SDL_RenderPresent(<a class="code" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">GetHandle</a>());</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    </div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#adf49a63164918a98c99bf04e1d70550e">  110</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#adf49a63164918a98c99bf04e1d70550e">Copy</a>()</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        SDL_RenderPresent(<a class="code" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">GetHandle</a>());</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">  117</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">Clear</a>()</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        SDL_SetRenderDrawColor</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        (</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">Screen::GetHandle</a>(),</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().clearColor.<a class="code" href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">GetRed</a>(),</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().clearColor.<a class="code" href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">GetGreen</a>(),</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().clearColor.<a class="code" href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">GetBlue</a>(),</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            0</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        );</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        SDL_RenderClear(<a class="code" href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">GetHandle</a>());</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        </div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">  132</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">SetBlendMode</a>(<a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード,<span class="keywordtype">int</span> 設定値)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().nowBlendMode = ブレンドモード;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">if</span>(設定値 &gt; 255)      <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().blendParam = 255;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(設定値 &lt; 0)      <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().blendParam = 0;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">else</span>                   <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().blendParam = 設定値;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    </div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a0c0b1cc915c890e81c7037c115577e70">  143</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a0c0b1cc915c890e81c7037c115577e70">SaveBmp</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域 , <span class="keyword">const</span> <span class="keywordtype">char</span> *ファイル名 )</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    {</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">  149</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">SetBright</a>( <a class="code" href="class_s_d_x_1_1_color.html">Color</a> 輝度 )</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">Single</a>().rgba.SetColor(輝度.<a class="code" href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">GetRed</a>(), 輝度.<a class="code" href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">GetGreen</a>(), 輝度.<a class="code" href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">GetBlue</a>());</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a21420de6ed982068e83bb5034e68303d">  156</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_screen.html#a21420de6ed982068e83bb5034e68303d">SetTransColor</a>(<a class="code" href="class_s_d_x_1_1_color.html">Color</a> 輝度)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_abf7a7a256567c36051d92ae7ab891fe4"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#abf7a7a256567c36051d92ae7ab891fe4">SDX::Screen::SetBlendMode</a></div><div class="ttdeci">static bool SetBlendMode(BlendMode ブレンドモード, int 設定値)</div><div class="ttdoc">ブレンド描画のモードを設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:132</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html"><div class="ttname"><a href="class_s_d_x_1_1_screen.html">SDX::Screen</a></div><div class="ttdoc">描画先を表すクラス. </div><div class="ttdef"><b>Definition:</b> Screen.h:56</div></div>
-<div class="ttc" id="class_s_d_x_1_1_color_html_ae89813caafa02d8d0d224827cb8bd6e9"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">SDX::Color::GetGreen</a></div><div class="ttdeci">int GetGreen() const </div><div class="ttdoc">緑の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:31</div></div>
-<div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Shape.h:536</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a0c0b1cc915c890e81c7037c115577e70"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a0c0b1cc915c890e81c7037c115577e70">SDX::Screen::SaveBmp</a></div><div class="ttdeci">static bool SaveBmp(const Rect &amp;領域, const char *ファイル名)</div><div class="ttdoc">描画対象になっている画面の一部をBMP形式で保存[未実装]. </div><div class="ttdef"><b>Definition:</b> Screen.h:143</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_adbcf348129e66aa3166f50c2536e5bf5"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#adbcf348129e66aa3166f50c2536e5bf5">SDX::Screen::GetHandle</a></div><div class="ttdeci">static RendererHandle GetHandle()</div><div class="ttdoc">スクリーンハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:77</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_abda2a2a9a53995c607a50140adcf9d13"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">SDX::Screen::Flip</a></div><div class="ttdeci">static bool Flip()</div><div class="ttdoc">描画内容を反映. </div><div class="ttdef"><b>Definition:</b> Screen.h:103</div></div>
-<div class="ttc" id="namespace_s_d_x_html_a54657119f8a69a9885e2a13ea4ffc315aec211f7c20af43e742bf2570c3cb84f9"><div class="ttname"><a href="namespace_s_d_x.html#a54657119f8a69a9885e2a13ea4ffc315aec211f7c20af43e742bf2570c3cb84f9">SDX::FileMode::Add</a></div><div class="ttdoc">書込時、末尾に追加 </div></div>
-<div class="ttc" id="class_s_d_x_1_1_color_html_a8fa5802ecda4925a2b1ea3a704930bed"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">SDX::Color::GetBlue</a></div><div class="ttdeci">int GetBlue() const </div><div class="ttdoc">青の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:37</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_ac8b735b095085cfdeb1c92a081c5deec"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#ac8b735b095085cfdeb1c92a081c5deec">SDX::Screen::Single</a></div><div class="ttdeci">static Screen &amp; Single()</div><div class="ttdoc">シングルトンなインスタンスを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:70</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a99f79bc00321c96d055a761cb026940a"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a99f79bc00321c96d055a761cb026940a">SDX::Screen::SetBright</a></div><div class="ttdeci">static bool SetBright(Color 輝度)</div><div class="ttdoc">描画輝度を設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:149</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a71d42b23c4af04d12ccac11801f801e8"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a71d42b23c4af04d12ccac11801f801e8">SDX::Screen::SetArea</a></div><div class="ttdeci">static bool SetArea(const Rect &amp;描画領域)</div><div class="ttdoc">描画範囲を設定する、設定範囲外には描画されない[未実装]. </div><div class="ttdef"><b>Definition:</b> Screen.h:89</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_aa99fbf08357a846871cd71453da4bf11"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">SDX::Screen::Clear</a></div><div class="ttdeci">static bool Clear()</div><div class="ttdoc">画面を消去する. </div><div class="ttdef"><b>Definition:</b> Screen.h:117</div></div>
-<div class="ttc" id="class_s_d_x_1_1_renderer_html"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html">SDX::Renderer</a></div><div class="ttdoc">描画先を表すクラス. </div><div class="ttdef"><b>Definition:</b> Screen.h:23</div></div>
-<div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:7</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a21420de6ed982068e83bb5034e68303d"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a21420de6ed982068e83bb5034e68303d">SDX::Screen::SetTransColor</a></div><div class="ttdeci">static bool SetTransColor(Color 輝度)</div><div class="ttdoc">透過色を設定[未実装]. </div><div class="ttdef"><b>Definition:</b> Screen.h:156</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a4bc3da393677827956230bae1bd695a4"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a4bc3da393677827956230bae1bd695a4">SDX::Screen::SetRenderer</a></div><div class="ttdeci">static void SetRenderer(Renderer &amp;描画先Renderer)</div><div class="ttdoc">スクリーンハンドルを設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:83</div></div>
-<div class="ttc" id="class_s_d_x_1_1_color_html_adb16773e3e4957ee9f603a6866e20056"><div class="ttname"><a href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">SDX::Color::GetRed</a></div><div class="ttdeci">int GetRed() const </div><div class="ttdoc">赤の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:25</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_a673f3b078efb780eb64df95d2ed72941"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a673f3b078efb780eb64df95d2ed72941">SDX::Screen::SetBackColor</a></div><div class="ttdeci">static bool SetBackColor(Color 背景色)</div><div class="ttdoc">Screen::Clear後の色を設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:95</div></div>
-<div class="ttc" id="namespace_s_d_x_html_a15408d43fe18c2f66f1536c9155ddf3b"><div class="ttname"><a href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">SDX::BlendMode</a></div><div class="ttdeci">BlendMode</div><div class="ttdoc">ブレンドモード. </div><div class="ttdef"><b>Definition:</b> Screen.h:10</div></div>
-<div class="ttc" id="class_s_d_x_1_1_screen_html_adf49a63164918a98c99bf04e1d70550e"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#adf49a63164918a98c99bf04e1d70550e">SDX::Screen::Copy</a></div><div class="ttdeci">static bool Copy()</div><div class="ttdoc">裏画面の内容を、表画面にコピー. </div><div class="ttdef"><b>Definition:</b> Screen.h:110</div></div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">  100</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">SetDrawMode</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;輝度＋α値 = <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">BlendMode</a> ブレンドモード = <a class="code" href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598">BlendMode::Alpha</a>)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            activeRenderer-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a3ca67570423d96ab31bcc5a0b0070e16">SetDrawMode</a>(輝度＋α値,ブレンドモード);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment">        static bool SaveBmp(const char *ファイル名)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">        {</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">            return activeRenderer-&gt;SaveBMP(ファイル名);</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment">        }</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    };</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html"><div class="ttname"><a href="class_s_d_x_1_1_screen.html">SDX::Screen</a></div><div class="ttdoc">アクティブなRendererを操作するクラス. </div><div class="ttdef"><b>Definition:</b> Screen.h:16</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Rect.h:22</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_af7cd559674dfc6d5dd5d7bb974c08e5a"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#af7cd559674dfc6d5dd5d7bb974c08e5a">SDX::Screen::GetTarget</a></div><div class="ttdeci">static Image * GetTarget()</div><div class="ttdoc">描画先Imageを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:55</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a7172e71f864db4fdd9344b28aae9aa52"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a7172e71f864db4fdd9344b28aae9aa52">SDX::Screen::SetClip</a></div><div class="ttdeci">static bool SetClip(const Rect &amp;非描画領域={0, 0, 0, 0})</div><div class="ttdoc">描画領域を設定する、設定範囲外には描画されない. </div><div class="ttdef"><b>Definition:</b> Screen.h:76</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_abda2a2a9a53995c607a50140adcf9d13"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">SDX::Screen::Flip</a></div><div class="ttdeci">static bool Flip()</div><div class="ttdoc">描画内容を反映. </div><div class="ttdef"><b>Definition:</b> Screen.h:62</div></div>
+<div class="ttc" id="namespace_s_d_x_html_a15408d43fe18c2f66f1536c9155ddf3ba97d7b134c46d41b1f15de713f0fd7d05"><div class="ttname"><a href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba97d7b134c46d41b1f15de713f0fd7d05">SDX::BlendMode::NoBlend</a></div><div class="ttdoc">ブレンドしない </div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a7a18d8aa6c37b391052eb3ff4a2003b5"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">SDX::Screen::GetRenderer</a></div><div class="ttdeci">static Renderer * GetRenderer()</div><div class="ttdoc">アクティブなRendererを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:33</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_aa99fbf08357a846871cd71453da4bf11"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">SDX::Screen::Clear</a></div><div class="ttdeci">static bool Clear()</div><div class="ttdoc">画面を消去する. </div><div class="ttdef"><b>Definition:</b> Screen.h:69</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a87165402223e8b423d5246260ea7cb68"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a87165402223e8b423d5246260ea7cb68">SDX::Renderer::SetClip</a></div><div class="ttdeci">bool SetClip(const Rect &amp;描画領域={0, 0, 0, 0})</div><div class="ttdoc">描画領域を設定する、範囲外には描画されない. </div><div class="ttdef"><b>Definition:</b> Renderer.h:190</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a2660c5800b998f53a7bb4387d07a3cfe"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">SDX::Screen::SetTarget</a></div><div class="ttdeci">static bool SetTarget(Image *描画対象=nullptr)</div><div class="ttdoc">描画先を変更. </div><div class="ttdef"><b>Definition:</b> Screen.h:48</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_ae8cee3d93f5150e4773a346f4311f485"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#ae8cee3d93f5150e4773a346f4311f485">SDX::Renderer::GetHandle</a></div><div class="ttdeci">SDL_Renderer * GetHandle()</div><div class="ttdoc">描画ハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Renderer.h:68</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a08f966fd74cbdd3024aaa1668fdc4340"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">SDX::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">白 [RGB]255,255,255 </div><div class="ttdef"><b>Definition:</b> Color.h:81</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_html"><div class="ttname"><a href="class_s_d_x_1_1_image.html">SDX::Image</a></div><div class="ttdoc">画像データを表すクラス. </div><div class="ttdef"><b>Definition:</b> Image.h:17</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html">SDX::Renderer</a></div><div class="ttdoc">描画先を表すクラス. </div><div class="ttdef"><b>Definition:</b> Renderer.h:27</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a6d8311a47016f34061fc89c261ac5879"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a6d8311a47016f34061fc89c261ac5879">SDX::Renderer::Clear</a></div><div class="ttdeci">bool Clear()</div><div class="ttdoc">画面を消去する. </div><div class="ttdef"><b>Definition:</b> Renderer.h:160</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a2203a7edc75460644b2c78b820dfb333"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a2203a7edc75460644b2c78b820dfb333">SDX::Renderer::GetTarget</a></div><div class="ttdeci">Image * GetTarget()</div><div class="ttdoc">現在の描画先を取得する. </div><div class="ttdef"><b>Definition:</b> Renderer.h:183</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a1c9fdc7884152f36b321a4b8fa0d524e"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">SDX::Renderer::SetTarget</a></div><div class="ttdeci">bool SetTarget(Image *描画対象=nullptr)</div><div class="ttdoc">描画先を変更. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:74</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a464df43da2fb85be486d7337309b194c"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">SDX::Screen::GetHandle</a></div><div class="ttdeci">static SDL_Renderer * GetHandle()</div><div class="ttdoc">スクリーンハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:26</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a12eda6cb5489822af0df7640a75b7196"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">SDX::Screen::SetRenderer</a></div><div class="ttdeci">static void SetRenderer(Renderer &amp;描画先Renderer=Renderer::mainRenderer)</div><div class="ttdoc">アクティブなRendererを設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:40</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a26da77095152626487bf45ad44fad309"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a26da77095152626487bf45ad44fad309">SDX::Screen::SetDrawMode</a></div><div class="ttdeci">static void SetDrawMode(const Color &amp;輝度＋α値=Color::White, BlendMode ブレンドモード=BlendMode::Alpha)</div><div class="ttdoc">描画輝度と描画モードをまとめて設定 </div><div class="ttdef"><b>Definition:</b> Screen.h:100</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a99498ee22abe812e8ea7d152ddf50916"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a99498ee22abe812e8ea7d152ddf50916">SDX::Screen::SetBlendMode</a></div><div class="ttdeci">static void SetBlendMode(BlendMode ブレンドモード=BlendMode::NoBlend, int 設定値=255)</div><div class="ttdoc">ブレンド描画のモードを設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:94</div></div>
+<div class="ttc" id="namespace_s_d_x_html_a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598"><div class="ttname"><a href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3ba6132295fcf5570fb8b0a944ef322a598">SDX::BlendMode::Alpha</a></div><div class="ttdoc">αブレンド </div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a3ca67570423d96ab31bcc5a0b0070e16"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a3ca67570423d96ab31bcc5a0b0070e16">SDX::Renderer::SetDrawMode</a></div><div class="ttdeci">void SetDrawMode(const Color &amp;輝度＋α値=Color::White, BlendMode ブレンドモード=BlendMode::NoBlend)</div><div class="ttdoc">描画輝度と描画モードをまとめて設定 </div><div class="ttdef"><b>Definition:</b> Renderer.h:236</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a3a97c4e8d75490ef54ecaa94767fc7f7"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a3a97c4e8d75490ef54ecaa94767fc7f7">SDX::Renderer::SetBlendMode</a></div><div class="ttdeci">void SetBlendMode(BlendMode ブレンドモード, int α値)</div><div class="ttdoc">描画モードを設定. </div><div class="ttdef"><b>Definition:</b> Renderer.h:226</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_aef4d72d1bd95efeba4b69f14c6987b85"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">SDX::Renderer::mainRenderer</a></div><div class="ttdeci">static Renderer &amp; mainRenderer</div><div class="ttdoc">メインウィンドウのレンダラー </div><div class="ttdef"><b>Definition:</b> Renderer.h:48</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_ab5a2c286c76b740ac4b44dd968fc9e5c"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">SDX::Screen::SetBackColor</a></div><div class="ttdeci">static void SetBackColor(const Color &amp;背景色)</div><div class="ttdoc">Screen::Clear後の色を設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:82</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_aed3510975f202ec30523ce0e8ffe9eac"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#aed3510975f202ec30523ce0e8ffe9eac">SDX::Renderer::SetBackColor</a></div><div class="ttdeci">void SetBackColor(const Color &amp;背景色)</div><div class="ttdoc">Screen::Clear後の色を設定. </div><div class="ttdef"><b>Definition:</b> Renderer.h:213</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a3f2a5c839dbf75a0c1d7d2e410600329"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a3f2a5c839dbf75a0c1d7d2e410600329">SDX::Renderer::SetBright</a></div><div class="ttdeci">void SetBright(const Color &amp;輝度)</div><div class="ttdoc">描画輝度を設定. </div><div class="ttdef"><b>Definition:</b> Renderer.h:220</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_acf836ca1608ed4ca1161a856a22b4676"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#acf836ca1608ed4ca1161a856a22b4676">SDX::Screen::SetBright</a></div><div class="ttdeci">static void SetBright(const Color &amp;輝度=Color::White)</div><div class="ttdoc">描画輝度を設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:88</div></div>
+<div class="ttc" id="namespace_s_d_x_html_a15408d43fe18c2f66f1536c9155ddf3b"><div class="ttname"><a href="namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b">SDX::BlendMode</a></div><div class="ttdeci">BlendMode</div><div class="ttdoc">ブレンドモード. </div><div class="ttdef"><b>Definition:</b> Renderer.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

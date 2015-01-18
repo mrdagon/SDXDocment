@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,32 +83,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">IScene.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_scene.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_i_scene.html">IScene</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">bool</span> isEnd = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update() = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw() = 0;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_scene.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_i_scene.html">IScene</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_scene.html#a9ed957c42a31bf02167f84d994a8b572">   12</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_i_scene.html#a9ed957c42a31bf02167f84d994a8b572">isEnd</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Init(){};</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Final(){};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Event(){};</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> IsEnd()</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> isEnd;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_i_scene_html"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html">SDX::IScene</a></div><div class="ttdoc">シーンのインターフェース. </div><div class="ttdef"><b>Definition:</b> IScene.h:6</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_s_d_x_1_1_i_scene.html">IScene</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_scene.html#ae0cd99bd250b152393d03b7aa7a9a8e6">Update</a>() = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_scene.html#ad49b57da2da33cb00a6dcda7e416bacb">Draw</a>() = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_scene.html#ab7c53b416e029b296265e6dd0a7ab224">   23</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_scene.html#ab7c53b416e029b296265e6dd0a7ab224">Init</a>(){};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_scene.html#a3d6a6510d725672599cee8d682c9bfe1">   26</a></span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_scene.html#a3d6a6510d725672599cee8d682c9bfe1">Final</a>(){};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html_ad49b57da2da33cb00a6dcda7e416bacb"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html#ad49b57da2da33cb00a6dcda7e416bacb">SDX::IScene::Draw</a></div><div class="ttdeci">virtual void Draw()=0</div><div class="ttdoc">描画処理. </div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html">SDX::IScene</a></div><div class="ttdoc">シーンのインターフェース. </div><div class="ttdef"><b>Definition:</b> IScene.h:9</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html_ae0cd99bd250b152393d03b7aa7a9a8e6"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html#ae0cd99bd250b152393d03b7aa7a9a8e6">SDX::IScene::Update</a></div><div class="ttdeci">virtual void Update()=0</div><div class="ttdoc">更新処理. </div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html_a3d6a6510d725672599cee8d682c9bfe1"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html#a3d6a6510d725672599cee8d682c9bfe1">SDX::IScene::Final</a></div><div class="ttdeci">virtual void Final()</div><div class="ttdoc">終了時の処理. </div><div class="ttdef"><b>Definition:</b> IScene.h:26</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html_a9ed957c42a31bf02167f84d994a8b572"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html#a9ed957c42a31bf02167f84d994a8b572">SDX::IScene::isEnd</a></div><div class="ttdeci">bool isEnd</div><div class="ttdoc">消滅フラグ </div><div class="ttdef"><b>Definition:</b> IScene.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_scene_html_ab7c53b416e029b296265e6dd0a7ab224"><div class="ttname"><a href="class_s_d_x_1_1_i_scene.html#ab7c53b416e029b296265e6dd0a7ab224">SDX::IScene::Init</a></div><div class="ttdeci">virtual void Init()</div><div class="ttdoc">初期化処理. </div><div class="ttdef"><b>Definition:</b> IScene.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,54 +83,133 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SDXafx.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//☀SDL</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//多重定義の関係でプリコンパイル済みヘッダーにのみインクルードするヘッダー</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Framework/Hit.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Framework/ShapeDraw.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;Camera* Camera::cameraNow;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;std::mt19937 Rand::engine;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">const</span> Color Color::Black(0x00,0x00,0x00);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">const</span> Color Color::Dilver(0xc0, 0xc0, 0xc0);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">const</span> Color Color::Gray(0x80, 0x80, 0x80);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">const</span> Color Color::White(0xff, 0xff, 0xff);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">const</span> Color Color::Maroon(0x80, 0x00, 0x00);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">const</span> Color Color::Red(0xff, 0x00, 0x00);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">const</span> Color Color::Purple(0x80, 0x00, 0x80);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">const</span> Color Color::Fuchsia(0xff, 0x00, 0xff);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">const</span> Color Color::Green(0x00, 0x80, 0x00);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">const</span> Color Color::Lime(0x00, 0xff, 0x00);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">const</span> Color Color::Olive(0x80, 0x80, 0x00);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">const</span> Color Color::Yellow(0xff, 0xff, 0x00);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">const</span> Color Color::Navy(0x00, 0x00, 0x80);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">const</span> Color Color::Blue(0x00, 0x00, 0xff);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">const</span> Color Color::Teal(0x00, 0x80, 0x80);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">const</span> Color Color::Aqua(0x00, 0xff, 0xff);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">int</span> Input::handle;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;Joypad Input::pad;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;Mouse Input::mouse;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;Keyboard Input::key;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;Touch Input::touch[10];</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;Gesture Input::gesture;</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//多重定義の関係でプリコンパイル済みヘッダーにのみインクルードするヘッダー</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Framework/ShapeHit.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;Framework/ShapeDraw.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a8a0b8e025abf3a0257f39bc241ece978">Color::Black</a> = { 0, 0, 0 };</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Color::Silver</a> = { 192, 192, 192 };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#aba7a2b19c2154dcc42b65663aaa12b2e">Color::Gray</a>(0x80, 0x80, 0x80);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>(0xff, 0xff, 0xff);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a40351b72ffb394a4b7c49d29ca3c891c">Color::Maroon</a>(0x80, 0x00, 0x00);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">Color::Red</a>(0xff, 0x00, 0x00);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a4e9b480348b8154f6677c5e0344f8520">Color::Purple</a>(0x80, 0x00, 0x80);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#ac62e1ec538ee37d64f052918ed8bcf77">Color::Fuchsia</a>(0xff, 0x00, 0xff);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Color::Green</a>(0x00, 0x80, 0x00);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#aba7e95f6f293363174ae20c55db16192">Color::Lime</a>(0x00, 0xff, 0x00);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a2fab61033fe2aac6f40bf9ddca918f9e">Color::Olive</a>(0x80, 0x80, 0x00);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a96df5bd76f9583c8f9ab43c7d989140d">Color::Yellow</a>(0xff, 0xff, 0x00);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#acadc580869ab20bcf41a159b5cfeff52">Color::Navy</a>(0x00, 0x00, 0x80);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>(0x00, 0x00, 0xff);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#a67f0f5a5ed9da41becee59b5222be049">Color::Teal</a>(0x00, 0x80, 0x80);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> Color <a class="code" href="class_s_d_x_1_1_color.html#aef3a262c4b7aa6691c484de7fb5e9d39">Color::Aqua</a>(0x00, 0xff, 0xff);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    Camera* Camera::active = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    Joypad <a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    Mouse <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Keyboard <a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    Touch <a class="code" href="class_s_d_x_1_1_input.html#a8111299d0da6c2a182c9cde2c5992be8">Input::touch</a>[10];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    Gesture <a class="code" href="class_s_d_x_1_1_input.html#ace9ec50da68c38bcd879ec40eff737eb">Input::gesture</a>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">bool</span> System::isEnd;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;Renderer System::defaultRenderer;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    Renderer &amp;<a class="code" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a> = <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.renderer;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    SubWindow <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;Font Drawing::defaultFont;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::list&lt;SubWindow*&gt; SubWindow::windowS;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;Time Time::singleton;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> Music::nowVolume;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    Renderer* Screen::activeRenderer = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    SubWindow* <a class="code" href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">Window::activeWindow</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Music* Music::active = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Music* Music::next = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> Music::nextLoop;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> Music::nextRestart;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> Loading::isLoading = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> Loading::loadingCount = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> Loading::succesCount = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::mutex Loading::mtx;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::vector&lt;std::function&lt;void(void)&gt;&gt; Loading::funcS;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">   55</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">CompAngle</a>(<span class="keywordtype">double</span> 角度A, <span class="keywordtype">double</span> 角度B)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">double</span> 角度差 = 角度A - 角度B;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        角度差 = fmod(角度差, <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//角度差がPAI以上</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (角度差 &gt; <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            角度差 -= <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//角度差が-PAI以下</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (角度差 &lt; -<a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            角度差 += <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> 角度差;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">   74</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">Renderer::SetTarget</a>(<a class="code" href="class_s_d_x_1_1_image.html">Image</a> *描画対象)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> a;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (描画対象 == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            a = (SDL_SetRenderTarget(handle, <span class="keyword">nullptr</span>) == 0);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            a = (SDL_SetRenderTarget(handle, 描画対象-&gt;<a class="code" href="class_s_d_x_1_1_image.html#aa9e489ed4e34a11c59531731eaf781a7">GetHandle</a>()) == 0);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> ( a )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            target = 描画対象;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_aef3a262c4b7aa6691c484de7fb5e9d39"><div class="ttname"><a href="class_s_d_x_1_1_color.html#aef3a262c4b7aa6691c484de7fb5e9d39">SDX::Color::Aqua</a></div><div class="ttdeci">static const Color Aqua</div><div class="ttdoc">水 [RGB]0,255,255 </div><div class="ttdef"><b>Definition:</b> Color.h:93</div></div>
+<div class="ttc" id="namespace_s_d_x_html_a49aa4acd7a7a07163d7225e69713bf7d"><div class="ttname"><a href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">SDX::PAI</a></div><div class="ttdeci">const double PAI</div><div class="ttdoc">円周率 </div><div class="ttdef"><b>Definition:</b> SDX.h:26</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a76cc926077132612f5e25b084b2ff852"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">SDX::Color::Red</a></div><div class="ttdeci">static const Color Red</div><div class="ttdoc">赤 [RGB]255,0,0 </div><div class="ttdef"><b>Definition:</b> Color.h:83</div></div>
+<div class="ttc" id="class_s_d_x_1_1_input_html_ae5a695a3e3096bc06265b482d1b1d133"><div class="ttname"><a href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">SDX::Input::mouse</a></div><div class="ttdeci">static Mouse mouse</div><div class="ttdoc">マウス </div><div class="ttdef"><b>Definition:</b> Input.h:23</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a40351b72ffb394a4b7c49d29ca3c891c"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a40351b72ffb394a4b7c49d29ca3c891c">SDX::Color::Maroon</a></div><div class="ttdeci">static const Color Maroon</div><div class="ttdoc">栗 [RGB]128,0,0 </div><div class="ttdef"><b>Definition:</b> Color.h:82</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a96df5bd76f9583c8f9ab43c7d989140d"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a96df5bd76f9583c8f9ab43c7d989140d">SDX::Color::Yellow</a></div><div class="ttdeci">static const Color Yellow</div><div class="ttdoc">黄 [[RGB]255,255,0 </div><div class="ttdef"><b>Definition:</b> Color.h:89</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a2fab61033fe2aac6f40bf9ddca918f9e"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a2fab61033fe2aac6f40bf9ddca918f9e">SDX::Color::Olive</a></div><div class="ttdeci">static const Color Olive</div><div class="ttdoc">暗黄 [RGB]128,128,0 </div><div class="ttdef"><b>Definition:</b> Color.h:88</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_adc47e34b5dbb0c7b584b5c15e299e59c"><div class="ttname"><a href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">SDX::Color::Blue</a></div><div class="ttdeci">static const Color Blue</div><div class="ttdoc">青 [RGB]0,0,255 </div><div class="ttdef"><b>Definition:</b> Color.h:91</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_ad3aa697f6142f6abacf5ee85bffde8ca"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">SDX::Color::Silver</a></div><div class="ttdeci">static const Color Silver</div><div class="ttdoc">銀 [R]192,192,192 </div><div class="ttdef"><b>Definition:</b> Color.h:79</div></div>
+<div class="ttc" id="class_s_d_x_1_1_input_html_ace9ec50da68c38bcd879ec40eff737eb"><div class="ttname"><a href="class_s_d_x_1_1_input.html#ace9ec50da68c38bcd879ec40eff737eb">SDX::Input::gesture</a></div><div class="ttdeci">static Gesture gesture</div><div class="ttdoc">タッチジェスチャー </div><div class="ttdef"><b>Definition:</b> Input.h:26</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_ad8ff95b3830b05b9c9a4e76167027e77"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">SDX::Color::Green</a></div><div class="ttdeci">static const Color Green</div><div class="ttdoc">濃緑 [RGB]0,128,0 </div><div class="ttdef"><b>Definition:</b> Color.h:86</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a08f966fd74cbdd3024aaa1668fdc4340"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">SDX::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">白 [RGB]255,255,255 </div><div class="ttdef"><b>Definition:</b> Color.h:81</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_html"><div class="ttname"><a href="class_s_d_x_1_1_image.html">SDX::Image</a></div><div class="ttdoc">画像データを表すクラス. </div><div class="ttdef"><b>Definition:</b> Image.h:17</div></div>
+<div class="ttc" id="class_s_d_x_1_1_input_html_a78fdd812e74a84f50d9e92ea583f2e34"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">SDX::Input::pad</a></div><div class="ttdeci">static Joypad pad</div><div class="ttdoc">ジョイパッド </div><div class="ttdef"><b>Definition:</b> Input.h:22</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_aba7e95f6f293363174ae20c55db16192"><div class="ttname"><a href="class_s_d_x_1_1_color.html#aba7e95f6f293363174ae20c55db16192">SDX::Color::Lime</a></div><div class="ttdeci">static const Color Lime</div><div class="ttdoc">明緑 [RGB]0,255,0 </div><div class="ttdef"><b>Definition:</b> Color.h:87</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_html_aa9e489ed4e34a11c59531731eaf781a7"><div class="ttname"><a href="class_s_d_x_1_1_image.html#aa9e489ed4e34a11c59531731eaf781a7">SDX::Image::GetHandle</a></div><div class="ttdeci">SDL_Texture * GetHandle() const </div><div class="ttdoc">ハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Image.h:175</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_aba7a2b19c2154dcc42b65663aaa12b2e"><div class="ttname"><a href="class_s_d_x_1_1_color.html#aba7a2b19c2154dcc42b65663aaa12b2e">SDX::Color::Gray</a></div><div class="ttdeci">static const Color Gray</div><div class="ttdoc">灰 [RGB]128,128,128 </div><div class="ttdef"><b>Definition:</b> Color.h:80</div></div>
+<div class="ttc" id="class_s_d_x_1_1_input_html_a5656ead9d3316a4fc3e214f04fe50408"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">SDX::Input::key</a></div><div class="ttdeci">static Keyboard key</div><div class="ttdoc">キーボード </div><div class="ttdef"><b>Definition:</b> Input.h:24</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a8a0b8e025abf3a0257f39bc241ece978"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a8a0b8e025abf3a0257f39bc241ece978">SDX::Color::Black</a></div><div class="ttdeci">static const Color Black</div><div class="ttdoc">黒 [RGB]0,0,0 </div><div class="ttdef"><b>Definition:</b> Color.h:78</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a1c9fdc7884152f36b321a4b8fa0d524e"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">SDX::Renderer::SetTarget</a></div><div class="ttdeci">bool SetTarget(Image *描画対象=nullptr)</div><div class="ttdoc">描画先を変更. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:74</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a67f0f5a5ed9da41becee59b5222be049"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a67f0f5a5ed9da41becee59b5222be049">SDX::Color::Teal</a></div><div class="ttdeci">static const Color Teal</div><div class="ttdoc">青緑 [RGB]0,128,128 </div><div class="ttdef"><b>Definition:</b> Color.h:92</div></div>
+<div class="ttc" id="class_s_d_x_1_1_input_html_a8111299d0da6c2a182c9cde2c5992be8"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a8111299d0da6c2a182c9cde2c5992be8">SDX::Input::touch</a></div><div class="ttdeci">static Touch touch[10]</div><div class="ttdoc">タッチ </div><div class="ttdef"><b>Definition:</b> Input.h:25</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_aef4d72d1bd95efeba4b69f14c6987b85"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">SDX::Renderer::mainRenderer</a></div><div class="ttdeci">static Renderer &amp; mainRenderer</div><div class="ttdoc">メインウィンドウのレンダラー </div><div class="ttdef"><b>Definition:</b> Renderer.h:48</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sub_window_html_a1271d0aeaef288258d495151d4f6ee4b"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SDX::SubWindow::mainWindow</a></div><div class="ttdeci">static SubWindow mainWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> SubWindow.h:43</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_ac62e1ec538ee37d64f052918ed8bcf77"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ac62e1ec538ee37d64f052918ed8bcf77">SDX::Color::Fuchsia</a></div><div class="ttdeci">static const Color Fuchsia</div><div class="ttdoc">赤紫 [RGB]255,0,255 </div><div class="ttdef"><b>Definition:</b> Color.h:85</div></div>
+<div class="ttc" id="namespace_s_d_x_html_afbb4859f8459209049d8627b179eaf96"><div class="ttname"><a href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">SDX::CompAngle</a></div><div class="ttdeci">double CompAngle(double 角度A, double 角度B)</div><div class="ttdoc">Aから見たBの角度差を-PAI～+PAIで返す. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:55</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a4e9b480348b8154f6677c5e0344f8520"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a4e9b480348b8154f6677c5e0344f8520">SDX::Color::Purple</a></div><div class="ttdeci">static const Color Purple</div><div class="ttdoc">紫 [RGB]128,0,128 </div><div class="ttdef"><b>Definition:</b> Color.h:84</div></div>
+<div class="ttc" id="class_s_d_x_1_1_window_html_a4d093f2dfe01e0e1d34a5a53f1d21081"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">SDX::Window::activeWindow</a></div><div class="ttdeci">static SubWindow * activeWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> Window.h:24</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_acadc580869ab20bcf41a159b5cfeff52"><div class="ttname"><a href="class_s_d_x_1_1_color.html#acadc580869ab20bcf41a159b5cfeff52">SDX::Color::Navy</a></div><div class="ttdeci">static const Color Navy</div><div class="ttdoc">濃青 [RGB]0,0,128 </div><div class="ttdef"><b>Definition:</b> Color.h:90</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

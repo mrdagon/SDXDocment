@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -102,12 +102,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb3a6cb7389550642807e89489a518f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#abb3a6cb7389550642807e89489a518f5">Color</a> (int 赤, int 緑, int 青, int 透過率=255)</td></tr>
-<tr class="memdesc:abb3a6cb7389550642807e89489a518f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB値から色に変換.  <a href="#abb3a6cb7389550642807e89489a518f5">More...</a><br /></td></tr>
-<tr class="separator:abb3a6cb7389550642807e89489a518f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ef1ff6be2270a438430f11b4a1050c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ef1ff6be2270a438430f11b4a1050c1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetColor</b> (int 赤, int 緑, int 青, int 透過率=255)</td></tr>
-<tr class="separator:a2ef1ff6be2270a438430f11b4a1050c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab464ad331a6333f25b80d2e22af8300c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#ab464ad331a6333f25b80d2e22af8300c">Color</a> (int 赤, int 緑, int 青, int α値=255)</td></tr>
+<tr class="memdesc:ab464ad331a6333f25b80d2e22af8300c"><td class="mdescLeft">&#160;</td><td class="mdescRight">RGB値から色に変換.  <a href="#ab464ad331a6333f25b80d2e22af8300c">More...</a><br /></td></tr>
+<tr class="separator:ab464ad331a6333f25b80d2e22af8300c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a978b1912f1ae61b189b577d809adc316"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a978b1912f1ae61b189b577d809adc316">SetColor</a> (int 赤, int 緑, int 青, int α値=255)</td></tr>
+<tr class="memdesc:a978b1912f1ae61b189b577d809adc316"><td class="mdescLeft">&#160;</td><td class="mdescRight">色の各要素を設定.  <a href="#a978b1912f1ae61b189b577d809adc316">More...</a><br /></td></tr>
+<tr class="separator:a978b1912f1ae61b189b577d809adc316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb16773e3e4957ee9f603a6866e20056"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">GetRed</a> () const </td></tr>
 <tr class="memdesc:adb16773e3e4957ee9f603a6866e20056"><td class="mdescLeft">&#160;</td><td class="mdescRight">赤の要素を取得.  <a href="#adb16773e3e4957ee9f603a6866e20056">More...</a><br /></td></tr>
 <tr class="separator:adb16773e3e4957ee9f603a6866e20056"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,90 +120,113 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetColor</b> (int 赤
 <tr class="memitem:a845c7693d3c9521f68f56fb01aa70092"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a845c7693d3c9521f68f56fb01aa70092">GetAlpha</a> () const </td></tr>
 <tr class="memdesc:a845c7693d3c9521f68f56fb01aa70092"><td class="mdescLeft">&#160;</td><td class="mdescRight">透明度を取得.  <a href="#a845c7693d3c9521f68f56fb01aa70092">More...</a><br /></td></tr>
 <tr class="separator:a845c7693d3c9521f68f56fb01aa70092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fbc3d723e9595e0cb5e1623805f5014"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fbc3d723e9595e0cb5e1623805f5014"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator ColorData</b> ()</td></tr>
-<tr class="separator:a7fbc3d723e9595e0cb5e1623805f5014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac04f8da746ae2b37adc2c51d87dfb55c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac04f8da746ae2b37adc2c51d87dfb55c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 比較色)</td></tr>
-<tr class="separator:ac04f8da746ae2b37adc2c51d87dfb55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be09de11ecdd27c437dcd6afc218b3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a4be09de11ecdd27c437dcd6afc218b3d">operator SDL_Color</a> () const </td></tr>
+<tr class="memdesc:a4be09de11ecdd27c437dcd6afc218b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換.  <a href="#a4be09de11ecdd27c437dcd6afc218b3d">More...</a><br /></td></tr>
+<tr class="separator:a4be09de11ecdd27c437dcd6afc218b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c368a8bbef8a78baa0aa76c8b88d533"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a3c368a8bbef8a78baa0aa76c8b88d533">operator==</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;比較色) const </td></tr>
+<tr class="memdesc:a3c368a8bbef8a78baa0aa76c8b88d533"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較オペレータ.  <a href="#a3c368a8bbef8a78baa0aa76c8b88d533">More...</a><br /></td></tr>
+<tr class="separator:a3c368a8bbef8a78baa0aa76c8b88d533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd5b330affadb5c38ecbc872a3901a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a1bd5b330affadb5c38ecbc872a3901a5">operator!=</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;比較色) const </td></tr>
+<tr class="memdesc:a1bd5b330affadb5c38ecbc872a3901a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">比較オペレータ.  <a href="#a1bd5b330affadb5c38ecbc872a3901a5">More...</a><br /></td></tr>
+<tr class="separator:a1bd5b330affadb5c38ecbc872a3901a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a8a0b8e025abf3a0257f39bc241ece978"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a0b8e025abf3a0257f39bc241ece978"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Black</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a8a0b8e025abf3a0257f39bc241ece978">Black</a> = { 0, 0, 0 }</td></tr>
+<tr class="memdesc:a8a0b8e025abf3a0257f39bc241ece978"><td class="mdescLeft">&#160;</td><td class="mdescRight">黒 [RGB]0,0,0 <br /></td></tr>
 <tr class="separator:a8a0b8e025abf3a0257f39bc241ece978"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac75360f7499d72fdbea6de2dfd363262"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac75360f7499d72fdbea6de2dfd363262"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Dilver</b></td></tr>
-<tr class="separator:ac75360f7499d72fdbea6de2dfd363262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3aa697f6142f6abacf5ee85bffde8ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3aa697f6142f6abacf5ee85bffde8ca"></a>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Silver</a> = { 192, 192, 192 }</td></tr>
+<tr class="memdesc:ad3aa697f6142f6abacf5ee85bffde8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">銀 [R]192,192,192 <br /></td></tr>
+<tr class="separator:ad3aa697f6142f6abacf5ee85bffde8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7a2b19c2154dcc42b65663aaa12b2e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba7a2b19c2154dcc42b65663aaa12b2e"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Gray</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#aba7a2b19c2154dcc42b65663aaa12b2e">Gray</a></td></tr>
+<tr class="memdesc:aba7a2b19c2154dcc42b65663aaa12b2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">灰 [RGB]128,128,128 <br /></td></tr>
 <tr class="separator:aba7a2b19c2154dcc42b65663aaa12b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08f966fd74cbdd3024aaa1668fdc4340"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08f966fd74cbdd3024aaa1668fdc4340"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>White</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">White</a></td></tr>
+<tr class="memdesc:a08f966fd74cbdd3024aaa1668fdc4340"><td class="mdescLeft">&#160;</td><td class="mdescRight">白 [RGB]255,255,255 <br /></td></tr>
 <tr class="separator:a08f966fd74cbdd3024aaa1668fdc4340"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40351b72ffb394a4b7c49d29ca3c891c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40351b72ffb394a4b7c49d29ca3c891c"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Maroon</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a40351b72ffb394a4b7c49d29ca3c891c">Maroon</a></td></tr>
+<tr class="memdesc:a40351b72ffb394a4b7c49d29ca3c891c"><td class="mdescLeft">&#160;</td><td class="mdescRight">栗 [RGB]128,0,0 <br /></td></tr>
 <tr class="separator:a40351b72ffb394a4b7c49d29ca3c891c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76cc926077132612f5e25b084b2ff852"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76cc926077132612f5e25b084b2ff852"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Red</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">Red</a></td></tr>
+<tr class="memdesc:a76cc926077132612f5e25b084b2ff852"><td class="mdescLeft">&#160;</td><td class="mdescRight">赤 [RGB]255,0,0 <br /></td></tr>
 <tr class="separator:a76cc926077132612f5e25b084b2ff852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e9b480348b8154f6677c5e0344f8520"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e9b480348b8154f6677c5e0344f8520"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Purple</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a4e9b480348b8154f6677c5e0344f8520">Purple</a></td></tr>
+<tr class="memdesc:a4e9b480348b8154f6677c5e0344f8520"><td class="mdescLeft">&#160;</td><td class="mdescRight">紫 [RGB]128,0,128 <br /></td></tr>
 <tr class="separator:a4e9b480348b8154f6677c5e0344f8520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac62e1ec538ee37d64f052918ed8bcf77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac62e1ec538ee37d64f052918ed8bcf77"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Fuchsia</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#ac62e1ec538ee37d64f052918ed8bcf77">Fuchsia</a></td></tr>
+<tr class="memdesc:ac62e1ec538ee37d64f052918ed8bcf77"><td class="mdescLeft">&#160;</td><td class="mdescRight">赤紫 [RGB]255,0,255 <br /></td></tr>
 <tr class="separator:ac62e1ec538ee37d64f052918ed8bcf77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8ff95b3830b05b9c9a4e76167027e77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8ff95b3830b05b9c9a4e76167027e77"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Green</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#ad8ff95b3830b05b9c9a4e76167027e77">Green</a></td></tr>
+<tr class="memdesc:ad8ff95b3830b05b9c9a4e76167027e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">濃緑 [RGB]0,128,0 <br /></td></tr>
 <tr class="separator:ad8ff95b3830b05b9c9a4e76167027e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba7e95f6f293363174ae20c55db16192"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba7e95f6f293363174ae20c55db16192"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Lime</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#aba7e95f6f293363174ae20c55db16192">Lime</a></td></tr>
+<tr class="memdesc:aba7e95f6f293363174ae20c55db16192"><td class="mdescLeft">&#160;</td><td class="mdescRight">明緑 [RGB]0,255,0 <br /></td></tr>
 <tr class="separator:aba7e95f6f293363174ae20c55db16192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fab61033fe2aac6f40bf9ddca918f9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fab61033fe2aac6f40bf9ddca918f9e"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Olive</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a2fab61033fe2aac6f40bf9ddca918f9e">Olive</a></td></tr>
+<tr class="memdesc:a2fab61033fe2aac6f40bf9ddca918f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">暗黄 [RGB]128,128,0 <br /></td></tr>
 <tr class="separator:a2fab61033fe2aac6f40bf9ddca918f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96df5bd76f9583c8f9ab43c7d989140d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96df5bd76f9583c8f9ab43c7d989140d"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Yellow</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a96df5bd76f9583c8f9ab43c7d989140d">Yellow</a></td></tr>
+<tr class="memdesc:a96df5bd76f9583c8f9ab43c7d989140d"><td class="mdescLeft">&#160;</td><td class="mdescRight">黄 [[RGB]255,255,0 <br /></td></tr>
 <tr class="separator:a96df5bd76f9583c8f9ab43c7d989140d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acadc580869ab20bcf41a159b5cfeff52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acadc580869ab20bcf41a159b5cfeff52"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Navy</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#acadc580869ab20bcf41a159b5cfeff52">Navy</a></td></tr>
+<tr class="memdesc:acadc580869ab20bcf41a159b5cfeff52"><td class="mdescLeft">&#160;</td><td class="mdescRight">濃青 [RGB]0,0,128 <br /></td></tr>
 <tr class="separator:acadc580869ab20bcf41a159b5cfeff52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc47e34b5dbb0c7b584b5c15e299e59c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc47e34b5dbb0c7b584b5c15e299e59c"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Blue</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Blue</a></td></tr>
+<tr class="memdesc:adc47e34b5dbb0c7b584b5c15e299e59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">青 [RGB]0,0,255 <br /></td></tr>
 <tr class="separator:adc47e34b5dbb0c7b584b5c15e299e59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f0f5a5ed9da41becee59b5222be049"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67f0f5a5ed9da41becee59b5222be049"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Teal</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#a67f0f5a5ed9da41becee59b5222be049">Teal</a></td></tr>
+<tr class="memdesc:a67f0f5a5ed9da41becee59b5222be049"><td class="mdescLeft">&#160;</td><td class="mdescRight">青緑 [RGB]0,128,128 <br /></td></tr>
 <tr class="separator:a67f0f5a5ed9da41becee59b5222be049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef3a262c4b7aa6691c484de7fb5e9d39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef3a262c4b7aa6691c484de7fb5e9d39"></a>
-static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Aqua</b></td></tr>
+static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_color.html#aef3a262c4b7aa6691c484de7fb5e9d39">Aqua</a></td></tr>
+<tr class="memdesc:aef3a262c4b7aa6691c484de7fb5e9d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">水 [RGB]0,255,255 <br /></td></tr>
 <tr class="separator:aef3a262c4b7aa6691c484de7fb5e9d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>色を表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//図形を異なる色で描画</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleColor()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;Color&quot;</span>, 640, 480);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
 <div class="line">        <span class="comment">//赤い線を描画、普通に指定する</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0e603f57975a94ec39421bb831973ed5">Drawing::Line</a>({10, 10}, {200, 10} , <a class="code" href="class_s_d_x_1_1_color.html#abb3a6cb7389550642807e89489a518f5">Color</a>(255,0,0), 3);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a6c0697ad811535c732a5edf5806ee8e0">Drawing::Line</a>({ 10, 10 }, { 200, 10 }, <a class="code" href="class_s_d_x_1_1_color.html#ab464ad331a6333f25b80d2e22af8300c">Color</a>(255, 0, 0), 3);</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//緑の四角を描画、省略してみる</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a187d8e2094ac03a175f55d2ad60a1512">Drawing::Rect</a>({10, 100, 200, 200}, { 0, 255, 0 }, <span class="keyword">true</span>);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ 10, 100, 200, 200 }, { 0, 255, 0 }, <span class="keyword">true</span>);</div>
 <div class="line"></div>
-<div class="line">        <span class="comment">//青い●を描画、定数を使う</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a4b31893f59219c5152cadb08b99f7949">Drawing::Circle</a>({ 110, 300, 50 }, Color::Blue, <span class="keyword">true</span>);</div>
+<div class="line">        <span class="comment">//半透明の青い●を描画、塗りつぶし有り</span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ 110, 300, 50 }, {0,0,255,128});</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了</span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
-<div class="line">    <span class="keywordflow">return</span>    <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abb3a6cb7389550642807e89489a518f5"></a>
+<a class="anchor" id="ab464ad331a6333f25b80d2e22af8300c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -229,7 +252,7 @@ static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>透過率</em> = <code>255</code>&#160;</td>
+          <td class="paramname"><em>α値</em> = <code>255</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -245,6 +268,46 @@ static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a978b1912f1ae61b189b577d809adc316"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::Color::SetColor </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>赤</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>緑</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>青</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>α値</em> = <code>255</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>色の各要素を設定. </p>
+
+</div>
+</div>
 <a class="anchor" id="adb16773e3e4957ee9f603a6866e20056"></a>
 <div class="memitem">
 <div class="memproto">
@@ -313,10 +376,63 @@ static const <a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td
 
 </div>
 </div>
+<a class="anchor" id="a4be09de11ecdd27c437dcd6afc218b3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDX::Color::operator SDL_Color </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>型変換. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3c368a8bbef8a78baa0aa76c8b88d533"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::Color::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>比較色</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比較オペレータ. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1bd5b330affadb5c38ecbc872a3901a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::Color::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>比較色</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比較オペレータ. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

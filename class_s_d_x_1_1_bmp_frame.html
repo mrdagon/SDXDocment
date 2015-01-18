@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -103,39 +103,78 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a6fe1a15975f29a8beeb9ec10492518ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_bmp_frame.html#a6fe1a15975f29a8beeb9ec10492518ef">BmpFrame</a> (<a class="el" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *フレーム画像)</td></tr>
+<tr class="memdesc:a6fe1a15975f29a8beeb9ec10492518ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレームを作成する.  <a href="#a6fe1a15975f29a8beeb9ec10492518ef">More...</a><br /></td></tr>
+<tr class="separator:a6fe1a15975f29a8beeb9ec10492518ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafd8083c5a835c99f602d8d3e49976e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a> (<a class="el" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *フレーム画像)</td></tr>
 <tr class="memdesc:aafd8083c5a835c99f602d8d3e49976e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレームを作成する.  <a href="#aafd8083c5a835c99f602d8d3e49976e8">More...</a><br /></td></tr>
 <tr class="separator:aafd8083c5a835c99f602d8d3e49976e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8069f8e4e74e802839736b1cf4220356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_bmp_frame.html#a8069f8e4e74e802839736b1cf4220356">Draw</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域) const </td></tr>
-<tr class="memdesc:a8069f8e4e74e802839736b1cf4220356"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形のフレームを描画.  <a href="#a8069f8e4e74e802839736b1cf4220356">More...</a><br /></td></tr>
-<tr class="separator:a8069f8e4e74e802839736b1cf4220356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95e11686e26c70feac7509e72f815be8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_bmp_frame.html#a95e11686e26c70feac7509e72f815be8">Draw</a> (const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色=<a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>) const </td></tr>
+<tr class="memdesc:a95e11686e26c70feac7509e72f815be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形のフレームを描画.  <a href="#a95e11686e26c70feac7509e72f815be8">More...</a><br /></td></tr>
+<tr class="separator:a95e11686e26c70feac7509e72f815be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>描画用枠を表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣初期化を行い何かキーを押すと終了する</span></div>
-<div class="line"><span class="keywordtype">bool</span>    SampleBmpFrame()</div>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//初期化を行い何かキーを押すと終了する</span></div>
+<div class="line"><span class="keywordtype">bool</span> SampleBmpFrame()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">using    namespace    </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>,    600,    400);</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">Screen::SetBackColor</a>(<a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//BmpFrame用の画像を読み込む</span></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a>    frameImage(<span class="stringliteral">&quot;image.bmp&quot;</span>,9,3,3);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> frameImageA(<span class="stringliteral">&quot;data/pipo-WindowBase001.png&quot;</span>, 9, 3, 3);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> frameImageB(<span class="stringliteral">&quot;data/pipo-WindowBase004.png&quot;</span>, 9, 3, 3);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//BmpFrameを作成</span></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a>    bmpFrame;</div>
-<div class="line">    bmpFrame.<a class="code" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a>(&amp;frameImage);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a> bmpFrameA(&amp;frameImageA);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a> bmpFrameB(&amp;frameImageB);</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span>    (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> 四角(220,140,200,200);</div>
+<div class="line">    <span class="keywordtype">double</span> 大きさ = 1.0;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
-<div class="line">        bmpFrame.Draw({ 10, 10, 500, 300 });</div>
-<div class="line">        <span class="keywordflow">if</span>    (Input::key.Return.on)    <span class="keywordflow">break</span>;<span class="comment">//Enterで終了    </span></div>
+<div class="line">        bmpFrameA.Draw({ 0, 0, <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#ab4282deb9545d77b69649fa71773fddb">x</a>, <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#a9cc8482282bfae916976c02466bdc116">y</a> });</div>
+<div class="line"></div>
+<div class="line">        bmpFrameB.Draw(四角);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Up.hold){ 四角.Move(0, -5); }</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Down.hold){ 四角.Move(0, 5); }</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Left.hold){ 四角.Move(-5, 0); }</div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Right.hold){ 四角.Move(5, 0); }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>; }<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
-<div class="line">    <span class="keywordflow">return</span>    <span class="keyword">true</span>;</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a6fe1a15975f29a8beeb9ec10492518ef"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDX::BmpFrame::BmpFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *&#160;</td>
+          <td class="paramname"><em>フレーム画像</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フレームを作成する. </p>
+<p>フレーム画像は３×３分割した9マスの物が使える </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aafd8083c5a835c99f602d8d3e49976e8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -151,11 +190,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>フレームを作成する. </p>
-<p>３×３分割したImagePackを元にフレームを作成 </p>
+<p>フレーム画像は３×３分割した9マスの物が使える </p>
 
 </div>
 </div>
-<a class="anchor" id="a8069f8e4e74e802839736b1cf4220356"></a>
+<a class="anchor" id="a95e11686e26c70feac7509e72f815be8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -166,8 +205,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void SDX::BmpFrame::Draw </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
-          <td class="paramname"><em>領域</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>領域</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画色</em> = <code><a class="el" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -178,16 +227,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>矩形のフレームを描画. </p>
-<p>右上座標を指定してフレームを描画する </p>
+<p>右上座標を指定してフレームを描画する </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>ImagePackにSetColorしていた場合の動作がまだ </dd></dl>
 
-<p>Implements <a class="el" href="class_s_d_x_1_1_i_frame.html">SDX::IFrame</a>.</p>
+<p>Implements <a class="el" href="class_s_d_x_1_1_i_frame.html#a3a17d131d985bee6ff408eaa44f147ea">SDX::IFrame</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>時間と日付を取得する関数群.  
  <a href="class_s_d_x_1_1_time.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="_timer_8h_source.html">Timer.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_time_8h_source.html">Time.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -128,34 +128,51 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>時間と日付を取得する関数群. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣時間を取得したり計測する</span></div>
+<p>わりと標準ライブラリで良い感じはある. </p><div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//時間を取得したり計測する</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"></div>
 <div class="line"><span class="keywordtype">bool</span> SampleTime()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">Time::ResetFPS</a>();</div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_time.html#aa4c6082d1f5ff5a47e28b47bc402b601">Time::ResetCount</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">Time::StartWatch</a>();<span class="comment">//処理時間の計測開始</span></div>
-<div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
 <div class="line">        count++;</div>
 <div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">Time::CheckFPS</a>();<span class="comment">//FramePerSecondを更新</span></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a91d6185e4363cdf47bb7faee48087cc8">Drawing::String</a>({ 10, 10 }, Color::White, { <span class="stringliteral">&quot;FPS:&quot;</span>, <a class="code" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">Time::GetFPS</a>(), <span class="stringliteral">&quot;\nNow:&quot;</span>, <a class="code" href="class_s_d_x_1_1_time.html#a01bd5f9848a1dfa2f4a30ab86bc7150a">Time::GetNowCount</a>() });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, { <span class="stringliteral">&quot;FPS:&quot;</span>, <a class="code" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">Time::GetFPS</a>(), <span class="stringliteral">&quot;\nNow:&quot;</span>, <a class="code" href="class_s_d_x_1_1_time.html#a01bd5f9848a1dfa2f4a30ab86bc7150a">Time::GetNowCount</a>() });</div>
 <div class="line"></div>
 <div class="line">        tm date;</div>
 <div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#a2e27379c88c9d2b7a3f404aab1e233e0">Time::GetDate</a>(&amp;date);</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 100 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, { date.tm_year + 1900, <span class="stringliteral">&quot;年 &quot;</span>, date.tm_mon + 1, <span class="stringliteral">&quot;月 &quot;</span>, date.tm_mday, <span class="stringliteral">&quot;日&quot;</span> });</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a91d6185e4363cdf47bb7faee48087cc8">Drawing::String</a>({ 10, 100 }, Color::White, { date.tm_year + 1900, <span class="stringliteral">&quot;年    &quot;</span>, date.tm_mon + 1, <span class="stringliteral">&quot;月    &quot;</span>, date.tm_mday, <span class="stringliteral">&quot;日&quot;</span> });</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">Time::StartWatch</a>();<span class="comment">//処理時間の計測開始</span></div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">Time::DrawWatch</a>({ 10, 200 }, <span class="stringliteral">&quot;処理時間:&quot;</span>);<span class="comment">//StartWatchかDrawWatchを呼んでからかかった時間をミリ秒で表示</span></div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 100; ++a)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ 200, 100, 20 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a> , 5);</div>
+<div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了</span></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">Time::DrawWatch</a>({ 10, 220 }, <span class="stringliteral">&quot;○描画100回の処理時間:&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 100; ++a)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({ 210, 110, 40 ,40}, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>,<span class="keyword">true</span>);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">Time::DrawWatch</a>({ 10, 240 }, <span class="stringliteral">&quot;□描画100回の処理時間:&quot;</span>);</div>
+<div class="line"></div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
@@ -372,14 +389,14 @@ Static Public Member Functions</h2></td></tr>
 
 <p>処理時間計測終了. </p>
 <p>StartWatchからの経過時間をミリ秒単位で描画<br />
-続けてDrawWatchする事も可能 </p>
+ 続けてDrawWatchする事も可能 </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

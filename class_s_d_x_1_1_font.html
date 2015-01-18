@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>フォントデータを表すクラス.  
+<p>TrueTypeFontとBMPFontをまとめて扱うクラス.  
  <a href="class_s_d_x_1_1_font.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_font_8h_source.html">Font.h</a>&gt;</code></p>
@@ -103,77 +103,98 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7eea41437f25b6cdfd51c13447d0e6db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7eea41437f25b6cdfd51c13447d0e6db"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Font</b> (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0, <a class="el" href="namespace_s_d_x.html#a905ad09ec545d4d0b6a5380828ea0a51">FontType</a> フォントタイプ=FontType::Normal)</td></tr>
-<tr class="separator:a7eea41437f25b6cdfd51c13447d0e6db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0901821a3f434c89f36789edcb6f97f0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a0901821a3f434c89f36789edcb6f97f0">Load</a> (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0, <a class="el" href="namespace_s_d_x.html#a905ad09ec545d4d0b6a5380828ea0a51">FontType</a> フォントタイプ=FontType::Normal)</td></tr>
-<tr class="memdesc:a0901821a3f434c89f36789edcb6f97f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリ上にフォントを作成する.  <a href="#a0901821a3f434c89f36789edcb6f97f0">More...</a><br /></td></tr>
-<tr class="separator:a0901821a3f434c89f36789edcb6f97f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b6ece40f475a8160fe69f63338dfc4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65b6ece40f475a8160fe69f63338dfc4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a65b6ece40f475a8160fe69f63338dfc4">Font</a> (const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリングフラグ=true)</td></tr>
+<tr class="memdesc:a65b6ece40f475a8160fe69f63338dfc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="separator:a65b6ece40f475a8160fe69f63338dfc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b9fa17e0fd8f66d12dee7d21bb5e76"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a89b9fa17e0fd8f66d12dee7d21bb5e76">Load</a> (const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリングフラグ=true)</td></tr>
+<tr class="memdesc:a89b9fa17e0fd8f66d12dee7d21bb5e76"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントを作成する.  <a href="#a89b9fa17e0fd8f66d12dee7d21bb5e76">More...</a><br /></td></tr>
+<tr class="separator:a89b9fa17e0fd8f66d12dee7d21bb5e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a184530d35a50d86e9a97fb718408343f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a184530d35a50d86e9a97fb718408343f">Release</a> () const </td></tr>
-<tr class="memdesc:a184530d35a50d86e9a97fb718408343f"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントをメモリから開放する.  <a href="#a184530d35a50d86e9a97fb718408343f">More...</a><br /></td></tr>
+<tr class="memdesc:a184530d35a50d86e9a97fb718408343f"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントハンドルをメモリから開放する.  <a href="#a184530d35a50d86e9a97fb718408343f">More...</a><br /></td></tr>
 <tr class="separator:a184530d35a50d86e9a97fb718408343f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0408ef3abd3b93992cb56b76b4d04486"><td class="memItemLeft" align="right" valign="top">FontHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a0408ef3abd3b93992cb56b76b4d04486">GetHandle</a> () const </td></tr>
-<tr class="memdesc:a0408ef3abd3b93992cb56b76b4d04486"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントのハンドルを取得.  <a href="#a0408ef3abd3b93992cb56b76b4d04486">More...</a><br /></td></tr>
-<tr class="separator:a0408ef3abd3b93992cb56b76b4d04486"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8de5ff4f931800cec39020deb52feced"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8de5ff4f931800cec39020deb52feced"></a>
-<a class="el" href="class_s_d_x_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a8de5ff4f931800cec39020deb52feced">MakeImage</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 文字色, bool 反転フラグ, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const </td></tr>
-<tr class="memdesc:a8de5ff4f931800cec39020deb52feced"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントから画像を生成 <br /></td></tr>
-<tr class="separator:a8de5ff4f931800cec39020deb52feced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9efb4fd853c4ca75b2a02c2c347554a4"><td class="memItemLeft" align="right" valign="top">TTF_Font *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a9efb4fd853c4ca75b2a02c2c347554a4">GetHandle</a> () const </td></tr>
+<tr class="memdesc:a9efb4fd853c4ca75b2a02c2c347554a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントのハンドルを取得.  <a href="#a9efb4fd853c4ca75b2a02c2c347554a4">More...</a><br /></td></tr>
+<tr class="separator:a9efb4fd853c4ca75b2a02c2c347554a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44499842fc2935ec962a98ba89fc8cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb">MakeImage</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 文字色, bool 反転フラグ, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列) const </td></tr>
+<tr class="memdesc:a44499842fc2935ec962a98ba89fc8cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">FontからImageを生成.  <a href="#a44499842fc2935ec962a98ba89fc8cfb">More...</a><br /></td></tr>
+<tr class="separator:a44499842fc2935ec962a98ba89fc8cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a7a38cee1b1a50404f24a3fc5bd1551df">GetSize</a> () const </td></tr>
 <tr class="memdesc:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="mdescLeft">&#160;</td><td class="mdescRight">大きさを取得.  <a href="#a7a38cee1b1a50404f24a3fc5bd1551df">More...</a><br /></td></tr>
 <tr class="separator:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e6ed008e4d33980979844e1ce9629c7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a5e6ed008e4d33980979844e1ce9629c7">Getthick</a> () const </td></tr>
-<tr class="memdesc:a5e6ed008e4d33980979844e1ce9629c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">太さを取得.  <a href="#a5e6ed008e4d33980979844e1ce9629c7">More...</a><br /></td></tr>
-<tr class="separator:a5e6ed008e4d33980979844e1ce9629c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2cd4295cc9dd7efdfd122d325264b6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ad2cd4295cc9dd7efdfd122d325264b6b">GetDrawStringWidth</a> (<a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 幅を計算する文字列) const </td></tr>
-<tr class="memdesc:ad2cd4295cc9dd7efdfd122d325264b6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画時の幅を取得[未実装].  <a href="#ad2cd4295cc9dd7efdfd122d325264b6b">More...</a><br /></td></tr>
-<tr class="separator:ad2cd4295cc9dd7efdfd122d325264b6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab129f8faaca15d2c495f05820f1380d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ab129f8faaca15d2c495f05820f1380d9">Draw</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const override</td></tr>
-<tr class="memdesc:ab129f8faaca15d2c495f05820f1380d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#ab129f8faaca15d2c495f05820f1380d9">More...</a><br /></td></tr>
-<tr class="separator:ab129f8faaca15d2c495f05820f1380d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30c24cec48b2c1e84f584054a6f73164"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a30c24cec48b2c1e84f584054a6f73164"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 表色, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 影色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const </td></tr>
-<tr class="separator:a30c24cec48b2c1e84f584054a6f73164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abda565d60302685d52393c2421c427b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#abda565d60302685d52393c2421c427b9">DrawRotate</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double 拡大率, double 角度, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 描画色, bool 反転フラグ, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const override</td></tr>
-<tr class="memdesc:abda565d60302685d52393c2421c427b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を回転して描画.  <a href="#abda565d60302685d52393c2421c427b9">More...</a><br /></td></tr>
-<tr class="separator:abda565d60302685d52393c2421c427b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13d27d1ef88f6a9af8f3ab8b7b13ecc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ac13d27d1ef88f6a9af8f3ab8b7b13ecc">DrawExtend</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double X拡大率, double Y拡大率, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 描画色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const override</td></tr>
-<tr class="memdesc:ac13d27d1ef88f6a9af8f3ab8b7b13ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大率を指定して文字を描画.  <a href="#ac13d27d1ef88f6a9af8f3ab8b7b13ecc">More...</a><br /></td></tr>
-<tr class="separator:ac13d27d1ef88f6a9af8f3ab8b7b13ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a429733a8da157f8504618ffe081d392a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a429733a8da157f8504618ffe081d392a">GetDrawStringWidth</a> (const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;幅を計算する文字列) const </td></tr>
+<tr class="memdesc:a429733a8da157f8504618ffe081d392a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画時の幅を取得.  <a href="#a429733a8da157f8504618ffe081d392a">More...</a><br /></td></tr>
+<tr class="separator:a429733a8da157f8504618ffe081d392a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae15db9e457e957400bd32f26d8a80093"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ae15db9e457e957400bd32f26d8a80093">Draw</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const override</td></tr>
+<tr class="memdesc:ae15db9e457e957400bd32f26d8a80093"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#ae15db9e457e957400bd32f26d8a80093">More...</a><br /></td></tr>
+<tr class="separator:ae15db9e457e957400bd32f26d8a80093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c2cdbd0251ae44248a11abf6cf5eb22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a8c2cdbd0251ae44248a11abf6cf5eb22">DrawShadow</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 表色, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 影色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列) const </td></tr>
+<tr class="memdesc:a8c2cdbd0251ae44248a11abf6cf5eb22"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を影付きで描画.  <a href="#a8c2cdbd0251ae44248a11abf6cf5eb22">More...</a><br /></td></tr>
+<tr class="separator:a8c2cdbd0251ae44248a11abf6cf5eb22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954630755e93320e230315e79cc92d89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a954630755e93320e230315e79cc92d89">DrawRotate</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double 拡大率, double 角度, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const override</td></tr>
+<tr class="memdesc:a954630755e93320e230315e79cc92d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を回転して描画.  <a href="#a954630755e93320e230315e79cc92d89">More...</a><br /></td></tr>
+<tr class="separator:a954630755e93320e230315e79cc92d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf57766f9eee5304e8d348d01d9d931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#aecf57766f9eee5304e8d348d01d9d931">DrawExtend</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double X拡大率, double Y拡大率, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const override</td></tr>
+<tr class="memdesc:aecf57766f9eee5304e8d348d01d9d931"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大率を指定して文字を描画.  <a href="#aecf57766f9eee5304e8d348d01d9d931">More...</a><br /></td></tr>
+<tr class="separator:aecf57766f9eee5304e8d348d01d9d931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726b4d859756a768743729c5b603779d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a726b4d859756a768743729c5b603779d">SetImage</a> (const std::string &amp;文字, <a class="el" href="class_s_d_x_1_1_image.html">Image</a> *対応画像)</td></tr>
+<tr class="memdesc:a726b4d859756a768743729c5b603779d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した文字に対応するImageを設定.  <a href="#a726b4d859756a768743729c5b603779d">More...</a><br /></td></tr>
+<tr class="separator:a726b4d859756a768743729c5b603779d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eea07bb522aa7ee83a39e92e9b3e04d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a3eea07bb522aa7ee83a39e92e9b3e04d">SetImageS</a> (const std::string &amp;文字列, <a class="el" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *対応画像, int 登録数)</td></tr>
+<tr class="memdesc:a3eea07bb522aa7ee83a39e92e9b3e04d"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した文字から連続してに対応するImageをまとめて設定.  <a href="#a3eea07bb522aa7ee83a39e92e9b3e04d">More...</a><br /></td></tr>
+<tr class="separator:a3eea07bb522aa7ee83a39e92e9b3e04d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>フォントデータを表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣フォントを使って文字列を描画する</span></div>
+<div class="textblock"><p>TrueTypeFontとBMPFontをまとめて扱うクラス. </p>
+<p>毎回レンダリングせず、ハッシュマップにImageを格納する 一度も表示していない文字が必要になった場合生成し以後使いまわす </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え </dd></dl>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//フォントを作成して文字列を描画する</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleFont()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//SDLとDXLIBでフォント指定方法が違うので注意が必要</span></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA( SystemFont::Gothic , 20 , 1 , 10 );</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB( SystemFont::Mincho , 20 , 1 , 10 );</div>
+<div class="line">    <span class="comment">//フォントの初期化</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line"></div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">Screen::SetBackColor</a>(<a class="code" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Color::Silver</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
 <div class="line">        angle += 0.02;</div>
 <div class="line"></div>
-<div class="line">        fontA.Draw({ 10 * angle, 10 }, Color::White, <span class="stringliteral">&quot;Hello!\nこんにちは\n今日は&quot;</span>);</div>
-<div class="line">        fontB.Draw({ 10 * angle, 200 }, Color::Blue, <span class="stringliteral">&quot;Hello!\nこんにちは\n今日は&quot;</span>);</div>
+<div class="line">        fontA.Draw({ 10 , 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line">        fontB.Draw({ 10 , 200 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">        fontA.DrawRotate({ 300, 200 }, 1, angle, Color::White, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転\nてすとしますよ~~~&quot;</span>);</div>
-<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle / 2, Color::White, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転\nてすとしますよ~~~&quot;</span>);</div>
+<div class="line">        fontA.DrawRotate({ 300, 100 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span>(Input::key.Return.on)    <span class="keywordflow">break</span>;<span class="comment">//Enterで終了    </span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a0901821a3f434c89f36789edcb6f97f0"></a>
+<a class="anchor" id="a89b9fa17e0fd8f66d12dee7d21bb5e76"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -193,19 +214,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>太さ</em> = <code>1</code>, </td>
+          <td class="paramname"><em>行間</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>改行高さ</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="namespace_s_d_x.html#a905ad09ec545d4d0b6a5380828ea0a51">FontType</a>&#160;</td>
-          <td class="paramname"><em>フォントタイプ</em> = <code>FontType::Normal</code>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>高品質レンダリングフラグ</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,9 +230,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
       </table>
 </div><div class="memdoc">
 
-<p>メモリ上にフォントを作成する. </p>
-<p>太さは0～9で指定、大きさと太さは-1にするとデフォルトになる<br />
-改行高さは0の場合、改行後の文字が上下くっつく。 SDLとDXLIBではフォント名の指定方法が違うので注意。 SDLでは太さとフォントタイプが無効 </p>
+<p>フォントを作成する. </p>
+<p>行間は0の場合、改行後の文字が上下くっつく。<br />
+ BMPフォント専用にしたい場合、フォント名は無効な物を入れる </p>
 
 </div>
 </div>
@@ -234,16 +249,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
       </table>
 </div><div class="memdoc">
 
-<p>フォントをメモリから開放する. </p>
+<p>フォントハンドルをメモリから開放する. </p>
 
 </div>
 </div>
-<a class="anchor" id="a0408ef3abd3b93992cb56b76b4d04486"></a>
+<a class="anchor" id="a9efb4fd853c4ca75b2a02c2c347554a4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FontHandle SDX::Font::GetHandle </td>
+          <td class="memname">TTF_Font* SDX::Font::GetHandle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -252,6 +267,40 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
 </div><div class="memdoc">
 
 <p>フォントのハンドルを取得. </p>
+
+</div>
+</div>
+<a class="anchor" id="a44499842fc2935ec962a98ba89fc8cfb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> SDX::Font::MakeImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>文字色</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>FontからImageを生成. </p>
 
 </div>
 </div>
@@ -272,42 +321,25 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
 
 </div>
 </div>
-<a class="anchor" id="a5e6ed008e4d33980979844e1ce9629c7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SDX::Font::Getthick </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>太さを取得. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad2cd4295cc9dd7efdfd122d325264b6b"></a>
+<a class="anchor" id="a429733a8da157f8504618ffe081d392a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int SDX::Font::GetDrawStringWidth </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
           <td class="paramname"><em>幅を計算する文字列</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>描画時の幅を取得[未実装]. </p>
+<p>描画時の幅を取得. </p>
 
 </div>
 </div>
-<a class="anchor" id="ab129f8faaca15d2c495f05820f1380d9"></a>
+<a class="anchor" id="ae15db9e457e957400bd32f26d8a80093"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -323,14 +355,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>色</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -346,12 +384,53 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
 </div><div class="memdoc">
 
 <p>文字を描画. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
-<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#a469998eaf4c3958996253d5b8da9560b">SDX::IFont</a>.</p>
+<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">SDX::IFont</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="abda565d60302685d52393c2421c427b9"></a>
+<a class="anchor" id="a8c2cdbd0251ae44248a11abf6cf5eb22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::Font::DrawShadow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>座標</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>表色</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>影色</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>文字を影付きで描画. </p>
+
+</div>
+</div>
+<a class="anchor" id="a954630755e93320e230315e79cc92d89"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -379,20 +458,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>反転フラグ</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -408,13 +487,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
 </div><div class="memdoc">
 
 <p>文字を回転して描画. </p>
-<p>呼び出す度に画像イメージを作成するので処理は重い </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
-<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#a3294c5199bc3140f3d54353a99b23fbf">SDX::IFont</a>.</p>
+<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">SDX::IFont</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac13d27d1ef88f6a9af8f3ab8b7b13ecc"></a>
+<a class="anchor" id="aecf57766f9eee5304e8d348d01d9d931"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -442,14 +521,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -465,15 +550,80 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>DrawShadow</b> (const
 </div><div class="memdoc">
 
 <p>拡大率を指定して文字を描画. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
-<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#ace0958cd56a54d9883915127707d9a85">SDX::IFont</a>.</p>
+<p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">SDX::IFont</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a726b4d859756a768743729c5b603779d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::Font::SetImage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>文字</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td>
+          <td class="paramname"><em>対応画像</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した文字に対応するImageを設定. </p>
+<p>文字列が2文字以上なら2文字目以降は無視 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3eea07bb522aa7ee83a39e92e9b3e04d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::Font::SetImageS </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>文字列</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *&#160;</td>
+          <td class="paramname"><em>対応画像</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>登録数</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した文字から連続してに対応するImageをまとめて設定. </p>
+<p>例えば文字列="0"で登録数=10なら0～9までを登録 アルファベットや数字用 </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

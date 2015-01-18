@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -103,22 +103,132 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e6976560ad2f1b16cb5271288920423"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e6976560ad2f1b16cb5271288920423"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Bound</b> (const TSpeed &amp;速度, const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;移動範囲, double 進行方向)</td></tr>
+<tr class="memitem:a4e6976560ad2f1b16cb5271288920423"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html#a4e6976560ad2f1b16cb5271288920423">Bound</a> (const TSpeed &amp;速度, const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;移動範囲, double 進行方向)</td></tr>
+<tr class="memdesc:a4e6976560ad2f1b16cb5271288920423"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度と移動範囲、最初の移動方向を指定.  <a href="#a4e6976560ad2f1b16cb5271288920423">More...</a><br /></td></tr>
 <tr class="separator:a4e6976560ad2f1b16cb5271288920423"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cd3315063ede9d02a3137b33e98c1f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cd3315063ede9d02a3137b33e98c1f3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> (<a class="el" href="class_s_d_x_1_1_i_model.html">IModel</a> *移動対象)</td></tr>
-<tr class="separator:a6cd3315063ede9d02a3137b33e98c1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696f8cf055dd53b54dd06f669c096551"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html#a696f8cf055dd53b54dd06f669c096551">Update</a> (<a class="el" href="class_s_d_x_1_1_i_position.html">IPosition</a> *移動対象) override</td></tr>
+<tr class="memdesc:a696f8cf055dd53b54dd06f669c096551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Motion終了時はfalseを返す.  <a href="#a696f8cf055dd53b54dd06f669c096551">More...</a><br /></td></tr>
+<tr class="separator:a696f8cf055dd53b54dd06f669c096551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;class TSpeed&gt;<br />
 class SDX::MOTION::Bound&lt; TSpeed &gt;</h3>
 
 <p>範囲内で跳ね返る. </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//ライブラリの初期化等を行う</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">bool</span> SampleMotion()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ウィンドウタイトルを指定して、初期化する</span></div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_line.html">Line</a> line(100, 50, 0.1, 20, 5);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> rect(100, 100, 10, 10 , 10 , 10);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_circle.html">Circle</a> circleA(200, 150, 10);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_circle.html">Circle</a> circleB(400, 400-30, 10);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_circle.html">Circle</a> circleC(400, 400, 10);</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_to_front.html">MOTION::ToFront&lt;SPEED::Wave&gt;</a> toFront({ 5, 0.1, 0 });</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html">MOTION::Bound&lt;SPEED::Liner&gt;</a> bound({ 5 }, {0,0,640,480},<a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>/6);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_to_point.html">MOTION::ToPoint&lt;SPEED::Accel&gt;</a> toPoint({ -1.0, 0.01 }, {400,400});</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_orbit.html">MOTION::Orbit&lt;SPEED::AccelLimit&gt;</a> orbit({ 0 , 0.001, 0.2 },50,30);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_vibrate.html">MOTION::Vibrate</a> vibrate( 5 );</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_i_shape.html">IShape</a>* shapeS[5] = {&amp;line,&amp;rect,&amp;circleA,&amp;circleB,&amp;circleC};</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html">MOTION::IMotion</a> *motionS[5] = {&amp;toFront,&amp;bound,&amp;toPoint,&amp;orbit,&amp;vibrate};</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())<span class="comment">//ウィンドウの更新や、入力の更新等を行う</span></div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 5; ++a)</div>
+<div class="line">        {</div>
+<div class="line">            motionS[a]-&gt;<a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">Update</a>(shapeS[a]);</div>
+<div class="line">            shapeS[a]-&gt;Draw(Color::White);</div>
+<div class="line">        }</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理を行う</span></div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a4e6976560ad2f1b16cb5271288920423"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSpeed &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html">SDX::MOTION::Bound</a>&lt; TSpeed &gt;::<a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html">Bound</a> </td>
+          <td>(</td>
+          <td class="paramtype">const TSpeed &amp;&#160;</td>
+          <td class="paramname"><em>速度</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;&#160;</td>
+          <td class="paramname"><em>移動範囲</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>進行方向</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>速度と移動範囲、最初の移動方向を指定. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a696f8cf055dd53b54dd06f669c096551"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSpeed &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_bound.html">SDX::MOTION::Bound</a>&lt; TSpeed &gt;::Update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_i_position.html">IPosition</a> *&#160;</td>
+          <td class="paramname"><em>移動対象</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Motion終了時はfalseを返す. </p>
+
+<p>Reimplemented from <a class="el" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">SDX::MOTION::IMotion</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

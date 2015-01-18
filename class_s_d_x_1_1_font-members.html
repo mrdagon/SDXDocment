@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -93,23 +93,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#ab129f8faaca15d2c495f05820f1380d9">Draw</a>(const Point &amp;座標, Color 色, VariadicStream 描画する文字列) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#ac13d27d1ef88f6a9af8f3ab8b7b13ecc">DrawExtend</a>(const Point &amp;座標, double X拡大率, double Y拡大率, Color 描画色, VariadicStream 描画する文字列) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#abda565d60302685d52393c2421c427b9">DrawRotate</a>(const Point &amp;座標, double 拡大率, double 角度, Color 描画色, bool 反転フラグ, VariadicStream 描画する文字列) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DrawShadow</b>(const Point &amp;座標, Color 表色, Color 影色, VariadicStream 描画する文字列) const  (defined in <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Font</b>() (defined in <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Font</b>(const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0, FontType フォントタイプ=FontType::Normal) (defined in <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#ad2cd4295cc9dd7efdfd122d325264b6b">GetDrawStringWidth</a>(VariadicStream 幅を計算する文字列) const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a0408ef3abd3b93992cb56b76b4d04486">GetHandle</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#ae15db9e457e957400bd32f26d8a80093">Draw</a>(const Point &amp;座標, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#aecf57766f9eee5304e8d348d01d9d931">DrawExtend</a>(const Point &amp;座標, double X拡大率, double Y拡大率, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a954630755e93320e230315e79cc92d89">DrawRotate</a>(const Point &amp;座標, double 拡大率, double 角度, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a8c2cdbd0251ae44248a11abf6cf5eb22">DrawShadow</a>(const Point &amp;座標, Color 表色, Color 影色, const VariadicStream &amp;描画する文字列) const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Font</b>()=default (defined in <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a65b6ece40f475a8160fe69f63338dfc4">Font</a>(const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリングフラグ=true)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a429733a8da157f8504618ffe081d392a">GetDrawStringWidth</a>(const VariadicStream &amp;幅を計算する文字列) const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a9efb4fd853c4ca75b2a02c2c347554a4">GetHandle</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a7a38cee1b1a50404f24a3fc5bd1551df">GetSize</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a5e6ed008e4d33980979844e1ce9629c7">Getthick</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a0901821a3f434c89f36789edcb6f97f0">Load</a>(const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0, FontType フォントタイプ=FontType::Normal)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a8de5ff4f931800cec39020deb52feced">MakeImage</a>(Color 文字色, bool 反転フラグ, VariadicStream 描画する文字列) const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a184530d35a50d86e9a97fb718408343f">Release</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a89b9fa17e0fd8f66d12dee7d21bb5e76">Load</a>(const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリングフラグ=true)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb">MakeImage</a>(Color 文字色, bool 反転フラグ, const VariadicStream &amp;描画する文字列) const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a184530d35a50d86e9a97fb718408343f">Release</a>() const </td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a726b4d859756a768743729c5b603779d">SetImage</a>(const std::string &amp;文字, Image *対応画像)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html#a3eea07bb522aa7ee83a39e92e9b3e04d">SetImageS</a>(const std::string &amp;文字列, ImagePack *対応画像, int 登録数)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~IFont</b>()=default (defined in <a class="el" href="class_s_d_x_1_1_i_font.html">SDX::IFont</a>)</td><td class="entry"><a class="el" href="class_s_d_x_1_1_i_font.html">SDX::IFont</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

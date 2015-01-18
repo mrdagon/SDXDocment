@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -94,58 +94,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><a class="el" href="class_s_d_x_1_1_font.html" title="フォントデータを表すクラス. ">Font</a>,BmpFont等のインターフェース.  
+<p>Fontのインターフェース.  
  <a href="class_s_d_x_1_1_i_font.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_font_8h_source.html">IFont.h</a>&gt;</code></p>
 
-<p>Inherited by <a class="el" href="class_s_d_x_1_1_bmp_font.html">SDX::BmpFont</a>, <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_hash_font.html">SDX::HashFont</a>.</p>
+<p>Inherited by <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_font_old.html">SDX::FontOld</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a469998eaf4c3958996253d5b8da9560b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#a469998eaf4c3958996253d5b8da9560b">Draw</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const =0</td></tr>
-<tr class="memdesc:a469998eaf4c3958996253d5b8da9560b"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#a469998eaf4c3958996253d5b8da9560b">More...</a><br /></td></tr>
-<tr class="separator:a469998eaf4c3958996253d5b8da9560b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3294c5199bc3140f3d54353a99b23fbf"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#a3294c5199bc3140f3d54353a99b23fbf">DrawRotate</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double 拡大率, double 角度, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 描画色, bool 反転フラグ, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const =0</td></tr>
-<tr class="memdesc:a3294c5199bc3140f3d54353a99b23fbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を回転して描画.  <a href="#a3294c5199bc3140f3d54353a99b23fbf">More...</a><br /></td></tr>
-<tr class="separator:a3294c5199bc3140f3d54353a99b23fbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace0958cd56a54d9883915127707d9a85"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#ace0958cd56a54d9883915127707d9a85">DrawExtend</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double X軸拡大率, double Y軸拡大率, <a class="el" href="class_s_d_x_1_1_color.html">Color</a> 色, <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 描画する文字列) const =0</td></tr>
-<tr class="memdesc:ace0958cd56a54d9883915127707d9a85"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大率を指定して文字を描画.  <a href="#ace0958cd56a54d9883915127707d9a85">More...</a><br /></td></tr>
-<tr class="separator:ace0958cd56a54d9883915127707d9a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad76df196db6490bbfbb1fe205f30d30f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">Draw</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const =0</td></tr>
+<tr class="memdesc:ad76df196db6490bbfbb1fe205f30d30f"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を描画.  <a href="#ad76df196db6490bbfbb1fe205f30d30f">More...</a><br /></td></tr>
+<tr class="separator:ad76df196db6490bbfbb1fe205f30d30f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb58da36015d571717a351c58314510"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">DrawRotate</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double 拡大率, double 角度, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const =0</td></tr>
+<tr class="memdesc:a0cb58da36015d571717a351c58314510"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字を回転して描画.  <a href="#a0cb58da36015d571717a351c58314510">More...</a><br /></td></tr>
+<tr class="separator:a0cb58da36015d571717a351c58314510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af92e08f09b52d8792009903c03ee8542"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">DrawExtend</a> (const <a class="el" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, double X軸拡大率, double Y軸拡大率, const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列, bool 反転フラグ=false) const =0</td></tr>
+<tr class="memdesc:af92e08f09b52d8792009903c03ee8542"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大率を指定して文字を描画.  <a href="#af92e08f09b52d8792009903c03ee8542">More...</a><br /></td></tr>
+<tr class="separator:af92e08f09b52d8792009903c03ee8542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="class_s_d_x_1_1_font.html" title="フォントデータを表すクラス. ">Font</a>,BmpFont等のインターフェース. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣フォントを使って文字列を描画する</span></div>
+<div class="textblock"><p>Fontのインターフェース. </p>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//フォントを作成して文字列を描画する</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleFont()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//SDLとDXLIBでフォント指定方法が違うので注意が必要</span></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA( SystemFont::Gothic , 20 , 1 , 10 );</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB( SystemFont::Mincho , 20 , 1 , 10 );</div>
+<div class="line">    <span class="comment">//フォントの初期化</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line"></div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span>(<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">Screen::SetBackColor</a>(<a class="code" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Color::Silver</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
 <div class="line">        angle += 0.02;</div>
 <div class="line"></div>
-<div class="line">        fontA.Draw({ 10 * angle, 10 }, Color::White, <span class="stringliteral">&quot;Hello!\nこんにちは\n今日は&quot;</span>);</div>
-<div class="line">        fontB.Draw({ 10 * angle, 200 }, Color::Blue, <span class="stringliteral">&quot;Hello!\nこんにちは\n今日は&quot;</span>);</div>
+<div class="line">        fontA.Draw({ 10 , 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line">        fontB.Draw({ 10 , 200 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">        fontA.DrawRotate({ 300, 200 }, 1, angle, Color::White, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転\nてすとしますよ~~~&quot;</span>);</div>
-<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle / 2, Color::White, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転\nてすとしますよ~~~&quot;</span>);</div>
+<div class="line">        fontA.DrawRotate({ 300, 100 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span>(Input::key.Return.on)    <span class="keywordflow">break</span>;<span class="comment">//Enterで終了    </span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a469998eaf4c3958996253d5b8da9560b"></a>
+<a class="anchor" id="ad76df196db6490bbfbb1fe205f30d30f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -161,14 +178,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>色</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -185,11 +208,11 @@ Public Member Functions</h2></td></tr>
 
 <p>文字を描画. </p>
 
-<p>Implemented in <a class="el" href="class_s_d_x_1_1_hash_font.html#abc5a325172e5c2f224e4a94780bc352b">SDX::HashFont</a>, <a class="el" href="class_s_d_x_1_1_font.html#ab129f8faaca15d2c495f05820f1380d9">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_bmp_font.html#a1080f472b9074e2e3602a8e9e1b11b42">SDX::BmpFont</a>.</p>
+<p>Implemented in <a class="el" href="class_s_d_x_1_1_font.html#ae15db9e457e957400bd32f26d8a80093">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_font_old.html#ac312e613c9d49d637746a8611fd28aa7">SDX::FontOld</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3294c5199bc3140f3d54353a99b23fbf"></a>
+<a class="anchor" id="a0cb58da36015d571717a351c58314510"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -217,20 +240,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>反転フラグ</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -247,11 +270,11 @@ Public Member Functions</h2></td></tr>
 
 <p>文字を回転して描画. </p>
 
-<p>Implemented in <a class="el" href="class_s_d_x_1_1_bmp_font.html#af3293dda2aaf2bab6a2c2824ad0ad02c">SDX::BmpFont</a>, <a class="el" href="class_s_d_x_1_1_hash_font.html#a3de6eedbcfa57452128db5b694242b56">SDX::HashFont</a>, and <a class="el" href="class_s_d_x_1_1_font.html#abda565d60302685d52393c2421c427b9">SDX::Font</a>.</p>
+<p>Implemented in <a class="el" href="class_s_d_x_1_1_font.html#a954630755e93320e230315e79cc92d89">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_font_old.html#a189c954c73945768ca43a13f3aafccf0">SDX::FontOld</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ace0958cd56a54d9883915127707d9a85"></a>
+<a class="anchor" id="af92e08f09b52d8792009903c03ee8542"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -279,14 +302,20 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_color.html">Color</a>&#160;</td>
-          <td class="paramname"><em>色</em>, </td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画色</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
-          <td class="paramname"><em>描画する文字列</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;&#160;</td>
+          <td class="paramname"><em>描画する文字列</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>反転フラグ</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -303,14 +332,14 @@ Public Member Functions</h2></td></tr>
 
 <p>拡大率を指定して文字を描画. </p>
 
-<p>Implemented in <a class="el" href="class_s_d_x_1_1_bmp_font.html#a3af1c4d786f70073c061b9c38d59b695">SDX::BmpFont</a>, <a class="el" href="class_s_d_x_1_1_hash_font.html#a7080f3c4aa31843e2c4a742881051dc3">SDX::HashFont</a>, and <a class="el" href="class_s_d_x_1_1_font.html#ac13d27d1ef88f6a9af8f3ab8b7b13ecc">SDX::Font</a>.</p>
+<p>Implemented in <a class="el" href="class_s_d_x_1_1_font.html#aecf57766f9eee5304e8d348d01d9d931">SDX::Font</a>, and <a class="el" href="class_s_d_x_1_1_font_old.html#a3fc5dc1d5b2c6dc7362e81520055c237">SDX::FontOld</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

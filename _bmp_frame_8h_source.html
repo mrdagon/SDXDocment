@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,82 +83,222 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">BmpFrame.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Image.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;Multimedia/Font.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;Framework/BmpFont.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Framework/Anime.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>SDX</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_frame.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_i_frame.html">IFrame</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Draw(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Framework/ImagePack.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;Framework/IFrame.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a> : <span class="keyword">public</span> <a class="code" href="class_s_d_x_1_1_i_frame.html">IFrame</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *frame = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a> : <span class="keyword">public</span> <a class="code" href="class_s_d_x_1_1_i_frame.html">IFrame</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> isMake;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *frame;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">   28</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a>( <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *フレーム画像 )</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span>( フレーム画像-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a>() != 9  ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this-&gt;frame = フレーム画像;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        this-&gt;isMake = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html#a8069f8e4e74e802839736b1cf4220356">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_bmp_frame.html#a8069f8e4e74e802839736b1cf4220356">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> fWidth = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">GetWidth</a>();</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> fHeight = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">GetHeight</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> X座標 = 領域.GetLeft();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Y座標 = 領域.GetTop();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> xA = X座標 + fWidth;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> xB = X座標 - fWidth + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a01271166c1745349b92fc5c5b291b84a">GetW</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> yA = Y座標 + fHeight;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> yB = Y座標 - fHeight + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#ab6e5a35f02e8c5bf4ca402efb0e91272">GetH</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="class_s_d_x_1_1_bmp_frame.html">BmpFrame</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html#a6fe1a15975f29a8beeb9ec10492518ef">   22</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_bmp_frame.html#a6fe1a15975f29a8beeb9ec10492518ef">BmpFrame</a>(<a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *フレーム画像)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <a class="code" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a>(フレーム画像);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">   29</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a>(<a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> *フレーム画像)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_loading.html#a969f71ede68ac12fa93e56050c914b84">Loading::IsLoading</a>())</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="class_s_d_x_1_1_loading.html#a891a3d0ec0f458125a845d4eafd39671">Loading::AddLoading</a>([=]{ <a class="code" href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">Make</a>(フレーム画像); });</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (フレーム画像-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a>() != 9) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            frame = フレーム画像;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_bmp_frame.html#a95e11686e26c70feac7509e72f815be8">   46</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_bmp_frame.html#a95e11686e26c70feac7509e72f815be8">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;領域 , <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色 = <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (frame == <span class="keyword">nullptr</span>){ <span class="keywordflow">return</span>; }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_s_d_x_1_1_color.html">Color</a> color = <a class="code" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">Screen::GetRenderer</a>()-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a50976e076b7a7b5ec3f1313ec820e1c5">rgba</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">//内部スキンを描画</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        frame[0][4]-&gt;DrawExtend({ fWidth +X座標, fHeight + Y座標}, { 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a01271166c1745349b92fc5c5b291b84a">GetW</a>() - fWidth + X座標, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#ab6e5a35f02e8c5bf4ca402efb0e91272">GetH</a>() - fHeight + Y座標});</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="comment">//まず外枠を描画    </span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        frame[0][3]-&gt;DrawExtend({ X座標, yA }, { xA, yB });</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        frame[0][5]-&gt;DrawExtend({ xB, yA }, { xB + fWidth, yB });</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        frame[0][1]-&gt;DrawExtend({ xA, Y座標 }, { xB, yA });</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        frame[0][7]-&gt;DrawExtend({ xA, yB }, { xB, yB + fHeight });</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">//四隅を描画</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        frame[0][0]-&gt;Draw({ X座標, Y座標 });</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        frame[0][2]-&gt;Draw({ X座標 + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a01271166c1745349b92fc5c5b291b84a">GetW</a>() - fWidth, Y座標 });</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        frame[0][6]-&gt;Draw({ X座標, Y座標 + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#ab6e5a35f02e8c5bf4ca402efb0e91272">GetH</a>() - fHeight });</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        frame[0][8]-&gt;Draw({ X座標 + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a01271166c1745349b92fc5c5b291b84a">GetW</a>() - fWidth, Y座標 + 領域.<a class="code" href="class_s_d_x_1_1_rect.html#ab6e5a35f02e8c5bf4ca402efb0e91272">GetH</a>() - fHeight });</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Shape.h:536</div></div>
-<div class="ttc" id="class_s_d_x_1_1_rect_html_a01271166c1745349b92fc5c5b291b84a"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#a01271166c1745349b92fc5c5b291b84a">SDX::Rect::GetW</a></div><div class="ttdeci">double GetW() const </div><div class="ttdoc">幅を取得. </div><div class="ttdef"><b>Definition:</b> Shape.h:616</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a68e2471b0e615183d3ec53321a3870c9"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">SDX::ImagePack::GetWidth</a></div><div class="ttdeci">int GetWidth() const </div><div class="ttdoc">最大幅を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:107</div></div>
-<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html_aafd8083c5a835c99f602d8d3e49976e8"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">SDX::BmpFrame::Make</a></div><div class="ttdeci">bool Make(ImagePack *フレーム画像)</div><div class="ttdoc">フレームを作成する. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:28</div></div>
-<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html">SDX::BmpFrame</a></div><div class="ttdoc">描画用枠を表すクラス. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:20</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a033d96d88be186a764674383788c0edf"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">SDX::ImagePack::GetSize</a></div><div class="ttdeci">int GetSize() const </div><div class="ttdoc">要素数を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:101</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html_ad6dfec42ed28f98587606af73cd54328"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">SDX::ImagePack::GetHeight</a></div><div class="ttdeci">int GetHeight() const </div><div class="ttdoc">最大高さを取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:113</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a></div><div class="ttdoc">複数のImageをまとめるクラス. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:9</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_frame_html"><div class="ttname"><a href="class_s_d_x_1_1_i_frame.html">SDX::IFrame</a></div><div class="ttdoc">描画用枠のインターフェース. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:12</div></div>
-<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html_a8069f8e4e74e802839736b1cf4220356"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html#a8069f8e4e74e802839736b1cf4220356">SDX::BmpFrame::Draw</a></div><div class="ttdeci">void Draw(const Rect &amp;領域) const </div><div class="ttdoc">矩形のフレームを描画. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:40</div></div>
-<div class="ttc" id="class_s_d_x_1_1_rect_html_ab6e5a35f02e8c5bf4ca402efb0e91272"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#ab6e5a35f02e8c5bf4ca402efb0e91272">SDX::Rect::GetH</a></div><div class="ttdeci">double GetH() const </div><div class="ttdoc">高さを取得. </div><div class="ttdef"><b>Definition:</b> Shape.h:621</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (描画色 != <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">Screen::GetRenderer</a>()-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a50976e076b7a7b5ec3f1313ec820e1c5">rgba</a>.<a class="code" href="class_s_d_x_1_1_color.html#a978b1912f1ae61b189b577d809adc316">SetColor</a></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    (</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        color.<a class="code" href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">GetRed</a>() * 描画色.GetRed() / 255,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        color.<a class="code" href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">GetGreen</a>() * 描画色.GetGreen() / 255,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        color.<a class="code" href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">GetBlue</a>() * 描画色.GetBlue() / 255,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                        color.<a class="code" href="class_s_d_x_1_1_color.html#a845c7693d3c9521f68f56fb01aa70092">GetAlpha</a>() * 描画色.GetAlpha() / 255                  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    );</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keyword">auto</span> camera = <a class="code" href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">Camera::Get</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">int</span> width = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">GetWidth</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordtype">int</span> height = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">GetHeight</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">bool</span> isMin = <span class="keyword">true</span>;<span class="comment">//枠が小さいため部分描画が必要フラグ</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">int</span> partW = width;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> partH = height;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">int</span> partLeft = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">int</span> partTop = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//外枠</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> (width * 2 &gt; 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>())</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                width = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() / 2;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                partW = width;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                partLeft = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">GetWidth</a>() - width;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                isMin = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (height * 2 &gt; 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>())</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                height = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() / 2;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                partH = height;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                partTop = frame-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">GetHeight</a>() - height;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                isMin = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">if</span> (camera)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="comment">//隙間が出来るのでCameraの機能はここで計算</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <a class="code" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">Camera::Set</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                width = int(width * camera-&gt;zoom);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                height = int(height *camera-&gt;zoom);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                <span class="comment">//カメラ補正有り</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="keywordtype">int</span> xA = (int)camera-&gt;TransX(領域.<a class="code" href="class_s_d_x_1_1_rect.html#aefb9f884eab08240e0b5381ed35bf818">GetLeft</a>());</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordtype">int</span> xB = xA + width;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                <span class="keywordtype">int</span> xD = (int)camera-&gt;TransX(領域.<a class="code" href="class_s_d_x_1_1_rect.html#aab1eda1a0f9b7cfa7aaa7d464bfe5b97">GetRight</a>());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordtype">int</span> xC = xD - width;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordtype">int</span> yA = (int)camera-&gt;TransY(領域.<a class="code" href="class_s_d_x_1_1_rect.html#ad67cb282587a525ddf6a21cbf33d9496">GetTop</a>());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordtype">int</span> yB = yA + height;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordtype">int</span> yD = (int)camera-&gt;TransY(領域.<a class="code" href="class_s_d_x_1_1_rect.html#a3719a286220681fe0b3131bde8c656d3">GetBottom</a>());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordtype">int</span> yC = yD - height;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">//内側</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                frame[0][4]-&gt;DrawExtend({ xB, yB, xC -xB, yC - yB });</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span> (isMin)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    frame[0][3]-&gt;DrawPartExtend({ xA, yB, width, yC - yB }, { 0, 0, width, height});<span class="comment">//左</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    frame[0][5]-&gt;DrawPartExtend({ xC, yB, width, yC - yB }, { partLeft, 0, width, height });<span class="comment">//右</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    frame[0][1]-&gt;DrawPartExtend({ xB, yA, xC - xB, height }, { 0, 0, width, height });<span class="comment">//上</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    frame[0][7]-&gt;DrawPartExtend({ xB, yC, xC - xB, height }, { 0, partTop, width, height });<span class="comment">//下</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    frame[0][0]-&gt;DrawPartExtend({ xA, yA, width, height }, { 0, 0, width, height });<span class="comment">//左上</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    frame[0][2]-&gt;DrawPartExtend({ xC, yA, width, height }, { partLeft, 0, width, height });<span class="comment">//右上</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                    frame[0][6]-&gt;DrawPartExtend({ xA, yC, width, height }, { 0, partTop, width, height });<span class="comment">//左下</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    frame[0][8]-&gt;DrawPartExtend({ xC, yC, width, height }, { partLeft, partTop, width, height });<span class="comment">//右下</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                    frame[0][3]-&gt;DrawExtend({ xA, yB, width, yC - yB });<span class="comment">//左</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                    frame[0][5]-&gt;DrawExtend({ xC, yB, width, yC - yB });<span class="comment">//右</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                    frame[0][1]-&gt;DrawExtend({ xB, yA, xC - xB, height });<span class="comment">//上</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    frame[0][7]-&gt;DrawExtend({ xB, yC, xC - xB, height });<span class="comment">//下</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                    frame[0][0]-&gt;DrawExtend({ xA, yA, width, height });<span class="comment">//左上</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    frame[0][2]-&gt;DrawExtend({ xC, yA, width, height });<span class="comment">//右上</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    frame[0][6]-&gt;DrawExtend({ xA, yC, width, height });<span class="comment">//左下</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    frame[0][8]-&gt;DrawExtend({ xC, yC, width, height });<span class="comment">//右下</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">Camera::Set</a>(camera);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="comment">//カメラ補正無し</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="keywordtype">int</span> xA = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#aefb9f884eab08240e0b5381ed35bf818">GetLeft</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordtype">int</span> xB = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#aefb9f884eab08240e0b5381ed35bf818">GetLeft</a>() + width;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                <span class="keywordtype">int</span> xC = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#aab1eda1a0f9b7cfa7aaa7d464bfe5b97">GetRight</a>() - width;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordtype">int</span> yA = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#ad67cb282587a525ddf6a21cbf33d9496">GetTop</a>();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordtype">int</span> yB = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#ad67cb282587a525ddf6a21cbf33d9496">GetTop</a>() + height;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordtype">int</span> yC = (int)領域.<a class="code" href="class_s_d_x_1_1_rect.html#a3719a286220681fe0b3131bde8c656d3">GetBottom</a>() - height;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="comment">//内側</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                frame[0][4]-&gt;DrawExtend({ xB, yB, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() - width * 2, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() - height * 2 });</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">if</span> (isMin)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                {</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <span class="comment">//外枠</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    frame[0][3]-&gt;DrawPartExtend({ xA, yB, width, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() - height * 2 }, { 0, 0, width, height });<span class="comment">//左</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    frame[0][5]-&gt;DrawPartExtend({ xC, yB, width, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() - height * 2 }, { partLeft, 0, width, height });<span class="comment">//右</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                    frame[0][1]-&gt;DrawPartExtend({ xB, yA, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() - width * 2, height }, { 0, 0, width, height });<span class="comment">//上</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    frame[0][7]-&gt;DrawPartExtend({ xB, yC, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() - width * 2, height }, { 0, partTop, width, height });<span class="comment">//下</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                    frame[0][0]-&gt;DrawPartExtend({ xA, yA, width, height }, { 0, 0, width, height });<span class="comment">//左上</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    frame[0][2]-&gt;DrawPartExtend({ xC, yA, width, height }, { partLeft, 0, width, height });<span class="comment">//右上</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                    frame[0][6]-&gt;DrawPartExtend({ xA, yC, width, height }, { 0, partTop, width, height });<span class="comment">//左下</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    frame[0][8]-&gt;DrawPartExtend({ xC, yC, width, height }, { partLeft, partTop, width, height });<span class="comment">//右下</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                }</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                {</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    <span class="comment">//外枠</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    frame[0][3]-&gt;DrawExtend({ xA, yB, width, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() - height * 2 });<span class="comment">//左</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    frame[0][5]-&gt;DrawExtend({ xC, yB, width, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">GetH</a>() - height * 2 });<span class="comment">//右</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    frame[0][1]-&gt;DrawExtend({ xB, yA, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() - width * 2, height });<span class="comment">//上</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    frame[0][7]-&gt;DrawExtend({ xB, yC, 領域.<a class="code" href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">GetW</a>() - width * 2, height });<span class="comment">//下</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    frame[0][0]-&gt;DrawExtend({ xA, yA, width, height });<span class="comment">//左上</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    frame[0][2]-&gt;DrawExtend({ xC, yA, width, height });<span class="comment">//右上</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    frame[0][6]-&gt;DrawExtend({ xA, yC, width, height });<span class="comment">//左下</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    frame[0][8]-&gt;DrawExtend({ xC, yC, width, height });<span class="comment">//右下</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">Camera::Set</a>(camera);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">if</span> (描画色 != <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>)</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">Screen::GetRenderer</a>()-&gt;<a class="code" href="class_s_d_x_1_1_renderer.html#a50976e076b7a7b5ec3f1313ec820e1c5">rgba</a> = color;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        }</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    };</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_ae89813caafa02d8d0d224827cb8bd6e9"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ae89813caafa02d8d0d224827cb8bd6e9">SDX::Color::GetGreen</a></div><div class="ttdeci">int GetGreen() const </div><div class="ttdoc">緑の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:36</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Rect.h:22</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_a3719a286220681fe0b3131bde8c656d3"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#a3719a286220681fe0b3131bde8c656d3">SDX::Rect::GetBottom</a></div><div class="ttdeci">double GetBottom() const </div><div class="ttdoc">下端のY座標を取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:136</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a50976e076b7a7b5ec3f1313ec820e1c5"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a50976e076b7a7b5ec3f1313ec820e1c5">SDX::Renderer::rgba</a></div><div class="ttdeci">Color rgba</div><div class="ttdoc">描画輝度とα値 </div><div class="ttdef"><b>Definition:</b> Renderer.h:52</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_ad67cb282587a525ddf6a21cbf33d9496"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#ad67cb282587a525ddf6a21cbf33d9496">SDX::Rect::GetTop</a></div><div class="ttdeci">double GetTop() const </div><div class="ttdoc">上端のY座標を取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:124</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_aab1eda1a0f9b7cfa7aaa7d464bfe5b97"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#aab1eda1a0f9b7cfa7aaa7d464bfe5b97">SDX::Rect::GetRight</a></div><div class="ttdeci">double GetRight() const </div><div class="ttdoc">右端のX座標を取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:130</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a68e2471b0e615183d3ec53321a3870c9"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">SDX::ImagePack::GetWidth</a></div><div class="ttdeci">int GetWidth() const </div><div class="ttdoc">最大幅を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:130</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a8fa5802ecda4925a2b1ea3a704930bed"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a8fa5802ecda4925a2b1ea3a704930bed">SDX::Color::GetBlue</a></div><div class="ttdeci">int GetBlue() const </div><div class="ttdoc">青の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:42</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_aefb9f884eab08240e0b5381ed35bf818"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#aefb9f884eab08240e0b5381ed35bf818">SDX::Rect::GetLeft</a></div><div class="ttdeci">double GetLeft() const </div><div class="ttdoc">左端のX座標を取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:118</div></div>
+<div class="ttc" id="class_s_d_x_1_1_screen_html_a7a18d8aa6c37b391052eb3ff4a2003b5"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5">SDX::Screen::GetRenderer</a></div><div class="ttdeci">static Renderer * GetRenderer()</div><div class="ttdoc">アクティブなRendererを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:33</div></div>
+<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html_aafd8083c5a835c99f602d8d3e49976e8"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8">SDX::BmpFrame::Make</a></div><div class="ttdeci">bool Make(ImagePack *フレーム画像)</div><div class="ttdoc">フレームを作成する. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:29</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a978b1912f1ae61b189b577d809adc316"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a978b1912f1ae61b189b577d809adc316">SDX::Color::SetColor</a></div><div class="ttdeci">void SetColor(int 赤, int 緑, int 青, int α値=255)</div><div class="ttdoc">色の各要素を設定. </div><div class="ttdef"><b>Definition:</b> Color.h:24</div></div>
+<div class="ttc" id="class_s_d_x_1_1_loading_html_a969f71ede68ac12fa93e56050c914b84"><div class="ttname"><a href="class_s_d_x_1_1_loading.html#a969f71ede68ac12fa93e56050c914b84">SDX::Loading::IsLoading</a></div><div class="ttdeci">static bool IsLoading()</div><div class="ttdoc">非同期読み込み登録中かどうか. </div><div class="ttdef"><b>Definition:</b> Loading.h:90</div></div>
+<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html">SDX::BmpFrame</a></div><div class="ttdoc">描画用枠を表すクラス. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a08f966fd74cbdd3024aaa1668fdc4340"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">SDX::Color::White</a></div><div class="ttdeci">static const Color White</div><div class="ttdoc">白 [RGB]255,255,255 </div><div class="ttdef"><b>Definition:</b> Color.h:81</div></div>
+<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html_a95e11686e26c70feac7509e72f815be8"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html#a95e11686e26c70feac7509e72f815be8">SDX::BmpFrame::Draw</a></div><div class="ttdeci">void Draw(const Rect &amp;領域, const Color &amp;描画色=Color::White) const </div><div class="ttdoc">矩形のフレームを描画. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:46</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
+<div class="ttc" id="class_s_d_x_1_1_loading_html_a891a3d0ec0f458125a845d4eafd39671"><div class="ttname"><a href="class_s_d_x_1_1_loading.html#a891a3d0ec0f458125a845d4eafd39671">SDX::Loading::AddLoading</a></div><div class="ttdeci">static void AddLoading(std::function&lt; void(void)&gt; &amp;&amp;読み込み関数)</div><div class="ttdoc">非同期読み込み処理に追加. </div><div class="ttdef"><b>Definition:</b> Loading.h:96</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a033d96d88be186a764674383788c0edf"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">SDX::ImagePack::GetSize</a></div><div class="ttdeci">int GetSize() const </div><div class="ttdoc">要素数を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:124</div></div>
+<div class="ttc" id="class_s_d_x_1_1_bmp_frame_html_a6fe1a15975f29a8beeb9ec10492518ef"><div class="ttname"><a href="class_s_d_x_1_1_bmp_frame.html#a6fe1a15975f29a8beeb9ec10492518ef">SDX::BmpFrame::BmpFrame</a></div><div class="ttdeci">BmpFrame(ImagePack *フレーム画像)</div><div class="ttdoc">フレームを作成する. </div><div class="ttdef"><b>Definition:</b> BmpFrame.h:22</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_ab85a210268fa1115b6c1b4f21e784118"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">SDX::Camera::Get</a></div><div class="ttdeci">static Camera * Get()</div><div class="ttdoc">現在アクティブなカメラを取得. </div><div class="ttdef"><b>Definition:</b> Camera.h:58</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_adb16773e3e4957ee9f603a6866e20056"><div class="ttname"><a href="class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056">SDX::Color::GetRed</a></div><div class="ttdeci">int GetRed() const </div><div class="ttdoc">赤の要素を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:30</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html_ad6dfec42ed28f98587606af73cd54328"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">SDX::ImagePack::GetHeight</a></div><div class="ttdeci">int GetHeight() const </div><div class="ttdoc">最大高さを取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:136</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a></div><div class="ttdoc">複数のImageをまとめるクラス. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:14</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_afbfb9732cac5d903db2abd11ff431208"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">SDX::Camera::Set</a></div><div class="ttdeci">static void Set(Camera *アクティブにするCamera=nullptr)</div><div class="ttdoc">現在アクティブなカメラを設定. </div><div class="ttdef"><b>Definition:</b> Camera.h:64</div></div>
+<div class="ttc" id="class_s_d_x_1_1_color_html_a845c7693d3c9521f68f56fb01aa70092"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a845c7693d3c9521f68f56fb01aa70092">SDX::Color::GetAlpha</a></div><div class="ttdeci">int GetAlpha() const </div><div class="ttdoc">透明度を取得. </div><div class="ttdef"><b>Definition:</b> Color.h:48</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_af0dd715f63548fa2e015ed3615631472"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#af0dd715f63548fa2e015ed3615631472">SDX::Rect::GetW</a></div><div class="ttdeci">double GetW() const override</div><div class="ttdoc">幅を取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:107</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_frame_html"><div class="ttname"><a href="class_s_d_x_1_1_i_frame.html">SDX::IFrame</a></div><div class="ttdoc">描画用枠のインターフェース. </div><div class="ttdef"><b>Definition:</b> IFrame.h:11</div></div>
+<div class="ttc" id="class_s_d_x_1_1_rect_html_a7aab90d8ce0b39cea4e3cf81d03b2ccc"><div class="ttname"><a href="class_s_d_x_1_1_rect.html#a7aab90d8ce0b39cea4e3cf81d03b2ccc">SDX::Rect::GetH</a></div><div class="ttdeci">double GetH() const override</div><div class="ttdoc">高さを取得. </div><div class="ttdef"><b>Definition:</b> Rect.h:112</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -103,8 +103,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9831ac7f08d47899d63c932df39b1ebb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9831ac7f08d47899d63c932df39b1ebb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Accel</b> (double 初速, double 加速度)</td></tr>
+<tr class="memitem:a9831ac7f08d47899d63c932df39b1ebb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_s_p_e_e_d_1_1_accel.html#a9831ac7f08d47899d63c932df39b1ebb">Accel</a> (double 初速, double 加速度)</td></tr>
+<tr class="memdesc:a9831ac7f08d47899d63c932df39b1ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">初速と加速度を指定.  <a href="#a9831ac7f08d47899d63c932df39b1ebb">More...</a><br /></td></tr>
 <tr class="separator:a9831ac7f08d47899d63c932df39b1ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e808dcf95325e2cdc14ea7e1f97f263"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_s_p_e_e_d_1_1_accel.html#a7e808dcf95325e2cdc14ea7e1f97f263">Get</a> () const override</td></tr>
 <tr class="memdesc:a7e808dcf95325e2cdc14ea7e1f97f263"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の速度を取得.  <a href="#a7e808dcf95325e2cdc14ea7e1f97f263">More...</a><br /></td></tr>
@@ -115,18 +115,23 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>加速する. </p>
-<div class="fragment"><div class="line"><span class="comment">//©SDXFramework http://sourceforge.jp/projects/dxframework/</span></div>
-<div class="line"><span class="comment">//🍣速度オブジェクトを使う</span></div>
+<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//速度オブジェクトを使う</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"></div>
 <div class="line"><span class="keywordtype">bool</span> SampleSpeed()</div>
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 600, 400);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//位置と形を持った型</span></div>
 <div class="line">    std::vector&lt;std::shared_ptr&lt;IShape&gt;&gt; shapes;</div>
 <div class="line">    shapes.emplace_back(<span class="keyword">new</span> <a class="code" href="class_s_d_x_1_1_circle.html">Circle</a>(0, 50, 10));</div>
 <div class="line">    shapes.emplace_back(<span class="keyword">new</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a>(0, 150, 20, 20));</div>
-<div class="line">    shapes.emplace_back(<span class="keyword">new</span> <a class="code" href="class_s_d_x_1_1_line.html">Line</a>(0, 250, PAI / 2, 20, 5));</div>
+<div class="line">    shapes.emplace_back(<span class="keyword">new</span> <a class="code" href="class_s_d_x_1_1_line.html">Line</a>(0, 250, <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> / 2, 20, 5));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//変化する数値を表す型</span></div>
 <div class="line">    std::vector&lt;std::shared_ptr&lt;SPEED::ISpeed&gt;&gt; speeds;</div>
@@ -136,7 +141,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a= 0; a &lt; 3; ++a)</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 3; ++a)</div>
 <div class="line">        {</div>
 <div class="line">            <span class="comment">//速度を更新する</span></div>
 <div class="line">            speeds[a]-&gt;Update();</div>
@@ -145,16 +150,45 @@ Public Member Functions</h2></td></tr>
 <div class="line">            shapes[a]-&gt;MoveA(speeds[a]-&gt;<a class="code" href="class_s_d_x_1_1_s_p_e_e_d_1_1_accel.html#a7e808dcf95325e2cdc14ea7e1f97f263">Get</a>(), 0);</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">//描画する</span></div>
-<div class="line">            shapes[a]-&gt;Draw(Color::White, 255);</div>
+<div class="line">            shapes[a]-&gt;Draw(Color::White);</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> (Input::key.Return.on) <span class="keywordflow">break</span>;<span class="comment">//Enterで終了</span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
 <div class="line">    }</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9831ac7f08d47899d63c932df39b1ebb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDX::SPEED::Accel::Accel </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>初速</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>加速度</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初速と加速度を指定. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7e808dcf95325e2cdc14ea7e1f97f263"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +246,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:57 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
