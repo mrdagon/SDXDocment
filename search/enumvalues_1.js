@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['back',['Back',['../namespace_s_d_x.html#acc67cb980f72f38356db30e56f424678a0557fa923dcee4d0f86b1409f5c2167f',1,'SDX']]],
-  ['block',['Block',['../namespace_s_d_x.html#aa645cbd025372835aff252e24e3facaaae1e4c8c9ccd9fc39c391da4bcd093fb2',1,'SDX']]]
+  ['end',['End',['../namespace_s_d_x.html#abf042a9ec549408e52d4039c9e39bdfca87557f11575c0ad78e4e28abedc13b6e',1,'SDX::End()'],['../namespace_s_d_x.html#a70c267e982962f5f38ee89af0ae2333ea87557f11575c0ad78e4e28abedc13b6e',1,'SDX::End()']]],
+  ['external',['External',['../namespace_s_d_x.html#a016b549f896a2805fa70f1449ba97e26ab206a1b4ea1097761f78e8876f6da779',1,'SDX']]]
 ];

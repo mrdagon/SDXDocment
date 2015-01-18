@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['animetype',['AnimeType',['../namespace_s_d_x.html#ac3b5943e33e9b6eb61419eae566d9a34',1,'SDX']]]
+  ['blendmode',['BlendMode',['../namespace_s_d_x.html#a15408d43fe18c2f66f1536c9155ddf3b',1,'SDX']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['key',['Key',['../class_s_d_x_1_1_key.html',1,'SDX']]],
-  ['keyboard',['Keyboard',['../class_s_d_x_1_1_keyboard.html',1,'SDX']]]
+  ['line',['Line',['../class_s_d_x_1_1_line.html',1,'SDX']]],
+  ['liner',['Liner',['../class_s_d_x_1_1_s_p_e_e_d_1_1_liner.html',1,'SDX::SPEED']]],
+  ['loading',['Loading',['../class_s_d_x_1_1_loading.html',1,'SDX']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clear',['Clear',['../namespace_s_d_x.html#a52caaabea48f136d2964dc0fcebc2592adc30bc0c7914db5918da4263fce93ad2',1,'SDX']]]
+  ['internal',['Internal',['../namespace_s_d_x.html#a016b549f896a2805fa70f1449ba97e26aafbf0897a5a83fdd873dfb032ec695d3',1,'SDX']]]
 ];

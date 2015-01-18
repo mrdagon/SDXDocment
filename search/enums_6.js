@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nextframe',['NextFrame',['../namespace_s_d_x.html#abf042a9ec549408e52d4039c9e39bdfc',1,'SDX']]]
+  ['savemode',['SaveMode',['../namespace_s_d_x.html#a016b549f896a2805fa70f1449ba97e26',1,'SDX']]]
 ];

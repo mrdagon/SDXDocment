@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mousecode',['MouseCode',['../namespace_s_d_x.html#ab4a987e97dd95851e64704a5b59ebc71',1,'SDX']]]
+  ['padcode',['PadCode',['../namespace_s_d_x.html#a3f6daed44c2ccf4dda2689130ab10b04',1,'SDX']]],
+  ['padtype',['PadType',['../namespace_s_d_x.html#a262353ebabeeb70d530796862077a5fe',1,'SDX']]]
 ];
