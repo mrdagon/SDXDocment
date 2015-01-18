@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['key',['Key',['../class_s_d_x_1_1_key.html',1,'SDX']]],
-  ['keyboard',['Keyboard',['../class_s_d_x_1_1_keyboard.html',1,'SDX']]],
-  ['keycode',['KeyCode',['../namespace_s_d_x.html#acb5862021d151aa4270dc680d95292fb',1,'SDX']]]
+  ['j',['J',['../class_s_d_x_1_1_keyboard.html#a41e02501f3acc86d07830d2f4c13d899',1,'SDX::Keyboard']]],
+  ['joypad',['Joypad',['../class_s_d_x_1_1_joypad.html',1,'SDX']]]
 ];

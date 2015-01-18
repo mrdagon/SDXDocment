@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>SDXFrameWork: SDXの導入方法(Linux)</title>
+<title>SDXFrameWork: SDXの導入方法(GNU/Linux)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -76,26 +76,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">SDXの導入方法(Linux) </div>  </div>
+<div class="title">SDXの導入方法(GNU/Linux) </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Ubuntu14.04での導入方法です。他のディストリビューションでも大体同じになると思います<br />
 とりあえずターミナルからのコンパイル方法だけ解説します. </p><hr/>
 <p> <b>1.SDL2.0のインストール</b><br />
- ターミナルを起動して以下のコマンドを実行する<br />
- $ sudo apt-get install libsdl2-dev<br />
- $ sudo apt-get install libsdl2-image-dev<br />
- $ sudo apt-get install libsdl-ttf2.0-dev<br />
- $ sudo apt-get install libsdl2-mixer-de<br />
- これでSDLの必要なファイルがインストールされます </p><hr/>
+ターミナルを起動して以下のコマンドを実行する<br />
+$ sudo apt-get install libsdl2-dev<br />
+$ sudo apt-get install libsdl2-image-dev<br />
+$ sudo apt-get install libsdl2-ttf-dev<br />
+$ sudo apt-get install libsdl2-mixer-de<br />
+これでSDLの必要なファイルがインストールされます </p><hr/>
 <p> <b>2.SDXの導入</b><br />
- SDXFramework/jni/SDL/includeフォルダをインクルードパスに指定するか<br />
- ターミナルから"sudo nautilus /usr/local"でフォルダを開いて、includeフォルダにコピーするかして下さい<br />
+SDXFramework/jni/SDL/includeフォルダをインクルードパスに指定するか<br />
+ターミナルから"sudo nautilus /usr/local"でフォルダを開いて、includeフォルダにコピーするかして下さい<br />
 </p><hr/>
 <p> <b>3.コンパイル</b><br />
- clangの最新版や標準ライブラリ等を入手し、c++のコンパイルが可能な状態にします<br />
- <br />
- main.cppファイルを作成します。<br />
+clangの最新版や標準ライブラリ等を入手し、c++のコンパイルが可能な状態にします<br />
+<br />
+main.cppファイルを作成します。<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
 <div class="line"></div>
@@ -103,32 +103,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
-<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ライブラリの初期化</span></div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ライブラリの初期化</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> x = 320;</div>
 <div class="line"><span class="keywordtype">int</span> y = 240;</div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">{</div>
-<div class="line"><span class="keywordflow">if</span> (Input::pad.Down.hold) y += 5;</div>
-<div class="line"><span class="keywordflow">if</span> (Input::pad.Up.hold) y -= 5;</div>
-<div class="line"><span class="keywordflow">if</span> (Input::pad.Right.hold) x += 5;</div>
-<div class="line"><span class="keywordflow">if</span> (Input::pad.Left.hold) x -= 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Down.hold) y += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Up.hold) y -= 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Right.hold) x += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Left.hold) x -= 5;</div>
 <div class="line"></div>
-<div class="line"><a class="code" href="class_s_d_x_1_1_drawing.html#a187d8e2094ac03a175f55d2ad60a1512">Drawing::Rect</a>({x-10, y-10, 20, 20}, Color::White, <span class="keyword">true</span>);</div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({x-10, y-10, 20, 20}, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">true</span>);</div>
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> main.cppがあるディレクトリに移動してコマンドを実行<br />
- $ clang++ -std=c++11 -o sdxtest main.cpp -lSDL2 -lSDL2_image -lSDL_ttf -lSDL2_mixer<br />
- sdxtest.aとかが出力されたら成功です. </p>
+</div><!-- fragment --><p> <br />
+main.cppがあるディレクトリに移動してコマンドを実行<br />
+"clang++ -std=c++11 -o sdxtest main.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer"<br />
+(sdxtestの部分を変えると出力されるファイル名が変わります、sudo su する必要がある場合もあります) sdxtest.aとかが出力されたら成功です. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

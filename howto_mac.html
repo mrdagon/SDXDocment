@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -91,78 +91,83 @@ AppStoreからXcodeの最新版をダウンロードしてインストールし�
 <p> <b>2 SDXFrameworkをダウンロードする</b><br />
 下記サイトで最新版を配布しているので、リンク先からダウンロードして下さい<br />
 <a href="https://sourceforge.jp/projects/dxframework/" target="_blank"><b>SorceForge</b></a><br />
- 解凍すると「SDXFramework」と言うフォルダが出来るので。<br />
- ホームディレクリ等において下さい。<br />
- </p><hr/>
+解凍すると「SDXFramework」と言うフォルダが出来るので。<br />
+ホームディレクリ等において下さい。<br />
+</p><hr/>
 <p> <b>3 frameworkのインストール</b><br />
- ① Finderを開き、上部メニューの「移動」から「フォルダへ移動」を選び「/System」と入力します。<br />
- <br />
- ② ライブラリフォルダを開き、Frameworksフォルダを開きます。<br />
- <br />
- ③ Frameworksフォルダ に 「SDXFramework/MacOSX」の中にある<br />
- 「SDL2.framework」<br />
- 「SDL2_image.framework」<br />
- 「SDL2_mixer.framework」<br />
- 「SDL2_ttf.framework」<br />
- の４つをドラッグ＆ドロップして追加し、パスワードを入力してインストールします。<br />
- </p><hr/>
+① Finderを開き、上部メニューの「移動」から「フォルダへ移動」を選び「/System」と入力します。<br />
+<br />
+② ライブラリフォルダを開き、Frameworksフォルダを開きます。<br />
+<br />
+③ Frameworksフォルダ に 「SDXFramework/MacOSX」の中にある<br />
+「SDL2.framework」<br />
+「SDL2_image.framework」<br />
+「SDL2_mixer.framework」<br />
+「SDL2_ttf.framework」<br />
+の４つをドラッグ＆ドロップして追加し、パスワードを入力してインストールします。<br />
+</p><hr/>
 <p> <b>4 新規プロジェクトを作成する</b><br />
- Xcodeを起動したら新規プロジェクトを作成します。<br />
- <br />
- ①上部メニューの「File」の「New」から「Project」を選びます。<br />
- <br />
- ②Command Line Toolのプロジェクトを作成して下さい。プロジェクト名は好きなように付けて下さい。TypeはC++にします。<br />
- <br />
- </p><hr/>
+Xcodeを起動したら新規プロジェクトを作成します。<br />
+<br />
+①上部メニューの「File」の「New」から「Project」を選びます。<br />
+<br />
+②Command Line Toolのプロジェクトを作成して下さい。プロジェクト名は好きなように付けて下さい。TypeはC++にします。<br />
+<br />
+</p><hr/>
 <p> <b>5 プロジェクトの設定</b><br />
- ①エクスプローラからプロジェクトを選びます<br />
- <br />
- ②メインウィンドウにプロジェクトの設定が表示されるので、画面の上の方にある「Build Phases」を選択します<br />
- <br />
- ③Link Binaly With Libraryesをクリックします<br />
- Add frameworks &amp; libraries here に 「SDXFramework/MacOSX」の中にある<br />
- 「SDL2.framework」<br />
- 「SDL2_image.framework」<br />
- 「SDL2_mixer.framework」<br />
- 「SDL2_ttf.framework」<br />
- の４つをドラッグ＆ドロップして追加します。<br />
- <br />
- ④画面の上の方にある「Build Settings」を選択します<br />
- 左のBasicをAllに変更します。<br />
- <br />
- ⑤画面をスクロールしてSerch Paths の項目から Header Search Pathsを開き<br />
- 先ほど解凍した「SDXFramework/jni/SDL/include｣フォルダをドラッグ＆ドロップして追加します。<br />
- 以上でプロジェクトの設定は完了です<br />
- <br />
- </p><hr/>
+①エクスプローラからプロジェクトを選びます<br />
+<br />
+②メインウィンドウにプロジェクトの設定が表示されるので、画面の上の方にある「Build Phases」を選択します<br />
+<br />
+③Link Binaly With Libraryesをクリックします<br />
+Add frameworks &amp; libraries here に 「SDXFramework/MacOSX」の中にある<br />
+「SDL2.framework」<br />
+「SDL2_image.framework」<br />
+「SDL2_mixer.framework」<br />
+「SDL2_ttf.framework」<br />
+の４つをドラッグ＆ドロップして追加します。<br />
+<br />
+④さらにCopy Filesに上の4つのframeworkをドラッグ＆ドロップして追加します。<br />
+<br />
+⑤画面の上の方にある「Build Settings」を選択します<br />
+左のBasicをAllに変更します。<br />
+<br />
+⑥画面をスクロールしてLinking の項目から Runpath Search Pathsを開き<br />
+｢/../Frameworks/｣と入力します。<br />
+<br />
+⑦画面をスクロールしてSerch Paths の項目から Header Search Pathsを開き<br />
+先ほど解凍した「SDXFramework/jni/SDL/include｣フォルダをドラッグ＆ドロップして追加します。<br />
+以上でプロジェクトの設定は完了です<br />
+<br />
+</p><hr/>
 <p> <b>6 サンプルソースのビルド</b><br />
- 画面左側の「Sorce」のフォルダのmain.cppファイルを開きます。<br />
- main.cppファイルに以下のコードをコピペして、コンパイルして実行して下さい。<br />
-</p><div class="fragment"><div class="line"><span class="preprocessor"> #include &lt;SDXFramework.h&gt;</span></div>
-<div class="line"><span class="preprocessor"> #include &lt;Multimedia/SDXafx.h&gt;</span></div>
+画面左側の「Sorce」のフォルダのmain.cppファイルを開きます。<br />
+main.cppファイルに以下のコードをコピペして、コンパイルして実行して下さい。<br />
+</p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
 <div class="line"></div>
-<div class="line"> <span class="keyword">using namespace </span>SDX;</div>
+<div class="line"><span class="keyword">using namespace </span>SDX;</div>
 <div class="line"></div>
-<div class="line"> <span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"> {</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#acd3d000bd013233dd518a5bc6e43590f">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ライブラリの初期化</span></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line">{</div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ライブラリの初期化</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordtype">int</span> x = 320;</div>
-<div class="line">    <span class="keywordtype">int</span> y = 240;</div>
+<div class="line"><span class="keywordtype">int</span> x = 320;</div>
+<div class="line"><span class="keywordtype">int</span> y = 240;</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
-<div class="line">    {</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::pad.Down.hold) y += 5;</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::pad.Up.hold) y -= 5;</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::pad.Right.hold) x += 5;</div>
-<div class="line">        <span class="keywordflow">if</span> (Input::pad.Left.hold) x -= 5;</div>
+<div class="line"><span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Down.hold) y += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Up.hold) y -= 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Right.hold) x += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Left.hold) x -= 5;</div>
 <div class="line"></div>
-<div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a187d8e2094ac03a175f55d2ad60a1512">Drawing::Rect</a>({x-10, y-10, 20, 20}, Color::White, <span class="keyword">true</span>);</div>
-<div class="line">    }</div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({x-10, y-10, 20, 20}, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">true</span>);</div>
+<div class="line">}</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理</span></div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理</span></div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> <br />
 画面に白い□が表示され、カーソルで移動出来れば導入成功です。<br />
@@ -172,16 +177,26 @@ AppStoreからXcodeの最新版をダウンロードしてインストールし�
 <br />
 </p><hr/>
 <p> <b>7 プリコンパイル済みヘッダーを利用する</b><br />
-調査中<br />
+[参考/Xcode5でプリコンパイル済みヘッダを使う]<br />
+<a href="http://qiita.com/idtkb/items/839cc85200a8e30c76cd">http://qiita.com/idtkb/items/839cc85200a8e30c76cd</a> <br />
+上記の方法で行けるようです。<br />
 <br />
-<b>8 完成したソフトを配布する</b><br />
-.appファイルを作りましょう。<br />
-[参考]<br />
-<a href="http://d.hatena.ne.jp/o_mega/20080512/1210612958">http://d.hatena.ne.jp/o_mega/20080512/1210612958</a> </p>
+メインの開発環境がMSVC等でとりあえずコンパイル出来れば良い場合は<br />
+#include "PreCompile.cpp"等、cppファイルをmain.cppでインクルードすれば良いです。<br />
+<br />
+<b>8 画像ファイルを置く場所<br />
+<br />
+<b>9 完成したソフトを配布する</b><br />
+.appファイルを作ります。<br />
+<br />
+[参考/MacでSDLアプリケーションの作り方]<br />
+<a href="http://d.hatena.ne.jp/o_mega/20080512/1210612958">http://d.hatena.ne.jp/o_mega/20080512/1210612958</a> <br />
+[参考/Library not loaded エラー？ここを見直そう]<br />
+<a href="http://qiita.com/kakipo/items/3cd87e00bc96bc3888b2">http://qiita.com/kakipo/items/3cd87e00bc96bc3888b2</a> </b></p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

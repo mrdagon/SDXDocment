@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.09</span>
+   &#160;<span id="projectnumber">0.10</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -80,9 +80,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>SDXFrameworkの利用にはSDXFrameworkが必要です。<br />
- androidの環境構築は他のOSに比べるとややこしいです<br />
- 実機デバッグの設定方法は機種により違うので各自で調べて下さい<br />
- clangにしか対応していないのでandroidNDKの64bit版だと使えないと思います<br />
+androidの環境構築は他のOSに比べるとややこしいです<br />
+実機デバッグの設定方法は機種により違うので各自で調べて下さい<br />
+clangにしか対応していないのでandroidNDKの64bit版だと使えないと思います<br />
+動作確認がちょっと中途半端で、不具合等多いかもしれません<br />
+android studioを利用する場合は勝手が違うと思います、自力で調べて下さい<br />
 </p><hr/>
 <p> <b>1.android-sdkの導入</b><br />
 以下のサイトを参考にしてjavaやeclipseの環境を構築して下さい<br />
@@ -93,18 +95,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="http://dench.flatlib.jp/opengl/androidsdk">http://dench.flatlib.jp/opengl/androidsdk</a> <br />
 </p><hr/>
 <p> <b>3.SDXの導入とプロジェクト作成</b><br />
- eclipseを起動すると作成されるworkspaceフォルダにSDXFrameworkフォルダを移動します。<br />
- コマンドプロンプトを開き cd workspace/SDXFramework で作成したプロジェクトのフォルダに移動<br />
- ndk-build のコマンドでコンパイルをします<br />
- <br />
- eclipseを起動し、ファイルメニューからインポートを選び、Existing Android Code Into Workspaceを選びます<br />
- ルート・ディレクトリにworkspace内のSDXFrameworkフォルダを選択します<br />
- プロジェクトをワークスペースにコピーにチェックを入れ、新規プロジェクト名を変更し完了を押します。<br />
- 少し待つとコピーされたプロジェクトが作成されます<br />
- <br />
- workspace/作成したプロジェクト名/jni/srcの中にあるmain.cppにC++のコードを書いて下さい<br />
- <br />
- workspace/作成したプロジェクト名/assetsの中に画像ファイル等のリソースを置いてください。 </p><hr/>
+eclipseを起動すると作成されるworkspaceフォルダにSDXFrameworkフォルダを移動します。<br />
+コマンドプロンプトを開き cd workspace/SDXFramework で作成したプロジェクトのフォルダに移動<br />
+ndk-build のコマンドでコンパイルをします<br />
+<br />
+eclipseを起動し、ファイルメニューからインポートを選び、Existing Android Code Into Workspaceを選びます<br />
+ルート・ディレクトリにworkspace内のSDXFrameworkフォルダを選択します<br />
+プロジェクトをワークスペースにコピーにチェックを入れ、新規プロジェクト名を変更し完了を押します。<br />
+少し待つとコピーされたプロジェクトが作成されます<br />
+<br />
+workspace/作成したプロジェクト名/jni/srcの中にあるmain.cppにC++のコードを書いて下さい<br />
+<br />
+workspace/作成したプロジェクト名/assetsの中に画像ファイル等のリソースを置いてください。 </p><hr/>
 <p> <b>4.コンパイルと実行</b><br />
 コマンドプロンプトを開き cd workspace/sdlactivity 等で作成したプロジェクトのフォルダに移動<br />
 ndk-build のコマンドでコンパイルを行います<br />
@@ -113,16 +115,16 @@ eclipseから実行を押すと、ソフトが起動します<br />
 シミュレータの場合、OpenGL絡みのでエラーが出る場合があります<br />
 その場合は実機でデバッグして下さい </p><hr/>
 <p> <b>5.eclipse上でのndk-build</b><br />
- プロジェクト&gt;プロパティー&gt;C/C++ ビルド&gt;ツールチェーンエディターの<br />
- 現在のビルダーを AndroidBuilderに変更します、調査中<br />
+プロジェクト&gt;プロパティー&gt;C/C++ ビルド&gt;ツールチェーンエディターの<br />
+現在のビルダーを AndroidBuilderに変更します、調査中<br />
 </p><hr/>
 <p> <b>6.配布ファイル名の変更</b><br />
- このページを参考にして下さい<br />
- <a href="http://ggkuron.hatenablog.com/entry/2013/08/02/073940">http://ggkuron.hatenablog.com/entry/2013/08/02/073940</a><br />
+このページを参考にして下さい<br />
+<a href="http://ggkuron.hatenablog.com/entry/2013/08/02/073940">http://ggkuron.hatenablog.com/entry/2013/08/02/073940</a><br />
 </p><hr/>
 <p> <b>7.配布方法</b><br />
 binフォルダに.apkファイルが作成されるので、それを配布して下さい。<br />
- 配布方法は色々あるので、GooglePlayへの登録方法等をネットで調べて下さい。<br />
+配布方法は色々あるので、GooglePlayへの登録方法等をネットで調べて下さい。<br />
 <b>8.端末の向きの変更</b><br />
 AndroidManifest.xmlを書き換えて変更します。<br />
 android:screenOrientation="landscape"<br />
@@ -133,7 +135,7 @@ android:screenOrientation="portrait"<br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Sep 20 2014 17:17:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
