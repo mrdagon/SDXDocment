@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -88,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_s_d_x_1_1_sound-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SDX::Sound Class Reference</div>  </div>
@@ -128,6 +130,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:abcd5da254beec78231845b3c06e66713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sound.html#abcd5da254beec78231845b3c06e66713">Set3DEffect</a> (double 距離=-1, double 角度=0)</td></tr>
 <tr class="memdesc:abcd5da254beec78231845b3c06e66713"><td class="mdescLeft">&#160;</td><td class="mdescRight">3D音声再生効果を付ける.  <a href="#abcd5da254beec78231845b3c06e66713">More...</a><br /></td></tr>
 <tr class="separator:abcd5da254beec78231845b3c06e66713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a79566f90ac2258c75782c43bb09bfeb8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sound.html#a79566f90ac2258c75782c43bb09bfeb8">SetMainVolume</a> (double 音量)</td></tr>
+<tr class="memdesc:a79566f90ac2258c75782c43bb09bfeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">全体の音量を0～1.0の範囲で設定.  <a href="#a79566f90ac2258c75782c43bb09bfeb8">More...</a><br /></td></tr>
+<tr class="separator:a79566f90ac2258c75782c43bb09bfeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>効果音用音声を表すクラス. </p>
@@ -232,10 +240,14 @@ Public Member Functions</h2></td></tr>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理を行う</span></div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><!-- fragment --> <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>同時に複数の効果音を鳴らす場合の挙動に不安 </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a7404ee11e67e1f5b059ea2ced2ad6ebb"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SDX::Sound::Sound </td>
@@ -255,6 +267,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音声ファイルをメモリに読み込む. </p>
@@ -265,6 +282,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="aa6c2d36139891c10f7f19b8e32d493e6"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Sound::Load </td>
@@ -284,6 +304,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音声ファイルをメモリに読み込む. </p>
@@ -293,6 +318,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="acda596bf026c0be4a0e5a54c1b3a4362"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Sound::Release </td>
@@ -301,6 +329,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音声ファイルをメモリから開放. </p>
@@ -310,6 +343,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a67a1dd437970f989a68901d4e881ef0b"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Mix_Chunk* SDX::Sound::GetHandle </td>
@@ -318,6 +354,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>ハンドルを取得. </p>
@@ -327,6 +368,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a1dde15f7a094958f254fe959085c7013"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Sound::Play </td>
@@ -335,6 +379,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音声ファイルを再生. </p>
@@ -344,6 +393,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="ae466323d3d074316650fb02ad44b26aa"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Sound::SetVolume </td>
@@ -353,6 +405,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音量を0～1.0の範囲で設定. </p>
@@ -362,6 +419,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a78acad6a877a8be84964973b0c8a2b36"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double SDX::Sound::GetVolume </td>
@@ -370,6 +430,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音量を取得. </p>
@@ -379,6 +444,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a768204eae6b484d08f038e6d99b6ab1c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Sound::SetPanning </td>
@@ -398,6 +466,11 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>音声パンを設定. </p>
@@ -408,6 +481,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="abcd5da254beec78231845b3c06e66713"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Sound::Set3DEffect </td>
@@ -427,17 +503,49 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>3D音声再生効果を付ける. </p>
-<p>距離は[近]0～1.0[遠]、角度は[正面]0[左]-PAI/2[右]PAI/2で指定 距離を0以下にすると無効になる SetPanよりこっちが優先される </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000017">Todo:</a></b></dt><dd>距離指定がバグってる？ </dd></dl>
+<p>距離は[近]0～1.0[遠]、角度は[正面]0[左]-PAI/2[右]PAI/2で指定 距離を0以下にすると無効になる SetPanよりこっちが優先される </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000018">Todo:</a></b></dt><dd>距離指定がバグってる？ </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a79566f90ac2258c75782c43bb09bfeb8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SDX::Sound::SetMainVolume </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>音量</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>全体の音量を0～1.0の範囲で設定. </p>
+<p>一度もこの関数を使用していない場合は最大音量 </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

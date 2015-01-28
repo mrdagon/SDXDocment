@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -88,7 +89,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_s_d_x_1_1_film-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -141,72 +141,80 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac83f0fc12cc9b39f8df05c0156db6fcf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_film.html#ac83f0fc12cc9b39f8df05c0156db6fcf">GetAnimeTime</a> () const </td></tr>
 <tr class="memdesc:ac83f0fc12cc9b39f8df05c0156db6fcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">全コマの合計フレーム時間を返す.  <a href="#ac83f0fc12cc9b39f8df05c0156db6fcf">More...</a><br /></td></tr>
 <tr class="separator:ac83f0fc12cc9b39f8df05c0156db6fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87a73e0616f6cd7b5ba86f08a34d205a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a87a73e0616f6cd7b5ba86f08a34d205a">Load</a> (const char *ファイル名, int 総コマ数, int コマ割り横, int コマ割り縦)</td></tr>
-<tr class="memdesc:a87a73e0616f6cd7b5ba86f08a34d205a"><td class="mdescLeft">&#160;</td><td class="mdescRight">１つの画像を分割して読み込む.  <a href="#a87a73e0616f6cd7b5ba86f08a34d205a">More...</a><br /></td></tr>
-<tr class="separator:a87a73e0616f6cd7b5ba86f08a34d205a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b0190dcb15a7ae4459abf30bce8ec5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a9b0190dcb15a7ae4459abf30bce8ec5c">Load</a> (const char *ファイル名, const char *拡張子, int 総コマ数, const char *書式=&quot;%03d.&quot;)</td></tr>
-<tr class="memdesc:a9b0190dcb15a7ae4459abf30bce8ec5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">連番ファイルを一括して読み込む.  <a href="#a9b0190dcb15a7ae4459abf30bce8ec5c">More...</a><br /></td></tr>
-<tr class="separator:a9b0190dcb15a7ae4459abf30bce8ec5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a437f698f5292db5ff611442fb48f0f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a437f698f5292db5ff611442fb48f0f2c">Add</a> (<a class="el" href="class_s_d_x_1_1_image.html">Image</a> *追加イメージ)</td></tr>
-<tr class="memdesc:a437f698f5292db5ff611442fb48f0f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imageを末尾に追加.  <a href="#a437f698f5292db5ff611442fb48f0f2c">More...</a><br /></td></tr>
-<tr class="separator:a437f698f5292db5ff611442fb48f0f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76ba0d04555c83f366eb67cbc5c9263f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a76ba0d04555c83f366eb67cbc5c9263f">Add</a> (const char *ファイル名)</td></tr>
-<tr class="memdesc:a76ba0d04555c83f366eb67cbc5c9263f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imageを末尾に追加.  <a href="#a76ba0d04555c83f366eb67cbc5c9263f">More...</a><br /></td></tr>
-<tr class="separator:a76ba0d04555c83f366eb67cbc5c9263f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a033d96d88be186a764674383788c0edf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a> () const </td></tr>
-<tr class="memdesc:a033d96d88be186a764674383788c0edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を取得.  <a href="#a033d96d88be186a764674383788c0edf">More...</a><br /></td></tr>
-<tr class="separator:a033d96d88be186a764674383788c0edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68e2471b0e615183d3ec53321a3870c9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">GetWidth</a> () const </td></tr>
-<tr class="memdesc:a68e2471b0e615183d3ec53321a3870c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大幅を取得.  <a href="#a68e2471b0e615183d3ec53321a3870c9">More...</a><br /></td></tr>
-<tr class="separator:a68e2471b0e615183d3ec53321a3870c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6dfec42ed28f98587606af73cd54328"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">GetHeight</a> () const </td></tr>
-<tr class="memdesc:ad6dfec42ed28f98587606af73cd54328"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大高さを取得.  <a href="#ad6dfec42ed28f98587606af73cd54328">More...</a><br /></td></tr>
-<tr class="separator:ad6dfec42ed28f98587606af73cd54328"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81284b058bf8e275852c2a6459b224aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a81284b058bf8e275852c2a6459b224aa">SetColor</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色)</td></tr>
-<tr class="memdesc:a81284b058bf8e275852c2a6459b224aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画色をまとめて変更.  <a href="#a81284b058bf8e275852c2a6459b224aa">More...</a><br /></td></tr>
-<tr class="separator:a81284b058bf8e275852c2a6459b224aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1541307c375ae75fce5fceaf5a98f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#ac1541307c375ae75fce5fceaf5a98f62">AdjustWidth</a> (std::vector&lt; int &gt; 幅)</td></tr>
-<tr class="memdesc:ac1541307c375ae75fce5fceaf5a98f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭からimageの幅を差分修正.  <a href="#ac1541307c375ae75fce5fceaf5a98f62">More...</a><br /></td></tr>
-<tr class="separator:ac1541307c375ae75fce5fceaf5a98f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132bc0638c9ea1f5a6f79d0bfa930e20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a132bc0638c9ea1f5a6f79d0bfa930e20">operator[]</a> (int index)</td></tr>
-<tr class="memdesc:a132bc0638c9ea1f5a6f79d0bfa930e20"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレータ.  <a href="#a132bc0638c9ea1f5a6f79d0bfa930e20">More...</a><br /></td></tr>
-<tr class="separator:a132bc0638c9ea1f5a6f79d0bfa930e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0b8f4555721f5f9b3fbafcb59533e27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#af0b8f4555721f5f9b3fbafcb59533e27">operator[]</a> (int index) const </td></tr>
-<tr class="memdesc:af0b8f4555721f5f9b3fbafcb59533e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレータ.  <a href="#af0b8f4555721f5f9b3fbafcb59533e27">More...</a><br /></td></tr>
-<tr class="separator:af0b8f4555721f5f9b3fbafcb59533e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af91f25811424dad66c9cb4a5359e9d81"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#af91f25811424dad66c9cb4a5359e9d81">begin</a> () -&gt; decltype(imageS.begin())</td></tr>
-<tr class="memdesc:af91f25811424dad66c9cb4a5359e9d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#af91f25811424dad66c9cb4a5359e9d81">More...</a><br /></td></tr>
-<tr class="separator:af91f25811424dad66c9cb4a5359e9d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa73a6cc92a9e6c1d17dceb65174f2e6f"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#aa73a6cc92a9e6c1d17dceb65174f2e6f">begin</a> () const -&gt; decltype(imageS.begin())</td></tr>
-<tr class="memdesc:aa73a6cc92a9e6c1d17dceb65174f2e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#aa73a6cc92a9e6c1d17dceb65174f2e6f">More...</a><br /></td></tr>
-<tr class="separator:aa73a6cc92a9e6c1d17dceb65174f2e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f05207ba1bed7a52d3cb03b4409a64"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a25f05207ba1bed7a52d3cb03b4409a64">end</a> () -&gt; decltype(imageS.end())</td></tr>
-<tr class="memdesc:a25f05207ba1bed7a52d3cb03b4409a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#a25f05207ba1bed7a52d3cb03b4409a64">More...</a><br /></td></tr>
-<tr class="separator:a25f05207ba1bed7a52d3cb03b4409a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59179a3b89024fec78fd521965594c49"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a59179a3b89024fec78fd521965594c49">end</a> () const -&gt; decltype(imageS.end())</td></tr>
-<tr class="memdesc:a59179a3b89024fec78fd521965594c49"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#a59179a3b89024fec78fd521965594c49">More...</a><br /></td></tr>
-<tr class="separator:a59179a3b89024fec78fd521965594c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:abb1d70fe1d61bdeb9db871820b88055c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb1d70fe1d61bdeb9db871820b88055c"></a>
-std::vector&lt; <a class="el" href="class_s_d_x_1_1_image.html">Image</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#abb1d70fe1d61bdeb9db871820b88055c">imageS</a></td></tr>
-<tr class="memdesc:abb1d70fe1d61bdeb9db871820b88055c"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持するImage <br /></td></tr>
-<tr class="separator:abb1d70fe1d61bdeb9db871820b88055c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a549b1bf177dd617391b746b7f791c5d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a549b1bf177dd617391b746b7f791c5d6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a549b1bf177dd617391b746b7f791c5d6">widthMax</a> = 0</td></tr>
-<tr class="memdesc:a549b1bf177dd617391b746b7f791c5d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大幅 <br /></td></tr>
-<tr class="separator:a549b1bf177dd617391b746b7f791c5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6e54333c1c7cf454b7e74b6585b218"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f6e54333c1c7cf454b7e74b6585b218"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a1f6e54333c1c7cf454b7e74b6585b218">heightMax</a> = 0</td></tr>
-<tr class="memdesc:a1f6e54333c1c7cf454b7e74b6585b218"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大高さ <br /></td></tr>
-<tr class="separator:a1f6e54333c1c7cf454b7e74b6585b218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_s_d_x_1_1_image_pack"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_s_d_x_1_1_image_pack')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a></td></tr>
+<tr class="memitem:a13c2be17098632d506b3684cea8807ad inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a13c2be17098632d506b3684cea8807ad">ImagePack</a> (const char *ファイル名, int 総コマ数, int コマ割り横, int コマ割り縦)</td></tr>
+<tr class="memdesc:a13c2be17098632d506b3684cea8807ad inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">１つの画像を分割して読み込む.  <a href="#a13c2be17098632d506b3684cea8807ad">More...</a><br /></td></tr>
+<tr class="separator:a13c2be17098632d506b3684cea8807ad inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefdf72a9eb4560a51eba8c6f51695cdb inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#aefdf72a9eb4560a51eba8c6f51695cdb">ImagePack</a> (const char *ファイル名, const char *拡張子, int 総コマ数, const char *書式=&quot;%03d.&quot;)</td></tr>
+<tr class="memdesc:aefdf72a9eb4560a51eba8c6f51695cdb inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">連番ファイルを一括して読み込む.  <a href="#aefdf72a9eb4560a51eba8c6f51695cdb">More...</a><br /></td></tr>
+<tr class="separator:aefdf72a9eb4560a51eba8c6f51695cdb inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a73e0616f6cd7b5ba86f08a34d205a inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a87a73e0616f6cd7b5ba86f08a34d205a">Load</a> (const char *ファイル名, int 総コマ数, int コマ割り横, int コマ割り縦)</td></tr>
+<tr class="memdesc:a87a73e0616f6cd7b5ba86f08a34d205a inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">１つの画像を分割して読み込む.  <a href="#a87a73e0616f6cd7b5ba86f08a34d205a">More...</a><br /></td></tr>
+<tr class="separator:a87a73e0616f6cd7b5ba86f08a34d205a inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b0190dcb15a7ae4459abf30bce8ec5c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a9b0190dcb15a7ae4459abf30bce8ec5c">Load</a> (const char *ファイル名, const char *拡張子, int 総コマ数, const char *書式=&quot;%03d.&quot;)</td></tr>
+<tr class="memdesc:a9b0190dcb15a7ae4459abf30bce8ec5c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">連番ファイルを一括して読み込む.  <a href="#a9b0190dcb15a7ae4459abf30bce8ec5c">More...</a><br /></td></tr>
+<tr class="separator:a9b0190dcb15a7ae4459abf30bce8ec5c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437f698f5292db5ff611442fb48f0f2c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a437f698f5292db5ff611442fb48f0f2c">Add</a> (<a class="el" href="class_s_d_x_1_1_image.html">Image</a> *追加イメージ)</td></tr>
+<tr class="memdesc:a437f698f5292db5ff611442fb48f0f2c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imageを末尾に追加.  <a href="#a437f698f5292db5ff611442fb48f0f2c">More...</a><br /></td></tr>
+<tr class="separator:a437f698f5292db5ff611442fb48f0f2c inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ba0d04555c83f366eb67cbc5c9263f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a76ba0d04555c83f366eb67cbc5c9263f">Add</a> (const char *ファイル名)</td></tr>
+<tr class="memdesc:a76ba0d04555c83f366eb67cbc5c9263f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imageを末尾に追加.  <a href="#a76ba0d04555c83f366eb67cbc5c9263f">More...</a><br /></td></tr>
+<tr class="separator:a76ba0d04555c83f366eb67cbc5c9263f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a033d96d88be186a764674383788c0edf inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a> () const </td></tr>
+<tr class="memdesc:a033d96d88be186a764674383788c0edf inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">要素数を取得.  <a href="#a033d96d88be186a764674383788c0edf">More...</a><br /></td></tr>
+<tr class="separator:a033d96d88be186a764674383788c0edf inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68e2471b0e615183d3ec53321a3870c9 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a68e2471b0e615183d3ec53321a3870c9">GetWidth</a> () const </td></tr>
+<tr class="memdesc:a68e2471b0e615183d3ec53321a3870c9 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大幅を取得.  <a href="#a68e2471b0e615183d3ec53321a3870c9">More...</a><br /></td></tr>
+<tr class="separator:a68e2471b0e615183d3ec53321a3870c9 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6dfec42ed28f98587606af73cd54328 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#ad6dfec42ed28f98587606af73cd54328">GetHeight</a> () const </td></tr>
+<tr class="memdesc:ad6dfec42ed28f98587606af73cd54328 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大高さを取得.  <a href="#ad6dfec42ed28f98587606af73cd54328">More...</a><br /></td></tr>
+<tr class="separator:ad6dfec42ed28f98587606af73cd54328 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81284b058bf8e275852c2a6459b224aa inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a81284b058bf8e275852c2a6459b224aa">SetColor</a> (const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;描画色)</td></tr>
+<tr class="memdesc:a81284b058bf8e275852c2a6459b224aa inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画色をまとめて変更.  <a href="#a81284b058bf8e275852c2a6459b224aa">More...</a><br /></td></tr>
+<tr class="separator:a81284b058bf8e275852c2a6459b224aa inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1541307c375ae75fce5fceaf5a98f62 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#ac1541307c375ae75fce5fceaf5a98f62">AdjustWidth</a> (std::vector&lt; int &gt; 幅)</td></tr>
+<tr class="memdesc:ac1541307c375ae75fce5fceaf5a98f62 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">先頭からimageの幅を差分修正.  <a href="#ac1541307c375ae75fce5fceaf5a98f62">More...</a><br /></td></tr>
+<tr class="separator:ac1541307c375ae75fce5fceaf5a98f62 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a132bc0638c9ea1f5a6f79d0bfa930e20 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a132bc0638c9ea1f5a6f79d0bfa930e20">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a132bc0638c9ea1f5a6f79d0bfa930e20 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレータ.  <a href="#a132bc0638c9ea1f5a6f79d0bfa930e20">More...</a><br /></td></tr>
+<tr class="separator:a132bc0638c9ea1f5a6f79d0bfa930e20 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b8f4555721f5f9b3fbafcb59533e27 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#af0b8f4555721f5f9b3fbafcb59533e27">operator[]</a> (int index) const </td></tr>
+<tr class="memdesc:af0b8f4555721f5f9b3fbafcb59533e27 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">オペレータ.  <a href="#af0b8f4555721f5f9b3fbafcb59533e27">More...</a><br /></td></tr>
+<tr class="separator:af0b8f4555721f5f9b3fbafcb59533e27 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af91f25811424dad66c9cb4a5359e9d81 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#af91f25811424dad66c9cb4a5359e9d81">begin</a> () -&gt; decltype(imageS.begin())</td></tr>
+<tr class="memdesc:af91f25811424dad66c9cb4a5359e9d81 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#af91f25811424dad66c9cb4a5359e9d81">More...</a><br /></td></tr>
+<tr class="separator:af91f25811424dad66c9cb4a5359e9d81 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f05207ba1bed7a52d3cb03b4409a64 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a25f05207ba1bed7a52d3cb03b4409a64">end</a> () -&gt; decltype(imageS.end())</td></tr>
+<tr class="memdesc:a25f05207ba1bed7a52d3cb03b4409a64 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#a25f05207ba1bed7a52d3cb03b4409a64">More...</a><br /></td></tr>
+<tr class="separator:a25f05207ba1bed7a52d3cb03b4409a64 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa73a6cc92a9e6c1d17dceb65174f2e6f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#aa73a6cc92a9e6c1d17dceb65174f2e6f">begin</a> () const -&gt; decltype(imageS.begin())</td></tr>
+<tr class="memdesc:aa73a6cc92a9e6c1d17dceb65174f2e6f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#aa73a6cc92a9e6c1d17dceb65174f2e6f">More...</a><br /></td></tr>
+<tr class="separator:aa73a6cc92a9e6c1d17dceb65174f2e6f inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59179a3b89024fec78fd521965594c49 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a59179a3b89024fec78fd521965594c49">end</a> () const -&gt; decltype(imageS.end())</td></tr>
+<tr class="memdesc:a59179a3b89024fec78fd521965594c49 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">イテレータ用.  <a href="#a59179a3b89024fec78fd521965594c49">More...</a><br /></td></tr>
+<tr class="separator:a59179a3b89024fec78fd521965594c49 inherit pub_methods_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a04aa015e8bf0644a68629159f2aac91a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04aa015e8bf0644a68629159f2aac91a"></a>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <tr class="separator:a04aa015e8bf0644a68629159f2aac91a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_s_d_x_1_1_image_pack"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_s_d_x_1_1_image_pack')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a></td></tr>
+<tr class="memitem:abb1d70fe1d61bdeb9db871820b88055c inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb1d70fe1d61bdeb9db871820b88055c"></a>
+std::vector&lt; <a class="el" href="class_s_d_x_1_1_image.html">Image</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#abb1d70fe1d61bdeb9db871820b88055c">imageS</a></td></tr>
+<tr class="memdesc:abb1d70fe1d61bdeb9db871820b88055c inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">保持するImage <br /></td></tr>
+<tr class="separator:abb1d70fe1d61bdeb9db871820b88055c inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a549b1bf177dd617391b746b7f791c5d6 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a549b1bf177dd617391b746b7f791c5d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a549b1bf177dd617391b746b7f791c5d6">widthMax</a> = 0</td></tr>
+<tr class="memdesc:a549b1bf177dd617391b746b7f791c5d6 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大幅 <br /></td></tr>
+<tr class="separator:a549b1bf177dd617391b746b7f791c5d6 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f6e54333c1c7cf454b7e74b6585b218 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f6e54333c1c7cf454b7e74b6585b218"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_image_pack.html#a1f6e54333c1c7cf454b7e74b6585b218">heightMax</a> = 0</td></tr>
+<tr class="memdesc:a1f6e54333c1c7cf454b7e74b6585b218 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大高さ <br /></td></tr>
+<tr class="separator:a1f6e54333c1c7cf454b7e74b6585b218 inherit pro_attribs_class_s_d_x_1_1_image_pack"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ImagePackにコマ毎の再生時間を追加したクラス. </p>
@@ -260,6 +268,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a13f6d21a123a1a9bb0de3359e7ad4d78"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SDX::Film::Film </td>
@@ -297,6 +308,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>画像ファイルを分割してメモリへ読み込む. </p>
@@ -306,6 +322,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a7f86fd875ff25996f2613fdde0fcc8a5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">SDX::Film::Film </td>
@@ -343,6 +362,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>連番ファイルを一括して読み込む. </p>
@@ -353,6 +377,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a2834c6abcffa1f18fe4270a991843f82"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Film::Load </td>
@@ -390,6 +417,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>画像ファイルを分割してメモリへ読み込む. </p>
@@ -399,6 +431,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="abd251263166a5629c7befef6a0174edd"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::Film::Load </td>
@@ -436,6 +471,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>連番ファイルを一括して読み込む. </p>
@@ -445,6 +485,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a4147894eb80ac3920bbf5fa013a24903"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::Add </td>
@@ -464,6 +507,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>末尾にImageを追加する. </p>
@@ -473,6 +521,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="abf8f99bbfa440234088142a0d57b2d50"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::Add </td>
@@ -492,6 +543,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>末尾にImageを追加する. </p>
@@ -514,7 +570,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -528,6 +584,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="af8f011ae907e2a20c305f110d4a8bfa3"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::SetFrameTime </td>
@@ -537,6 +596,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>各コマのフレーム数を設定する. </p>
@@ -546,6 +610,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a935bbf1b267c3e6aa4229b7b8c978e60"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::SetType </td>
@@ -555,6 +622,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>全体の再生方法を指定する. </p>
@@ -565,6 +637,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a6cb1645610130c01444a699e9e243e14"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::SetType </td>
@@ -584,6 +659,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>指定コマの次フレームを設定する. </p>
@@ -594,6 +674,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="a9f63dabd0606ba2ce8b7b409498c9b05"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void SDX::Film::SetType </td>
@@ -613,6 +696,11 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>指定コマの次フレームを設定する. </p>
@@ -623,6 +711,9 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
 <a class="anchor" id="ac83f0fc12cc9b39f8df05c0156db6fcf"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int SDX::Film::GetAnimeTime </td>
@@ -631,456 +722,21 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Anime</b></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>全コマの合計フレーム時間を返す. </p>
 
 </div>
 </div>
-<a class="anchor" id="a87a73e0616f6cd7b5ba86f08a34d205a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SDX::ImagePack::Load </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ファイル名</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>総コマ数</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>コマ割り横</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>コマ割り縦</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>１つの画像を分割して読み込む. </p>
-<p>総コマ数=14,コマ割り横=4,コマ割り縦=4の場合<br />
- [ 0][ 1][ 2][ 3]<br />
- [ 4][ 5][ 6][ 7]<br />
- [ 8][ 9][10][11]<br />
- [12][13][ ][ ]<br />
- のように分割して、ImagePackのサイズは14になる </p>
-
-</div>
-</div>
-<a class="anchor" id="a9b0190dcb15a7ae4459abf30bce8ec5c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool SDX::ImagePack::Load </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ファイル名</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>拡張子</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>総コマ数</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>書式</em> = <code>&quot;%03d.&quot;</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>連番ファイルを一括して読み込む. </p>
-<p>ファイル名の後に三桁の連番が付いたファイルを連続して読み込む<br />
- 例:「ファイル名***.拡張子」 </p>
-
-</div>
-</div>
-<a class="anchor" id="a437f698f5292db5ff611442fb48f0f2c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SDX::ImagePack::Add </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_image.html">Image</a> *&#160;</td>
-          <td class="paramname"><em>追加イメージ</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Imageを末尾に追加. </p>
-
-</div>
-</div>
-<a class="anchor" id="a76ba0d04555c83f366eb67cbc5c9263f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SDX::ImagePack::Add </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ファイル名</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Imageを末尾に追加. </p>
-
-</div>
-</div>
-<a class="anchor" id="a033d96d88be186a764674383788c0edf"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SDX::ImagePack::GetSize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>要素数を取得. </p>
-
-</div>
-</div>
-<a class="anchor" id="a68e2471b0e615183d3ec53321a3870c9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SDX::ImagePack::GetWidth </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>最大幅を取得. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad6dfec42ed28f98587606af73cd54328"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SDX::ImagePack::GetHeight </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>最大高さを取得. </p>
-
-</div>
-</div>
-<a class="anchor" id="a81284b058bf8e275852c2a6459b224aa"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SDX::ImagePack::SetColor </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_color.html">Color</a> &amp;&#160;</td>
-          <td class="paramname"><em>描画色</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>描画色をまとめて変更. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac1541307c375ae75fce5fceaf5a98f62"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void SDX::ImagePack::AdjustWidth </td>
-          <td>(</td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>幅</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>先頭からimageの幅を差分修正. </p>
-<p>BMPフォント用の画像を文字幅を調整する時に使う 分割読み込み時 </p>
-
-</div>
-</div>
-<a class="anchor" id="a132bc0638c9ea1f5a6f79d0bfa930e20"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_s_d_x_1_1_image.html">Image</a>* SDX::ImagePack::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>オペレータ. </p>
-
-</div>
-</div>
-<a class="anchor" id="af0b8f4555721f5f9b3fbafcb59533e27"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_s_d_x_1_1_image.html">Image</a>* SDX::ImagePack::operator[] </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>オペレータ. </p>
-
-</div>
-</div>
-<a class="anchor" id="af91f25811424dad66c9cb4a5359e9d81"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto SDX::ImagePack::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; decltype(imageS.begin())
-		</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イテレータ用. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa73a6cc92a9e6c1d17dceb65174f2e6f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto SDX::ImagePack::begin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; decltype(imageS.begin())
-		</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イテレータ用. </p>
-
-</div>
-</div>
-<a class="anchor" id="a25f05207ba1bed7a52d3cb03b4409a64"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto SDX::ImagePack::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> -&gt; decltype(imageS.end())
-		</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イテレータ用. </p>
-
-</div>
-</div>
-<a class="anchor" id="a59179a3b89024fec78fd521965594c49"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">auto SDX::ImagePack::end </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const -&gt; decltype(imageS.end())
-		</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>イテレータ用. </p>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

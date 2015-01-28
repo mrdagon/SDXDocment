@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -62,6 +62,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
       <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
@@ -103,8 +104,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a921c89bb21caab6fd8755a66e01fc53a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a921c89bb21caab6fd8755a66e01fc53a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>FontOld</b> (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0)</td></tr>
+<tr class="memitem:a921c89bb21caab6fd8755a66e01fc53a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font_old.html#a921c89bb21caab6fd8755a66e01fc53a">FontOld</a> (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0)</td></tr>
+<tr class="memdesc:a921c89bb21caab6fd8755a66e01fc53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ.  <a href="#a921c89bb21caab6fd8755a66e01fc53a">More...</a><br /></td></tr>
 <tr class="separator:a921c89bb21caab6fd8755a66e01fc53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a568e0d2d02734c27651daf60459244ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font_old.html#a568e0d2d02734c27651daf60459244ba">Load</a> (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0)</td></tr>
 <tr class="memdesc:a568e0d2d02734c27651daf60459244ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリ上にフォントを作成する.  <a href="#a568e0d2d02734c27651daf60459244ba">More...</a><br /></td></tr>
@@ -140,10 +141,108 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>旧フォントクラス. </p>
-<p>毎回レンダリングするので遅い </p><div class="fragment"></div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
+<p>毎回レンダリングするので遅い </p><div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
+<div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//フォントを作成して文字列を描画する</span></div>
+<div class="line"><span class="keywordtype">bool</span> SampleFont()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//フォントの初期化</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line"></div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_screen.html#ab5a2c286c76b740ac4b44dd968fc9e5c">Screen::SetBackColor</a>(<a class="code" href="class_s_d_x_1_1_color.html#ad3aa697f6142f6abacf5ee85bffde8ca">Color::Silver</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">    {</div>
+<div class="line">        angle += 0.02;</div>
+<div class="line"></div>
+<div class="line">        fontA.Draw({ 10 , 10 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line">        fontB.Draw({ 10 , 200 }, <a class="code" href="class_s_d_x_1_1_color.html#adc47e34b5dbb0c7b584b5c15e299e59c">Color::Blue</a>, <span class="stringliteral">&quot;Hello○\nこん☆にちは\n今日は1234&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        fontA.DrawRotate({ 300, 100 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line">        fontB.DrawRotate({ 300, 200 }, 1, angle, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">false</span>, <span class="stringliteral">&quot;文字の回転□\nてすと1234×&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>.Return.on){ <span class="keywordflow">break</span>;}<span class="comment">//Enterで終了</span></div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a921c89bb21caab6fd8755a66e01fc53a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDX::FontOld::FontOld </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>フォント名</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>大きさ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>太さ</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>改行高さ</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デフォルトコンストラクタ. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a568e0d2d02734c27651daf60459244ba"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::FontOld::Load </td>
@@ -175,17 +274,25 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>メモリ上にフォントを作成する. </p>
 <p>太さは0～9で指定、大きさと太さは-1にするとデフォルトになる<br />
-改行高さは0の場合、改行後の文字が上下くっつく。 SDLとDXLIBではフォント名の指定方法が違うので注意。 SDLでは太さとフォントタイプが無効 </p>
+ 改行高さは0の場合、改行後の文字が上下くっつく。 SDLとDXLIBではフォント名の指定方法が違うので注意。 SDLでは太さとフォントタイプが無効 </p>
 
 </div>
 </div>
 <a class="anchor" id="a007fd0d9b160b1e5f00ef44320329411"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool SDX::FontOld::Release </td>
@@ -194,6 +301,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>フォントをメモリから開放する. </p>
@@ -203,6 +315,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a2e33199576e41a99d5b97146618069bc"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">TTF_Font* SDX::FontOld::GetHandle </td>
@@ -211,6 +326,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>フォントのハンドルを取得. </p>
@@ -220,6 +340,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="aded629e1f10676b2fd503d7e412fe164"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int SDX::FontOld::GetSize </td>
@@ -228,6 +351,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>大きさを取得. </p>
@@ -237,6 +365,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="a259ae73854f963bcacda80f8581b9516"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int SDX::FontOld::Getthick </td>
@@ -245,6 +376,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>太さを取得. </p>
@@ -254,6 +390,9 @@ Public Member Functions</h2></td></tr>
 <a class="anchor" id="ad20ca98c1989afb65367199d43cdca90"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int SDX::FontOld::GetDrawStringWidth </td>
@@ -263,6 +402,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>描画時の幅を取得[DXLIB]. </p>
@@ -308,7 +452,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -370,7 +514,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -433,7 +577,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -447,7 +591,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:38 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

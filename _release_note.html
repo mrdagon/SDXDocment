@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -83,7 +83,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 今後の変更予定はSorceForgeのチケットを参照して下さい<br />
 <br />
 </p><hr/>
-<p> <b>ver 0.10</b><br />
+<p> <b>ver 0.11</b><br />
+SoundとMusicに全体の音量を変更する関数を追加<br />
+<br />
+<b>ver 0.10</b><br />
 [大きめの破壊的変更]<br />
 BmpFontをFontに統合して廃止<br />
 Cameraクラスを再設計<br />
@@ -91,7 +94,9 @@ AnimeクラスをFilmクラスに名称変更、Anime::PlayerをAnimeに名称�
 引数が座標X、座標Yとかになっている物をconst Point&amp;に変更<br />
 引数が座標X、座標Y、幅、高さとかになっている物をconst Rect&amp;に変更<br />
 DrawExtendの引数をPoint2つからRectに変更<br />
-Directorクラスのバグを修正<b>IFontクラスの反転フラグの引数の位置を変更</b> <br />
+Directorクラスのバグを修正<br />
+IFontクラスの反転フラグの引数の位置を変更<br />
+<br />
 [細かい破壊的変更]<br />
 DXLib版と分離したので～Handleのusing宣言を削除<br />
 NULL_HANDLEマクロを削除<br />
@@ -124,6 +129,9 @@ Soundクラスの非実装関数を一部削除<br />
 ImageからisScreen,isAlpha,isTransフラグ関係を削除<br />
 BlendBltとFilterBltをそれぞれBlend,Filterに統合(ただし未実装)<br />
 Copyコンストラクタを色々禁止<br />
+GNU/Linuxのコンパイル方法を修正<br />
+Macで配布する場合の注意事項を追記<br />
+Sample実行用の画像ファイル等を配布開始<br />
 <br />
 <b>ver 0.09</b><br />
 ライセンスをAGPL Ver3に変更<br />
@@ -199,7 +207,7 @@ UpDateとなっていた関数をUpdateに変更<br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -36,7 +36,7 @@ var searchData=
   ['getminx',['GetMinX',['../class_s_d_x_1_1_line.html#a23f4c559c322450ef4ab0e73f5030bc3',1,'SDX::Line']]],
   ['getminy',['GetMinY',['../class_s_d_x_1_1_line.html#a090929a0cb5cbbf1fdac0ec2c69b3877',1,'SDX::Line']]],
   ['getnowcount',['GetNowCount',['../class_s_d_x_1_1_time.html#a01bd5f9848a1dfa2f4a30ab86bc7150a',1,'SDX::Time']]],
-  ['getpoint',['GetPoint',['../class_s_d_x_1_1_mouse.html#ab77d7a33ff117422618862cac91fa5ea',1,'SDX::Mouse']]],
+  ['getpoint',['GetPoint',['../class_s_d_x_1_1_rect.html#a9e9465b126db748dbaa6bdcea17abe2d',1,'SDX::Rect::GetPoint()'],['../class_s_d_x_1_1_mouse.html#ab77d7a33ff117422618862cac91fa5ea',1,'SDX::Mouse::GetPoint()']]],
   ['getred',['GetRed',['../class_s_d_x_1_1_color.html#adb16773e3e4957ee9f603a6866e20056',1,'SDX::Color']]],
   ['getremoveflag',['GetRemoveFlag',['../class_s_d_x_1_1_i_model.html#accd30fe63f17c4aefc6ffbc2bfb52588',1,'SDX::IModel']]],
   ['getrenderer',['GetRenderer',['../class_s_d_x_1_1_screen.html#a7a18d8aa6c37b391052eb3ff4a2003b5',1,'SDX::Screen::GetRenderer()'],['../class_s_d_x_1_1_sub_window.html#ac9c4334255b9256db7a049bfb718b39d',1,'SDX::SubWindow::GetRenderer()']]],

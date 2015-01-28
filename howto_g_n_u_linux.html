@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>SDXFrameWork: SDXの導入方法(MacOSX)</title>
+<title>SDXFrameWork: SDXの導入方法(GNU/Linux)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -76,73 +76,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">SDXの導入方法(MacOSX) </div>  </div>
+<div class="title">SDXの導入方法(GNU/Linux) </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>SDXFrameworkの使用には<br />
-「SDXFramework」<br />
-「Xcode」<br />
-が必要です。<br />
-Xcode以外の環境に以外ついては説明しませんが、多分出来るはずです。<br />
+<div class="textblock"><p>Ubuntu14.04での導入方法です。他のディストリビューションでも大体同じになると思います<br />
+とりあえずターミナルからのコンパイル方法だけ解説します. </p><hr/>
+<p> <b>1.SDL2.0のインストール</b><br />
+ターミナルを起動して以下のコマンドを実行する<br />
+$ sudo apt-get install libsdl2-dev<br />
+$ sudo apt-get install libsdl2-image-dev<br />
+$ sudo apt-get install libsdl2-ttf-dev<br />
+$ sudo apt-get install libsdl2-mixer-de<br />
+これでSDLの必要なファイルがインストールされます </p><hr/>
+<p> <b>2.SDXの導入</b><br />
+SDXFramework/jni/SDL/includeフォルダをインクルードパスに指定するか<br />
+ターミナルから"sudo nautilus /usr/local"でフォルダを開いて、includeフォルダにコピーするかして下さい<br />
 </p><hr/>
-<p> <b>1 Xcodeをインストールする</b><br />
-AppStoreからXcodeの最新版をダウンロードしてインストールします。 <br />
-</p><hr/>
-<p> <b>2 SDXFrameworkをダウンロードする</b><br />
-下記サイトで最新版を配布しているので、リンク先からダウンロードして下さい<br />
-<a href="https://sourceforge.jp/projects/dxframework/" target="_blank"><b>SorceForge</b></a><br />
-解凍すると「SDXFramework」と言うフォルダが出来るので。<br />
-ホームディレクリ等において下さい。<br />
-</p><hr/>
-<p> <b>3 frameworkのインストール</b><br />
-① Finderを開き、上部メニューの「移動」から「フォルダへ移動」を選び「/System」と入力します。<br />
+<p> <b>3.コンパイル</b><br />
+clangの最新版や標準ライブラリ等を入手し、c++のコンパイルが可能な状態にします<br />
 <br />
-② ライブラリフォルダを開き、Frameworksフォルダを開きます。<br />
-<br />
-③ Frameworksフォルダ に 「SDXFramework/MacOSX」の中にある<br />
-「SDL2.framework」<br />
-「SDL2_image.framework」<br />
-「SDL2_mixer.framework」<br />
-「SDL2_ttf.framework」<br />
-の４つをドラッグ＆ドロップして追加し、パスワードを入力してインストールします。<br />
-</p><hr/>
-<p> <b>4 新規プロジェクトを作成する</b><br />
-Xcodeを起動したら新規プロジェクトを作成します。<br />
-<br />
-①上部メニューの「File」の「New」から「Project」を選びます。<br />
-<br />
-②Command Line Toolのプロジェクトを作成して下さい。プロジェクト名は好きなように付けて下さい。TypeはC++にします。<br />
-<br />
-</p><hr/>
-<p> <b>5 プロジェクトの設定</b><br />
-①エクスプローラからプロジェクトを選びます<br />
-<br />
-②メインウィンドウにプロジェクトの設定が表示されるので、画面の上の方にある「Build Phases」を選択します<br />
-<br />
-③Link Binaly With Libraryesをクリックします<br />
-Add frameworks &amp; libraries here に 「SDXFramework/MacOSX」の中にある<br />
-「SDL2.framework」<br />
-「SDL2_image.framework」<br />
-「SDL2_mixer.framework」<br />
-「SDL2_ttf.framework」<br />
-の４つをドラッグ＆ドロップして追加します。<br />
-<br />
-④さらにCopy Filesに上の4つのframeworkをドラッグ＆ドロップして追加します。<br />
-<br />
-⑤画面の上の方にある「Build Settings」を選択します<br />
-左のBasicをAllに変更します。<br />
-<br />
-⑥画面をスクロールしてLinking の項目から Runpath Search Pathsを開き<br />
-</p><div class="fragment"><div class="line">@loader_path/../Frameworks/</div>
-</div><!-- fragment --><p> と入力します。<br />
-⑦画面をスクロールしてSerch Paths の項目から Header Search Pathsを開き<br />
-先ほど解凍した「SDXFramework/jni/SDL/include｣フォルダをドラッグ＆ドロップして追加します。<br />
-以上でプロジェクトの設定は完了です<br />
-<br />
-</p><hr/>
-<p> <b>6 サンプルソースのビルド</b><br />
-画面左側の「Sorce」のフォルダのmain.cppファイルを開きます。<br />
-main.cppファイルに以下のコードをコピペして、コンパイルして実行して下さい。<br />
+main.cppファイルを作成します。<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
 <div class="line"></div>
@@ -170,32 +123,56 @@ main.cppファイルに以下のコードをコピペして、コンパイルし
 <div class="line"><span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> <br />
-画面に白い□が表示され、カーソルで移動出来れば導入成功です。<br />
-失敗した場合は、もう一度手順を確認して下さい。<br />
-よくわからない場合は、掲示板で「新しい話題を始める」をクリックして質問して下さい。<br />
-<a href="http://sourceforge.jp/projects/dxframework/forums/31378/" target="_blank"><b>SDXFramework：ヘルプフォーラム</b></a><br />
-<br />
+main.cppがあるディレクトリに移動してコマンドを実行<br />
+"clang++ -std=c++11 -o sdxtest main.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer"<br />
+(sdxtestの部分を変えると出力されるファイル名が変わります、sudo su する必要がある場合もあります) sdxtest.aとかが出力されたら成功です.</p>
+<p>Ubuntu14.04での導入方法です。他のディストリビューションでも大体同じになると思います<br />
+とりあえずターミナルからのコンパイル方法だけ解説します. </p><hr/>
+<p> <b>1.SDL2.0のインストール</b><br />
+ターミナルを起動して以下のコマンドを実行する<br />
+$ sudo apt-get install libsdl2-dev<br />
+$ sudo apt-get install libsdl2-image-dev<br />
+$ sudo apt-get install libsdl2-ttf-dev<br />
+$ sudo apt-get install libsdl2-mixer-de<br />
+これでSDLの必要なファイルがインストールされます </p><hr/>
+<p> <b>2.SDXの導入</b><br />
+SDXFramework/jni/SDL/includeフォルダをインクルードパスに指定するか<br />
+ターミナルから"sudo nautilus /usr/local"でフォルダを開いて、includeフォルダにコピーするかして下さい<br />
 </p><hr/>
-<p> <b>7 プリコンパイル済みヘッダーを利用する</b><br />
-[参考/Xcode5でプリコンパイル済みヘッダを使う]<br />
-<a href="http://qiita.com/idtkb/items/839cc85200a8e30c76cd">http://qiita.com/idtkb/items/839cc85200a8e30c76cd</a> <br />
-上記の方法で行けるようです。<br />
+<p> <b>3.コンパイル</b><br />
+clangの最新版や標準ライブラリ等を入手し、c++のコンパイルが可能な状態にします<br />
 <br />
-メインの開発環境がXCode以外でとりあえずコンパイル出来れば良い場合は<br />
-</p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;PreCompile.cpp&quot;</span></div>
-</div><!-- fragment --><p> 上のような感じにmain.cppで、他のcppファイルをインクルードすれば良いです。<br />
-<br />
-<b>8 画像ファイルを置く場所<br />
-実行ファイルがある所に<br />
-<br />
-<b>9 完成したソフトを配布する</b><br />
-.appファイルを作ります。以下のサイトを参考にして下さい。<br />
-<br />
-[参考/MacでSDLアプリケーションの作り方]<br />
-<a href="http://d.hatena.ne.jp/o_mega/20080512/1210612958">http://d.hatena.ne.jp/o_mega/20080512/1210612958</a> <br />
-[参考/Library not loaded エラー？ここを見直そう]<br />
-<a href="http://qiita.com/kakipo/items/3cd87e00bc96bc3888b2">http://qiita.com/kakipo/items/3cd87e00bc96bc3888b2</a> <br />
-</b></p>
+main.cppファイルを作成します。<br />
+</p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">using namespace </span>SDX;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line">{</div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;sample&quot;</span>, 640, 480);<span class="comment">//ライブラリの初期化</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> x = 320;</div>
+<div class="line"><span class="keywordtype">int</span> y = 240;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
+<div class="line">{</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Down.hold) y += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Up.hold) y -= 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Right.hold) x += 5;</div>
+<div class="line"><span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.Left.hold) x -= 5;</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_drawing.html#a53026c27c78acf010b31f7e91117a76e">Drawing::Rect</a>({x-10, y-10, 20, 20}, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, <span class="keyword">true</span>);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">System::End</a>();<span class="comment">//ライブラリの終了処理</span></div>
+<div class="line"></div>
+<div class="line"><span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> <br />
+main.cppがあるディレクトリに移動してコマンドを実行<br />
+"clang++ -std=c++11 -o sdxtest main.cpp -lSDL2 -lSDL2_image -lSDL2_ttf -lSDL2_mixer"<br />
+(sdxtestの部分を変えると出力されるファイル名が変わります、sudo su する必要がある場合もあります) sdxtest.aが出力されたら成功です. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

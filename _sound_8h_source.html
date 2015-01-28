@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>SDXFrameWork: Sound.h Source File</title>
+<title>SDXFrameWork: Multimedia/Sound.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -92,40 +92,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>SDX</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_sound.html">Sound</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        Mix_Chunk* handle;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">int</span> leftPan = 255;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> rightPan = 255;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> volume = 1.0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">int</span> angle = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> distance = -1;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_s_d_x_1_1_sound.html">Sound</a>(){}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ~<a class="code" href="class_s_d_x_1_1_sound.html">Sound</a>(){}</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">   28</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">Sound</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ファイル名, <span class="keywordtype">double</span> 音量 = 1.0)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(ファイル名);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">   34</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ファイル名, <span class="keywordtype">double</span> 音量 = 1.0)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (Loading::isLoading)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <a class="code" href="class_s_d_x_1_1_loading.html#a891a3d0ec0f458125a845d4eafd39671">Loading::AddLoading</a>([=]{ <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(ファイル名,音量); });</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>){ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            handle = Mix_LoadWAV(ファイル名);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (!handle){ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            volume = std::max(音量,0.0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_sound.html">Sound</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        Mix_Chunk* handle;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">int</span> leftPan = 255;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">int</span> rightPan = 255;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">double</span> volume = 1.0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> angle = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">int</span> distance = -1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_s_d_x_1_1_sound.html">Sound</a>(){}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        ~<a class="code" href="class_s_d_x_1_1_sound.html">Sound</a>(){}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">   29</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">Sound</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ファイル名, <span class="keywordtype">double</span> 音量 = 1.0)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(ファイル名);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">   35</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ファイル名, <span class="keywordtype">double</span> 音量 = 1.0)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (Loading::isLoading)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <a class="code" href="class_s_d_x_1_1_loading.html#a891a3d0ec0f458125a845d4eafd39671">Loading::AddLoading</a>([=]{ <a class="code" href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">Load</a>(ファイル名,音量); });</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (handle != <span class="keyword">nullptr</span>){ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            handle = Mix_LoadWAV(ファイル名);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span> (!handle){ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            volume = std::min(音量,1.0);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            Mix_VolumeChunk(handle, <span class="keywordtype">int</span>(volume * 128));</div>
@@ -166,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            volume = std::max(音量, 0.0);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            volume = std::min(音量, 1.0);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            Mix_VolumeChunk(handle, <span class="keywordtype">int</span>(音量 * 128));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            Mix_VolumeChunk(handle, <span class="keywordtype">int</span>(音量 * MIX_MAX_VOLUME));</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
@@ -191,16 +190,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    };</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_sound.html#a79566f90ac2258c75782c43bb09bfeb8">  127</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_sound.html#a79566f90ac2258c75782c43bb09bfeb8">SetMainVolume</a>(<span class="keywordtype">double</span> 音量)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">//全チャンネルの音量を変更</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            Mix_Volume(-1,<span class="keywordtype">int</span>(音量 * MIX_MAX_VOLUME));</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    };</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
 <div class="ttc" id="namespace_s_d_x_html_a49aa4acd7a7a07163d7225e69713bf7d"><div class="ttname"><a href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">SDX::PAI</a></div><div class="ttdeci">const double PAI</div><div class="ttdoc">円周率 </div><div class="ttdef"><b>Definition:</b> SDX.h:26</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sound_html"><div class="ttname"><a href="class_s_d_x_1_1_sound.html">SDX::Sound</a></div><div class="ttdoc">効果音用音声を表すクラス. </div><div class="ttdef"><b>Definition:</b> Sound.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sound_html"><div class="ttname"><a href="class_s_d_x_1_1_sound.html">SDX::Sound</a></div><div class="ttdoc">効果音用音声を表すクラス. </div><div class="ttdef"><b>Definition:</b> Sound.h:13</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sound_html_a79566f90ac2258c75782c43bb09bfeb8"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a79566f90ac2258c75782c43bb09bfeb8">SDX::Sound::SetMainVolume</a></div><div class="ttdeci">static void SetMainVolume(double 音量)</div><div class="ttdoc">全体の音量を0～1.0の範囲で設定. </div><div class="ttdef"><b>Definition:</b> Sound.h:127</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_a67a1dd437970f989a68901d4e881ef0b"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a67a1dd437970f989a68901d4e881ef0b">SDX::Sound::GetHandle</a></div><div class="ttdeci">Mix_Chunk * GetHandle() const </div><div class="ttdoc">ハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Sound.h:63</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_abcd5da254beec78231845b3c06e66713"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#abcd5da254beec78231845b3c06e66713">SDX::Sound::Set3DEffect</a></div><div class="ttdeci">void Set3DEffect(double 距離=-1, double 角度=0)</div><div class="ttdoc">3D音声再生効果を付ける. </div><div class="ttdef"><b>Definition:</b> Sound.h:115</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_a78acad6a877a8be84964973b0c8a2b36"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a78acad6a877a8be84964973b0c8a2b36">SDX::Sound::GetVolume</a></div><div class="ttdeci">double GetVolume()</div><div class="ttdoc">音量を取得. </div><div class="ttdef"><b>Definition:</b> Sound.h:97</div></div>
 <div class="ttc" id="class_s_d_x_1_1_loading_html_a891a3d0ec0f458125a845d4eafd39671"><div class="ttname"><a href="class_s_d_x_1_1_loading.html#a891a3d0ec0f458125a845d4eafd39671">SDX::Loading::AddLoading</a></div><div class="ttdeci">static void AddLoading(std::function&lt; void(void)&gt; &amp;&amp;読み込み関数)</div><div class="ttdoc">非同期読み込み処理に追加. </div><div class="ttdef"><b>Definition:</b> Loading.h:96</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sound_html_a7404ee11e67e1f5b059ea2ced2ad6ebb"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">SDX::Sound::Sound</a></div><div class="ttdeci">Sound(const char *ファイル名, double 音量=1.0)</div><div class="ttdoc">音声ファイルをメモリに読み込む. </div><div class="ttdef"><b>Definition:</b> Sound.h:28</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sound_html_aa6c2d36139891c10f7f19b8e32d493e6"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">SDX::Sound::Load</a></div><div class="ttdeci">bool Load(const char *ファイル名, double 音量=1.0)</div><div class="ttdoc">音声ファイルをメモリに読み込む. </div><div class="ttdef"><b>Definition:</b> Sound.h:34</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sound_html_a7404ee11e67e1f5b059ea2ced2ad6ebb"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a7404ee11e67e1f5b059ea2ced2ad6ebb">SDX::Sound::Sound</a></div><div class="ttdeci">Sound(const char *ファイル名, double 音量=1.0)</div><div class="ttdoc">音声ファイルをメモリに読み込む. </div><div class="ttdef"><b>Definition:</b> Sound.h:29</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sound_html_aa6c2d36139891c10f7f19b8e32d493e6"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#aa6c2d36139891c10f7f19b8e32d493e6">SDX::Sound::Load</a></div><div class="ttdeci">bool Load(const char *ファイル名, double 音量=1.0)</div><div class="ttdoc">音声ファイルをメモリに読み込む. </div><div class="ttdef"><b>Definition:</b> Sound.h:35</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_ae466323d3d074316650fb02ad44b26aa"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#ae466323d3d074316650fb02ad44b26aa">SDX::Sound::SetVolume</a></div><div class="ttdeci">bool SetVolume(double 音量)</div><div class="ttdoc">音量を0～1.0の範囲で設定. </div><div class="ttdef"><b>Definition:</b> Sound.h:88</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_a1dde15f7a094958f254fe959085c7013"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#a1dde15f7a094958f254fe959085c7013">SDX::Sound::Play</a></div><div class="ttdeci">bool Play() const </div><div class="ttdoc">音声ファイルを再生. </div><div class="ttdef"><b>Definition:</b> Sound.h:69</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sound_html_acda596bf026c0be4a0e5a54c1b3a4362"><div class="ttname"><a href="class_s_d_x_1_1_sound.html#acda596bf026c0be4a0e5a54c1b3a4362">SDX::Sound::Release</a></div><div class="ttdeci">bool Release()</div><div class="ttdoc">音声ファイルをメモリから開放. </div><div class="ttdef"><b>Definition:</b> Sound.h:55</div></div>
@@ -208,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

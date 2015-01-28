@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>SDXFrameWork: SDXafx.h Source File</title>
+<title>SDXFrameWork: Multimedia/SDXafx.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.10</span>
+   &#160;<span id="projectnumber">0.11</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -128,55 +128,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    Music* Music::active = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    Music* Music::next = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> Music::nextLoop;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> Music::nextRestart;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> Loading::isLoading = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> Loading::loadingCount = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> Loading::succesCount = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::mutex Loading::mtx;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::vector&lt;std::function&lt;void(void)&gt;&gt; Loading::funcS;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">   55</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">CompAngle</a>(<span class="keywordtype">double</span> 角度A, <span class="keywordtype">double</span> 角度B)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">double</span> 角度差 = 角度A - 角度B;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        角度差 = fmod(角度差, <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="comment">//角度差がPAI以上</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span> (角度差 &gt; <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            角度差 -= <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//角度差が-PAI以下</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (角度差 &lt; -<a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            角度差 += <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> 角度差;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">   74</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">Renderer::SetTarget</a>(<a class="code" href="class_s_d_x_1_1_image.html">Image</a> *描画対象)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> a;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (描画対象 == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            a = (SDL_SetRenderTarget(handle, <span class="keyword">nullptr</span>) == 0);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            a = (SDL_SetRenderTarget(handle, 描画対象-&gt;<a class="code" href="class_s_d_x_1_1_image.html#aa9e489ed4e34a11c59531731eaf781a7">GetHandle</a>()) == 0);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">if</span> ( a )</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            target = 描画対象;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">return</span> a;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> Music::mainVolume = MIX_MAX_VOLUME;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">bool</span> Music::nextLoop;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> Music::nextRestart;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">bool</span> Loading::isLoading = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> Loading::loadingCount = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> Loading::succesCount = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::mutex Loading::mtx;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::vector&lt;std::function&lt;void(void)&gt;&gt; Loading::funcS;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">   56</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">CompAngle</a>(<span class="keywordtype">double</span> 角度A, <span class="keywordtype">double</span> 角度B)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">double</span> 角度差 = 角度A - 角度B;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        角度差 = fmod(角度差, <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="comment">//角度差がPAI以上</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> (角度差 &gt; <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            角度差 -= <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//角度差が-PAI以下</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (角度差 &lt; -<a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a>)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            角度差 += <a class="code" href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">PAI</a> * 2;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> 角度差;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">   75</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">Renderer::SetTarget</a>(<a class="code" href="class_s_d_x_1_1_image.html">Image</a> *描画対象)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">bool</span> a;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">if</span> (描画対象 == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            a = (SDL_SetRenderTarget(handle, <span class="keyword">nullptr</span>) == 0);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            a = (SDL_SetRenderTarget(handle, 描画対象-&gt;<a class="code" href="class_s_d_x_1_1_image.html#aa9e489ed4e34a11c59531731eaf781a7">GetHandle</a>()) == 0);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> ( a )</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            target = 描画対象;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_aef3a262c4b7aa6691c484de7fb5e9d39"><div class="ttname"><a href="class_s_d_x_1_1_color.html#aef3a262c4b7aa6691c484de7fb5e9d39">SDX::Color::Aqua</a></div><div class="ttdeci">static const Color Aqua</div><div class="ttdoc">水 [RGB]0,255,255 </div><div class="ttdef"><b>Definition:</b> Color.h:93</div></div>
 <div class="ttc" id="namespace_s_d_x_html_a49aa4acd7a7a07163d7225e69713bf7d"><div class="ttname"><a href="namespace_s_d_x.html#a49aa4acd7a7a07163d7225e69713bf7d">SDX::PAI</a></div><div class="ttdeci">const double PAI</div><div class="ttdoc">円周率 </div><div class="ttdef"><b>Definition:</b> SDX.h:26</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_a76cc926077132612f5e25b084b2ff852"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a76cc926077132612f5e25b084b2ff852">SDX::Color::Red</a></div><div class="ttdeci">static const Color Red</div><div class="ttdoc">赤 [RGB]255,0,0 </div><div class="ttdef"><b>Definition:</b> Color.h:83</div></div>
@@ -196,20 +197,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_s_d_x_1_1_color_html_aba7a2b19c2154dcc42b65663aaa12b2e"><div class="ttname"><a href="class_s_d_x_1_1_color.html#aba7a2b19c2154dcc42b65663aaa12b2e">SDX::Color::Gray</a></div><div class="ttdeci">static const Color Gray</div><div class="ttdoc">灰 [RGB]128,128,128 </div><div class="ttdef"><b>Definition:</b> Color.h:80</div></div>
 <div class="ttc" id="class_s_d_x_1_1_input_html_a5656ead9d3316a4fc3e214f04fe50408"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">SDX::Input::key</a></div><div class="ttdeci">static Keyboard key</div><div class="ttdoc">キーボード </div><div class="ttdef"><b>Definition:</b> Input.h:24</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_a8a0b8e025abf3a0257f39bc241ece978"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a8a0b8e025abf3a0257f39bc241ece978">SDX::Color::Black</a></div><div class="ttdeci">static const Color Black</div><div class="ttdoc">黒 [RGB]0,0,0 </div><div class="ttdef"><b>Definition:</b> Color.h:78</div></div>
-<div class="ttc" id="class_s_d_x_1_1_renderer_html_a1c9fdc7884152f36b321a4b8fa0d524e"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">SDX::Renderer::SetTarget</a></div><div class="ttdeci">bool SetTarget(Image *描画対象=nullptr)</div><div class="ttdoc">描画先を変更. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:74</div></div>
+<div class="ttc" id="class_s_d_x_1_1_renderer_html_a1c9fdc7884152f36b321a4b8fa0d524e"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e">SDX::Renderer::SetTarget</a></div><div class="ttdeci">bool SetTarget(Image *描画対象=nullptr)</div><div class="ttdoc">描画先を変更. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:75</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_a67f0f5a5ed9da41becee59b5222be049"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a67f0f5a5ed9da41becee59b5222be049">SDX::Color::Teal</a></div><div class="ttdeci">static const Color Teal</div><div class="ttdoc">青緑 [RGB]0,128,128 </div><div class="ttdef"><b>Definition:</b> Color.h:92</div></div>
 <div class="ttc" id="class_s_d_x_1_1_input_html_a8111299d0da6c2a182c9cde2c5992be8"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a8111299d0da6c2a182c9cde2c5992be8">SDX::Input::touch</a></div><div class="ttdeci">static Touch touch[10]</div><div class="ttdoc">タッチ </div><div class="ttdef"><b>Definition:</b> Input.h:25</div></div>
 <div class="ttc" id="class_s_d_x_1_1_renderer_html_aef4d72d1bd95efeba4b69f14c6987b85"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">SDX::Renderer::mainRenderer</a></div><div class="ttdeci">static Renderer &amp; mainRenderer</div><div class="ttdoc">メインウィンドウのレンダラー </div><div class="ttdef"><b>Definition:</b> Renderer.h:48</div></div>
 <div class="ttc" id="class_s_d_x_1_1_sub_window_html_a1271d0aeaef288258d495151d4f6ee4b"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SDX::SubWindow::mainWindow</a></div><div class="ttdeci">static SubWindow mainWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> SubWindow.h:43</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_ac62e1ec538ee37d64f052918ed8bcf77"><div class="ttname"><a href="class_s_d_x_1_1_color.html#ac62e1ec538ee37d64f052918ed8bcf77">SDX::Color::Fuchsia</a></div><div class="ttdeci">static const Color Fuchsia</div><div class="ttdoc">赤紫 [RGB]255,0,255 </div><div class="ttdef"><b>Definition:</b> Color.h:85</div></div>
-<div class="ttc" id="namespace_s_d_x_html_afbb4859f8459209049d8627b179eaf96"><div class="ttname"><a href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">SDX::CompAngle</a></div><div class="ttdeci">double CompAngle(double 角度A, double 角度B)</div><div class="ttdoc">Aから見たBの角度差を-PAI～+PAIで返す. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:55</div></div>
+<div class="ttc" id="namespace_s_d_x_html_afbb4859f8459209049d8627b179eaf96"><div class="ttname"><a href="namespace_s_d_x.html#afbb4859f8459209049d8627b179eaf96">SDX::CompAngle</a></div><div class="ttdeci">double CompAngle(double 角度A, double 角度B)</div><div class="ttdoc">Aから見たBの角度差を-PAI～+PAIで返す. </div><div class="ttdef"><b>Definition:</b> SDXafx.h:56</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_a4e9b480348b8154f6677c5e0344f8520"><div class="ttname"><a href="class_s_d_x_1_1_color.html#a4e9b480348b8154f6677c5e0344f8520">SDX::Color::Purple</a></div><div class="ttdeci">static const Color Purple</div><div class="ttdoc">紫 [RGB]128,0,128 </div><div class="ttdef"><b>Definition:</b> Color.h:84</div></div>
 <div class="ttc" id="class_s_d_x_1_1_window_html_a4d093f2dfe01e0e1d34a5a53f1d21081"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">SDX::Window::activeWindow</a></div><div class="ttdeci">static SubWindow * activeWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> Window.h:24</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html_acadc580869ab20bcf41a159b5cfeff52"><div class="ttname"><a href="class_s_d_x_1_1_color.html#acadc580869ab20bcf41a159b5cfeff52">SDX::Color::Navy</a></div><div class="ttdeci">static const Color Navy</div><div class="ttdoc">濃青 [RGB]0,0,128 </div><div class="ttdef"><b>Definition:</b> Color.h:90</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 18 2015 21:51:37 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

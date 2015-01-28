@@ -22,6 +22,7 @@ var searchData=
   ['setimages',['SetImageS',['../class_s_d_x_1_1_font.html#a3eea07bb522aa7ee83a39e92e9b3e04d',1,'SDX::Font']]],
   ['setindex',['SetIndex',['../class_s_d_x_1_1_sp_image_s.html#a39d6a74cda9b502868b8c25e00e9d0e8',1,'SDX::SpImageS']]],
   ['setinputtype',['SetInputType',['../class_s_d_x_1_1_joypad.html#ad06b0bb7589c87f165c477123d395574',1,'SDX::Joypad']]],
+  ['setmainvolume',['SetMainVolume',['../class_s_d_x_1_1_music.html#aacee5b0f1048a613b97739b723c48de3',1,'SDX::Music::SetMainVolume()'],['../class_s_d_x_1_1_sound.html#a79566f90ac2258c75782c43bb09bfeb8',1,'SDX::Sound::SetMainVolume()']]],
   ['setmotion',['SetMotion',['../class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304',1,'SDX::Camera']]],
   ['setpanning',['SetPanning',['../class_s_d_x_1_1_sound.html#a768204eae6b484d08f038e6d99b6ab1c',1,'SDX::Sound']]],
   ['setpoint',['SetPoint',['../class_s_d_x_1_1_mouse.html#aa3131dbc5157180613a40e47ee95b48f',1,'SDX::Mouse']]],
