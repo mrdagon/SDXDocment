@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -92,112 +92,112 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>SDX</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_camera.html">Camera</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//●影響があるクラスと関数</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//[Renderer/Screen]</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//SetClip</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//[Drawing]</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//Line</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//Rect</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Circle</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//Oval</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Polygon</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//Triangle</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//Pixel</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//[Image]</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//Draw～6種</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//●間接的に影響</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//[Font]</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Imageを利用</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//[BmpFrame]</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//Imageを利用</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//[Shape]</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//Drawingを利用</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//[Sprite]</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">//ImageやDrawingを利用</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">double</span> angle;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        std::unique_ptr&lt;MOTION::IMotion&gt; motion;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_camera.html">Camera</a>* active;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">   44</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">   45</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">   46</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">   50</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">Camera</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> 拡大率) :</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>(座標),</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>(座標),</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>(拡大率),</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            angle(0)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">   58</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_camera.html">Camera</a>* <a class="code" href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">Get</a>()</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> active;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">   64</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">Set</a>(<a class="code" href="class_s_d_x_1_1_camera.html">Camera</a> *アクティブにするCamera = <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            active = アクティブにするCamera;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">   70</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">SetMotion</a>( std::unique_ptr&lt;MOTION::IMotion&gt; 移動パターン)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            motion = std::move(移動パターン);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">   76</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">Update</a>()</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (motion)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                motion-&gt;Update(&amp;<a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">   85</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(<span class="keywordtype">double</span> X座標変換前)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a> + (X座標変換前 - <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>) * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">   91</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(<span class="keywordtype">double</span> Y座標変換前)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> + (Y座標変換前 - <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a>) * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">   97</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">Trans</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;変換前座標)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span>{ <a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(変換前座標.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>) , <a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(変換前座標.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a>) };</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">  103</a></span>&#160;        SDL_Rect <a class="code" href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">TransRect</a>(<span class="keyword">const</span> SDL_Rect &amp;変換前矩形)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span>{ (int)<a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(変換前矩形.x), (int)<a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(変換前矩形.y), (int)(変換前矩形.w * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>), (int)(変換前矩形.h *<a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>) };</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_camera.html">Camera</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//●影響があるクラスと関数</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">//[Renderer/Screen]</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//SetClip</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//[Drawing]</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//Line</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">//Rect</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">//Circle</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">//Oval</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">//Polygon</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">//Triangle</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//Pixel</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">//[Image]</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">//Draw～6種</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">//●間接的に影響</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//[Font]</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//Imageを利用</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//[BmpFrame]</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//Imageを利用</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//[Shape]</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//Drawingを利用</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//[Sprite]</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">//ImageやDrawingを利用</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">double</span> angle;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        std::unique_ptr&lt;MOTION::IMotion&gt; motion;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_camera.html">Camera</a>* active;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">   43</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">   44</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">   45</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">   49</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">Camera</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> 拡大率) :</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>(座標),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>(座標),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>(拡大率),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            angle(0)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">   57</a></span>&#160;        <span class="keyword">static</span> <a class="code" href="class_s_d_x_1_1_camera.html">Camera</a>* <a class="code" href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">Get</a>()</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> active;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">   63</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">Set</a>(<a class="code" href="class_s_d_x_1_1_camera.html">Camera</a> *アクティブにするCamera = <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            active = アクティブにするCamera;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">   69</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">SetMotion</a>( std::unique_ptr&lt;MOTION::IMotion&gt; 移動パターン)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            motion = std::move(移動パターン);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">   75</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">Update</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (motion)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                motion-&gt;Update(&amp;<a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">   84</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(<span class="keywordtype">double</span> X座標変換前)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a> + (X座標変換前 - <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>) * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">   90</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(<span class="keywordtype">double</span> Y座標変換前)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">forcus</a>.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> + (Y座標変換前 - <a class="code" href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">position</a>.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a>) * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">   96</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">Trans</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;変換前座標)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">return</span>{ <a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(変換前座標.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>) , <a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(変換前座標.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a>) };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">  102</a></span>&#160;        SDL_Rect <a class="code" href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">TransRect</a>(<span class="keyword">const</span> SDL_Rect &amp;変換前矩形)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span>{ (int)<a class="code" href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">TransX</a>(変換前矩形.x), (int)<a class="code" href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">TransY</a>(変換前矩形.y), (int)(変換前矩形.w * <a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>), (int)(変換前矩形.h *<a class="code" href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">zoom</a>) };</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    };</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a7965b0c47f5f14d3a328c39c309d330e"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">SDX::Point::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">座標 </div><div class="ttdef"><b>Definition:</b> Point.h:26</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_aec20aee690b5cdb831a6edac195d34c8"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">SDX::Camera::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">モーションに応じてカメラ位置の更新. </div><div class="ttdef"><b>Definition:</b> Camera.h:76</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_aa4c529f1ce1f5240ede28a70ea8f5685"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">SDX::Camera::position</a></div><div class="ttdeci">Point position</div><div class="ttdoc">中心の位置 </div><div class="ttdef"><b>Definition:</b> Camera.h:44</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a2f43746ef9b46811f96d79ee3384e167"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">SDX::Camera::TransRect</a></div><div class="ttdeci">SDL_Rect TransRect(const SDL_Rect &amp;変換前矩形) const </div><div class="ttdoc">領域を画面上のどこに相当するか変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:103</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_aec20aee690b5cdb831a6edac195d34c8"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#aec20aee690b5cdb831a6edac195d34c8">SDX::Camera::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">モーションに応じてカメラ位置の更新. </div><div class="ttdef"><b>Definition:</b> Camera.h:75</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_aa4c529f1ce1f5240ede28a70ea8f5685"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#aa4c529f1ce1f5240ede28a70ea8f5685">SDX::Camera::position</a></div><div class="ttdeci">Point position</div><div class="ttdoc">中心の位置 </div><div class="ttdef"><b>Definition:</b> Camera.h:43</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a2f43746ef9b46811f96d79ee3384e167"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a2f43746ef9b46811f96d79ee3384e167">SDX::Camera::TransRect</a></div><div class="ttdeci">SDL_Rect TransRect(const SDL_Rect &amp;変換前矩形) const </div><div class="ttdoc">領域を画面上のどこに相当するか変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:102</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a03a5b3acbd97f7764c092c2419f4810b"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">SDX::Camera::TransX</a></div><div class="ttdeci">double TransX(double X座標変換前) const </div><div class="ttdoc">カメラの位置と拡大率に応じてX座標を変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:85</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a5712925b227a380896797e0eaa6b47c2"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">SDX::Camera::TransY</a></div><div class="ttdeci">double TransY(double Y座標変換前) const </div><div class="ttdoc">カメラの位置と拡大率に応じてY座標を変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:91</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_ac20851a3fbd8a7d3c36705cb4c757304"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">SDX::Camera::SetMotion</a></div><div class="ttdeci">void SetMotion(std::unique_ptr&lt; MOTION::IMotion &gt; 移動パターン)</div><div class="ttdoc">カメラの移動モーションを設定. </div><div class="ttdef"><b>Definition:</b> Camera.h:70</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_ab85a210268fa1115b6c1b4f21e784118"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">SDX::Camera::Get</a></div><div class="ttdeci">static Camera * Get()</div><div class="ttdoc">現在アクティブなカメラを取得. </div><div class="ttdef"><b>Definition:</b> Camera.h:58</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a8815cd7328820485cfe2618f11e00774"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">SDX::Camera::zoom</a></div><div class="ttdeci">double zoom</div><div class="ttdoc">拡大率、マイナスになると描画が狂う </div><div class="ttdef"><b>Definition:</b> Camera.h:46</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a03a5b3acbd97f7764c092c2419f4810b"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a03a5b3acbd97f7764c092c2419f4810b">SDX::Camera::TransX</a></div><div class="ttdeci">double TransX(double X座標変換前) const </div><div class="ttdoc">カメラの位置と拡大率に応じてX座標を変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:84</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a5712925b227a380896797e0eaa6b47c2"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a5712925b227a380896797e0eaa6b47c2">SDX::Camera::TransY</a></div><div class="ttdeci">double TransY(double Y座標変換前) const </div><div class="ttdoc">カメラの位置と拡大率に応じてY座標を変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:90</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_ac20851a3fbd8a7d3c36705cb4c757304"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#ac20851a3fbd8a7d3c36705cb4c757304">SDX::Camera::SetMotion</a></div><div class="ttdeci">void SetMotion(std::unique_ptr&lt; MOTION::IMotion &gt; 移動パターン)</div><div class="ttdoc">カメラの移動モーションを設定. </div><div class="ttdef"><b>Definition:</b> Camera.h:69</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_ab85a210268fa1115b6c1b4f21e784118"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#ab85a210268fa1115b6c1b4f21e784118">SDX::Camera::Get</a></div><div class="ttdeci">static Camera * Get()</div><div class="ttdoc">現在アクティブなカメラを取得. </div><div class="ttdef"><b>Definition:</b> Camera.h:57</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a8815cd7328820485cfe2618f11e00774"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a8815cd7328820485cfe2618f11e00774">SDX::Camera::zoom</a></div><div class="ttdeci">double zoom</div><div class="ttdoc">拡大率、マイナスになると描画が狂う </div><div class="ttdef"><b>Definition:</b> Camera.h:45</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a443c4818684ec717a08f74ef6d35036c"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">SDX::Point::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">座標 </div><div class="ttdef"><b>Definition:</b> Point.h:25</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html"><div class="ttname"><a href="class_s_d_x_1_1_camera.html">SDX::Camera</a></div><div class="ttdoc">2D用に座標変換を行うカメラを表すクラス. </div><div class="ttdef"><b>Definition:</b> Camera.h:13</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_afbfb9732cac5d903db2abd11ff431208"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">SDX::Camera::Set</a></div><div class="ttdeci">static void Set(Camera *アクティブにするCamera=nullptr)</div><div class="ttdoc">現在アクティブなカメラを設定. </div><div class="ttdef"><b>Definition:</b> Camera.h:64</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a6290255e24be4f5549406b83abfc1f9d"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">SDX::Camera::Trans</a></div><div class="ttdeci">Point Trans(const Point &amp;変換前座標) const </div><div class="ttdoc">座標を画面上のどこに表示されるか変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:97</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_a0b314082c74f007934163297c56324c0"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">SDX::Camera::Camera</a></div><div class="ttdeci">Camera(const Point &amp;座標, double 拡大率)</div><div class="ttdoc">カメラの作成. </div><div class="ttdef"><b>Definition:</b> Camera.h:50</div></div>
-<div class="ttc" id="class_s_d_x_1_1_camera_html_acc5a0eb8f1f7948c33ac864ca4ba4987"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">SDX::Camera::forcus</a></div><div class="ttdeci">Point forcus</div><div class="ttdoc">Screen上の座標positonがWindow上のforcusに来るように補正をかける </div><div class="ttdef"><b>Definition:</b> Camera.h:45</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html"><div class="ttname"><a href="class_s_d_x_1_1_camera.html">SDX::Camera</a></div><div class="ttdoc">2D用に座標変換を行うカメラを表すクラス. </div><div class="ttdef"><b>Definition:</b> Camera.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_afbfb9732cac5d903db2abd11ff431208"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#afbfb9732cac5d903db2abd11ff431208">SDX::Camera::Set</a></div><div class="ttdeci">static void Set(Camera *アクティブにするCamera=nullptr)</div><div class="ttdoc">現在アクティブなカメラを設定. </div><div class="ttdef"><b>Definition:</b> Camera.h:63</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a6290255e24be4f5549406b83abfc1f9d"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a6290255e24be4f5549406b83abfc1f9d">SDX::Camera::Trans</a></div><div class="ttdeci">Point Trans(const Point &amp;変換前座標) const </div><div class="ttdoc">座標を画面上のどこに表示されるか変換. </div><div class="ttdef"><b>Definition:</b> Camera.h:96</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_a0b314082c74f007934163297c56324c0"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#a0b314082c74f007934163297c56324c0">SDX::Camera::Camera</a></div><div class="ttdeci">Camera(const Point &amp;座標, double 拡大率)</div><div class="ttdoc">カメラの作成. </div><div class="ttdef"><b>Definition:</b> Camera.h:49</div></div>
+<div class="ttc" id="class_s_d_x_1_1_camera_html_acc5a0eb8f1f7948c33ac864ca4ba4987"><div class="ttname"><a href="class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987">SDX::Camera::forcus</a></div><div class="ttdeci">Point forcus</div><div class="ttdoc">Screen上の座標positonがWindow上のforcusに来るように補正をかける </div><div class="ttdef"><b>Definition:</b> Camera.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:46 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

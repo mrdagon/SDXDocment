@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -130,17 +130,23 @@ Public Attributes</h2></td></tr>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <span class="comment">//BMPフォントを生成したり読み込む</span></div>
+<div class="line">    <span class="comment">//事前にBMPフォントを作っておくと、Android等で読み込みが早い</span></div>
+<div class="line">    fontA.MakeBMPFont(<span class="stringliteral">&quot;data/jyouyoukannji.txt&quot;</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image.html">Image</a> bmpFont(<span class="stringliteral">&quot;data/bmpfont.png&quot;</span>);</div>
+<div class="line">    fontA.LoadBMPFont(bmpFont, <span class="stringliteral">&quot;data/jyouyoukannji.txt&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//追加BMPフォントの登録</span></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont2(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
 <div class="line"></div>
 <div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
-<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
-<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont2, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont2, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont2[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont2[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont2[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont2[29]);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
 <div class="line"></div>
@@ -210,7 +216,7 @@ template&lt;typename... TStream&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:48 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -465,7 +465,7 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>文字列を読み込む. </p>
-<p>FileMode::Readの場合成功 </p>
+<p>1byte目が文字数、残り部分が文字データになっていれば読み込める FileMode::Readの場合成功 </p>
 
 </div>
 </div>
@@ -548,7 +548,7 @@ template&lt;class TSaveType , class TOutput &gt; </div>
 </div><div class="memdoc">
 
 <p>型変換をしつつ配列に読み込む. </p>
-<p>intで保存してdoubleの値に代入したい時等に使う. </p>
+<p>ファイルにはint型で保存してあって、double型の値に代入したい時等に使う. </p>
 
 </div>
 </div>
@@ -634,7 +634,7 @@ template&lt;class T &gt; </div>
 
 <p>文字列を書き込む. </p>
 <p>FileModeがWriteかAddの場合成功。<br />
- 書込元変数をファイルに書き込む。 </p>
+ 書込元変数をファイルに書き込む。 文字列の長さが文字列自身の前に書き込まれる </p>
 
 </div>
 </div>
@@ -858,7 +858,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

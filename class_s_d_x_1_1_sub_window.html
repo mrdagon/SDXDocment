@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -146,6 +146,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8f8cfd1352b874e96c3f801a46c4cec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sub_window.html#a8f8cfd1352b874e96c3f801a46c4cec5">Update</a> ()</td></tr>
 <tr class="memdesc:a8f8cfd1352b874e96c3f801a46c4cec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画処理を反映する.  <a href="#a8f8cfd1352b874e96c3f801a46c4cec5">More...</a><br /></td></tr>
 <tr class="separator:a8f8cfd1352b874e96c3f801a46c4cec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae94636575c711c39ea21d55fc088ec2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sub_window.html#ae94636575c711c39ea21d55fc088ec2c">SetLogicalSize</a> (int 幅, int 高さ)</td></tr>
+<tr class="memdesc:ae94636575c711c39ea21d55fc088ec2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画領域の大きさを設定する.  <a href="#ae94636575c711c39ea21d55fc088ec2c">More...</a><br /></td></tr>
+<tr class="separator:ae94636575c711c39ea21d55fc088ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -189,9 +192,12 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b></td></t
 <div class="line">{</div>
 <div class="line">    <span class="keyword">using namespace </span>SDX;</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;MainWindow&quot;</span>, 640, 480);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">System::Initialise</a>(<span class="stringliteral">&quot;MainWindow&quot;</span>, 320, 240);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_sub_window.html">SubWindow</a> sub(<span class="stringliteral">&quot;SubWindow&quot;</span>,200,200);</div>
 <div class="line"></div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_sub_window.html">SubWindow</a> sub(<span class="stringliteral">&quot;SubWindow&quot;</span>,400,400);</div>
+<div class="line">    <span class="comment">//SetLogicalSizeしておくと、ウィンドウの解像度を上げても描画される解像度はそのままになる</span></div>
+<div class="line">    <span class="comment">//Windowサイズを変えた後に呼び出しても良い</span></div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_window.html#a66e1a772ef9d4bc49285e5a9b70b6475">Window::SetLogicalSize</a>(320, 240);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordflow">while</span> (<a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">System::Update</a>())</div>
 <div class="line">    {</div>
@@ -203,13 +209,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b></td></t
 <div class="line">        <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>({ 10, 100 }, <a class="code" href="class_s_d_x_1_1_color.html#a08f966fd74cbdd3024aaa1668fdc4340">Color::White</a>, { <span class="stringliteral">&quot;SubWindowクラスのテスト&quot;</span>, <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#ab4282deb9545d77b69649fa71773fddb">x</a>,<span class="stringliteral">&quot; &quot;</span>, <a class="code" href="class_s_d_x_1_1_input.html#ae5a695a3e3096bc06265b482d1b1d133">Input::mouse</a>.<a class="code" href="class_s_d_x_1_1_mouse.html#a9cc8482282bfae916976c02466bdc116">y</a> });</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._1.on){ <a class="code" href="class_s_d_x_1_1_window.html#ac22ae3f59a8cacafdc66ba84881e0983">Window::SetTitle</a>(<span class="stringliteral">&quot;Mainタイトルを変えたよ！&quot;</span>); }<span class="comment">//ウィンドウタイトルを変更</span></div>
-<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._2.on) { <a class="code" href="class_s_d_x_1_1_window.html#aab394333b3b0cbb310ffe5e467326c3a">Window::SetSize</a>(320, 240); }<span class="comment">//ウィンドウの大きさを変更</span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._2.on){<a class="code" href="class_s_d_x_1_1_window.html#aab394333b3b0cbb310ffe5e467326c3a">Window::SetSize</a>(640, 480);}<span class="comment">//ウィンドウの大きさを変更</span></div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._3.on) { <a class="code" href="class_s_d_x_1_1_window.html#aeab4099fbba64d8dea356b1487e9955f">Window::SetFullscreen</a>(<span class="keyword">true</span>); }</div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._4.on) { <a class="code" href="class_s_d_x_1_1_window.html#aeab4099fbba64d8dea356b1487e9955f">Window::SetFullscreen</a>(<span class="keyword">false</span>); }</div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._5.on) { <a class="code" href="class_s_d_x_1_1_window.html#aebd9bc8f4fbcf31126638761ae59f853">Window::SetIcon</a>(<span class="stringliteral">&quot;icon.png&quot;</span>); }</div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._6.on){ sub.SetTitle(<span class="stringliteral">&quot;Subタイトルを変えたよ！&quot;</span>); }<span class="comment">//ウィンドウタイトルを変更</span></div>
-<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._7.on) { sub.SetSize(200, 200); }<span class="comment">//ウィンドウの大きさを変更</span></div>
+<div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._7.on) { sub.SetSize(400, 400); }<span class="comment">//ウィンドウの大きさを変更</span></div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._8.on) { sub.SetFullscreen(<span class="keyword">true</span>); }</div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._9.on) { sub.SetFullscreen(<span class="keyword">false</span>); }</div>
 <div class="line">        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_input.html#a5656ead9d3316a4fc3e214f04fe50408">Input::key</a>._0.on) { sub.SetIcon(<span class="stringliteral">&quot;icon.png&quot;</span>); }</div>
@@ -641,10 +647,47 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b></td></t
 
 </div>
 </div>
+<a class="anchor" id="ae94636575c711c39ea21d55fc088ec2c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::SubWindow::SetLogicalSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>幅</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>高さ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画領域の大きさを設定する. </p>
+<p>例えばSetSizeの半分にすると2倍表示になる </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:48 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

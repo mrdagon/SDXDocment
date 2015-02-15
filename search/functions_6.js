@@ -15,7 +15,7 @@ var searchData=
   ['getdate',['GetDate',['../class_s_d_x_1_1_time.html#a2e27379c88c9d2b7a3f404aab1e233e0',1,'SDX::Time']]],
   ['getdirect',['GetDirect',['../class_s_d_x_1_1_i_position.html#aa7204e085d8a21ad8bfc7909a341d06d',1,'SDX::IPosition::GetDirect(IPosition *比較対象) const '],['../class_s_d_x_1_1_i_position.html#aa7204e085d8a21ad8bfc7909a341d06d',1,'SDX::IPosition::GetDirect(IPosition *比較対象) const ']]],
   ['getdistance',['GetDistance',['../class_s_d_x_1_1_i_position.html#a8c895f936fad791e35cc4a7a45899cb0',1,'SDX::IPosition::GetDistance(IPosition *比較対象) const '],['../class_s_d_x_1_1_i_position.html#a8c895f936fad791e35cc4a7a45899cb0',1,'SDX::IPosition::GetDistance(IPosition *比較対象) const ']]],
-  ['getdrawstringwidth',['GetDrawStringWidth',['../class_s_d_x_1_1_font.html#a429733a8da157f8504618ffe081d392a',1,'SDX::Font::GetDrawStringWidth()'],['../class_s_d_x_1_1_font_old.html#ad20ca98c1989afb65367199d43cdca90',1,'SDX::FontOld::GetDrawStringWidth()']]],
+  ['getdrawstringwidth',['GetDrawStringWidth',['../class_s_d_x_1_1_font.html#a429733a8da157f8504618ffe081d392a',1,'SDX::Font::GetDrawStringWidth()'],['../class_s_d_x_1_1_font_old.html#a491e136753e71a251e76ce39d9e1546f',1,'SDX::FontOld::GetDrawStringWidth()']]],
   ['getfilemode',['GetFileMode',['../class_s_d_x_1_1_file.html#aac6c31ae7acf6004d5d5a68a93e43e75',1,'SDX::File']]],
   ['getfilename',['GetFileName',['../class_s_d_x_1_1_file.html#a0c5b0a953ab49f0a611da5926352dac5',1,'SDX::File']]],
   ['getfont',['GetFont',['../class_s_d_x_1_1_drawing.html#a3d84ee57be80dde6e03adeb6e2775274',1,'SDX::Drawing']]],

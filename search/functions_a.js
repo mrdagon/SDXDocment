@@ -1,6 +1,7 @@
 var searchData=
 [
   ['make',['Make',['../class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8',1,'SDX::BmpFrame::Make()'],['../class_s_d_x_1_1_image.html#a543231a2f06838779ba90b97e28312a1',1,'SDX::Image::Make()'],['../class_s_d_x_1_1_joypad.html#a48a8e156fd21720b2eab8a1771787c81',1,'SDX::Joypad::Make()']]],
+  ['makebmpfont',['MakeBMPFont',['../class_s_d_x_1_1_font.html#aa2f72062067e0fd21b9330c939ac4b73',1,'SDX::Font']]],
   ['makeimage',['MakeImage',['../class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb',1,'SDX::Font::MakeImage()'],['../class_s_d_x_1_1_font_old.html#af422f606a560f8c2773ecb91b7a00da3',1,'SDX::FontOld::MakeImage()']]],
   ['model',['Model',['../class_s_d_x_1_1_model.html#ad6e39d73e9f92d5af8f4b29125d06c14',1,'SDX::Model']]],
   ['mono',['Mono',['../class_s_d_x_1_1_filter.html#aa57156d576ff9002bcc6ec831765ef14',1,'SDX::Filter']]],

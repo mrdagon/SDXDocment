@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -80,29 +80,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="class_s_d_x_1_1_blend.html">SDX::Blend</a>  </dt>
+<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="class_s_d_x_1_1_blend.html">SDX::Blend</a>  </dt>
 <dd>実装が面倒なので後回し  </dd>
 <dt><a class="anchor" id="_todo000001"></a>Member <a class="el" href="class_s_d_x_1_1_bmp_frame.html#a95e11686e26c70feac7509e72f815be8">SDX::BmpFrame::Draw</a>  (const Rect &amp;領域, const Color &amp;描画色=Color::White) const </dt>
 <dd>ImagePackにSetColorしていた場合の動作がまだ  </dd>
-<dt><a class="anchor" id="_todo000002"></a>Class <a class="el" href="class_s_d_x_1_1_camera.html">SDX::Camera</a>  </dt>
-<dd>グローバルな機能として設計中  </dd>
 <dt><a class="anchor" id="_todo000020"></a>Class <a class="el" href="class_s_d_x_1_1_enum_array.html">SDX::EnumArray&lt; TType, TEnum &gt;</a>  </dt>
 <dd>エラー処理など未実装  </dd>
-<dt><a class="anchor" id="_todo000003"></a>Class <a class="el" href="class_s_d_x_1_1_film.html">SDX::Film</a>  </dt>
+<dt><a class="anchor" id="_todo000002"></a>Class <a class="el" href="class_s_d_x_1_1_film.html">SDX::Film</a>  </dt>
 <dd>リソース解放周り色々未実装  </dd>
-<dt><a class="anchor" id="_todo000006"></a>Class <a class="el" href="class_s_d_x_1_1_filter.html">SDX::Filter</a>  </dt>
+<dt><a class="anchor" id="_todo000005"></a>Class <a class="el" href="class_s_d_x_1_1_filter.html">SDX::Filter</a>  </dt>
 <dd>実装が面倒なので後回し  </dd>
-<dt><a class="anchor" id="_todo000007"></a>Class <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>  </dt>
+<dt><a class="anchor" id="_todo000006"></a>Class <a class="el" href="class_s_d_x_1_1_font.html">SDX::Font</a>  </dt>
 <dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え  </dd>
-<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#ae15db9e457e957400bd32f26d8a80093">SDX::Font::Draw</a>  (const Point &amp;座標, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
+<dt><a class="anchor" id="_todo000007"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#ae15db9e457e957400bd32f26d8a80093">SDX::Font::Draw</a>  (const Point &amp;座標, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
 <dd>反転描画無効  </dd>
-<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#aecf57766f9eee5304e8d348d01d9d931">SDX::Font::DrawExtend</a>  (const Point &amp;座標, double X拡大率, double Y拡大率, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
+<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#aecf57766f9eee5304e8d348d01d9d931">SDX::Font::DrawExtend</a>  (const Point &amp;座標, double X拡大率, double Y拡大率, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
 <dd>反転描画無効  </dd>
-<dt><a class="anchor" id="_todo000009"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#a954630755e93320e230315e79cc92d89">SDX::Font::DrawRotate</a>  (const Point &amp;座標, double 拡大率, double 角度, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
+<dt><a class="anchor" id="_todo000008"></a>Member <a class="el" href="class_s_d_x_1_1_font.html#a954630755e93320e230315e79cc92d89">SDX::Font::DrawRotate</a>  (const Point &amp;座標, double 拡大率, double 角度, const Color &amp;描画色, const VariadicStream &amp;描画する文字列, bool 反転フラグ=false) const override</dt>
 <dd>反転描画無効  </dd>
+<dt><a class="anchor" id="_todo000010"></a>Member <a class="el" href="class_s_d_x_1_1_font_old.html#a568e0d2d02734c27651daf60459244ba">SDX::FontOld::Load</a>  (const char *フォント名, int 大きさ, int 太さ=1, int 改行高さ=0)</dt>
+<dd>太さが無効  </dd>
 <dt><a class="anchor" id="_todo000011"></a>Class <a class="el" href="class_s_d_x_1_1_i_drawable.html">SDX::IDrawable</a>  </dt>
 <dd>例えばDrawPartに回転可能な関数等を追加するかもしれない  </dd>
-<dt><a class="anchor" id="_todo000004"></a>Class <a class="el" href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a>  </dt>
+<dt><a class="anchor" id="_todo000003"></a>Class <a class="el" href="class_s_d_x_1_1_image_pack.html">SDX::ImagePack</a>  </dt>
 <dd>リソース解放周り色々未実装  </dd>
 <dt><a class="anchor" id="_todo000012"></a>Class <a class="el" href="class_s_d_x_1_1_joypad.html">SDX::Joypad</a>  </dt>
 <dd>2つ目以降のjoypad対応未実装  </dd>
@@ -124,7 +124,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -120,6 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44499842fc2935ec962a98ba89fc8cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb">MakeImage</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 文字色, bool 反転フラグ, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列) const </td></tr>
 <tr class="memdesc:a44499842fc2935ec962a98ba89fc8cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">FontからImageを生成.  <a href="#a44499842fc2935ec962a98ba89fc8cfb">More...</a><br /></td></tr>
 <tr class="separator:a44499842fc2935ec962a98ba89fc8cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2f72062067e0fd21b9330c939ac4b73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#aa2f72062067e0fd21b9330c939ac4b73">MakeBMPFont</a> (const std::string テキストファイル名)</td></tr>
+<tr class="memdesc:aa2f72062067e0fd21b9330c939ac4b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMPフォントデータを生成する.  <a href="#aa2f72062067e0fd21b9330c939ac4b73">More...</a><br /></td></tr>
+<tr class="separator:aa2f72062067e0fd21b9330c939ac4b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98b93c9ff44c55da72e79d238c9861b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ad98b93c9ff44c55da72e79d238c9861b">LoadBMPFont</a> (const <a class="el" href="class_s_d_x_1_1_image.html">Image</a> &amp;BMPフォント, const std::string テキストファイル名)</td></tr>
+<tr class="memdesc:ad98b93c9ff44c55da72e79d238c9861b"><td class="mdescLeft">&#160;</td><td class="mdescRight">MakeBMPFontで生成したBMPフォントデータを読み込む.  <a href="#ad98b93c9ff44c55da72e79d238c9861b">More...</a><br /></td></tr>
+<tr class="separator:ad98b93c9ff44c55da72e79d238c9861b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a7a38cee1b1a50404f24a3fc5bd1551df">GetSize</a> () const </td></tr>
 <tr class="memdesc:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="mdescLeft">&#160;</td><td class="mdescRight">大きさを取得.  <a href="#a7a38cee1b1a50404f24a3fc5bd1551df">More...</a><br /></td></tr>
 <tr class="separator:a7a38cee1b1a50404f24a3fc5bd1551df"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,7 +153,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>TrueTypeFontとBMPFontをまとめて扱うクラス. </p>
-<p>毎回レンダリングせず、ハッシュマップにImageを格納する 一度も表示していない文字が必要になった場合生成し以後使いまわす </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え </dd></dl>
+<p>毎回レンダリングせず、ハッシュマップにImageを格納する 一度も表示していない文字が必要になった場合生成し以後使いまわす </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え </dd></dl>
 <div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
 <div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
 <div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
@@ -162,17 +168,23 @@ Public Member Functions</h2></td></tr>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontA(SystemFont::Gothic, 9, 4,<span class="keyword">false</span>);</div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_font.html">Font</a> fontB(SystemFont::Mincho, 20, 4, <span class="keyword">true</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//BMPフォントの登録</span></div>
+<div class="line">    <span class="comment">//BMPフォントを生成したり読み込む</span></div>
+<div class="line">    <span class="comment">//事前にBMPフォントを作っておくと、Android等で読み込みが早い</span></div>
+<div class="line">    fontA.MakeBMPFont(<span class="stringliteral">&quot;data/jyouyoukannji.txt&quot;</span>);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image.html">Image</a> bmpFont(<span class="stringliteral">&quot;data/bmpfont.png&quot;</span>);</div>
+<div class="line">    fontA.LoadBMPFont(bmpFont, <span class="stringliteral">&quot;data/jyouyoukannji.txt&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//追加BMPフォントの登録</span></div>
 <div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpNumber(<span class="stringliteral">&quot;data/number.png&quot;</span>,10,10,1);</div>
-<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
+<div class="line">    <a class="code" href="class_s_d_x_1_1_image_pack.html">ImagePack</a> bmpFont2(<span class="stringliteral">&quot;data/font.png&quot;</span>, 30, 10, 3);</div>
 <div class="line"></div>
 <div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;0&quot;</span>, &amp;bmpNumber,10);</div>
-<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont, 26);</div>
-<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont, 26);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont[26]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont[27]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont[28]);</div>
-<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont[29]);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;a&quot;</span>, &amp;bmpFont2, 26);</div>
+<div class="line">    fontA.SetImageS(<span class="stringliteral">&quot;A&quot;</span>, &amp;bmpFont2, 26);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;×&quot;</span>, bmpFont2[26]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;□&quot;</span>, bmpFont2[27]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;○&quot;</span>, bmpFont2[28]);</div>
+<div class="line">    fontA.SetImage(<span class="stringliteral">&quot;☆&quot;</span>, bmpFont2[29]);</div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">double</span> angle = 0;</div>
 <div class="line"></div>
@@ -337,6 +349,70 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa2f72062067e0fd21b9330c939ac4b73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::Font::MakeBMPFont </td>
+          <td>(</td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>テキストファイル名</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BMPフォントデータを生成する. </p>
+<p>テキストファイルには出力したい文字を一行で入力します pngに変換したい場合、生成したBMPの黒の箇所を透明にして下さい </p>
+
+</div>
+</div>
+<a class="anchor" id="ad98b93c9ff44c55da72e79d238c9861b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::Font::LoadBMPFont </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_image.html">Image</a> &amp;&#160;</td>
+          <td class="paramname"><em>BMPフォント</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramname"><em>テキストファイル名</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>MakeBMPFontで生成したBMPフォントデータを読み込む. </p>
+<p>テキストファイルはMakeBMPFontに使った物と同じ物を使用して下さい </p>
+
+</div>
+</div>
 <a class="anchor" id="a7a38cee1b1a50404f24a3fc5bd1551df"></a>
 <div class="memitem">
 <div class="memproto">
@@ -433,7 +509,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>文字を描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">SDX::IFont</a>.</p>
 
@@ -544,7 +620,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>文字を回転して描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">SDX::IFont</a>.</p>
 
@@ -607,7 +683,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>拡大率を指定して文字を描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">SDX::IFont</a>.</p>
 
@@ -696,7 +772,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:56 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -104,110 +104,111 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> Position(<span class="keywordtype">double</span> X座標, <span class="keywordtype">double</span> Y座標)</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> aspA = <a class="code" href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">Window::activeWindow</a>-&gt;aspect;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> aspB = (double)<a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>() / <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordflow">if</span> (aspA == aspB)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                xBuffer = int(X座標 * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                yBuffer = int(Y座標 * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aspA &gt; aspB){</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">//横が余る</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordtype">double</span> rate = aspA / aspB;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordtype">double</span> pos = (X座標 - (rate - 1) / rate / 2) * rate;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                xBuffer = int(pos * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                yBuffer = int(Y座標 * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="comment">//上が余る</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keywordtype">double</span> rate = aspB / aspA;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordtype">double</span> pos = (Y座標 - (rate - 1) / rate / 2) * rate;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                xBuffer = int(X座標 * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                yBuffer = int(pos * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">   49</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = 0;</div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">   50</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">   52</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">   53</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">   55</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">   56</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">   57</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">   59</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">   62</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">Update</a>()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = (!<a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> &amp;&amp; press);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = (<a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> &amp;&amp; !press);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = press;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (press)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                ++<a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a>)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = xBuffer - <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = yBuffer - <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = xBuffer;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = yBuffer;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">   93</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">Reset</a>()</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = 0;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = 0;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            press = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    };</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_window_html_a58e72da80b3d292668bddf528315e7c5"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">SDX::Window::GetWidth</a></div><div class="ttdeci">static int GetWidth()</div><div class="ttdoc">ウィンドウ幅の取得. </div><div class="ttdef"><b>Definition:</b> Window.h:58</div></div>
-<div class="ttc" id="class_s_d_x_1_1_window_html_a44c3e68609f28817ddc7ad372f3a2296"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">SDX::Window::GetHeight</a></div><div class="ttdeci">static int GetHeight()</div><div class="ttdoc">ウィンドウ高さの取得. </div><div class="ttdef"><b>Definition:</b> Window.h:64</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_a8678ddb944d716f4318e80295057ff2f"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">SDX::Touch::moveX</a></div><div class="ttdeci">double moveX</div><div class="ttdoc">前回更新時からの移動量 </div><div class="ttdef"><b>Definition:</b> Touch.h:52</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_ac6d078b12b2f252075dfefe93654439f"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">SDX::Touch::hold</a></div><div class="ttdeci">bool hold</div><div class="ttdoc">タッチしている間は true </div><div class="ttdef"><b>Definition:</b> Touch.h:57</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_a6fd635bcd7270a356f996555d5779c12"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">SDX::Touch::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">タッチしている座標 </div><div class="ttdef"><b>Definition:</b> Touch.h:50</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_a59510c47de54a63cd40cdde3b6d79c23"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">SDX::Touch::off</a></div><div class="ttdeci">bool off</div><div class="ttdoc">指を離した直後は true </div><div class="ttdef"><b>Definition:</b> Touch.h:56</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_af47a8cd66174a3785561df9c526dba00"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">SDX::Touch::holdCount</a></div><div class="ttdeci">unsigned int holdCount</div><div class="ttdoc">押されている時間 </div><div class="ttdef"><b>Definition:</b> Touch.h:59</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_aa6e9d191da3d9cba470294baa155a697"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">SDX::Touch::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">状態のリセット. </div><div class="ttdef"><b>Definition:</b> Touch.h:93</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_a8552cae3e7c056a6eb8337811b736129"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">SDX::Touch::moveY</a></div><div class="ttdeci">double moveY</div><div class="ttdoc">前回更新時からの移動量 </div><div class="ttdef"><b>Definition:</b> Touch.h:53</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_ace17cadcb65b414af391ac3f5e81329a"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">SDX::Touch::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">タッチしている座標 </div><div class="ttdef"><b>Definition:</b> Touch.h:49</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">//event.tfinger.x等は0.0~1.0の範囲になるので、押した位置を画面の解像度に合わせて計算する</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> aspA = <a class="code" href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">Window::activeWindow</a>-&gt;aspect;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> aspB = (double)<a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>() / <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (aspA == aspB)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                xBuffer = int(X座標 * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                yBuffer = int(Y座標 * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aspA &gt; aspB){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">//横が余る</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordtype">double</span> rate = aspA / aspB;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordtype">double</span> pos = (X座標 - (rate - 1) / rate / 2) * rate;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                xBuffer = int(pos * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                yBuffer = int(Y座標 * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="comment">//上が余る</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordtype">double</span> rate = aspB / aspA;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordtype">double</span> pos = (Y座標 - (rate - 1) / rate / 2) * rate;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                xBuffer = int(X座標 * <a class="code" href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">Window::GetWidth</a>());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                yBuffer = int(pos * <a class="code" href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">Window::GetHeight</a>());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">   50</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">   51</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">   53</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">   54</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">   56</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">   57</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">   58</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">   60</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>  <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">   63</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">Update</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = (!<a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> &amp;&amp; press);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = (<a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> &amp;&amp; !press);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = press;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">if</span> (press)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                ++<a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span> (!<a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a>)</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = xBuffer - <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = yBuffer - <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = xBuffer;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = yBuffer;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">   94</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">Reset</a>()</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">x</a> = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">y</a> = 0;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">moveX</a> = 0;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">moveY</a> = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            press = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">on</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">off</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">hold</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <a class="code" href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">holdCount</a> = 0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    };</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_window_html_a58e72da80b3d292668bddf528315e7c5"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a58e72da80b3d292668bddf528315e7c5">SDX::Window::GetWidth</a></div><div class="ttdeci">static int GetWidth()</div><div class="ttdoc">ウィンドウ幅の取得. </div><div class="ttdef"><b>Definition:</b> Window.h:65</div></div>
+<div class="ttc" id="class_s_d_x_1_1_window_html_a44c3e68609f28817ddc7ad372f3a2296"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a44c3e68609f28817ddc7ad372f3a2296">SDX::Window::GetHeight</a></div><div class="ttdeci">static int GetHeight()</div><div class="ttdoc">ウィンドウ高さの取得. </div><div class="ttdef"><b>Definition:</b> Window.h:71</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_a8678ddb944d716f4318e80295057ff2f"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a8678ddb944d716f4318e80295057ff2f">SDX::Touch::moveX</a></div><div class="ttdeci">double moveX</div><div class="ttdoc">前回更新時からの移動量 </div><div class="ttdef"><b>Definition:</b> Touch.h:53</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_ac6d078b12b2f252075dfefe93654439f"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#ac6d078b12b2f252075dfefe93654439f">SDX::Touch::hold</a></div><div class="ttdeci">bool hold</div><div class="ttdoc">タッチしている間は true </div><div class="ttdef"><b>Definition:</b> Touch.h:58</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_a6fd635bcd7270a356f996555d5779c12"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a6fd635bcd7270a356f996555d5779c12">SDX::Touch::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">タッチしている座標 </div><div class="ttdef"><b>Definition:</b> Touch.h:51</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_a59510c47de54a63cd40cdde3b6d79c23"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a59510c47de54a63cd40cdde3b6d79c23">SDX::Touch::off</a></div><div class="ttdeci">bool off</div><div class="ttdoc">指を離した直後は true </div><div class="ttdef"><b>Definition:</b> Touch.h:57</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_af47a8cd66174a3785561df9c526dba00"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#af47a8cd66174a3785561df9c526dba00">SDX::Touch::holdCount</a></div><div class="ttdeci">unsigned int holdCount</div><div class="ttdoc">押されている時間 </div><div class="ttdef"><b>Definition:</b> Touch.h:60</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_aa6e9d191da3d9cba470294baa155a697"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#aa6e9d191da3d9cba470294baa155a697">SDX::Touch::Reset</a></div><div class="ttdeci">void Reset()</div><div class="ttdoc">状態のリセット. </div><div class="ttdef"><b>Definition:</b> Touch.h:94</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_a8552cae3e7c056a6eb8337811b736129"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a8552cae3e7c056a6eb8337811b736129">SDX::Touch::moveY</a></div><div class="ttdeci">double moveY</div><div class="ttdoc">前回更新時からの移動量 </div><div class="ttdef"><b>Definition:</b> Touch.h:54</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_ace17cadcb65b414af391ac3f5e81329a"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#ace17cadcb65b414af391ac3f5e81329a">SDX::Touch::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">タッチしている座標 </div><div class="ttdef"><b>Definition:</b> Touch.h:50</div></div>
 <div class="ttc" id="class_s_d_x_1_1_input_html"><div class="ttname"><a href="class_s_d_x_1_1_input.html">SDX::Input</a></div><div class="ttdoc">キーやマウスによる入力をまとめて管理するクラス. </div><div class="ttdef"><b>Definition:</b> Input.h:17</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_a09fad8fedfdd94e080c479becce7fd23"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">SDX::Touch::on</a></div><div class="ttdeci">bool on</div><div class="ttdoc">タッチされた直後は true </div><div class="ttdef"><b>Definition:</b> Touch.h:55</div></div>
-<div class="ttc" id="class_s_d_x_1_1_touch_html_aa04f9cd00fb9d71bef70051753d27b48"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">SDX::Touch::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">状態の更新. </div><div class="ttdef"><b>Definition:</b> Touch.h:62</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_a09fad8fedfdd94e080c479becce7fd23"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#a09fad8fedfdd94e080c479becce7fd23">SDX::Touch::on</a></div><div class="ttdeci">bool on</div><div class="ttdoc">タッチされた直後は true </div><div class="ttdef"><b>Definition:</b> Touch.h:56</div></div>
+<div class="ttc" id="class_s_d_x_1_1_touch_html_aa04f9cd00fb9d71bef70051753d27b48"><div class="ttname"><a href="class_s_d_x_1_1_touch.html#aa04f9cd00fb9d71bef70051753d27b48">SDX::Touch::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">状態の更新. </div><div class="ttdef"><b>Definition:</b> Touch.h:63</div></div>
 <div class="ttc" id="class_s_d_x_1_1_touch_html"><div class="ttname"><a href="class_s_d_x_1_1_touch.html">SDX::Touch</a></div><div class="ttdoc">タッチ操作. </div><div class="ttdef"><b>Definition:</b> Touch.h:12</div></div>
 <div class="ttc" id="class_s_d_x_1_1_window_html_a4d093f2dfe01e0e1d34a5a53f1d21081"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">SDX::Window::activeWindow</a></div><div class="ttdeci">static SubWindow * activeWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> Window.h:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

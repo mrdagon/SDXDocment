@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.11</span>
+   &#160;<span id="projectnumber">0.12</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -80,10 +80,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>各バージョンの主な更新履歴です <br />
-今後の変更予定はSorceForgeのチケットを参照して下さい<br />
+今後の変更予定はSorceForgeのチケットやTodo一覧を参照して下さい<br />
+<br />
+SorceForgeで配布しているファイルはデータを全て含む、安定版です<br />
+開発中のバージョンを入手したい場合は<br />
+以下のページ右下の"Download ZIP"からソースをダウンロードし<br />
+<a href="https://github.com/mrdagon/SDXFramework">https://github.com/mrdagon/SDXFramework</a> <br />
+SDXFramework&gt;jni&gt;SDL&gt;includeに解凍したファイルを上書きする等して下さい<br />
 <br />
 </p><hr/>
-<p> <b>ver 0.11</b><br />
+<p> <b>ver 0.12</b><br />
+Window::SetLogicalSize関数を追加<br />
+ウィンドウサイズを倍にして、表示倍率も倍にするといった事が簡単に出来るようになります<br />
+Android関連の不具合を修正。Androidの導入方法を修正。<br />
+BMPフォントを出力する関数と、読み込む関数を追加<br />
+ドキュメントを色々修正<br />
+<br />
+<b>ver 0.11</b><br />
 SoundとMusicに全体の音量を変更する関数を追加<br />
 <br />
 <b>ver 0.10</b><br />
@@ -207,7 +220,7 @@ UpDateとなっていた関数をUpdateに変更<br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 26 2015 21:49:55 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

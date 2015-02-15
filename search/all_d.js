@@ -4,6 +4,7 @@ var searchData=
   ['mainrenderer',['mainRenderer',['../class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85',1,'SDX::Renderer']]],
   ['mainwindow',['mainWindow',['../class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b',1,'SDX::SubWindow']]],
   ['make',['Make',['../class_s_d_x_1_1_bmp_frame.html#aafd8083c5a835c99f602d8d3e49976e8',1,'SDX::BmpFrame::Make()'],['../class_s_d_x_1_1_image.html#a543231a2f06838779ba90b97e28312a1',1,'SDX::Image::Make()'],['../class_s_d_x_1_1_joypad.html#a48a8e156fd21720b2eab8a1771787c81',1,'SDX::Joypad::Make()']]],
+  ['makebmpfont',['MakeBMPFont',['../class_s_d_x_1_1_font.html#aa2f72062067e0fd21b9330c939ac4b73',1,'SDX::Font']]],
   ['makeimage',['MakeImage',['../class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb',1,'SDX::Font::MakeImage()'],['../class_s_d_x_1_1_font_old.html#af422f606a560f8c2773ecb91b7a00da3',1,'SDX::FontOld::MakeImage()']]],
   ['maroon',['Maroon',['../class_s_d_x_1_1_color.html#a40351b72ffb394a4b7c49d29ca3c891c',1,'SDX::Color']]],
   ['middle',['Middle',['../class_s_d_x_1_1_mouse.html#ae5d5ffe36ef9f96e1f66d52122289630',1,'SDX::Mouse']]],
@@ -26,6 +27,6 @@ var searchData=
   ['multiple',['Multiple',['../class_s_d_x_1_1_blend.html#ae619815df2673af461789364dfc4fdab',1,'SDX::Blend']]],
   ['multiply',['Multiply',['../class_s_d_x_1_1_keyboard.html#a223f232ebcd3b24ca037edef47c5084f',1,'SDX::Keyboard']]],
   ['multizoom',['MultiZoom',['../class_s_d_x_1_1_circle.html#a88a400ba98a1770c27bacf7e99084e5d',1,'SDX::Circle::MultiZoom()'],['../class_s_d_x_1_1_complex.html#aa62b014cab69ca0601e282e702b60068',1,'SDX::Complex::MultiZoom()'],['../class_s_d_x_1_1_i_model.html#adfefc8a6326f5e640e0fc4f68518da5d',1,'SDX::IModel::MultiZoom()'],['../class_s_d_x_1_1_i_position.html#a73cad968e85151b878820e4b220c3fc8',1,'SDX::IPosition::MultiZoom(double X倍率, double Y倍率)=0'],['../class_s_d_x_1_1_i_position.html#ad1964f5738f8539b5e9b446fbaf02aed',1,'SDX::IPosition::MultiZoom(double 倍率)'],['../class_s_d_x_1_1_i_sprite.html#a08ba895b28af64c2b595857fe2b7ed36',1,'SDX::ISprite::MultiZoom(double 倍率)'],['../class_s_d_x_1_1_i_sprite.html#a14de7fbe6439b6a25895c2dbd712d08b',1,'SDX::ISprite::MultiZoom(double X倍率, double Y倍率)'],['../class_s_d_x_1_1_line.html#a293857645dccc928b83aab6ba4081b91',1,'SDX::Line::MultiZoom()'],['../class_s_d_x_1_1_point.html#a76f63144b95ebbfbb64c909ee154ffc2',1,'SDX::Point::MultiZoom()'],['../class_s_d_x_1_1_rect.html#a21c5ea4e61699ac9857a88e1c046a2f1',1,'SDX::Rect::MultiZoom()'],['../class_s_d_x_1_1_i_position.html#a73cad968e85151b878820e4b220c3fc8',1,'SDX::IPosition::MultiZoom(double X倍率, double Y倍率)=0'],['../class_s_d_x_1_1_i_position.html#ad1964f5738f8539b5e9b446fbaf02aed',1,'SDX::IPosition::MultiZoom(double 倍率)']]],
-  ['music',['Music',['../class_s_d_x_1_1_music.html#a9cab6adb493ee7c5d9e543b6caa5fb10',1,'SDX::Music']]],
-  ['music',['Music',['../class_s_d_x_1_1_music.html',1,'SDX']]]
+  ['music',['Music',['../class_s_d_x_1_1_music.html',1,'SDX']]],
+  ['music',['Music',['../class_s_d_x_1_1_music.html#a9cab6adb493ee7c5d9e543b6caa5fb10',1,'SDX::Music']]]
 ];
