@@ -10,7 +10,6 @@ var searchData=
   ['imagepack',['ImagePack',['../class_s_d_x_1_1_image_pack.html#a13c2be17098632d506b3684cea8807ad',1,'SDX::ImagePack::ImagePack(const char *ファイル名, int 総コマ数, int コマ割り横, int コマ割り縦)'],['../class_s_d_x_1_1_image_pack.html#aefdf72a9eb4560a51eba8c6f51695cdb',1,'SDX::ImagePack::ImagePack(const char *ファイル名, const char *拡張子, int 総コマ数, const char *書式=&quot;%03d.&quot;)']]],
   ['imagepack',['ImagePack',['../class_s_d_x_1_1_image_pack.html',1,'SDX']]],
   ['images',['imageS',['../class_s_d_x_1_1_image_pack.html#abb1d70fe1d61bdeb9db871820b88055c',1,'SDX::ImagePack']]],
-  ['imodel',['IModel',['../class_s_d_x_1_1_i_model.html#ac4792b621a9a45873bbf5a2c53ec01d7',1,'SDX::IModel']]],
   ['imodel',['IModel',['../class_s_d_x_1_1_i_model.html',1,'SDX']]],
   ['imotion',['IMotion',['../class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html',1,'SDX::MOTION']]],
   ['init',['Init',['../class_s_d_x_1_1_i_scene.html#ab7c53b416e029b296265e6dd0a7ab224',1,'SDX::IScene']]],
@@ -23,12 +22,11 @@ var searchData=
   ['iscene',['IScene',['../class_s_d_x_1_1_i_scene.html',1,'SDX']]],
   ['isdraw',['IsDraw',['../class_s_d_x_1_1_director.html#a77933f7444745f5834740ed8db982cb1',1,'SDX::Director']]],
   ['isend',['isEnd',['../class_s_d_x_1_1_i_scene.html#a9ed957c42a31bf02167f84d994a8b572',1,'SDX::IScene']]],
-  ['ishape',['iShape',['../class_s_d_x_1_1_i_model.html#a3e952ab7f4422315af3e25a4708cb3be',1,'SDX::IModel']]],
   ['ishape',['IShape',['../class_s_d_x_1_1_i_shape.html',1,'SDX']]],
   ['isloading',['IsLoading',['../class_s_d_x_1_1_loading.html#a969f71ede68ac12fa93e56050c914b84',1,'SDX::Loading']]],
   ['ispeed',['ISpeed',['../class_s_d_x_1_1_s_p_e_e_d_1_1_i_speed.html',1,'SDX::SPEED']]],
   ['isprite',['ISprite',['../class_s_d_x_1_1_i_sprite.html',1,'SDX']]],
-  ['isprite',['iSprite',['../class_s_d_x_1_1_i_model.html#a4c7e802a720cdb57d9242f165d7640d8',1,'SDX::IModel']]],
   ['isremove',['isRemove',['../class_s_d_x_1_1_i_model.html#adf8fdbe317def052878bafd26706b1f2',1,'SDX::IModel']]],
+  ['istablet',['IsTablet',['../class_s_d_x_1_1_system.html#a07619fbf2acbb099dc643c4563526c8b',1,'SDX::System']]],
   ['isturn',['isTurn',['../class_s_d_x_1_1_i_sprite.html#a1565eb9e4d27ab186ed079eda8187c4d',1,'SDX::ISprite']]]
 ];

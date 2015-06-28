@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['safeany',['SafeAny',['../class_s_d_x_1_1_safe_any.html',1,'SDX']]],
   ['screen',['Screen',['../class_s_d_x_1_1_screen.html',1,'SDX']]],
   ['sound',['Sound',['../class_s_d_x_1_1_sound.html',1,'SDX']]],
   ['spanime',['SpAnime',['../class_s_d_x_1_1_sp_anime.html',1,'SDX']]],

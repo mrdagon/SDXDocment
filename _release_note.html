@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -80,16 +80,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>各バージョンの主な更新履歴です <br />
-今後の変更予定はSorceForgeのチケットやTodo一覧を参照して下さい<br />
+今後の変更予定はOSDNのチケットやTodo一覧を参照して下さい<br />
 <br />
-SorceForgeで配布しているファイルはデータを全て含む、安定版です<br />
-開発中のバージョンを入手したい場合は<br />
+OSDNで配布しているファイルはデータを全て含む、安定版です<br />
+開発中のバージョンを入手したい場合や、差分ファイルだけ欲しい場合は<br />
 以下のページ右下の"Download ZIP"からソースをダウンロードし<br />
 <a href="https://github.com/mrdagon/SDXFramework">https://github.com/mrdagon/SDXFramework</a> <br />
-SDXFramework&gt;jni&gt;SDL&gt;includeに解凍したファイルを上書きする等して下さい<br />
+SDXFramework&gt;jni&gt;SDL&gt;includeに解凍したファイルを上書きして下さい<br />
 <br />
 </p><hr/>
-<p> <b>ver 0.12</b><br />
+<p> <b>ver 0.13</b><br />
+[破壊的変更]<br />
+SDXafx.hのファイルパスを変更<br />
+IModelの設計をGetShapeとGetSpriteをオーバーライドする形に変更<br />
+Font::DrawRotateで一行分上に表示されている等の不具合を修正<br />
+Fontクラスで登録されていない文字を表示する際に空白が入る用に修正<br />
+Font::GetCsvToStringで改行コードが残る不具合を修正<br />
+VisualStudioでReleaseビルドする時はMTにするように変更<br />
+[細かな修正等]<br />
+OMIT_SDL2_TTFマクロでttf関連の機能を無効に出来るように変更<br />
+Fontの内部構造をmapからunorderd_mapに変更<br />
+削除した実装はOldフォルダに移す事に<br />
+UtilityにAny.hとPool.hを追加、デフォルトでインクルードはしていない<br />
+Sample関数を名前空間でくくってたのを解除<br />
+VisualStudio2015に対応したlibファイルを追加、プラットフォームツールセットをv140でも動作するように<br />
+Timeに日付を文字列で返す関数GetDateStringを追加<br />
+Systemにプラットフォームの種類を取得する関数と、タブレットかどうかを取得する関数を追加。<br />
+LoadBMPFont関数を非同期読み込み対応<br />
+Drawing関数で半透明指定が無効になっていたバグを修正<br />
+Font::MakeBmpFontで出力されるファイル名に文字サイズが入るように修正<br />
+外部エディタとしてTiledとの連携機能を仮実装<br />
+<br />
+<b>ver 0.12</b><br />
 Window::SetLogicalSize関数を追加<br />
 ウィンドウサイズを倍にして、表示倍率も倍にするといった事が簡単に出来るようになります<br />
 Android関連の不具合を修正。Androidの導入方法を修正。<br />
@@ -220,7 +242,7 @@ UpDateとなっていた関数をUpdateに変更<br />
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

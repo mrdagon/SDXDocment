@@ -31,7 +31,7 @@ var searchData=
   ['setrenderer',['SetRenderer',['../class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196',1,'SDX::Screen']]],
   ['setshadowsize',['SetShadowSize',['../class_s_d_x_1_1_i_model.html#a14d5ff35a267dc9fc08ee8ae6b64d861',1,'SDX::IModel']]],
   ['setshowflag',['SetShowFlag',['../class_s_d_x_1_1_sub_window.html#a8f52e51c882ebf6fe97dcfc40bbd2b2a',1,'SDX::SubWindow']]],
-  ['setsize',['SetSize',['../class_s_d_x_1_1_sub_window.html#aa2c3fe8382d41a35584d3324edcd8937',1,'SDX::SubWindow::SetSize()'],['../class_s_d_x_1_1_window.html#aab394333b3b0cbb310ffe5e467326c3a',1,'SDX::Window::SetSize()']]],
+  ['setsize',['SetSize',['../class_s_d_x_1_1_font.html#ab6f59139ed52483af393e6dae9094621',1,'SDX::Font::SetSize()'],['../class_s_d_x_1_1_sub_window.html#aa2c3fe8382d41a35584d3324edcd8937',1,'SDX::SubWindow::SetSize()'],['../class_s_d_x_1_1_window.html#aab394333b3b0cbb310ffe5e467326c3a',1,'SDX::Window::SetSize()']]],
   ['settarget',['SetTarget',['../class_s_d_x_1_1_renderer.html#a1c9fdc7884152f36b321a4b8fa0d524e',1,'SDX::Renderer::SetTarget()'],['../class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe',1,'SDX::Screen::SetTarget()']]],
   ['settext',['SetText',['../class_s_d_x_1_1_sp_font.html#a87a26969632a62f27cb60421615c09b2',1,'SDX::SpFont']]],
   ['setthick',['SetThick',['../class_s_d_x_1_1_line.html#a84c5ca11fcf2f7a076c6fff9b138e44d',1,'SDX::Line']]],

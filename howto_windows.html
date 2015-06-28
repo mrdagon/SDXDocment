@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -85,7 +85,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 が必要です。<br />
 Windows環境の場合、コンパイラは「Visual Studio 2013 Community」を推奨しています。｢Express Edition for Desktop｣でもOKです。<br />
 識別子にUnicodeを使用している関係で基本的にgccでコンパイルする事は出来ません。<br />
-VisualStudio2012以前の環境については、サポートしていません。 </p><hr/>
+VisualStudio2012以前の環境については、サポートしていません。<br />
+VisualStudio2015 Prevew版は対応していると思いますが、テストが十分出来ていません。 </p><hr/>
 <p> <b>1 VisualStudioをインストールする</b><br />
 C++の規格準拠具合の関係で、VisualStudio2012以前のコンパイラは使用できません。<br />
 <a href="http://www.visualstudio.com/downloads/download-visual-studio-vs" target="_blank"><b>Visual Studio のダウンロード</b></a><br />
@@ -98,7 +99,7 @@ C++の規格準拠具合の関係で、VisualStudio2012以前のコンパイラ�
 </p><hr/>
 <p> <b>2 SDXFrameworkをダウンロードする</b><br />
 下記サイトで最新版を配布しているので、リンク先からダウンロードして下さい<br />
-<a href="https://sourceforge.jp/projects/dxframework/" target="_blank"><b>SorceForge</b></a><br />
+<a href="https://sourceforge.jp/projects/dxframework/" target="_blank"><b>OSDN</b></a><br />
 </p><hr/>
 <p> <b>3 新規プロジェクトの作成</b><br />
 <b>プロジェクトの作成</b><br />
@@ -110,23 +111,30 @@ C++の規格準拠具合の関係で、VisualStudio2012以前のコンパイラ�
 <b>プロジェクトを設定</b><br />
 ①上部メニューの「プロジェクト」をクリックし「プロパティ」をクリックし、設定ダイアログを開きます。<br />
 <br />
-②ダイアログ左上の構成を「アクティブ(Debug)」から「全ての構成」に変更します<br />
+②ダイアログ左上の構成を「Release」に変更します<br />
 <br />
-③｢構成プロパティ｣→｢全般｣を選びます。<br />
-WindowsXPでも動作するようにしたい場合は｢プラットフォームツールセット｣を、｢Visual Studio 2013 (v120)｣から｢Visual Studio 2013 - Windows XP (v120_xp)｣に変更します。(任意)<br />
+③ダイアログ左の「構成プロパティ」→「C/C++」→「コード生成」を選びます。<br />
+ランタイムライブラリを「マルチスレッド (/MT)」に変更し、「適用」ボタンをクリックします。<br />
+この設定を行わない場合、"MSVCP1XX.dll"が無いエラーが出る事があります。<br />
 <br />
-④｢構成プロパティ｣→｢VC++ディレクトリ｣を選びます。<br />
-WindowsXPでも動作するようにしたい場合は｢実行可能ファイルディレクトリ｣に、｢SDXFramework/Windows/dll/x86｣を追加します。<br />
+④ダイアログ左上の構成を「全ての構成」に変更します<br />
 <br />
-⑤ダイアログ左の「構成プロパティ」→「C/C++」→「全般」を選びます。<br />
+⑤｢構成プロパティ｣→｢全般｣を選びます。(任意)<br />
+この設定は任意です。<br />
+WindowsXPでも動作するようにしたい場合は｢プラットフォームツールセット｣を、｢Visual Studio 201X (v1XX)｣から｢Visual Studio 201X - Windows XP (v1XX_xp)｣に変更します。<br />
+<br />
+⑥｢構成プロパティ｣→｢VC++ディレクトリ｣を選びます。<br />
+｢実行可能ファイルディレクトリ｣に、｢SDXFramework/Windows/dll/x86｣を追加します。<br />
+<br />
+⑦ダイアログ左の「構成プロパティ」→「C/C++」→「全般」を選びます。<br />
 追加のインクルードディレクトリに先ほど解凍した「SDXFramework/jni/SDL/include」を追加し、「適用」ボタンをクリックします。<br />
 <br />
-⑥ダイアログ左の「構成プロパティ」→「リンカー」→「全般」を選びます。<br />
+⑧ダイアログ左の「構成プロパティ」→「リンカー」→「全般」を選びます。<br />
 追加のライブラリディレクトリに先ほど解凍した「SDXFramework/Windows/lib/x86」を追加し、「適用」ボタンをクリックします。<br />
 <br />
-⑦最後にダイアログの右下にある「OK」を押してダイアログを閉じます。<br />
+⑨最後にダイアログの右下にある「OK」を押してダイアログを閉じます。<br />
 <br />
-④と⑥は64bit版の場合、X64。32bit版の場合、X86を使ってください。libとdllの構成が違う場合、コンパイルエラーか実行エラーになります。<br />
+⑥と⑧は64bit版の場合、X64。32bit版の場合、X86を使ってください。libとdllの構成が違う場合、コンパイルエラーか実行エラーになります。<br />
 <br />
 </p><hr/>
 <p> <b>4 サンプルソースのビルド</b><br />
@@ -135,7 +143,7 @@ WindowsXPでも動作するようにしたい場合は｢実行可能ファイ�
 ファイル名は何でもかまいませんが「main.cpp」にして下さい。<br />
 追加したcppファイルに以下のコードをコピペして、コンパイルして実行して下さい。<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXafx.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">using namespace </span>SDX;</div>
 <div class="line"></div>
@@ -181,7 +189,7 @@ SDXは色々な理由があって、大半のコードをヘッダーに実装�
 <b>ファイルを編集する</b><br />
 pre_compile.cpp（cppとhを間違えないで下さい）には<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXafx.h&gt;</span></div>
 </div><!-- fragment --><p> と入力して下さい。<br />
 <br />
 stdafx.hには<br />
@@ -190,7 +198,7 @@ stdafx.hには<br />
 <br />
 先ほどの「main.cpp」の<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;SDXFramework.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;Multimedia/SDXafx.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;SDXafx.h&gt;</span></div>
 </div><!-- fragment --><p> の三行を<br />
 </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;stdafx.h&quot;</span></div>
 </div><!-- fragment --><p> に変更します。<br />
@@ -279,11 +287,52 @@ C++用のテンプレートが追加されていれば成功です。次回以�
 Releaseビルドして、exeファイルとdllファイルと必要なリソースを配布して下さい。<br />
 DLLと実行ファイルを同じフォルダに置くとどれが実行ファイルかユーザーが見つけにくい場合等は、<br />
 相対パスのショートカットを置く等すると良いと思います。<br />
+<b>10 dllを減らす。</b><br />
+ある機能やデータフォーマットを必要としていない場合、dllを一緒に配布しなくても良いDLLがあります<br />
+<br />
+BMPフォントしか使わない場合は </p><div class="fragment"><div class="line"><span class="preprocessor">#define OMIT_SDL2_TTF</span></div>
+</div><!-- fragment --><p> をstdafx.hに定義すると、ttf関連の機能を無効に出来ます。 <br />
+SDL2.dll:必須<br />
+SDL2_main.dll:必須<br />
+SDL2_image.dll:ほぼ必須<br />
+SDL2_mixer.dll:ほぼ必須<br />
+SDL2_ttf.dll:ttf機能を無効にしないなら必須<br />
+zlib1.dll:ほぼ必須<br />
+<br />
+『libwebp-4.dll』<br />
+webP形式の画像を使うなら必要<br />
+<br />
+『libtiff-5.dll』<br />
+tiff形式の画像ファイルを扱うなら必要<br />
+<br />
+『libpng16-16.dll』<br />
+png形式の画像を使うなら必要<br />
+<br />
+『libjpeg-9.dll』<br />
+jpeg形式のファイルを使うなら必要<br />
+<br />
+『libvorbisfile-3.dll、libogg-0.dll、libvorbis-0.dll』<br />
+ogg形式の音声ファイルを使うなら必要<br />
+<br />
+『libmodplug-1.dll』<br />
+必須<br />
+<br />
+『libmikmod-2.dll』<br />
+必須<br />
+<br />
+『libFLAC-8.dll』<br />
+FLAC形式の音声ファイルを使うなら必要<br />
+<br />
+『smpeg2.dll』<br />
+MP3形式のファイルを使うなら必要、MP3特許が切れていないので使用は避けても良い<br />
+<br />
+『libfreetype-6.dll』<br />
+ttf形式のフォントを使うなら必要<br />
 </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

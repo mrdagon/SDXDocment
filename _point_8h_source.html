@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -198,23 +198,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">return</span>{ (int)<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>, (<span class="keywordtype">int</span>)<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> };</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_point.html#a513a61291a84870b4d5707f14d0a3c06">  122</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_point.html#a513a61291a84870b4d5707f14d0a3c06">operator +</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;加算値)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        {</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_point.html#adc8531a9c7985812e007082eb6c08a3c">  122</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> <a class="code" href="class_s_d_x_1_1_point.html#adc8531a9c7985812e007082eb6c08a3c">operator +</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;加算値)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">return</span> {this-&gt;<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a> + 加算値.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a> , this-&gt;<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> + 加算値.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a>};</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    };</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="class_s_d_x_1_1_point.html">Point</a> operator -(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;加算値)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">return</span>{ this-&gt;<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a> - 加算値.<a class="code" href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">x</a>, this-&gt;<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> - 加算値.<a class="code" href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">y</a> };</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    };</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
 <div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Rect.h:22</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a7965b0c47f5f14d3a328c39c309d330e"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a7965b0c47f5f14d3a328c39c309d330e">SDX::Point::y</a></div><div class="ttdeci">double y</div><div class="ttdoc">座標 </div><div class="ttdef"><b>Definition:</b> Point.h:26</div></div>
 <div class="ttc" id="class_s_d_x_1_1_line_html"><div class="ttname"><a href="class_s_d_x_1_1_line.html">SDX::Line</a></div><div class="ttdoc">太さのある線を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Line.h:20</div></div>
-<div class="ttc" id="class_s_d_x_1_1_point_html_a513a61291a84870b4d5707f14d0a3c06"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a513a61291a84870b4d5707f14d0a3c06">SDX::Point::operator+</a></div><div class="ttdeci">Point operator+(const Point &amp;加算値)</div><div class="ttdoc">座標の加算. </div><div class="ttdef"><b>Definition:</b> Point.h:122</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_aeaa51204b7e1f11ee3d021700f78ff5a"><div class="ttname"><a href="class_s_d_x_1_1_point.html#aeaa51204b7e1f11ee3d021700f78ff5a">SDX::Point::Point</a></div><div class="ttdeci">Point(double X座標, double Y座標)</div><div class="ttdoc">コンストラクタ. </div><div class="ttdef"><b>Definition:</b> Point.h:31</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a8269d2e846b7915eaa957a6c676b2937"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a8269d2e846b7915eaa957a6c676b2937">SDX::Point::GetW</a></div><div class="ttdeci">double GetW() const override</div><div class="ttdoc">幅を取得. </div><div class="ttdef"><b>Definition:</b> Point.h:73</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a90257318969549113decf5eabef793f1"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a90257318969549113decf5eabef793f1">SDX::Point::Hit</a></div><div class="ttdeci">bool Hit(const Point *point) const override</div><div class="ttdoc">衝突判定. </div><div class="ttdef"><b>Definition:</b> Point.h:107</div></div>
 <div class="ttc" id="class_s_d_x_1_1_complex_html_a0d2c1430bed5944aefd1744c10efde26"><div class="ttname"><a href="class_s_d_x_1_1_complex.html#a0d2c1430bed5944aefd1744c10efde26">SDX::Complex::shapes</a></div><div class="ttdeci">std::vector&lt; IShape * &gt; shapes</div><div class="ttdoc">保持するShape </div><div class="ttdef"><b>Definition:</b> Complex.h:23</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a419c561d52650dda8efe782dd171520b"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a419c561d52650dda8efe782dd171520b">SDX::Point::GetY</a></div><div class="ttdeci">double GetY() const override</div><div class="ttdoc">Y座標を取得. </div><div class="ttdef"><b>Definition:</b> Point.h:68</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a6bab0985e274dfb92d4c8e7d7545df49"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a6bab0985e274dfb92d4c8e7d7545df49">SDX::Point::Point</a></div><div class="ttdeci">Point(TA X座標, TB Y座標)</div><div class="ttdoc">コンストラクタ. </div><div class="ttdef"><b>Definition:</b> Point.h:38</div></div>
+<div class="ttc" id="class_s_d_x_1_1_point_html_adc8531a9c7985812e007082eb6c08a3c"><div class="ttname"><a href="class_s_d_x_1_1_point.html#adc8531a9c7985812e007082eb6c08a3c">SDX::Point::operator+</a></div><div class="ttdeci">Point operator+(const Point &amp;加算値) const </div><div class="ttdoc">座標の加算. </div><div class="ttdef"><b>Definition:</b> Point.h:122</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_shape_html"><div class="ttname"><a href="class_s_d_x_1_1_i_shape.html">SDX::IShape</a></div><div class="ttdoc">衝突判定可能な図形の抽象クラス. </div><div class="ttdef"><b>Definition:</b> IShape.h:21</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_shape_html_ad231f45f65575fc52746c7a90b98fe21"><div class="ttname"><a href="class_s_d_x_1_1_i_shape.html#ad231f45f65575fc52746c7a90b98fe21">SDX::IShape::Hit</a></div><div class="ttdeci">virtual bool Hit(const IShape *iShape) const =0</div><div class="ttdoc">衝突判定. </div></div>
@@ -237,7 +241,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:46 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:35 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d6a6510d725672599cee8d682c9bfe1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_scene.html#a3d6a6510d725672599cee8d682c9bfe1">Final</a> ()</td></tr>
 <tr class="memdesc:a3d6a6510d725672599cee8d682c9bfe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了時の処理.  <a href="#a3d6a6510d725672599cee8d682c9bfe1">More...</a><br /></td></tr>
 <tr class="separator:a3d6a6510d725672599cee8d682c9bfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6272740932c7cc3a0379148b55a60611"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_scene.html#a6272740932c7cc3a0379148b55a60611">LoadGUI</a> ()</td></tr>
+<tr class="memdesc:a6272740932c7cc3a0379148b55a60611"><td class="mdescLeft">&#160;</td><td class="mdescRight">GUIの読み込み処理.  <a href="#a6272740932c7cc3a0379148b55a60611">More...</a><br /></td></tr>
+<tr class="separator:a6272740932c7cc3a0379148b55a60611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -132,15 +135,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="line"><span class="comment">//[サンプルコード作成中]</span></div>
 <div class="line"><span class="keywordtype">bool</span> SampleDirector()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keyword">class </span>SceneA : <span class="keyword">public</span> IScene</div>
+<div class="line">    <span class="keyword">using namespace </span>SDX;</div>
+<div class="line">    <span class="keyword">class </span>SceneA : <span class="keyword">public</span> <a class="code" href="class_s_d_x_1_1_i_scene.html">IScene</a></div>
 <div class="line">    {</div>
 <div class="line">    <span class="keyword">public</span>:</div>
 <div class="line"></div>
-<div class="line">        Image back;</div>
+<div class="line">        <a class="code" href="class_s_d_x_1_1_image.html">Image</a> back;</div>
 <div class="line"></div>
 <div class="line">        SceneA()</div>
 <div class="line">        {</div>
-<div class="line">            back.Make(640, 480);</div>
+<div class="line">            back.<a class="code" href="class_s_d_x_1_1_image.html#a543231a2f06838779ba90b97e28312a1">Make</a>(640, 480);</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        ~SceneA()</div>
@@ -169,7 +173,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="line">            <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>(&amp;back);</div>
 <div class="line">            <span class="keywordtype">double</span> x = <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(640.0);</div>
 <div class="line">            <span class="keywordtype">double</span> y = <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(480.0);</div>
-<div class="line">            Color color = { <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255) };</div>
+<div class="line">            <a class="code" href="class_s_d_x_1_1_color.html">Color</a> color = { <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255), <a class="code" href="class_s_d_x_1_1_rand.html#ae59a6c0ed8ecdc0c70b4d1c8048b5ff4">Rand::Get</a>(255) };</div>
 <div class="line">            <a class="code" href="class_s_d_x_1_1_drawing.html#a28151c6f54694fb3d92a8ca8b809140a">Drawing::Circle</a>({ x, y, 30 }, color);</div>
 <div class="line">            <a class="code" href="class_s_d_x_1_1_screen.html#a2660c5800b998f53a7bb4387d07a3cfe">Screen::SetTarget</a>();</div>
 <div class="line"></div>
@@ -179,7 +183,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div class="line">        }</div>
 <div class="line">    };</div>
 <div class="line"></div>
-<div class="line">    <span class="keyword">class </span>SceneB : <span class="keyword">public</span> IScene</div>
+<div class="line">    <span class="keyword">class </span>SceneB : <span class="keyword">public</span> <a class="code" href="class_s_d_x_1_1_i_scene.html">IScene</a></div>
 <div class="line">    {</div>
 <div class="line">    <span class="keyword">public</span>:</div>
 <div class="line"></div>
@@ -334,10 +338,35 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a class="anchor" id="a6272740932c7cc3a0379148b55a60611"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SDX::IScene::LoadGUI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GUIの読み込み処理. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

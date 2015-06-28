@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -89,9 +89,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 SDXFrameworkを利用して作成したソフトウェアを配布する場合以下を守る必要があります。<br />
 <br />
 [ソースコードの公開]<br />
-　ソフトを所持している人にソースコードを配布する必要があります<br />
-ソフトと一緒に配布する、Github等で公開する、同梱はせず問い合わせが来たらメールで送る等、公開方法は問いません<br />
-SDXFrameworkの部分のコードは一緒に配布するか、あるいはどこで入手可能かを示す必要があります<br />
+　ソフトを所持している人がソースコードを入手出来るようにする必要があります<br />
+ソフトと一緒に配布する、Github等で公開する、同梱はせず問い合わせが来たらメールで送る等、公開方法はいくつかあります。<br />
+バージョンアップ前のコードを要求されるとややこしいとかあるので、Githubで公開したり、ソフトと一緒に配布する方が楽ではあります。<br />
+<br />
+SDXFrameworkの部分のコードは一緒に配布するか、あるいはどこで入手可能かを示す必要があります。<br />
+独自の修正をしていたり、Githubで公開している開発途中のバージョンを使っている場合は、一緒に配布して貰った方が良いです。<br />
 <br />
 [同じライセンスの適用]<br />
 　ソースコードは全体としてAGPL Ver3を適用する必要があります<br />
@@ -105,7 +108,7 @@ SDXFrameworkの部分のコードは一緒に配布するか、あるいはど�
 再配布可能にしてもしなくてもかまいません。<br />
 <br />
 [特許]<br />
-　公開したソフトウェアに利用されている特許をあなたが所持している場合、派生した著作物に対してその特許を行使できません<br />
+　公開したソフトウェアに利用されている特許の権利をあなたが所持している場合、派生した著作物等に対してその特許を行使できません<br />
 <br />
 [ライセンス文と著作権表記]<br />
 　License.txtをソフトウェアと一緒に配布する必要があります<br />
@@ -114,7 +117,64 @@ SDXFrameworkの部分のコードは一緒に配布するか、あるいはど�
 <b>ライセンス表記</b><br />
  Copyright © 2014~ SDXFramework<br />
 <a href="http://sourceforge.jp/projects/dxframework/simple/">http://sourceforge.jp/projects/dxframework/simple/</a> <br />
- </p><hr/>
+ <b>内部で使っているライブラリのライセンス</b><br />
+ SDL2.0等が利用しているライブラリのライセンスにも従う必要があります<br />
+該当するdll等を使用していない場合、それらのライセンスを表記する必要はありません<br />
+使用する場合は各種ライセンス表記が必要です<br />
+各ライセンス文はLicenceフォルダにコピーが置いてあります<br />
+<br />
+SDL2<br />
+SDL2_image<br />
+SDL2_mixer<br />
+SDL2_ttf<br />
+zlib<br />
+はzlibライセンスなので、無改変の場合特にライセンス表記は不要です。<br />
+</p><table class="doxtable">
+<caption align="bottom">ライブラリ一覧</caption>
+<tr style="background:#ccccff">
+<td>SDL_image </td><td></td></tr>
+<tr>
+<td>libjpeg </td><td>独自ライセンス。使用している事を表記する必要がある。 </td></tr>
+<tr>
+<td>libpng </td><td>libpngライセンス。表記は任意 </td></tr>
+<tr>
+<td>libtiff </td><td>BSDライクライセンス。著作権者表記、ライセンス文のコピーが必要、著作者名を勝手に宣伝使ってはいけない </td></tr>
+<tr>
+<td>libwebp </td><td>3条項BSDライセンス。著作権者表記、ライセンス文のコピーが必要、著作者名を勝手に宣伝使ってはいけない </td></tr>
+<tr style="background:#ccccff">
+<td>SDL_mixer</td><td></td></tr>
+<tr>
+<td>libFLAC </td><td>3条項BSDライセンス。著作権者表記、ライセンス文のコピーが必要、著作者名を勝手に宣伝使ってはいけない </td></tr>
+<tr>
+<td>libmikmod </td><td>LGPL ver2。著作権者表記、ライセンス文のコピー等が必要 </td></tr>
+<tr>
+<td>libmodplug </td><td>パブリックドメイン。著作権表記等は任意 </td></tr>
+<tr>
+<td>libogg/libvorbis </td><td>3条項BSDライセンス。著作権者表記、ライセンス文のコピーが必要、著作者名を勝手に宣伝使ってはいけない </td></tr>
+<tr>
+<td>smpeg2 </td><td>LGPL ver2。著作権者表記、ライセンス文のコピー等が必要 </td></tr>
+<tr style="background:#ccccff">
+<td>SDL_ttf</td><td></td></tr>
+<tr>
+<td>libfreetype </td><td>FreeType License。著作権者表記、ライセンス文のコピーが必要 </td></tr>
+</table>
+<p><br />
+例えば全ての機能を利用する場合は、<br />
+SDXFramework Copyright © 2014~ <br />
+<a href="http://sourceforge.jp/projects/dxframework/simple/">http://sourceforge.jp/projects/dxframework/simple/</a> <br />
+libjpeg copyright (C) 1991-2012, Thomas G. Lane, Guido Vollbeding.All rights reserved.<br />
+libtiff Copyright (c) 1988-1997 Sam Leffler.All rights reserved.<br />
+libtiff Copyright (c) 1991-1997 Silicon Graphics, Inc.All rights reserved.<br />
+libwebp Copyright (c) 2010, Google Inc.All rights reserved.<br />
+libFLAC Copyright (C) 2000,2001,2002,2003,2004,2005,2006,2007 Josh Coalson.All rights reserved.<br />
+libmikmod Copyright (c) Mikmod.All rights reserved.<br />
+libogg Copyright (c) 2002-2008 Xiph.org Foundation.All rights reserved.<br />
+smpeg Copyright (c)Loki Software.All rights reserved.<br />
+libfreetype Copyright 1996-2002, 2006 by David Turner, Robert Wilhelm, and Werner Lemberg.All rights reserved.<br />
+<br />
+以上の内容をreadmeやゲーム内のクレジット等の分かりやすい所に明記し。<br />
+Licenceフォルダのテキストファイルを一緒に配布する等して下さい<br />
+</p><hr/>
 <p> SDXFrameworkには以下のライブラリを利用しています<br />
 Android用の設定ファイルを一部変更しています<br />
 <br />
@@ -123,11 +183,23 @@ Android用の設定ファイルを一部変更しています<br />
 <a href="http://www.libsdl.org/projects/SDL_mixer/" target="_blank"><b>SDL_mixer</b></a><br />
 <a href="http://www.libsdl.org/projects/SDL_ttf/" target="_blank"><b>SDL_ttf</b></a><br />
 <br />
+libjpeg copyright (C) 1991-2012, Thomas G. Lane, Guido Vollbeding.All rights reserved.<br />
+<br />
+libtiff Copyright (c) 1988-1997 Sam Leffler.All rights reserved.<br />
+libtiff Copyright (c) 1991-1997 Silicon Graphics, Inc.All rights reserved.<br />
+<br />
+libwebp Copyright (c) 2010, Google Inc.All rights reserved.<br />
+libFLAC Copyright (C) 2000,2001,2002,2003,2004,2005,2006,2007 Josh Coalson.All rights reserved.<br />
+libmikmod Copyright (c) Mikmod.All rights reserved.<br />
+libogg Copyright (c) 2002-2008 Xiph.org Foundation.All rights reserved.<br />
+smpeg Copyright (c)Loki Software.All rights reserved.<br />
+libfreetype Copyright 1996-2002, 2006 by David Turner, Robert Wilhelm, and Werner Lemberg.All rights reserved.<br />
+<br />
 </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

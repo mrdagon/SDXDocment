@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">virtual</span> ~<a class="code" href="class_s_d_x_1_1_i_sprite.html">ISprite</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_sprite.html#a991ebf3d9165aecdf3a0e15370483ebc">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;図形) = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_sprite.html#a4068ff6371cd5fb5d4c03af0b0710e59">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;図形) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_i_sprite.html#a5988eecd4bb77a78ea885a49211e99a4">   37</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_i_sprite.html#a5988eecd4bb77a78ea885a49211e99a4">SetZoom</a>(<span class="keywordtype">double</span> X拡大率, <span class="keywordtype">double</span> Y拡大率)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
@@ -168,7 +168,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a86060e65174188c36549a132388c184b"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a86060e65174188c36549a132388c184b">SDX::ISprite::axis</a></div><div class="ttdeci">Point axis</div><div class="ttdoc">回転軸のずれ </div><div class="ttdef"><b>Definition:</b> ISprite.h:29</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a84c124797b12d7ffd184aa56147460ca"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a84c124797b12d7ffd184aa56147460ca">SDX::ISprite::Rotate</a></div><div class="ttdeci">void Rotate(double 回転する角度)</div><div class="ttdoc">回転させる. </div><div class="ttdef"><b>Definition:</b> ISprite.h:84</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a991ebf3d9165aecdf3a0e15370483ebc"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a991ebf3d9165aecdf3a0e15370483ebc">SDX::ISprite::Draw</a></div><div class="ttdeci">virtual void Draw(const IShape &amp;図形)=0</div><div class="ttdoc">ISpriteを描画する. </div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a3bb7d451521cfc8826d4f55342c1c2b4"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a3bb7d451521cfc8826d4f55342c1c2b4">SDX::ISprite::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">Anime等の更新処理. </div><div class="ttdef"><b>Definition:</b> ISprite.h:90</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_shape_html"><div class="ttname"><a href="class_s_d_x_1_1_i_shape.html">SDX::IShape</a></div><div class="ttdoc">衝突判定可能な図形の抽象クラス. </div><div class="ttdef"><b>Definition:</b> IShape.h:21</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a89112ca944fd628539366646579efc32"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a89112ca944fd628539366646579efc32">SDX::ISprite::SetAngle</a></div><div class="ttdeci">void SetAngle(double 角度)</div><div class="ttdoc">表示角度を設定. </div><div class="ttdef"><b>Definition:</b> ISprite.h:78</div></div>
@@ -176,12 +175,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_abf1e9f87a5c09ed24ec1431c167d9e94"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#abf1e9f87a5c09ed24ec1431c167d9e94">SDX::ISprite::color</a></div><div class="ttdeci">Color color</div><div class="ttdoc">描画色 </div><div class="ttdef"><b>Definition:</b> ISprite.h:27</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html">SDX::ISprite</a></div><div class="ttdoc">2Dモデルに貼り付けるスプライトを表す抽象クラス. </div><div class="ttdef"><b>Definition:</b> ISprite.h:17</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a4068ff6371cd5fb5d4c03af0b0710e59"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a4068ff6371cd5fb5d4c03af0b0710e59">SDX::ISprite::Draw</a></div><div class="ttdeci">virtual void Draw(const IShape &amp;図形) const =0</div><div class="ttdoc">ISpriteを描画する. </div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a14de7fbe6439b6a25895c2dbd712d08b"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a14de7fbe6439b6a25895c2dbd712d08b">SDX::ISprite::MultiZoom</a></div><div class="ttdeci">void MultiZoom(double X倍率, double Y倍率)</div><div class="ttdoc">縦横別で拡大率を掛け算する. </div><div class="ttdef"><b>Definition:</b> ISprite.h:50</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a0657b126aed02b4b64cb13c8b21e80a0"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a0657b126aed02b4b64cb13c8b21e80a0">SDX::ISprite::GetAngle</a></div><div class="ttdeci">double GetAngle()</div><div class="ttdoc">表示角度を取得. </div><div class="ttdef"><b>Definition:</b> ISprite.h:72</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a5c070b560457f31b4240ff5f90e44b6c"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a5c070b560457f31b4240ff5f90e44b6c">SDX::ISprite::gap</a></div><div class="ttdeci">Point gap</div><div class="ttdoc">Shape中心とSpriteとの位置差 </div><div class="ttdef"><b>Definition:</b> ISprite.h:28</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a5988eecd4bb77a78ea885a49211e99a4"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a5988eecd4bb77a78ea885a49211e99a4">SDX::ISprite::SetZoom</a></div><div class="ttdeci">void SetZoom(double X拡大率, double Y拡大率)</div><div class="ttdoc">表示倍率を設定. </div><div class="ttdef"><b>Definition:</b> ISprite.h:37</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html_a443c4818684ec717a08f74ef6d35036c"><div class="ttname"><a href="class_s_d_x_1_1_point.html#a443c4818684ec717a08f74ef6d35036c">SDX::Point::x</a></div><div class="ttdeci">double x</div><div class="ttdoc">座標 </div><div class="ttdef"><b>Definition:</b> Point.h:25</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_model_html"><div class="ttname"><a href="class_s_d_x_1_1_i_model.html">SDX::IModel</a></div><div class="ttdoc">ShapeとSpriteをまとめて、2Dモデルを表すクラス. </div><div class="ttdef"><b>Definition:</b> IModel.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_model_html"><div class="ttname"><a href="class_s_d_x_1_1_i_model.html">SDX::IModel</a></div><div class="ttdoc">ShapeとSpriteをまとめて、2Dモデルを表すクラス. </div><div class="ttdef"><b>Definition:</b> IModel.h:13</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a08ba895b28af64c2b595857fe2b7ed36"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a08ba895b28af64c2b595857fe2b7ed36">SDX::ISprite::MultiZoom</a></div><div class="ttdeci">void MultiZoom(double 倍率)</div><div class="ttdoc">拡大率を掛け算する. </div><div class="ttdef"><b>Definition:</b> ISprite.h:44</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_aacf3d14a6369a6d76a2dc757105248ca"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#aacf3d14a6369a6d76a2dc757105248ca">SDX::ISprite::GetZoomY</a></div><div class="ttdeci">double GetZoomY()</div><div class="ttdoc">縦方向の表示倍率を取得. </div><div class="ttdef"><b>Definition:</b> ISprite.h:66</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_sprite_html_a1565eb9e4d27ab186ed079eda8187c4d"><div class="ttname"><a href="class_s_d_x_1_1_i_sprite.html#a1565eb9e4d27ab186ed079eda8187c4d">SDX::ISprite::isTurn</a></div><div class="ttdeci">bool isTurn</div><div class="ttdoc">反転フラグ </div><div class="ttdef"><b>Definition:</b> ISprite.h:26</div></div>
@@ -190,7 +190,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:46 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:35 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

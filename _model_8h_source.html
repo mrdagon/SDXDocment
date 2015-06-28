@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -97,22 +97,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">   14</a></span>&#160;        TShape <a class="code" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">shape</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">   15</a></span>&#160;        TSprite <a class="code" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">sprite</a>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_model.html#ad6e39d73e9f92d5af8f4b29125d06c14">   18</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_model.html#ad6e39d73e9f92d5af8f4b29125d06c14">Model</a>(TShape &amp;&amp;図形と位置, TSprite &amp;&amp;描画方法) :</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <a class="code" href="class_s_d_x_1_1_i_model.html">IModel</a>(<a class="code" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">shape</a>, <a class="code" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">sprite</a>),</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">shape</a>(図形と位置),</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <a class="code" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">sprite</a>(描画方法)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {}</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    };</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_model_html_ad6e39d73e9f92d5af8f4b29125d06c14"><div class="ttname"><a href="class_s_d_x_1_1_model.html#ad6e39d73e9f92d5af8f4b29125d06c14">SDX::Model::Model</a></div><div class="ttdeci">Model(TShape &amp;&amp;図形と位置, TSprite &amp;&amp;描画方法)</div><div class="ttdoc">コンストラクタ. </div><div class="ttdef"><b>Definition:</b> Model.h:18</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_model.html#a84e81b7da1fd8c6111ceba4704e12a8d">   18</a></span>&#160;        <a class="code" href="class_s_d_x_1_1_model.html#a84e81b7da1fd8c6111ceba4704e12a8d">Model</a>(<span class="keyword">const</span> TShape &amp;<a class="code" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">shape</a>, <span class="keyword">const</span> TSprite &amp;<a class="code" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">sprite</a>) :</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            shape(shape),</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            sprite(sprite)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_i_shape.html">IShape</a>&amp; GetShape()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">shape</a>; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">const</span> ISprite&amp; GetSprite()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">sprite</a>; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
 <div class="ttc" id="class_s_d_x_1_1_model_html"><div class="ttname"><a href="class_s_d_x_1_1_model.html">SDX::Model</a></div><div class="ttdoc">Modelの基本クラス. </div><div class="ttdef"><b>Definition:</b> Model.h:11</div></div>
 <div class="ttc" id="class_s_d_x_1_1_model_html_abaed638c0cb90c05736ff1b7c376d566"><div class="ttname"><a href="class_s_d_x_1_1_model.html#abaed638c0cb90c05736ff1b7c376d566">SDX::Model::shape</a></div><div class="ttdeci">TShape shape</div><div class="ttdoc">対応Shape </div><div class="ttdef"><b>Definition:</b> Model.h:14</div></div>
+<div class="ttc" id="class_s_d_x_1_1_model_html_a84e81b7da1fd8c6111ceba4704e12a8d"><div class="ttname"><a href="class_s_d_x_1_1_model.html#a84e81b7da1fd8c6111ceba4704e12a8d">SDX::Model::Model</a></div><div class="ttdeci">Model(const TShape &amp;shape, const TSprite &amp;sprite)</div><div class="ttdoc">コンストラクタ. </div><div class="ttdef"><b>Definition:</b> Model.h:18</div></div>
 <div class="ttc" id="class_s_d_x_1_1_model_html_ac3a8b2373ea9c06415d04ef853425b48"><div class="ttname"><a href="class_s_d_x_1_1_model.html#ac3a8b2373ea9c06415d04ef853425b48">SDX::Model::sprite</a></div><div class="ttdeci">TSprite sprite</div><div class="ttdoc">対応Sprite </div><div class="ttdef"><b>Definition:</b> Model.h:15</div></div>
-<div class="ttc" id="class_s_d_x_1_1_i_model_html"><div class="ttname"><a href="class_s_d_x_1_1_i_model.html">SDX::IModel</a></div><div class="ttdoc">ShapeとSpriteをまとめて、2Dモデルを表すクラス. </div><div class="ttdef"><b>Definition:</b> IModel.h:12</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_shape_html"><div class="ttname"><a href="class_s_d_x_1_1_i_shape.html">SDX::IShape</a></div><div class="ttdoc">衝突判定可能な図形の抽象クラス. </div><div class="ttdef"><b>Definition:</b> IShape.h:21</div></div>
+<div class="ttc" id="class_s_d_x_1_1_i_model_html"><div class="ttname"><a href="class_s_d_x_1_1_i_model.html">SDX::IModel</a></div><div class="ttdoc">ShapeとSpriteをまとめて、2Dモデルを表すクラス. </div><div class="ttdef"><b>Definition:</b> IModel.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:46 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:35 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

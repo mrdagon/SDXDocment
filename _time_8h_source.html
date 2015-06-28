@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -129,56 +129,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            localtime_s(現在時刻, &amp;timer);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">   54</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">GetFPS</a>()</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#aaa6a26f1aa67fc8a2ef366ce247be26f">   54</a></span>&#160;        <span class="keyword">static</span> std::string <a class="code" href="class_s_d_x_1_1_time.html#aaa6a26f1aa67fc8a2ef366ce247be26f">GetDateString</a>()</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">return</span> Single().fps;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">   60</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">ResetFPS</a>()</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            Single().fpsCounter = std::chrono::system_clock::now();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">   66</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">CheckFPS</a>()</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keyword">auto</span> diff = std::chrono::system_clock::now() - Single().fpsCounter;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            Single().fps = 1000000.0 / (double)std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(diff).count();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Single().fpsCounter = std::chrono::system_clock::now();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">   74</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">StartWatch</a>()</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            Single().watch = std::chrono::system_clock::now();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">   82</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">DrawWatch</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keyword">const</span> <span class="keywordtype">char</span>* 描画文字列)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::string buf = 描画文字列;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            buf += <span class="stringliteral">&quot; = &quot;</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keyword">auto</span> diff = std::chrono::system_clock::now() - Single().watch;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordtype">double</span> count = (double)std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(diff).count();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>(座標, <a class="code" href="class_s_d_x_1_1_color.html">Color</a>(255, 255, 255), { buf, count });</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            Single().watch = std::chrono::system_clock::now();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    };</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_time_html_a4129895b9fcee1b2ced6f0a65724c393"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">SDX::Time::GetFPS</a></div><div class="ttdeci">static double GetFPS()</div><div class="ttdoc">FPSを取得. </div><div class="ttdef"><b>Definition:</b> Time.h:54</div></div>
-<div class="ttc" id="class_s_d_x_1_1_time_html_a4e9e35f5fc02ef35f1d2ec05edf34ad8"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">SDX::Time::DrawWatch</a></div><div class="ttdeci">static void DrawWatch(const Point &amp;座標, const char *描画文字列)</div><div class="ttdoc">処理時間計測終了. </div><div class="ttdef"><b>Definition:</b> Time.h:82</div></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            tm time;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_s_d_x_1_1_time.html#a2e27379c88c9d2b7a3f404aab1e233e0">GetDate</a>( &amp;time );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> str = { time.tm_year+1900, <span class="stringliteral">&quot;_&quot;</span> , time.tm_mon , <span class="stringliteral">&quot;_&quot;</span> , time.tm_mday , <span class="stringliteral">&quot;_&quot;</span> , time.tm_hour , <span class="stringliteral">&quot;_&quot;</span> , time.tm_min , <span class="stringliteral">&quot;_&quot;</span> , time.tm_sec};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span> str.<a class="code" href="class_s_d_x_1_1_variadic_stream.html#a86f6c2aeab1e88bfcd11312313aa6349">StringS</a>[0];</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">   63</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">GetFPS</a>()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> Single().fps;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">   69</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">ResetFPS</a>()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            Single().fpsCounter = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">   75</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">CheckFPS</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keyword">auto</span> diff = std::chrono::system_clock::now() - Single().fpsCounter;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            Single().fps = 1000000.0 / (double)std::chrono::duration_cast&lt;std::chrono::microseconds&gt;(diff).count();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            Single().fpsCounter = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">   83</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">StartWatch</a>()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            Single().watch = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">   91</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">DrawWatch</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keyword">const</span> <span class="keywordtype">char</span>* 描画文字列)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            std::string buf = 描画文字列;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            buf += <span class="stringliteral">&quot; = &quot;</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">auto</span> diff = std::chrono::system_clock::now() - Single().watch;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordtype">double</span> count = (double)std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(diff).count();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">Drawing::String</a>(座標, <a class="code" href="class_s_d_x_1_1_color.html">Color</a>(255, 255, 255), { buf, count });</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            Single().watch = std::chrono::system_clock::now();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    };</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_a4129895b9fcee1b2ced6f0a65724c393"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a4129895b9fcee1b2ced6f0a65724c393">SDX::Time::GetFPS</a></div><div class="ttdeci">static double GetFPS()</div><div class="ttdoc">FPSを取得. </div><div class="ttdef"><b>Definition:</b> Time.h:63</div></div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_a4e9e35f5fc02ef35f1d2ec05edf34ad8"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a4e9e35f5fc02ef35f1d2ec05edf34ad8">SDX::Time::DrawWatch</a></div><div class="ttdeci">static void DrawWatch(const Point &amp;座標, const char *描画文字列)</div><div class="ttdoc">処理時間計測終了. </div><div class="ttdef"><b>Definition:</b> Time.h:91</div></div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_aaa6a26f1aa67fc8a2ef366ce247be26f"><div class="ttname"><a href="class_s_d_x_1_1_time.html#aaa6a26f1aa67fc8a2ef366ce247be26f">SDX::Time::GetDateString</a></div><div class="ttdeci">static std::string GetDateString()</div><div class="ttdoc">現在の日付、時刻を文字列にして返す. </div><div class="ttdef"><b>Definition:</b> Time.h:54</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
-<div class="ttc" id="class_s_d_x_1_1_drawing_html_a0a75bae9e9dbdb6f26abff04fe646dd7"><div class="ttname"><a href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">SDX::Drawing::String</a></div><div class="ttdeci">static void String(const Point &amp;座標, const Color &amp;色, const VariadicStream &amp;描画する文字列)</div><div class="ttdoc">文字を描画. </div><div class="ttdef"><b>Definition:</b> Drawing.h:455</div></div>
-<div class="ttc" id="class_s_d_x_1_1_time_html_ac69d50f7ba42c131efdcde74f0e8958b"><div class="ttname"><a href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">SDX::Time::StartWatch</a></div><div class="ttdeci">static void StartWatch()</div><div class="ttdoc">処理時間計測開始. </div><div class="ttdef"><b>Definition:</b> Time.h:74</div></div>
+<div class="ttc" id="class_s_d_x_1_1_drawing_html_a0a75bae9e9dbdb6f26abff04fe646dd7"><div class="ttname"><a href="class_s_d_x_1_1_drawing.html#a0a75bae9e9dbdb6f26abff04fe646dd7">SDX::Drawing::String</a></div><div class="ttdeci">static void String(const Point &amp;座標, const Color &amp;色, const VariadicStream &amp;描画する文字列)</div><div class="ttdoc">文字を描画. </div><div class="ttdef"><b>Definition:</b> Drawing.h:463</div></div>
+<div class="ttc" id="class_s_d_x_1_1_variadic_stream_html_a86f6c2aeab1e88bfcd11312313aa6349"><div class="ttname"><a href="class_s_d_x_1_1_variadic_stream.html#a86f6c2aeab1e88bfcd11312313aa6349">SDX::VariadicStream::StringS</a></div><div class="ttdeci">std::vector&lt; std::string &gt; StringS</div><div class="ttdoc">一行ずつの文字列. </div><div class="ttdef"><b>Definition:</b> VariadicStream.h:53</div></div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_ac69d50f7ba42c131efdcde74f0e8958b"><div class="ttname"><a href="class_s_d_x_1_1_time.html#ac69d50f7ba42c131efdcde74f0e8958b">SDX::Time::StartWatch</a></div><div class="ttdeci">static void StartWatch()</div><div class="ttdoc">処理時間計測開始. </div><div class="ttdef"><b>Definition:</b> Time.h:83</div></div>
 <div class="ttc" id="class_s_d_x_1_1_time_html_a01bd5f9848a1dfa2f4a30ab86bc7150a"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a01bd5f9848a1dfa2f4a30ab86bc7150a">SDX::Time::GetNowCount</a></div><div class="ttdeci">static double GetNowCount()</div><div class="ttdoc">リセット後の経過時間のミリ秒で取得(小数点以下). </div><div class="ttdef"><b>Definition:</b> Time.h:37</div></div>
 <div class="ttc" id="class_s_d_x_1_1_color_html"><div class="ttname"><a href="class_s_d_x_1_1_color.html">SDX::Color</a></div><div class="ttdoc">色を表すクラス. </div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
 <div class="ttc" id="class_s_d_x_1_1_time_html"><div class="ttname"><a href="class_s_d_x_1_1_time.html">SDX::Time</a></div><div class="ttdoc">時間と日付を取得する関数群. </div><div class="ttdef"><b>Definition:</b> Time.h:13</div></div>
-<div class="ttc" id="class_s_d_x_1_1_time_html_a87a3f886ab651bc33c50dc91e35193d1"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">SDX::Time::CheckFPS</a></div><div class="ttdeci">static void CheckFPS()</div><div class="ttdoc">FPS計測を更新. </div><div class="ttdef"><b>Definition:</b> Time.h:66</div></div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_a87a3f886ab651bc33c50dc91e35193d1"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a87a3f886ab651bc33c50dc91e35193d1">SDX::Time::CheckFPS</a></div><div class="ttdeci">static void CheckFPS()</div><div class="ttdoc">FPS計測を更新. </div><div class="ttdef"><b>Definition:</b> Time.h:75</div></div>
 <div class="ttc" id="class_s_d_x_1_1_time_html_aa4c6082d1f5ff5a47e28b47bc402b601"><div class="ttname"><a href="class_s_d_x_1_1_time.html#aa4c6082d1f5ff5a47e28b47bc402b601">SDX::Time::ResetCount</a></div><div class="ttdeci">static void ResetCount()</div><div class="ttdoc">時間の初期化. </div><div class="ttdef"><b>Definition:</b> Time.h:31</div></div>
-<div class="ttc" id="class_s_d_x_1_1_time_html_ab8c0ece801cb85206c82dc639b3411ae"><div class="ttname"><a href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">SDX::Time::ResetFPS</a></div><div class="ttdeci">static void ResetFPS()</div><div class="ttdoc">FPSの計測開始. </div><div class="ttdef"><b>Definition:</b> Time.h:60</div></div>
+<div class="ttc" id="class_s_d_x_1_1_time_html_ab8c0ece801cb85206c82dc639b3411ae"><div class="ttname"><a href="class_s_d_x_1_1_time.html#ab8c0ece801cb85206c82dc639b3411ae">SDX::Time::ResetFPS</a></div><div class="ttdeci">static void ResetFPS()</div><div class="ttdoc">FPSの計測開始. </div><div class="ttdef"><b>Definition:</b> Time.h:69</div></div>
+<div class="ttc" id="class_s_d_x_1_1_variadic_stream_html"><div class="ttname"><a href="class_s_d_x_1_1_variadic_stream.html">SDX::VariadicStream</a></div><div class="ttdoc">可変数引数な文字列を処理するクラス. </div><div class="ttdef"><b>Definition:</b> VariadicStream.h:25</div></div>
 <div class="ttc" id="class_s_d_x_1_1_time_html_a2e27379c88c9d2b7a3f404aab1e233e0"><div class="ttname"><a href="class_s_d_x_1_1_time.html#a2e27379c88c9d2b7a3f404aab1e233e0">SDX::Time::GetDate</a></div><div class="ttdeci">static void GetDate(tm *現在時刻)</div><div class="ttdoc">日付を取得. </div><div class="ttdef"><b>Definition:</b> Time.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

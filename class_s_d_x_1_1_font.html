@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -120,6 +120,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a44499842fc2935ec962a98ba89fc8cfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_s_d_x_1_1_image.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#a44499842fc2935ec962a98ba89fc8cfb">MakeImage</a> (<a class="el" href="class_s_d_x_1_1_color.html">Color</a> 文字色, bool 反転フラグ, const <a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> &amp;描画する文字列) const </td></tr>
 <tr class="memdesc:a44499842fc2935ec962a98ba89fc8cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">FontからImageを生成.  <a href="#a44499842fc2935ec962a98ba89fc8cfb">More...</a><br /></td></tr>
 <tr class="separator:a44499842fc2935ec962a98ba89fc8cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f59139ed52483af393e6dae9094621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#ab6f59139ed52483af393e6dae9094621">SetSize</a> (int 大きさ, int 行間=0)</td></tr>
+<tr class="memdesc:ab6f59139ed52483af393e6dae9094621"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォントの行間を再指定する.  <a href="#ab6f59139ed52483af393e6dae9094621">More...</a><br /></td></tr>
+<tr class="separator:ab6f59139ed52483af393e6dae9094621"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f72062067e0fd21b9330c939ac4b73"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_font.html#aa2f72062067e0fd21b9330c939ac4b73">MakeBMPFont</a> (const std::string テキストファイル名)</td></tr>
 <tr class="memdesc:aa2f72062067e0fd21b9330c939ac4b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMPフォントデータを生成する.  <a href="#aa2f72062067e0fd21b9330c939ac4b73">More...</a><br /></td></tr>
 <tr class="separator:aa2f72062067e0fd21b9330c939ac4b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,7 +156,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>TrueTypeFontとBMPFontをまとめて扱うクラス. </p>
-<p>毎回レンダリングせず、ハッシュマップにImageを格納する 一度も表示していない文字が必要になった場合生成し以後使いまわす </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え </dd></dl>
+<p>毎回レンダリングせず、ハッシュマップにImageを格納する 一度も表示していない文字が必要になった場合生成し以後使いまわす </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>高さが違う文字が混ざった場合の仕様が未定、現状上揃え </dd></dl>
 <div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
 <div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
 <div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
@@ -253,7 +256,7 @@ Public Member Functions</h2></td></tr>
 
 <p>フォントを作成する. </p>
 <p>行間は0の場合、改行後の文字が上下くっつく。<br />
- BMPフォント専用にしたい場合、フォント名は無効な物を入れる </p>
+ BMPフォント専用にしたい場合、SetSizeを使うと良い </p>
 
 </div>
 </div>
@@ -349,6 +352,44 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab6f59139ed52483af393e6dae9094621"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDX::Font::SetSize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>大きさ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>行間</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>フォントの行間を再指定する. </p>
+<p>Loadしたフォントの大きさが変化するわけでは無い<br />
+ BMPフォント専用にしたい場合、Loadでは無くこっちが良い </p>
+
+</div>
+</div>
 <a class="anchor" id="aa2f72062067e0fd21b9330c939ac4b73"></a>
 <div class="memitem">
 <div class="memproto">
@@ -372,7 +413,9 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>BMPフォントデータを生成する. </p>
-<p>テキストファイルには出力したい文字を一行で入力します pngに変換したい場合、生成したBMPの黒の箇所を透明にして下さい </p>
+<p>テキストファイルには出力したい文字を一行で入力します<br />
+ pngに変換したい場合、生成したBMPの黒の箇所を透明にして下さい<br />
+ 等幅フォントのみ対応 </p>
 
 </div>
 </div>
@@ -509,7 +552,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>文字を描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000007">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#ad76df196db6490bbfbb1fe205f30d30f">SDX::IFont</a>.</p>
 
@@ -620,7 +663,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>文字を回転して描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000010">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#a0cb58da36015d571717a351c58314510">SDX::IFont</a>.</p>
 
@@ -683,7 +726,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>拡大率を指定して文字を描画. </p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000009">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000011">Todo:</a></b></dt><dd>反転描画無効 </dd></dl>
 
 <p>Implements <a class="el" href="class_s_d_x_1_1_i_font.html#af92e08f09b52d8792009903c03ee8542">SDX::IFont</a>.</p>
 
@@ -772,7 +815,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

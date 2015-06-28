@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -121,6 +121,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d9d5d869b570086b345945bd8c0b57a"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a5d9d5d869b570086b345945bd8c0b57a">Read</a> (T &amp;読み込み先変数)</td></tr>
 <tr class="memdesc:a5d9d5d869b570086b345945bd8c0b57a"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを読み込む.  <a href="#a5d9d5d869b570086b345945bd8c0b57a">More...</a><br /></td></tr>
 <tr class="separator:a5d9d5d869b570086b345945bd8c0b57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dd15a9422be80edf68a58ac06b9641"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:aa4dd15a9422be80edf68a58ac06b9641"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#aa4dd15a9422be80edf68a58ac06b9641">Read</a> (std::vector&lt; T &gt; &amp;読み込み元配列)</td></tr>
+<tr class="memdesc:aa4dd15a9422be80edf68a58ac06b9641"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変長配列を読み込む.  <a href="#aa4dd15a9422be80edf68a58ac06b9641">More...</a><br /></td></tr>
+<tr class="separator:aa4dd15a9422be80edf68a58ac06b9641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ebc7248580e324196397f14b2f3141b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a4ebc7248580e324196397f14b2f3141b">Read</a> (std::string &amp;読み込み先変数)</td></tr>
 <tr class="memdesc:a4ebc7248580e324196397f14b2f3141b"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を読み込む.  <a href="#a4ebc7248580e324196397f14b2f3141b">More...</a><br /></td></tr>
 <tr class="separator:a4ebc7248580e324196397f14b2f3141b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,17 +144,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8065f84f6c04d843e09894525e95dc19"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a8065f84f6c04d843e09894525e95dc19">Write</a> (T &amp;書込み元変数)</td></tr>
 <tr class="memdesc:a8065f84f6c04d843e09894525e95dc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">データを書き込む.  <a href="#a8065f84f6c04d843e09894525e95dc19">More...</a><br /></td></tr>
 <tr class="separator:a8065f84f6c04d843e09894525e95dc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a736735d84748823a74b02a839f00d53c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a736735d84748823a74b02a839f00d53c">Write</a> (std::string &amp;書込み元変数)</td></tr>
-<tr class="memdesc:a736735d84748823a74b02a839f00d53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む.  <a href="#a736735d84748823a74b02a839f00d53c">More...</a><br /></td></tr>
-<tr class="separator:a736735d84748823a74b02a839f00d53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0dbe0d6ac4b1a48167567a5c85b74c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#ac0dbe0d6ac4b1a48167567a5c85b74c8">Write</a> (const std::string &amp;書込み元変数, bool is文字数=true)</td></tr>
+<tr class="memdesc:ac0dbe0d6ac4b1a48167567a5c85b74c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列を書き込む.  <a href="#ac0dbe0d6ac4b1a48167567a5c85b74c8">More...</a><br /></td></tr>
+<tr class="separator:ac0dbe0d6ac4b1a48167567a5c85b74c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594b79dd09cdaae2b4d08aae87453c9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a594b79dd09cdaae2b4d08aae87453c9b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Write</b> (std::string &amp;書込み元変数, bool is文字数=true)</td></tr>
+<tr class="separator:a594b79dd09cdaae2b4d08aae87453c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab718d50bddfe797cee4fdf3795014f2d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ab718d50bddfe797cee4fdf3795014f2d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#ab718d50bddfe797cee4fdf3795014f2d">Write</a> (std::vector&lt; T &gt; &amp;書込み元配列)</td></tr>
+<tr class="memdesc:ab718d50bddfe797cee4fdf3795014f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">可変長配列を読み込む.  <a href="#ab718d50bddfe797cee4fdf3795014f2d">More...</a><br /></td></tr>
+<tr class="separator:ab718d50bddfe797cee4fdf3795014f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad00752165c57878f70caf852e0ef47db"><td class="memTemplParams" colspan="2">template&lt;class TSaveType , class TInput &gt; </td></tr>
 <tr class="memitem:ad00752165c57878f70caf852e0ef47db"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#ad00752165c57878f70caf852e0ef47db">Write</a> (TInput *書き込み元配列, int 要素数)</td></tr>
 <tr class="memdesc:ad00752165c57878f70caf852e0ef47db"><td class="mdescLeft">&#160;</td><td class="mdescRight">型変換をして書き込む.  <a href="#ad00752165c57878f70caf852e0ef47db">More...</a><br /></td></tr>
 <tr class="separator:ad00752165c57878f70caf852e0ef47db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd9d8d0f07e4e16b36bbc4f1b8c4bcd"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:acbd9d8d0f07e4e16b36bbc4f1b8c4bcd"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#acbd9d8d0f07e4e16b36bbc4f1b8c4bcd">ReadWrite</a> (T &amp;読み書き変数)</td></tr>
-<tr class="memdesc:acbd9d8d0f07e4e16b36bbc4f1b8c4bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">FileModeがReadの場合Read、WriteかAddの場合Writeを行う.  <a href="#acbd9d8d0f07e4e16b36bbc4f1b8c4bcd">More...</a><br /></td></tr>
+<tr class="memdesc:acbd9d8d0f07e4e16b36bbc4f1b8c4bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">変数を読み書きする.  <a href="#acbd9d8d0f07e4e16b36bbc4f1b8c4bcd">More...</a><br /></td></tr>
 <tr class="separator:acbd9d8d0f07e4e16b36bbc4f1b8c4bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c9b32f813aa95088dedd77aa745297b"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a4c9b32f813aa95088dedd77aa745297b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a4c9b32f813aa95088dedd77aa745297b">ReadWrite</a> (T *読み書き変数, int 要素数)</td></tr>
+<tr class="memdesc:a4c9b32f813aa95088dedd77aa745297b"><td class="mdescLeft">&#160;</td><td class="mdescRight">配列に読み書きする.  <a href="#a4c9b32f813aa95088dedd77aa745297b">More...</a><br /></td></tr>
+<tr class="separator:a4c9b32f813aa95088dedd77aa745297b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fbdac3cb2c477d6b7a3a2bab1993b34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a8fbdac3cb2c477d6b7a3a2bab1993b34">AddLine</a> (<a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a> 文字列)</td></tr>
+<tr class="memdesc:a8fbdac3cb2c477d6b7a3a2bab1993b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">改行付きの文字列を一行書き込む.  <a href="#a8fbdac3cb2c477d6b7a3a2bab1993b34">More...</a><br /></td></tr>
+<tr class="separator:a8fbdac3cb2c477d6b7a3a2bab1993b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a003cdfcfc3aec232c9f2cab49f507ece"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_file.html#a003cdfcfc3aec232c9f2cab49f507ece">GetLineS</a> ()</td></tr>
 <tr class="memdesc:a003cdfcfc3aec232c9f2cab49f507ece"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを改行区切りで一括して読み込む.  <a href="#a003cdfcfc3aec232c9f2cab49f507ece">More...</a><br /></td></tr>
 <tr class="separator:a003cdfcfc3aec232c9f2cab49f507ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +191,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>入出力可能なテキストかバイナリファイルを表すクラス. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>配列の保存と読み込みの仕様が分かりにくい？ </dd></dl>
 <div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
 <div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
 <div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
@@ -442,6 +461,35 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aa4dd15a9422be80edf68a58ac06b9641"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::File::Read </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>読み込み元配列</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>可変長配列を読み込む. </p>
+<p>FileMode::Readの場合成功 要素数を最初に読み込む </p>
+
+</div>
+</div>
 <a class="anchor" id="a4ebc7248580e324196397f14b2f3141b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -610,7 +658,7 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a736735d84748823a74b02a839f00d53c"></a>
+<a class="anchor" id="ac0dbe0d6ac4b1a48167567a5c85b74c8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -620,9 +668,19 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname">bool SDX::File::Write </td>
           <td>(</td>
-          <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>書込み元変数</em></td><td>)</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>書込み元変数</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is文字数</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -634,7 +692,36 @@ template&lt;class T &gt; </div>
 
 <p>文字列を書き込む. </p>
 <p>FileModeがWriteかAddの場合成功。<br />
- 書込元変数をファイルに書き込む。 文字列の長さが文字列自身の前に書き込まれる </p>
+ 書込元変数をファイルに書き込む。 文字列の長さを文字列自身の前に書き込むかを選択出来る </p>
+
+</div>
+</div>
+<a class="anchor" id="ab718d50bddfe797cee4fdf3795014f2d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::File::Write </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>書込み元配列</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>可変長配列を読み込む. </p>
+<p>FileMode::Wirteの場合成功 要素数を最初に書き込む </p>
 
 </div>
 </div>
@@ -701,7 +788,73 @@ template&lt;class T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p>FileModeがReadの場合Read、WriteかAddの場合Writeを行う. </p>
+<p>変数を読み書きする. </p>
+<p>FileModeがReadの場合Read、WriteかAddの場合Writeを行う </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c9b32f813aa95088dedd77aa745297b"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::File::ReadWrite </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>読み書き変数</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>要素数</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配列に読み書きする. </p>
+<p>FileModeがReadの場合Read、WriteかAddの場合Writeを行う </p>
+
+</div>
+</div>
+<a class="anchor" id="a8fbdac3cb2c477d6b7a3a2bab1993b34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SDX::File::AddLine </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_variadic_stream.html">VariadicStream</a>&#160;</td>
+          <td class="paramname"><em>文字列</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>改行付きの文字列を一行書き込む. </p>
 
 </div>
 </div>
@@ -858,7 +1011,7 @@ template&lt;class T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

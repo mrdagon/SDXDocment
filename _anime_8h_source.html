@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -89,7 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;Framework/Film.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespace_s_d_x.html">    7</a></span>&#160;<span class="keyword">namespace </span>SDX</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>SDX</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_anime.html">   11</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_anime.html">Anime</a> : <span class="keyword">public</span> <a class="code" href="class_s_d_x_1_1_i_drawable.html">IDrawable</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
@@ -148,7 +148,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">if</span> (コマ数 &gt;= film-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a>())</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                コマ数 = film-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a>()-1;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                コマ数 = film-&gt;<a class="code" href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">GetSize</a>() - 1;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (コマ数 &lt; 0)</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            {</div>
@@ -160,12 +160,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_anime.html#a9ca3ef6fd504cd88835be39c7dadfb4c">   85</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_anime.html#a9ca3ef6fd504cd88835be39c7dadfb4c">Draw</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">GetFrame</a>()-&gt;<a class="code" href="class_s_d_x_1_1_image.html#acd76b5cf9cf2f6bdf3e4c44f1e09c624">Draw</a>(座標,反転フラグ);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">GetFrame</a>()-&gt;<a class="code" href="class_s_d_x_1_1_image.html#acd76b5cf9cf2f6bdf3e4c44f1e09c624">Draw</a>(座標, 反転フラグ);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_anime.html#a62968c546c9648d4afadc69e88bac25b">   91</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_anime.html#a62968c546c9648d4afadc69e88bac25b">DrawExtend</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;描画領域 , <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_anime.html#a62968c546c9648d4afadc69e88bac25b">   91</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_anime.html#a62968c546c9648d4afadc69e88bac25b">DrawExtend</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_rect.html">Rect</a> &amp;描画領域, <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">GetFrame</a>()-&gt;<a class="code" href="class_s_d_x_1_1_image.html#a87221c66b0b412dbb21f1767e9c7e974">DrawExtend</a>(描画領域 , 反転フラグ);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">GetFrame</a>()-&gt;<a class="code" href="class_s_d_x_1_1_image.html#a87221c66b0b412dbb21f1767e9c7e974">DrawExtend</a>(描画領域, 反転フラグ);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
 <div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_anime.html#abe7f5df1d525cf9d48766696a355af1d">   97</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_anime.html#abe7f5df1d525cf9d48766696a355af1d">DrawRotate</a>(<span class="keyword">const</span> <a class="code" href="class_s_d_x_1_1_point.html">Point</a> &amp;座標, <span class="keywordtype">double</span> 拡大率, <span class="keywordtype">double</span> 角度, <span class="keywordtype">bool</span> 反転フラグ = <span class="keyword">false</span>)<span class="keyword"> const override</span></div>
@@ -185,10 +185,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">        </span>{</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">GetFrame</a>()-&gt;<a class="code" href="class_s_d_x_1_1_image.html#a0ad44150fac2acf7c325d11d9169edbb">DrawPart</a>(描画先座標, 描画元領域, 反転フラグ);</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    };</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    };</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
 <div class="ttc" id="namespace_s_d_x_html_abf042a9ec549408e52d4039c9e39bdfca960b44c579bc2f6818d2daaf9e4c16f0"><div class="ttname"><a href="namespace_s_d_x.html#abf042a9ec549408e52d4039c9e39bdfca960b44c579bc2f6818d2daaf9e4c16f0">SDX::NextFrame::Normal</a></div><div class="ttdoc">次のコマに進む </div></div>
 <div class="ttc" id="class_s_d_x_1_1_rect_html"><div class="ttname"><a href="class_s_d_x_1_1_rect.html">SDX::Rect</a></div><div class="ttdoc">矩形を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Rect.h:22</div></div>
 <div class="ttc" id="class_s_d_x_1_1_image_html_a00a7d0e83f2fea9b3ba9683505cbf86d"><div class="ttname"><a href="class_s_d_x_1_1_image.html#a00a7d0e83f2fea9b3ba9683505cbf86d">SDX::Image::DrawRotateAxis</a></div><div class="ttdeci">bool DrawRotateAxis(const Point &amp;座標, const Point &amp;回転軸座標, double 拡大率, double 角度, bool 反転フラグ=false) const override</div><div class="ttdoc">回転軸、角度、拡大率を指定して描画. </div><div class="ttdef"><b>Definition:</b> Image.h:244</div></div>
@@ -196,7 +194,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_s_d_x_1_1_image_html_a0ad44150fac2acf7c325d11d9169edbb"><div class="ttname"><a href="class_s_d_x_1_1_image.html#a0ad44150fac2acf7c325d11d9169edbb">SDX::Image::DrawPart</a></div><div class="ttdeci">bool DrawPart(const Point &amp;描画先座標, const Rect &amp;描画元領域, bool 反転フラグ=false) const override</div><div class="ttdoc">指定した一部分を描画. </div><div class="ttdef"><b>Definition:</b> Image.h:268</div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html_a3944bc2db135955961b783e60967b9ef"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#a3944bc2db135955961b783e60967b9ef">SDX::Anime::GetFrame</a></div><div class="ttdeci">Image * GetFrame() const </div><div class="ttdoc">現在のコマを取得. </div><div class="ttdef"><b>Definition:</b> Anime.h:63</div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html_aacdb7975058adba3d6a7bf4fdc614123"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#aacdb7975058adba3d6a7bf4fdc614123">SDX::Anime::Update</a></div><div class="ttdeci">bool Update(double 経過フレーム=1)</div><div class="ttdoc">カウンタの更新. </div><div class="ttdef"><b>Definition:</b> Anime.h:27</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html_abb1d70fe1d61bdeb9db871820b88055c"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#abb1d70fe1d61bdeb9db871820b88055c">SDX::ImagePack::imageS</a></div><div class="ttdeci">std::vector&lt; Image * &gt; imageS</div><div class="ttdoc">保持するImage </div><div class="ttdef"><b>Definition:</b> ImagePack.h:17</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html_abb1d70fe1d61bdeb9db871820b88055c"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#abb1d70fe1d61bdeb9db871820b88055c">SDX::ImagePack::imageS</a></div><div class="ttdeci">std::vector&lt; Image * &gt; imageS</div><div class="ttdoc">保持するImage </div><div class="ttdef"><b>Definition:</b> ImagePack.h:20</div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html_a9ca3ef6fd504cd88835be39c7dadfb4c"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#a9ca3ef6fd504cd88835be39c7dadfb4c">SDX::Anime::Draw</a></div><div class="ttdeci">bool Draw(const Point &amp;座標, bool 反転フラグ=false) const override</div><div class="ttdoc">指定座標に描画. </div><div class="ttdef"><b>Definition:</b> Anime.h:85</div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html_ac1c7b91a8f97755c6393b53d53034bd0"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#ac1c7b91a8f97755c6393b53d53034bd0">SDX::Anime::SetFrame</a></div><div class="ttdeci">void SetFrame(int コマ数)</div><div class="ttdoc">コマの位置を設定. </div><div class="ttdef"><b>Definition:</b> Anime.h:70</div></div>
 <div class="ttc" id="class_s_d_x_1_1_point_html"><div class="ttname"><a href="class_s_d_x_1_1_point.html">SDX::Point</a></div><div class="ttdoc">点を表す図形クラス. </div><div class="ttdef"><b>Definition:</b> Point.h:22</div></div>
@@ -208,7 +206,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_s_d_x_1_1_anime_html_a62968c546c9648d4afadc69e88bac25b"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#a62968c546c9648d4afadc69e88bac25b">SDX::Anime::DrawExtend</a></div><div class="ttdeci">bool DrawExtend(const Rect &amp;描画領域, bool 反転フラグ=false) const override</div><div class="ttdoc">指定矩形内に描画. </div><div class="ttdef"><b>Definition:</b> Anime.h:91</div></div>
 <div class="ttc" id="class_s_d_x_1_1_i_drawable_html"><div class="ttname"><a href="class_s_d_x_1_1_i_drawable.html">SDX::IDrawable</a></div><div class="ttdoc">描画可能なクラスのインターフェース. </div><div class="ttdef"><b>Definition:</b> IDrawable.h:14</div></div>
 <div class="ttc" id="class_s_d_x_1_1_film_html"><div class="ttname"><a href="class_s_d_x_1_1_film.html">SDX::Film</a></div><div class="ttdoc">ImagePackにコマ毎の再生時間を追加したクラス. </div><div class="ttdef"><b>Definition:</b> Film.h:32</div></div>
-<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a033d96d88be186a764674383788c0edf"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">SDX::ImagePack::GetSize</a></div><div class="ttdeci">int GetSize() const </div><div class="ttdoc">要素数を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:124</div></div>
+<div class="ttc" id="class_s_d_x_1_1_image_pack_html_a033d96d88be186a764674383788c0edf"><div class="ttname"><a href="class_s_d_x_1_1_image_pack.html#a033d96d88be186a764674383788c0edf">SDX::ImagePack::GetSize</a></div><div class="ttdeci">int GetSize() const </div><div class="ttdoc">要素数を取得. </div><div class="ttdef"><b>Definition:</b> ImagePack.h:186</div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html"><div class="ttname"><a href="class_s_d_x_1_1_anime.html">SDX::Anime</a></div><div class="ttdoc">Filmに再生状態を付与したクラス. </div><div class="ttdef"><b>Definition:</b> Anime.h:11</div></div>
 <div class="ttc" id="namespace_s_d_x_html_abf042a9ec549408e52d4039c9e39bdfcada81d52f967c3a9b84f650260c507500"><div class="ttname"><a href="namespace_s_d_x.html#abf042a9ec549408e52d4039c9e39bdfcada81d52f967c3a9b84f650260c507500">SDX::NextFrame::ToFront</a></div><div class="ttdoc">コマの進む向きをプラスにしてから進む </div></div>
 <div class="ttc" id="class_s_d_x_1_1_anime_html_aca3c44ebe4a081331755877ab0466690"><div class="ttname"><a href="class_s_d_x_1_1_anime.html#aca3c44ebe4a081331755877ab0466690">SDX::Anime::Anime</a></div><div class="ttdeci">Anime(const Film *再生する対象)</div><div class="ttdoc">コンストラクタ. </div><div class="ttdef"><b>Definition:</b> Anime.h:21</div></div>
@@ -219,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:46 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:35 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

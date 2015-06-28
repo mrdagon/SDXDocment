@@ -13,8 +13,8 @@ var searchData=
   ['f7',['F7',['../class_s_d_x_1_1_keyboard.html#a97b47bcdc834cdd917bbdbd99382cc42',1,'SDX::Keyboard']]],
   ['f8',['F8',['../class_s_d_x_1_1_keyboard.html#abb6f8aa1acac55853f470045958b50e6',1,'SDX::Keyboard']]],
   ['f9',['F9',['../class_s_d_x_1_1_keyboard.html#a32d51d6be81842d9fc295b6975a611ff',1,'SDX::Keyboard']]],
-  ['file',['File',['../class_s_d_x_1_1_file.html#a44f0f78f0abd18f68940ddd0e3dcf6fe',1,'SDX::File']]],
   ['file',['File',['../class_s_d_x_1_1_file.html',1,'SDX']]],
+  ['file',['File',['../class_s_d_x_1_1_file.html#a44f0f78f0abd18f68940ddd0e3dcf6fe',1,'SDX::File']]],
   ['filemode',['FileMode',['../namespace_s_d_x.html#a54657119f8a69a9885e2a13ea4ffc315',1,'SDX']]],
   ['film',['Film',['../class_s_d_x_1_1_film.html',1,'SDX']]],
   ['film',['Film',['../class_s_d_x_1_1_film.html#a13f6d21a123a1a9bb0de3359e7ad4d78',1,'SDX::Film::Film(const char *ファイル名, int 総コマ数, int コマ割り横, int コマ割り縦, int １コマの再生時間=1)'],['../class_s_d_x_1_1_film.html#a7f86fd875ff25996f2613fdde0fcc8a5',1,'SDX::Film::Film(const char *ファイル名, const char *拡張子, int 総コマ数, int １コマの再生時間=1, const char *書式=&quot;%03d.&quot;)']]],
@@ -25,8 +25,6 @@ var searchData=
   ['flip',['Flip',['../class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13',1,'SDX::Screen']]],
   ['font',['Font',['../class_s_d_x_1_1_font.html',1,'SDX']]],
   ['font',['Font',['../class_s_d_x_1_1_font.html#a65b6ece40f475a8160fe69f63338dfc4',1,'SDX::Font']]],
-  ['fontold',['FontOld',['../class_s_d_x_1_1_font_old.html#a921c89bb21caab6fd8755a66e01fc53a',1,'SDX::FontOld']]],
-  ['fontold',['FontOld',['../class_s_d_x_1_1_font_old.html',1,'SDX']]],
   ['forcus',['forcus',['../class_s_d_x_1_1_camera.html#acc5a0eb8f1f7948c33ac864ca4ba4987',1,'SDX::Camera']]],
   ['fuchsia',['Fuchsia',['../class_s_d_x_1_1_color.html#ac62e1ec538ee37d64f052918ed8bcf77',1,'SDX::Color']]]
 ];

@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -89,11 +89,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_s_d_x_1_1_i_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">SDX::IModel Class Reference</div>  </div>
+<div class="title">SDX::IModel Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -108,9 +107,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4792b621a9a45873bbf5a2c53ec01d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_model.html#ac4792b621a9a45873bbf5a2c53ec01d7">IModel</a> (<a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;図形, <a class="el" href="class_s_d_x_1_1_i_sprite.html">ISprite</a> &amp;描画方法)</td></tr>
-<tr class="memdesc:ac4792b621a9a45873bbf5a2c53ec01d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="#ac4792b621a9a45873bbf5a2c53ec01d7">More...</a><br /></td></tr>
-<tr class="separator:ac4792b621a9a45873bbf5a2c53ec01d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79a53d6b7c4f4c6776eb3b29e80eec6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab79a53d6b7c4f4c6776eb3b29e80eec6"></a>
+virtual const <a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetShape</b> () const =0</td></tr>
+<tr class="separator:ab79a53d6b7c4f4c6776eb3b29e80eec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5693ca9af29b163af2fc25315c6a4646"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5693ca9af29b163af2fc25315c6a4646"></a>
+virtual const <a class="el" href="class_s_d_x_1_1_i_sprite.html">ISprite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSprite</b> () const </td></tr>
+<tr class="separator:a5693ca9af29b163af2fc25315c6a4646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0edaac84f466aa42df0d6812e08d614b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0edaac84f466aa42df0d6812e08d614b"></a>
+<a class="el" href="class_s_d_x_1_1_i_sprite.html">ISprite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSprite</b> ()</td></tr>
+<tr class="separator:a0edaac84f466aa42df0d6812e08d614b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323cb7809937a32f78d27ca61fff06b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a323cb7809937a32f78d27ca61fff06b5"></a>
+<a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetShape</b> ()</td></tr>
+<tr class="separator:a323cb7809937a32f78d27ca61fff06b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accd30fe63f17c4aefc6ffbc2bfb52588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_model.html#accd30fe63f17c4aefc6ffbc2bfb52588">GetRemoveFlag</a> () const </td></tr>
 <tr class="memdesc:accd30fe63f17c4aefc6ffbc2bfb52588"><td class="mdescLeft">&#160;</td><td class="mdescRight">消滅フラグの取得.  <a href="#accd30fe63f17c4aefc6ffbc2bfb52588">More...</a><br /></td></tr>
 <tr class="separator:accd30fe63f17c4aefc6ffbc2bfb52588"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,9 +195,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa7204e085d8a21ad8bfc7909a341d06d inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_position.html#aa7204e085d8a21ad8bfc7909a341d06d">GetDirect</a> (<a class="el" href="class_s_d_x_1_1_i_position.html">IPosition</a> *比較対象) const </td></tr>
 <tr class="memdesc:aa7204e085d8a21ad8bfc7909a341d06d inherit pub_methods_class_s_d_x_1_1_i_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">対象との角度を取得.  <a href="#aa7204e085d8a21ad8bfc7909a341d06d">More...</a><br /></td></tr>
 <tr class="separator:aa7204e085d8a21ad8bfc7909a341d06d inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c895f936fad791e35cc4a7a45899cb0 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_position.html#a8c895f936fad791e35cc4a7a45899cb0">GetDistance</a> (<a class="el" href="class_s_d_x_1_1_i_position.html">IPosition</a> *比較対象) const </td></tr>
-<tr class="memdesc:a8c895f936fad791e35cc4a7a45899cb0 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">対象との相対座標を取得.  <a href="#a8c895f936fad791e35cc4a7a45899cb0">More...</a><br /></td></tr>
-<tr class="separator:a8c895f936fad791e35cc4a7a45899cb0 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd6a210d4c71b025788e48fbc70822c1 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_position.html#abd6a210d4c71b025788e48fbc70822c1">GetDistance</a> (const <a class="el" href="class_s_d_x_1_1_i_position.html">IPosition</a> *比較対象) const </td></tr>
+<tr class="memdesc:abd6a210d4c71b025788e48fbc70822c1 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">対象との相対座標を取得.  <a href="#abd6a210d4c71b025788e48fbc70822c1">More...</a><br /></td></tr>
+<tr class="separator:abd6a210d4c71b025788e48fbc70822c1 inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b38379b8388e1041cc20d4c15681aed inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_position.html#a7b38379b8388e1041cc20d4c15681aed">SetZoom</a> (double X拡大率, double Y拡大率)</td></tr>
 <tr class="memdesc:a7b38379b8388e1041cc20d4c15681aed inherit pub_methods_class_s_d_x_1_1_i_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">拡大率を設定.  <a href="#a7b38379b8388e1041cc20d4c15681aed">More...</a><br /></td></tr>
 <tr class="separator:a7b38379b8388e1041cc20d4c15681aed inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,17 +221,6 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memdesc:a3da470a69e7b9ec3c5fc6ce2fc62e79f inherit pub_methods_class_s_d_x_1_1_i_position"><td class="mdescLeft">&#160;</td><td class="mdescRight">角度の差を計算する <br /></td></tr>
 <tr class="separator:a3da470a69e7b9ec3c5fc6ce2fc62e79f inherit pub_methods_class_s_d_x_1_1_i_position"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a3e952ab7f4422315af3e25a4708cb3be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e952ab7f4422315af3e25a4708cb3be"></a>
-<a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_model.html#a3e952ab7f4422315af3e25a4708cb3be">iShape</a></td></tr>
-<tr class="memdesc:a3e952ab7f4422315af3e25a4708cb3be"><td class="mdescLeft">&#160;</td><td class="mdescRight">対応Shape <br /></td></tr>
-<tr class="separator:a3e952ab7f4422315af3e25a4708cb3be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c7e802a720cdb57d9242f165d7640d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c7e802a720cdb57d9242f165d7640d8"></a>
-<a class="el" href="class_s_d_x_1_1_i_sprite.html">ISprite</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_i_model.html#a4c7e802a720cdb57d9242f165d7640d8">iSprite</a></td></tr>
-<tr class="memdesc:a4c7e802a720cdb57d9242f165d7640d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">対応Sprite <br /></td></tr>
-<tr class="separator:a4c7e802a720cdb57d9242f165d7640d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:adf8fdbe317def052878bafd26706b1f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf8fdbe317def052878bafd26706b1f2"></a>
@@ -242,7 +239,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ShapeとSpriteをまとめて、2Dモデルを表すクラス. </p>
-<div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
+<p>GetShapeとGetSpriteをオーバーライドして使用する </p><div class="fragment"><div class="line"><span class="comment">//Copyright © 2014 SDXFramework</span></div>
 <div class="line"><span class="comment">//[License]GNU Affero General Public License, version 3</span></div>
 <div class="line"><span class="comment">//[Contact]http://sourceforge.jp/projects/dxframework/</span></div>
 <div class="line"></div>
@@ -279,7 +276,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 4; ++a)</div>
 <div class="line">        {</div>
-<div class="line">            modelS[a]-&gt;iSprite.<a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">Update</a>();<span class="comment">//SpAnimeは更新が必要</span></div>
+<div class="line">            modelS[a]-&gt;GetSprite().<a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">Update</a>();<span class="comment">//SpAnimeは更新が必要</span></div>
 <div class="line">            motionS[a]-&gt;Update( modelS[a] );<span class="comment">//modelを移動</span></div>
 <div class="line">            modelS[a]-&gt;Draw();<span class="comment">//modelを描画</span></div>
 <div class="line"></div>
@@ -302,44 +299,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div class="line">    </div>
 <div class="line">    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line">}</div>
-</div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac4792b621a9a45873bbf5a2c53ec01d7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">SDX::IModel::IModel </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;&#160;</td>
-          <td class="paramname"><em>図形</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_s_d_x_1_1_i_sprite.html">ISprite</a> &amp;&#160;</td>
-          <td class="paramname"><em>描画方法</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>コンストラクタ. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="accd30fe63f17c4aefc6ffbc2bfb52588"></a>
 <div class="memitem">
 <div class="memproto">
@@ -885,7 +845,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

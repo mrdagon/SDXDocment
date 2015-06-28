@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -107,9 +107,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acc104270681b96e428054dbeede07b51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sp_font.html#acc104270681b96e428054dbeede07b51">SpFont</a> (const <a class="el" href="class_s_d_x_1_1_i_font.html">IFont</a> *フォント, const char *描画する文字列)</td></tr>
 <tr class="memdesc:acc104270681b96e428054dbeede07b51"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ.  <a href="#acc104270681b96e428054dbeede07b51">More...</a><br /></td></tr>
 <tr class="separator:acc104270681b96e428054dbeede07b51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a809871c05355f5f5d5bcc6de038f868f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sp_font.html#a809871c05355f5f5d5bcc6de038f868f">Draw</a> (const <a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;座標) override</td></tr>
-<tr class="memdesc:a809871c05355f5f5d5bcc6de038f868f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISpriteを描画する.  <a href="#a809871c05355f5f5d5bcc6de038f868f">More...</a><br /></td></tr>
-<tr class="separator:a809871c05355f5f5d5bcc6de038f868f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170e00e1fdb1138df0c25082d39af56b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sp_font.html#a170e00e1fdb1138df0c25082d39af56b">Draw</a> (const <a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;座標) const override</td></tr>
+<tr class="memdesc:a170e00e1fdb1138df0c25082d39af56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISpriteを描画する.  <a href="#a170e00e1fdb1138df0c25082d39af56b">More...</a><br /></td></tr>
+<tr class="separator:a170e00e1fdb1138df0c25082d39af56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a26969632a62f27cb60421615c09b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_s_d_x_1_1_sp_font.html#a87a26969632a62f27cb60421615c09b2">SetText</a> (const char *表示する文字)</td></tr>
 <tr class="memdesc:a87a26969632a62f27cb60421615c09b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画する文字列を変更.  <a href="#a87a26969632a62f27cb60421615c09b2">More...</a><br /></td></tr>
 <tr class="separator:a87a26969632a62f27cb60421615c09b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,7 +214,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <div class="line">    {</div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> a = 0; a &lt; 4; ++a)</div>
 <div class="line">        {</div>
-<div class="line">            modelS[a]-&gt;iSprite.<a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">Update</a>();<span class="comment">//SpAnimeは更新が必要</span></div>
+<div class="line">            modelS[a]-&gt;GetSprite().<a class="code" href="class_s_d_x_1_1_m_o_t_i_o_n_1_1_i_motion.html#ae4e032e4645213b3ad326e803ed60101">Update</a>();<span class="comment">//SpAnimeは更新が必要</span></div>
 <div class="line">            motionS[a]-&gt;Update( modelS[a] );<span class="comment">//modelを移動</span></div>
 <div class="line">            modelS[a]-&gt;Draw();<span class="comment">//modelを描画</span></div>
 <div class="line"></div>
@@ -275,7 +275,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a809871c05355f5f5d5bcc6de038f868f"></a>
+<a class="anchor" id="a170e00e1fdb1138df0c25082d39af56b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -287,7 +287,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_s_d_x_1_1_i_shape.html">IShape</a> &amp;&#160;</td>
           <td class="paramname"><em>図形</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -299,7 +299,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 <p>ISpriteを描画する. </p>
 
-<p>Implements <a class="el" href="class_s_d_x_1_1_i_sprite.html#a991ebf3d9165aecdf3a0e15370483ebc">SDX::ISprite</a>.</p>
+<p>Implements <a class="el" href="class_s_d_x_1_1_i_sprite.html#a4068ff6371cd5fb5d4c03af0b0710e59">SDX::ISprite</a>.</p>
 
 </div>
 </div>
@@ -332,7 +332,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:48 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:36 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

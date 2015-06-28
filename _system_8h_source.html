@@ -23,7 +23,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">SDXFrameWork
-   &#160;<span id="projectnumber">0.12</span>
+   &#160;<span id="projectnumber">0.13</span>
    </div>
    <div id="projectbrief">SDXFrameWork</div>
   </td>
@@ -93,179 +93,242 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>SDX</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html">   13</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_system.html">System</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_window.html">Window</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        MONO_STATE(<a class="code" href="class_s_d_x_1_1_system.html">System</a>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span>&amp; IsEnd()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> isEnd;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">return</span> isEnd;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">   31</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">Initialise</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ウィンドウ名, <span class="keywordtype">int</span> 幅, <span class="keywordtype">int</span> 高さ , <span class="keywordtype">bool</span> フルスクリーンフラグ = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">enum class</span> Platform</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        Windows,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        MacOSX,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        GNU_Linux,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        iOS,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        Android,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        Unknown,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_system.html">System</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_s_d_x_1_1_window.html">Window</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        MONO_STATE(<a class="code" href="class_s_d_x_1_1_system.html">System</a>)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span>&amp; IsEnd()</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO) &lt; 0)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                exit(1);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#ifndef TABLET</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            SDL_JoystickEventState(SDL_ENABLE);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">bool</span> isEnd;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">return</span> isEnd;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">static</span> std::string inputText;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">static</span> std::string textComposition;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> textCursor;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> textSelection_len;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span> (SDL_NumJoysticks() &gt; 0)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.<a class="code" href="class_s_d_x_1_1_joypad.html#a875779b77a3c6fc9ede8af90e3fec97d">Open</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.<a class="code" href="class_s_d_x_1_1_sub_window.html#a7b9df5af0ab81c2c6af06a857a3d218d">Create</a>(ウィンドウ名,幅,高さ,フルスクリーンフラグ);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">Screen::SetRenderer</a>(<a class="code" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="class_s_d_x_1_1_window.html#ac3394c20e890e79e70ddc7b7a2ec84b6">Window::SetWindow</a>(<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">//タブレットと画面サイズを合わせる</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifdef TABLET</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">int</span> dpiX;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">int</span> dpiY;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            SDL_GetWindowSize(<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.handle, &amp;dpiX, &amp;dpiY);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.aspect = (double)dpiX / dpiY;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            SDL_RenderSetLogicalSize(<a class="code" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">Screen::GetHandle</a>(), 幅, 高さ);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="comment">//デフォルトフォントの設定</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            setlocale(LC_CTYPE, <span class="stringliteral">&quot;jpn&quot;</span>);<span class="comment">//文字コードを日本語に</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            TTF_Init();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_s_d_x_1_1_drawing.html#a93e690805234ee19bf6f3abe0e4b99b3">Drawing::SetDefaultFont</a>(SystemFont::Gothic, 16 , 2 );</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_EVERYTHING);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">//音声関連の初期化</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            Mix_OpenAudio(44100, AUDIO_S16, 2, 1024);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            Mix_AllocateChannels(16);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            Mix_HookMusicFinished(Music::Finished);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            IsEnd() = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">   45</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">Initialise</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ウィンドウ名, <span class="keywordtype">int</span> 幅, <span class="keywordtype">int</span> 高さ, <span class="keywordtype">bool</span> フルスクリーンフラグ = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_TIMER | SDL_INIT_AUDIO | SDL_INIT_VIDEO) &lt; 0)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                exit(1);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifndef TABLET</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            SDL_JoystickEventState(SDL_ENABLE);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span> (SDL_NumJoysticks() &gt; 0)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <a class="code" href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">Input::pad</a>.<a class="code" href="class_s_d_x_1_1_joypad.html#a875779b77a3c6fc9ede8af90e3fec97d">Open</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.<a class="code" href="class_s_d_x_1_1_sub_window.html#a7b9df5af0ab81c2c6af06a857a3d218d">Create</a>(ウィンドウ名,幅,高さ,フルスクリーンフラグ);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">Screen::SetRenderer</a>(<a class="code" href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">Renderer::mainRenderer</a>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="class_s_d_x_1_1_window.html#ac3394c20e890e79e70ddc7b7a2ec84b6">Window::SetWindow</a>(<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">//タブレットと画面サイズを合わせる</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#ifdef TABLET</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">int</span> dpiX;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> dpiY;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            SDL_GetWindowSize(<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.handle, &amp;dpiX, &amp;dpiY);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.aspect = (double)dpiX / dpiY;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            SDL_RenderSetLogicalSize(<a class="code" href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">Screen::GetHandle</a>(), 幅, 高さ);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">//デフォルトフォントの設定</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            setlocale(LC_CTYPE, <span class="stringliteral">&quot;jpn&quot;</span>);<span class="comment">//文字コードを日本語に</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">   79</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">End</a>()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            TTF_Quit();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            Mix_CloseAudio();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            Mix_Quit();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            SDL_Quit();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">Window::activeWindow</a>-&gt;<a class="code" href="class_s_d_x_1_1_sub_window.html#ab01010e1915a568fbe61075ffed95e44">Destroy</a>();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            IsEnd() = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#ifndef OMIT_SDL2_TTF</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            TTF_Init();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="class_s_d_x_1_1_drawing.html#a93e690805234ee19bf6f3abe0e4b99b3">Drawing::SetDefaultFont</a>(SystemFont::Gothic, 16 , 2 );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            SDL_InitSubSystem(SDL_INIT_JOYSTICK | SDL_INIT_GAMECONTROLLER | SDL_INIT_EVERYTHING);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">//音声関連の初期化</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            Mix_Init(MIX_INIT_MP3 | MIX_INIT_OGG);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            Mix_OpenAudio(44100, AUDIO_S16, 2, 1024);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            Mix_AllocateChannels(16);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            Mix_HookMusicFinished(Music::Finished);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">   91</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">Update</a>(<span class="keywordtype">bool</span> 描画更新フラグ = <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">if</span> (描画更新フラグ)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">Screen::Flip</a>();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">Screen::Clear</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <a class="code" href="class_s_d_x_1_1_input.html#aa381a197a320eb3c90a135771ca1ba30">Input::Update</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordtype">bool</span> result = <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">System::ProcessMessage</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <a class="code" href="class_s_d_x_1_1_music.html#a0999125ede43e618e2e6ab88dd12247f">Music::Update</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">  110</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">ProcessMessage</a>()</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            SDL_Event event;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">while</span> (SDL_PollEvent(&amp;event))</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">if</span> (event.type == SDL_WINDOWEVENT)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="keywordflow">switch</span> (event.window.event)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    <span class="keywordflow">case</span> SDL_WINDOWEVENT_CLOSE:</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#ifndef TABLET</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                        <span class="comment">//ここでIDに応じてDestroy等する</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        SubWindow::CheckWindowID(event.window.windowID);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.handle == <span class="keyword">nullptr</span>)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                            IsEnd() = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it : SubWindow::windowS)</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                            {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                it-&gt;Destroy();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                            }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                        }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#ifdef TABLET</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">case</span> SDL_WINDOWEVENT_MINIMIZED:</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                        <span class="comment">//スリープに入った時、再生中ならBGMを停止する</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_music.html#aa88345bb8d87afce8ced0c443e0bbf75">Music::Check</a>())</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                            Mix_PauseMusic();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">case</span> SDL_WINDOWEVENT_RESTORED:</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        <span class="comment">//BGMを止めていたら、再開する</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                        Mix_ResumeMusic();</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                    }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                }</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (event.type == SDL_QUIT)</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                {</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    IsEnd() = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    <a class="code" href="class_s_d_x_1_1_input.html#a52cd33e224c4ef287d63eb70cc4dfd36">Input::GetState</a>(event);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordflow">return</span> !IsEnd();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">  164</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">Wait</a>(<span class="keywordtype">int</span> 停止ミリ秒)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            SDL_Delay(停止ミリ秒);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">  170</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">WaitKey</a>()</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">while</span> (!<a class="code" href="class_s_d_x_1_1_keyboard.html#a0ec148cd4ebbd5c4ba65989c856af648">Keyboard::HoldAnyKey</a>() &amp;&amp; <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">System::ProcessMessage</a>()){}</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    };</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;}</div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_a0cc7d778e419e8625d63158f7fab36d8"><div class="ttname"><a href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">SDX::System::Wait</a></div><div class="ttdeci">static void Wait(int 停止ミリ秒)</div><div class="ttdoc">指定ミリ秒処理を停止する. </div><div class="ttdef"><b>Definition:</b> System.h:164</div></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            SDL_StopTextInput();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            IsEnd() = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">   97</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">End</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifndef OMIT_SDL2_TTF</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            TTF_Quit();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            Mix_CloseAudio();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            Mix_Quit();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            SDL_Quit();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <a class="code" href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">Window::activeWindow</a>-&gt;<a class="code" href="class_s_d_x_1_1_sub_window.html#ab01010e1915a568fbe61075ffed95e44">Destroy</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            IsEnd() = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">  111</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">Update</a>(<span class="keywordtype">bool</span> 描画更新フラグ = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordflow">if</span> (描画更新フラグ)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">Screen::Flip</a>();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <a class="code" href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">Screen::Clear</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="class_s_d_x_1_1_input.html#aa381a197a320eb3c90a135771ca1ba30">Input::Update</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordtype">bool</span> result = <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">System::ProcessMessage</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <a class="code" href="class_s_d_x_1_1_music.html#a0999125ede43e618e2e6ab88dd12247f">Music::Update</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">  130</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">ProcessMessage</a>()</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            SDL_Event event;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="keywordflow">while</span> (SDL_PollEvent(&amp;event))</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">switch</span> (event.type)</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">case</span> SDL_WINDOWEVENT:</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        <span class="keywordflow">switch</span> (event.window.event)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                        {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                        <span class="keywordflow">case</span> SDL_WINDOWEVENT_CLOSE:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="preprocessor">#ifndef TABLET</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                            <span class="comment">//ここでIDに応じてDestroy等する</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                            SubWindow::CheckWindowID(event.window.windowID);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SubWindow::mainWindow</a>.handle == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                            {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                IsEnd() = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                <span class="keywordflow">for</span> (<span class="keyword">auto</span> it : SubWindow::windowS)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                    it-&gt;Destroy();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                            }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="preprocessor">#ifdef TABLET</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                        <span class="keywordflow">case</span> SDL_WINDOWEVENT_MINIMIZED:</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                            <span class="comment">//スリープに入った時、再生中ならBGMを停止する</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                            <span class="keywordflow">if</span> (<a class="code" href="class_s_d_x_1_1_music.html#aa88345bb8d87afce8ced0c443e0bbf75">Music::Check</a>())</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                            {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                Mix_PauseMusic();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                            }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                        <span class="keywordflow">case</span> SDL_WINDOWEVENT_RESTORED:</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                            <span class="comment">//BGMを止めていたら、再開する</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                            Mix_ResumeMusic();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    <span class="keywordflow">case</span> SDL_QUIT:</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        IsEnd() = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                    <span class="keywordflow">case</span> SDL_TEXTINPUT:</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        inputText += <span class="keyword">event</span>.text.text;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="keywordflow">case</span> SDL_TEXTEDITING:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        <span class="comment">//Windowsでは無効</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                        textComposition = <span class="keyword">event</span>.edit.text;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        textCursor = <span class="keyword">event</span>.edit.start;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        textSelection_len = <span class="keyword">event</span>.edit.length;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                        <a class="code" href="class_s_d_x_1_1_input.html#a52cd33e224c4ef287d63eb70cc4dfd36">Input::GetState</a>(event);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">return</span> !IsEnd();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">  192</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">Wait</a>(<span class="keywordtype">int</span> 停止ミリ秒)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        {</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            SDL_Delay(停止ミリ秒);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">  198</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">WaitKey</a>()</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordflow">while</span> (!<a class="code" href="class_s_d_x_1_1_keyboard.html#a0ec148cd4ebbd5c4ba65989c856af648">Keyboard::HoldAnyKey</a>() &amp;&amp; <a class="code" href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">System::ProcessMessage</a>()){}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#aaf76c9499a706ad31aa8f965f8b1a27b">  204</a></span>&#160;        <span class="keyword">static</span> Platform <a class="code" href="class_s_d_x_1_1_system.html#aaf76c9499a706ad31aa8f965f8b1a27b">GetPlatform</a>()</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#ifdef __WINDOWS__</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordflow">return</span> Platform::Windows;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#elif defined(__MACOSX__)</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">return</span> Platform::MacOSX;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#elif defined(__LINUX__)</span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">return</span> Platform::GNU_Linux;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#elif defined(__ANDROID__)</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">return</span> Platform::Android;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="preprocessor">#elif defined(__IPHONEOS__)</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">return</span> Platform::iOS;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            <span class="keywordflow">return</span> Platform::Unknown;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        </div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="class_s_d_x_1_1_system.html#a07619fbf2acbb099dc643c4563526c8b">  222</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="class_s_d_x_1_1_system.html#a07619fbf2acbb099dc643c4563526c8b">IsTablet</a>()</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#ifdef __WINDOWS__</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="preprocessor">#elif defined(__MACOSX__)</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="preprocessor">#elif defined(__LINUX__)</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#elif defined(__ANDROID__)</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="preprocessor">#elif defined(__IPHONEOS__)</span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    };</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_a0cc7d778e419e8625d63158f7fab36d8"><div class="ttname"><a href="class_s_d_x_1_1_system.html#a0cc7d778e419e8625d63158f7fab36d8">SDX::System::Wait</a></div><div class="ttdeci">static void Wait(int 停止ミリ秒)</div><div class="ttdoc">指定ミリ秒処理を停止する. </div><div class="ttdef"><b>Definition:</b> System.h:192</div></div>
 <div class="ttc" id="class_s_d_x_1_1_input_html_aa381a197a320eb3c90a135771ca1ba30"><div class="ttname"><a href="class_s_d_x_1_1_input.html#aa381a197a320eb3c90a135771ca1ba30">SDX::Input::Update</a></div><div class="ttdeci">static void Update()</div><div class="ttdoc">入力状態を更新. </div><div class="ttdef"><b>Definition:</b> Input.h:42</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_af3f3ce86a6658da60bac85a171b916a3"><div class="ttname"><a href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">SDX::System::WaitKey</a></div><div class="ttdeci">static void WaitKey()</div><div class="ttdoc">なんらかのキーが入力されるまで処理を停止する. </div><div class="ttdef"><b>Definition:</b> System.h:170</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_af3f3ce86a6658da60bac85a171b916a3"><div class="ttname"><a href="class_s_d_x_1_1_system.html#af3f3ce86a6658da60bac85a171b916a3">SDX::System::WaitKey</a></div><div class="ttdeci">static void WaitKey()</div><div class="ttdoc">なんらかのキーが入力されるまで処理を停止する. </div><div class="ttdef"><b>Definition:</b> System.h:198</div></div>
 <div class="ttc" id="class_s_d_x_1_1_screen_html_abda2a2a9a53995c607a50140adcf9d13"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#abda2a2a9a53995c607a50140adcf9d13">SDX::Screen::Flip</a></div><div class="ttdeci">static bool Flip()</div><div class="ttdoc">描画内容を反映. </div><div class="ttdef"><b>Definition:</b> Screen.h:62</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_af66d69c02c938d3cea8292ce2716ecf8"><div class="ttname"><a href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">SDX::System::Initialise</a></div><div class="ttdeci">static void Initialise(const char *ウィンドウ名, int 幅, int 高さ, bool フルスクリーンフラグ=false)</div><div class="ttdoc">ライブラリの初期化. </div><div class="ttdef"><b>Definition:</b> System.h:31</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html"><div class="ttname"><a href="class_s_d_x_1_1_system.html">SDX::System</a></div><div class="ttdoc">ライブラリの初期化やシステム的な処理を行う関数群. </div><div class="ttdef"><b>Definition:</b> System.h:13</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_a209a4390eba4a0496bf17a9b6643fefb"><div class="ttname"><a href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">SDX::System::Update</a></div><div class="ttdeci">static bool Update(bool 描画更新フラグ=true)</div><div class="ttdoc">各種更新処理をまとめて行う. </div><div class="ttdef"><b>Definition:</b> System.h:91</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sub_window_html_a7b9df5af0ab81c2c6af06a857a3d218d"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a7b9df5af0ab81c2c6af06a857a3d218d">SDX::SubWindow::Create</a></div><div class="ttdeci">bool Create(const char *ウィンドウ名, int 幅, int 高さ, bool フルスクリーンフラグ=false)</div><div class="ttdoc">Windowの初期化と生成. </div><div class="ttdef"><b>Definition:</b> SubWindow.h:76</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_af66d69c02c938d3cea8292ce2716ecf8"><div class="ttname"><a href="class_s_d_x_1_1_system.html#af66d69c02c938d3cea8292ce2716ecf8">SDX::System::Initialise</a></div><div class="ttdeci">static void Initialise(const char *ウィンドウ名, int 幅, int 高さ, bool フルスクリーンフラグ=false)</div><div class="ttdoc">ライブラリの初期化. </div><div class="ttdef"><b>Definition:</b> System.h:45</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html"><div class="ttname"><a href="class_s_d_x_1_1_system.html">SDX::System</a></div><div class="ttdoc">ライブラリの初期化やシステム的な処理を行う関数群. </div><div class="ttdef"><b>Definition:</b> System.h:23</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_a209a4390eba4a0496bf17a9b6643fefb"><div class="ttname"><a href="class_s_d_x_1_1_system.html#a209a4390eba4a0496bf17a9b6643fefb">SDX::System::Update</a></div><div class="ttdeci">static bool Update(bool 描画更新フラグ=true)</div><div class="ttdoc">各種更新処理をまとめて行う. </div><div class="ttdef"><b>Definition:</b> System.h:111</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sub_window_html_a7b9df5af0ab81c2c6af06a857a3d218d"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a7b9df5af0ab81c2c6af06a857a3d218d">SDX::SubWindow::Create</a></div><div class="ttdeci">bool Create(const char *ウィンドウ名, int 幅, int 高さ, bool フルスクリーンフラグ=false)</div><div class="ttdoc">Windowの初期化と生成. </div><div class="ttdef"><b>Definition:</b> SubWindow.h:77</div></div>
 <div class="ttc" id="class_s_d_x_1_1_screen_html_aa99fbf08357a846871cd71453da4bf11"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#aa99fbf08357a846871cd71453da4bf11">SDX::Screen::Clear</a></div><div class="ttdeci">static bool Clear()</div><div class="ttdoc">画面を消去する. </div><div class="ttdef"><b>Definition:</b> Screen.h:69</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_aaf76c9499a706ad31aa8f965f8b1a27b"><div class="ttname"><a href="class_s_d_x_1_1_system.html#aaf76c9499a706ad31aa8f965f8b1a27b">SDX::System::GetPlatform</a></div><div class="ttdeci">static Platform GetPlatform()</div><div class="ttdoc">プラットフォームを取得する. </div><div class="ttdef"><b>Definition:</b> System.h:204</div></div>
 <div class="ttc" id="class_s_d_x_1_1_input_html_a78fdd812e74a84f50d9e92ea583f2e34"><div class="ttname"><a href="class_s_d_x_1_1_input.html#a78fdd812e74a84f50d9e92ea583f2e34">SDX::Input::pad</a></div><div class="ttdeci">static Joypad pad</div><div class="ttdoc">ジョイパッド </div><div class="ttdef"><b>Definition:</b> Input.h:22</div></div>
 <div class="ttc" id="class_s_d_x_1_1_window_html_ac3394c20e890e79e70ddc7b7a2ec84b6"><div class="ttname"><a href="class_s_d_x_1_1_window.html#ac3394c20e890e79e70ddc7b7a2ec84b6">SDX::Window::SetWindow</a></div><div class="ttdeci">static void SetWindow(SubWindow &amp;アクティブにするSubWindow=SubWindow::mainWindow)</div><div class="ttdoc">SubWindowをアクティブにする. </div><div class="ttdef"><b>Definition:</b> Window.h:34</div></div>
 <div class="ttc" id="class_s_d_x_1_1_music_html_a0999125ede43e618e2e6ab88dd12247f"><div class="ttname"><a href="class_s_d_x_1_1_music.html#a0999125ede43e618e2e6ab88dd12247f">SDX::Music::Update</a></div><div class="ttdeci">static bool Update()</div><div class="ttdoc">fadeOut付きで終了した後に次Musicを再生するための処理. </div><div class="ttdef"><b>Definition:</b> Music.h:233</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_abf134fee23f168a2c5d4ec57f45bd0e0"><div class="ttname"><a href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">SDX::System::End</a></div><div class="ttdeci">static bool End()</div><div class="ttdoc">ライブラリの終了処理. </div><div class="ttdef"><b>Definition:</b> System.h:79</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_abf134fee23f168a2c5d4ec57f45bd0e0"><div class="ttname"><a href="class_s_d_x_1_1_system.html#abf134fee23f168a2c5d4ec57f45bd0e0">SDX::System::End</a></div><div class="ttdeci">static bool End()</div><div class="ttdoc">ライブラリの終了処理. </div><div class="ttdef"><b>Definition:</b> System.h:97</div></div>
 <div class="ttc" id="class_s_d_x_1_1_screen_html_a464df43da2fb85be486d7337309b194c"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a464df43da2fb85be486d7337309b194c">SDX::Screen::GetHandle</a></div><div class="ttdeci">static SDL_Renderer * GetHandle()</div><div class="ttdoc">スクリーンハンドルを取得. </div><div class="ttdef"><b>Definition:</b> Screen.h:26</div></div>
 <div class="ttc" id="class_s_d_x_1_1_screen_html_a12eda6cb5489822af0df7640a75b7196"><div class="ttname"><a href="class_s_d_x_1_1_screen.html#a12eda6cb5489822af0df7640a75b7196">SDX::Screen::SetRenderer</a></div><div class="ttdeci">static void SetRenderer(Renderer &amp;描画先Renderer=Renderer::mainRenderer)</div><div class="ttdoc">アクティブなRendererを設定. </div><div class="ttdef"><b>Definition:</b> Screen.h:40</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_a07619fbf2acbb099dc643c4563526c8b"><div class="ttname"><a href="class_s_d_x_1_1_system.html#a07619fbf2acbb099dc643c4563526c8b">SDX::System::IsTablet</a></div><div class="ttdeci">static bool IsTablet()</div><div class="ttdoc">タブレット端末かどうかを取得. </div><div class="ttdef"><b>Definition:</b> System.h:222</div></div>
 <div class="ttc" id="class_s_d_x_1_1_keyboard_html_a0ec148cd4ebbd5c4ba65989c856af648"><div class="ttname"><a href="class_s_d_x_1_1_keyboard.html#a0ec148cd4ebbd5c4ba65989c856af648">SDX::Keyboard::HoldAnyKey</a></div><div class="ttdeci">static bool HoldAnyKey()</div><div class="ttdoc">いずれかのキーが押されているか取得. </div><div class="ttdef"><b>Definition:</b> Keyboard.h:454</div></div>
-<div class="ttc" id="class_s_d_x_1_1_system_html_ae002abf833fa52c0fa0ce4a2d565d2e6"><div class="ttname"><a href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">SDX::System::ProcessMessage</a></div><div class="ttdeci">static bool ProcessMessage()</div><div class="ttdoc">OSのメッセージ処理を行う. </div><div class="ttdef"><b>Definition:</b> System.h:110</div></div>
+<div class="ttc" id="class_s_d_x_1_1_system_html_ae002abf833fa52c0fa0ce4a2d565d2e6"><div class="ttname"><a href="class_s_d_x_1_1_system.html#ae002abf833fa52c0fa0ce4a2d565d2e6">SDX::System::ProcessMessage</a></div><div class="ttdeci">static bool ProcessMessage()</div><div class="ttdoc">OSのメッセージ処理を行う. </div><div class="ttdef"><b>Definition:</b> System.h:130</div></div>
 <div class="ttc" id="class_s_d_x_1_1_renderer_html_aef4d72d1bd95efeba4b69f14c6987b85"><div class="ttname"><a href="class_s_d_x_1_1_renderer.html#aef4d72d1bd95efeba4b69f14c6987b85">SDX::Renderer::mainRenderer</a></div><div class="ttdeci">static Renderer &amp; mainRenderer</div><div class="ttdoc">メインウィンドウのレンダラー </div><div class="ttdef"><b>Definition:</b> Renderer.h:49</div></div>
 <div class="ttc" id="class_s_d_x_1_1_joypad_html_a875779b77a3c6fc9ede8af90e3fec97d"><div class="ttname"><a href="class_s_d_x_1_1_joypad.html#a875779b77a3c6fc9ede8af90e3fec97d">SDX::Joypad::Open</a></div><div class="ttdeci">void Open()</div><div class="ttdoc">ジョイパッドを起動. </div><div class="ttdef"><b>Definition:</b> Joypad.h:114</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sub_window_html_a1271d0aeaef288258d495151d4f6ee4b"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SDX::SubWindow::mainWindow</a></div><div class="ttdeci">static SubWindow mainWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> SubWindow.h:45</div></div>
-<div class="ttc" id="class_s_d_x_1_1_sub_window_html_ab01010e1915a568fbe61075ffed95e44"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#ab01010e1915a568fbe61075ffed95e44">SDX::SubWindow::Destroy</a></div><div class="ttdeci">bool Destroy()</div><div class="ttdoc">SubWindowを削除. </div><div class="ttdef"><b>Definition:</b> SubWindow.h:101</div></div>
-<div class="ttc" id="class_s_d_x_1_1_drawing_html_a93e690805234ee19bf6f3abe0e4b99b3"><div class="ttname"><a href="class_s_d_x_1_1_drawing.html#a93e690805234ee19bf6f3abe0e4b99b3">SDX::Drawing::SetDefaultFont</a></div><div class="ttdeci">static void SetDefaultFont(const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリング=true)</div><div class="ttdoc">デフォルトのフォントを設定する. </div><div class="ttdef"><b>Definition:</b> Drawing.h:283</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sub_window_html_a1271d0aeaef288258d495151d4f6ee4b"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#a1271d0aeaef288258d495151d4f6ee4b">SDX::SubWindow::mainWindow</a></div><div class="ttdeci">static SubWindow mainWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> SubWindow.h:46</div></div>
+<div class="ttc" id="class_s_d_x_1_1_sub_window_html_ab01010e1915a568fbe61075ffed95e44"><div class="ttname"><a href="class_s_d_x_1_1_sub_window.html#ab01010e1915a568fbe61075ffed95e44">SDX::SubWindow::Destroy</a></div><div class="ttdeci">bool Destroy()</div><div class="ttdoc">SubWindowを削除. </div><div class="ttdef"><b>Definition:</b> SubWindow.h:102</div></div>
+<div class="ttc" id="class_s_d_x_1_1_drawing_html_a93e690805234ee19bf6f3abe0e4b99b3"><div class="ttname"><a href="class_s_d_x_1_1_drawing.html#a93e690805234ee19bf6f3abe0e4b99b3">SDX::Drawing::SetDefaultFont</a></div><div class="ttdeci">static void SetDefaultFont(const char *フォント名, int 大きさ, int 行間=0, bool 高品質レンダリング=true)</div><div class="ttdoc">デフォルトのフォントを設定する. </div><div class="ttdef"><b>Definition:</b> Drawing.h:291</div></div>
 <div class="ttc" id="class_s_d_x_1_1_music_html_aa88345bb8d87afce8ced0c443e0bbf75"><div class="ttname"><a href="class_s_d_x_1_1_music.html#aa88345bb8d87afce8ced0c443e0bbf75">SDX::Music::Check</a></div><div class="ttdeci">static bool Check()</div><div class="ttdoc">再生中か確認. </div><div class="ttdef"><b>Definition:</b> Music.h:186</div></div>
 <div class="ttc" id="class_s_d_x_1_1_window_html_a4d093f2dfe01e0e1d34a5a53f1d21081"><div class="ttname"><a href="class_s_d_x_1_1_window.html#a4d093f2dfe01e0e1d34a5a53f1d21081">SDX::Window::activeWindow</a></div><div class="ttdeci">static SubWindow * activeWindow</div><div class="ttdoc">現在アクティブなウィンドウ </div><div class="ttdef"><b>Definition:</b> Window.h:24</div></div>
 <div class="ttc" id="class_s_d_x_1_1_window_html"><div class="ttname"><a href="class_s_d_x_1_1_window.html">SDX::Window</a></div><div class="ttdoc">アクティブなSubWindowを操作するクラス. </div><div class="ttdef"><b>Definition:</b> Window.h:14</div></div>
@@ -273,7 +336,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 15 2015 15:53:47 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jun 28 2015 09:15:35 for SDXFrameWork by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
